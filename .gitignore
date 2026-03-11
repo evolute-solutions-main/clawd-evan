@@ -1,0 +1,47 @@
+# Secrets / local environment (keep examples committed)
+.env
+.secrets.env
+
+# Ignore env variants, but allow examples
+*.env
+.env.*
+*.secrets.env
+!*.example
+
+# Logs / runtime artifacts
+runs/
+*.log
+
+# OS
+.DS_Store
+
+# Temp directories
+.tmp/
+tmp/
+
+# Large exports and archives (do not commit)
+data/chatgpt-export/
+data/chatgpt/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# Very large derived artifacts (especially exports)
+**/extracted/chat.html
+**/source.zip
+**/chatgpt-export-fixed.zip
+**/derived/messages.jsonl
+
+# Secrets
+.secrets.env
+
+data/clawdbot-sessions/derived/text/7521a844-bb48-4090-aa6e-7210d2969d73.md
+data/clawdbot-sessions/derived/text/ce306557-f75e-4874-9927-821153b8e54e.md
+data/clawdbot-sessions/derived/text/352fb0f6-d3bc-4c72-8484-a024858ed776.md
+data/clawdbot-sessions/derived/text/eb6df4a9-85e1-4cbd-8b4e-faf0636aac73.md
+
+data/clawdbot-sessions/derived/text/fee96ff4-f250-49ba-858a-b2ac9a0a2fbb.md
+data/clawdbot-sessions/derived/text/38a78ffd-fb62-4ea3-9cef-8add8d6c7ace.md

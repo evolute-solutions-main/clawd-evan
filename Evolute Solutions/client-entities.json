@@ -1,0 +1,565 @@
+{
+  "version": 1,
+  "sourceOfTruth": "repo",
+  "updatedAt": "2026-02-23T20:09:04-05:00",
+  "clients": [
+    {
+      "id": "american-designer-homes",
+      "businessName": "American Designer Homes",
+      "nickname": "",
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1468661549194281144"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213227645967978",
+        "contractTaskGid": ""
+      },
+      "notes": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "az-remodeling-and-rooter",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1468303418018893935"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213227645967980",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "AZ Remodeling and Rooter",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "be-decking-and-construction",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1394239403366285382"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213227782531128",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "Be-Decking and Construction",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "braymiller-builders",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1460345897832681543"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213227782531132",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "Braymiller Builders",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "concept-ii-closets",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1448030024593834106"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213227497620881",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "Concept II Closets",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "flh-services",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1473371247537557525"
+      },
+      "asana": {
+        "clientHubTaskGid": "",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "FLH Services",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "four-seasons-design-build",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1474420680123744537"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213377566958304",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "Four Seasons Design Build",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "innavik",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1400236255370936490"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213227782531134",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "Innavik",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "master-design-construction",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1442535792428716123"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213227645967968",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "Master Design Construction",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "prestige-home-remodeling",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1471221296330178802"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213243230257491",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "Prestige Home Remodeling",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "pro-built-co",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1469111055534915625"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213199582666317",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "Pro Built Co",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "satin-touch",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1474386422705164379"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213379894891288",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "Satin Touch",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "stp-floors",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1438722016772620339"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213227645967970",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "STP Floors (STP4)",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "susquehanna-home-solutions",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1432777540166090875"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213199620234591",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "Susquehanna Home Solutions",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "the-perfectionist-construction",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1410653307227213914"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213409361206939",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "The Perfectionist Construction",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "the-redwood-exotics",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1403092736055447672"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213227782531138",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "The Redwood Exotics",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "tillup-llc",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1469355379166019760"
+      },
+      "asana": {
+        "clientHubTaskGid": "1213227645967976",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "Tillup LLC",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    },
+    {
+      "id": "epic-modulars",
+      "status": "active",
+      "discord": {
+        "guildId": "1164939432722440282",
+        "channelId": "1475571185671733248"
+      },
+      "asana": {
+        "clientHubTaskGid": "",
+        "contractTaskGid": ""
+      },
+      "owner": {
+        "name": "",
+        "discordUsername": ""
+      },
+      "notes": "",
+      "businessName": "Epic Modulars",
+      "nickname": "",
+      "logs": [],
+      "clientHub": {
+        "healthScore": "",
+        "accountPerformance": "",
+        "videoPhotosStatus": "",
+        "adStatus": "",
+        "serviceBeingAdvertised": "",
+        "asana": {
+          "fields": {},
+          "lastSyncedAt": ""
+        }
+      }
+    }
+  ]
+}

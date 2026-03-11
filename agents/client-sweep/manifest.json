@@ -1,0 +1,32 @@
+{
+  "name": "client-sweep",
+  "inputs": {
+    "discord": {
+      "guild": "1164939432722440282",
+      "categories": [
+        "1334610131647987742",
+        "1478798565810770104"
+      ],
+      "enrichment": [
+        "1459289532372357253",
+        "1469019592302006426",
+        "1402266658592002139"
+      ]
+    },
+    "asana": ["1213220062504456"]
+  },
+  "outputs": {
+    "folder": "agents/client-sweep/outputs",
+    "files": ["sweep.md"]
+  },
+  "publish": {
+    "channel": "discord:1475336170916544524",
+    "mode": "post-file"
+  },
+  "providers": ["openai", "anthropic"],
+  "modelPolicy": {
+    "primary": "openai/gpt-5",
+    "fallback": "opus"
+  },
+  "safety": { "failFast": true, "idempotent": true }
+}
