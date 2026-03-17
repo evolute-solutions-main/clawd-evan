@@ -1,0 +1,2 @@
+2026-03-12 Client Sweep: Notion publish failed twice. Last error: ECONNRESET during fetch.
+2026-03-14 RESOLVED: Root cause was wrong Notion API endpoints (/data_sources → /databases). Also added ECONNRESET retry logic (3 attempts) and fixed NOTION_KEY format in .secrets.env.

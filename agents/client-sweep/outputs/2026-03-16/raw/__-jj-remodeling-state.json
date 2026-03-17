@@ -1,0 +1,14 @@
+{
+  "clientName": "🍷-jj-remodeling",
+  "context": [
+    "Onboarding nearly complete: Facebook access, payment, CRM login, and document review all finished by Mar 13.",
+    "Max sent a message on Mar 16 asking client \"can u see this\" — no response from Jesus yet."
+  ],
+  "status": "Onboarding is wrapping up. All setup steps (Facebook access/payment, CRM login, expectations docs) were completed by Mar 13. Max sent a message on Mar 16 asking Jesus to confirm he can see something, but there has been no reply yet — it's unclear what was shared or whether the client has seen it.",
+  "next": "Max → follow up with Jesus on the Mar 16 message (clarify what was shared and confirm he can see it); Davi → confirm ads are live or provide launch status update to client.",
+  "teamChatter": null,
+  "risk": null,
+  "urgencyScore": 1,
+  "needsManualReview": true,
+  "reviewNote": "Max's Mar 16 message (\"can u see this\") lacks context — unclear what was shared (likely an image or ad preview). No client response yet. Need to verify what was sent and whether ads have actually launched as promised on Mar 12."
+}

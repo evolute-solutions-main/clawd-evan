@@ -1,9 +1,19 @@
 #!/usr/bin/env node
 /**
  * Client Sweep - Loop Runner (Gateway-backed Orchestrator)
- * 
- * Processes each client in a separate agent run (via gateway CLI)
- * and aggregates into sweep.md, then publishes to Notion.
+ *
+ * ⚠️  DEPRECATED — superseded by run-pipeline.mjs
+ *
+ * This file is kept for rollback comparison only. Do not extend it.
+ * New runs should use: node scripts/run-pipeline.mjs
+ *
+ * Differences vs run-pipeline.mjs:
+ *   - This spawns one `clawdbot agent` LLM process per client; the LLM
+ *     does its own retrieval + formatting, which produces output drift.
+ *   - run-pipeline.mjs fetches data in code, LLM only does interpretation,
+ *     and assembles the report deterministically.
+ *
+ * Scheduled for removal after run-pipeline.mjs has been validated in prod.
  */
 
 import fs from 'node:fs'

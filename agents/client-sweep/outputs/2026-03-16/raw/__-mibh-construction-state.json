@@ -1,0 +1,14 @@
+{
+  "clientName": "🤖-mibh-construction",
+  "context": [
+    "Ads launched on 2026-03-12; Moshe (client) has not yet logged into GoHighLevel app — said he 'didn't have time' on 03-13.",
+    "Moshe asked about connecting multiple usernames to GHL; Davi asked for team emails but Moshe only confirmed his own email (mikebaruh@gmail.com) — unclear if he needs additional users added."
+  ],
+  "status": "Campaign is live as of March 12, but client Moshe has not yet logged into GoHighLevel or completed the onboarding steps (CRM tutorial, expectations doc, calendar sync). On March 13 he said he hadn't had time and asked about connecting multiple usernames; Davi requested team emails but Moshe only restated his own email, leaving it unclear whether additional users are needed.",
+  "next": "Davi → Follow up with Moshe to (1) clarify whether he needs additional team members added to GHL and get their emails, (2) confirm he has successfully logged into the app and connected his calendar, and (3) ensure he's reviewed the expectations doc and CRM tutorial before leads start coming in.",
+  "teamChatter": null,
+  "risk": "Client has not completed any onboarding steps and leads may already be flowing with no one monitoring them — risk of poor lead handling and early dissatisfaction.",
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}

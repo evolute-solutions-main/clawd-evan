@@ -3,7 +3,11 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fetchChannelWindow } from '../../_shared/discord-fetcher/index.mjs'
-import { appointmentsDailyReport, CHANNELS } from './appointmentsDailyReport.mjs'
+
+const CHANNELS = {
+  unconfirmed: '1387098677646196887',
+  confirmed:   '1332578941407334430'
+}
 
 function loadSecrets(repoRoot) {
   try {
@@ -48,32 +52,37 @@ function ensureDir(p){ fs.mkdirSync(p, { recursive: true }) }
 
 function parseZapierContent(content) {
   const out = {}
-  // Name (tolerant to emojis/bullets)
-  let m = content.match(/\*\*Name:\*\*\s*([^\n\r]+)/i)
-  if (!m) m = content.match(/👤\s*\*\*Name:\*\*\s*([^\n\r]+)/i)
+  // Name (tolerant to emojis/bullets and with or without **bold** markers)
+  let m = content.match(/(?:👤\s*)?(?:\*{0,2})Name:(?:\*{0,2})\s*([^\n\r]+)/i)
   out.name = m ? m[1].trim().replace(/\s+/g,' ') : undefined
-  if (out.name) out.name = out.name.replace(/\s*-\s*$/,'') // drop trailing dash-only artifacts
-  // Phone (strip spaces/dashes/parentheses, keep leading +)
-  m = content.match(/\*\*Phone:\*\*\s*([+\d][\d\s()\-]+)/i)
+  if (out.name) {
+    // strip bleed-through into adjacent fields (e.g. blank name followed by Phone on same line)
+    out.name = out.name.replace(/\s*[-–]\s*(?:📞|☎️|Phone:|Time:|Calendar:).*/i, '').trim() || undefined
+  }
+  // Phone (with or without **bold** markers; strip formatting, keep leading +)
+  m = content.match(/(?:📞\s*)?(?:\*{0,2})Phone:(?:\*{0,2})\s*([+\d][\d\s()\-]+)/i)
   if (m) {
-    const raw = m[1].trim()
-    const norm = raw.replace(/[^\d+]/g,'')
-    out.phone = norm
+    const norm = m[1].trim().replace(/[^\d+]/g,'')
+    out.phone = norm || undefined
   } else {
     // Fallback: only accept explicit + followed by 10–15 digits to avoid picking up years/times
     const pm = content.match(/(\+\d{10,15})\b/)
-    if (pm) {
-      out.phone = pm[1]
-    }
+    if (pm) out.phone = pm[1]
   }
   // Calendar (confirmed only)
-  m = content.match(/\*\*Calendar:\*\*\s*([^\n\r]+)/i)
+  m = content.match(/(?:\*{0,2})Calendar:(?:\*{0,2})\s*([^\n\r]+)/i)
   out.calendar = m ? m[1].trim() : undefined
   // Time text
-  m = content.match(/\*\*Time:\*\*\s*([^\n\r]+)/i)
+  m = content.match(/(?:🕒\s*)?(?:\*{0,2})Time:(?:\*{0,2})\s*([^\n\r]+)/i)
   out.apptTimeText = m ? m[1].trim() : undefined
-  // Setter: Zapier payload sometimes lacks Created by; default Unknown
-  out.setter = 'Unknown'
+  // Setter: parse "Created by" / "Created By" field; default Unknown if missing
+  m = content.match(/(?:\*{0,2})created\s+by(?:\*{0,2})[:\s]+([^\n\r]+)/i)
+  if (m) {
+    const raw = m[1].trim().replace(/\.*$/, '').trim() // strip trailing period(s)
+    out.setter = raw || 'Unknown'
+  } else {
+    out.setter = 'Unknown'
+  }
   return out
 }
 

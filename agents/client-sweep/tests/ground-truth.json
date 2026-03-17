@@ -1,0 +1,185 @@
+[
+  {
+    "name": "Four Seasons — CRM login pending then launch (Onboarding)",
+    "category": "onboard",
+    "messages": [
+      {"content": "@Kenneth have you been able to log into the CRM? Once we get the green light we'll turn everything on. On phone use Lead Connector; on desktop app.evolutesolutions.io.", "timestamp": 1700000000}
+    ],
+    "expect": {"status": "Onboarding; CRM/login confirmation pending", "next": "Confirm CRM login completed; then launch/turn everything on."}
+  },
+  {
+    "name": "Velento — launched; pending client info",
+    "category": "active",
+    "messages": [
+      {"content": "Ads are on; I'll send you more info soon.", "timestamp": 1700000001}
+    ],
+    "expect": {"status": "Launched; pending client deliverable", "next": "Follow up on the requested client deliverable/confirmation so we can proceed."}
+  },
+  {
+    "name": "JJ — ready to proceed and turn everything on",
+    "category": "active",
+    "messages": [
+      {"content": "We have ads access. Everything is set up, he confirmed he's added properly, we can proceed and turn everything on.", "timestamp": 1700000002}
+    ],
+    "expect": {"status": "Launch-ready", "next": "Confirm final checks and turn campaigns on."}
+  },
+  {
+    "name": "FLH — payment issue",
+    "category": "onboard",
+    "messages": [
+      {"content": "Let's get on a call to resolve Meta payment method linking.", "timestamp": 1700000003}
+    ],
+    "expect": {"status": "Payment method issue blocking launch", "next": "Schedule a call and resolve Meta payment linking."}
+  },
+  {
+    "name": "Susquehanna — paused resume Monday",
+    "category": "active",
+    "messages": [
+      {"content": "We paused while he was sick, he's ready to resume Monday.", "timestamp": 1700000004}
+    ],
+    "expect": {"status": "Paused but client ready to resume", "next": "Re-launch on the stated date and confirm performance checks."}
+  },
+  {
+    "name": "AZ Remodeling — license gating",
+    "category": "onboard",
+    "messages": [
+      {"content": "We're waiting on their license to start running ads.", "timestamp": 1700000005}
+    ],
+    "expect": {"status": "Launch blocked by license gating", "next": "Confirm license readiness; launch immediately after confirmation."}
+  },
+  {
+    "name": "Prestige — waiting on pictures and Loom watch",
+    "category": "active",
+    "messages": [
+      {"content": "Sent a Loom; waiting on pictures to relaunch.", "timestamp": 1700000006}
+    ],
+    "expect": {"status": "Launch-ready but missing assets", "next": "Collect requested pictures/videos; then relaunch updated creative."}
+  },
+  {
+    "name": "Satin Touch — onboarding, waiting on lead spreadsheet",
+    "category": "onboard",
+    "messages": [
+      {"content": "Please send the lead spreadsheet when you can.", "timestamp": 1700000007},
+      {"content": "Following up on the lead list so we can proceed.", "timestamp": 1700000008}
+    ],
+    "expect": {"status": "Onboarding; waiting on lead list/spreadsheet", "next": "Get the spreadsheet from the client (lead list), then proceed."}
+  },
+  {
+    "name": "Lone Star — launched, now verify and follow up",
+    "category": "active",
+    "messages": [
+      {"content": "Launched this week — let's monitor leads and adjust.", "timestamp": 1700000009}
+    ],
+    "expect": {"status": "Launched/recently live", "next": "Verify launch setup quality and follow up on lead handling over next few days."}
+  },
+  {
+    "name": "Redwood — launched; content provided",
+    "category": "active",
+    "messages": [
+      {"content": "We launched the flooring ads this week — thanks for the content you sent over.", "timestamp": 1700000010}
+    ],
+    "expect": {"status": "Launched/recently live", "next": "Verify launch setup quality and follow up on lead handling over next few days."}
+  },
+  {
+    "name": "Be-Decking — outcomes requested",
+    "category": "active",
+    "messages": [
+      {"content": "I’m in the field — I’ll send you an update on the leads later today.", "timestamp": 1700000011}
+    ],
+    "expect": {"status": "Launch-ready; outcomes requested", "next": "Follow up for lead report/outcomes and confirm handling process."}
+  },
+  {
+    "name": "Perfectionist — CRM/login confirmation pending",
+    "category": "active",
+    "messages": [
+      {"content": "Appreciate the info. Once you confirm the CRM login we’ll turn everything on.", "timestamp": 1700000012}
+    ],
+    "expect": {"status": "CRM/login confirmation pending", "next": "Confirm CRM login completed; then launch/turn everything on."}
+  },
+  {
+    "name": "MIBH — launched; CRM/login follow-up",
+    "category": "active",
+    "messages": [
+      {"content": "We launched already — here’s your CRM login info again. Let me know once it’s set up properly.", "timestamp": 1700000013}
+    ],
+    "expect": {"status": "Launched; CRM/login follow-up", "next": "Confirm CRM login is set up and everything is clear; monitor leads and support."}
+  },
+  {
+    "name": "Innavik — launched; awaiting outcomes",
+    "category": "active",
+    "messages": [
+      {"content": "We’ve been running for months. Can you share feedback on the recent leads and appointments?", "timestamp": 1700000014},
+      {"content": "I'll add it to my list and get back to you with an update on the leads.", "timestamp": 1700000015}
+    ],
+    "expect": {"status": "Launched; awaiting outcomes", "next": "Follow up for lead report/outcomes and confirm handling process."}
+  },
+  {
+    "name": "Interior Redesign — paused after launch; client dissatisfied and out of budget",
+    "category": "active",
+    "messages": [
+      {"content": "We launched but I’m dissatisfied with the quality and I ran out of money, so I stopped the ads.", "timestamp": 1700000016}
+    ],
+    "expect": {"status": "Needs response", "next": "Acknowledge concerns, outline fixes (incl. campaign adjustments), and reply now."}
+  },
+  {
+    "name": "American Designer Homes — multiple complaints",
+    "category": "active",
+    "messages": [
+      {"content": "Lead quality is poor; I’m not happy with these results.", "timestamp": 1700000017},
+      {"content": "Forwarding his complaints here as well so we have them tracked.", "timestamp": 1700000018}
+    ],
+    "expect": {"status": "Needs response", "next": "Acknowledge concerns, outline fixes (incl. campaign adjustments), and reply now."}
+  },
+  {
+    "name": "Tillup — launched; recent Q&A, not urgent",
+    "category": "active",
+    "messages": [
+      {"content": "How do I send the estimate?", "timestamp": 1700000020},
+      {"content": "Clarified the steps on March 10; he replied thanks.", "timestamp": 1700000021}
+    ],
+    "expect": {"status": "Launched (ongoing)", "next": "Light check-in on outcomes later this week (not urgent)."}
+  },
+  {
+    "name": "STP Floors — launched; CRM/login follow-up",
+    "category": "active",
+    "messages": [
+      {"content": "He’s good, please resend the email to give him access to the CRM.", "timestamp": 1700000022},
+      {"content": "Reset login info.", "timestamp": 1700000023},
+      {"content": "Now we should confirm the other guy got into the CRM and check in on how things are going.", "timestamp": 1700000024}
+    ],
+    "expect": {"status": "Launched; CRM/login follow-up", "next": "Confirm CRM login is set up and everything is clear; monitor leads and support."}
+  },
+  {
+    "name": "Four Seasons — awaiting test confirmation",
+    "category": "active",
+    "messages": [
+      {"content": "Did you receive the test notification? Please confirm.", "timestamp": 1700000025}
+    ],
+    "expect": {"status": "Needs response", "next": "Follow up for confirmation; if no reply, resend the test notification and confirm receipt."}
+  },
+  {
+    "name": "Braymiller — optimization report received",
+    "category": "active",
+    "messages": [
+      {"content": "Here’s the performance report for review.", "timestamp": 1700000026},
+      {"content": "Leads aren’t converting well.", "timestamp": 1700000027}
+    ],
+    "expect": {"status": "Launched; needs optimization follow-up", "next": "Acknowledge the report and propose 2–3 concrete campaign changes; ask for constraints/preferences; offer a quick call."}
+  },
+  {
+    "name": "Epic Modulars — sales follow-up (unresponsive)",
+    "category": "active",
+    "messages": [
+      {"content": "Following up on the proposal and your partner’s update.", "timestamp": 1700000028}
+    ],
+    "expect": {"status": "Sales follow-up; client unresponsive", "next": "Send a concise follow-up; if no reply in 48–72 hours, mark lost and note the reason."}
+  },
+  {
+    "name": "JJ Remodeling — ensure everything is on",
+    "category": "active",
+    "messages": [
+      {"content": "We should make sure everything is on and confirm with the client that it’s live.", "timestamp": 1700000029}
+    ],
+    "expect": {"status": "Launch-ready", "next": "Ensure all campaigns are on and confirm with the client that everything is live."}
+  }
+]

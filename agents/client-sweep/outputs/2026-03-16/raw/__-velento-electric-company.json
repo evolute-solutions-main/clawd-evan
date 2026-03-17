@@ -1,0 +1,42 @@
+{
+  "client": {
+    "name": "🍕-velento-electric-company",
+    "channelId": "1440010670232834118",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1480613643686117376",
+      "channelId": "1440010670232834118",
+      "author": "davi_dinicio",
+      "content": "Hi <@1438984878107529248>, no worries at all about Discord! Glad we are catching up now.\nLet's break down exactly what's going on so we can get everything dialed in for you this week:\n\nThe Lead Connector Automation: > I completely understand your frustration here. The AI is designed to do the heavy lifting of chasing people down until you step in, but it absolutely shouldn't be stepping on your toes. (i will check that)\n\n3. Lead Quality & Next Steps: > It’s great that the reach is solid and some leads have transitioned to estimates. To help us optimize the algorithm this week and filter out the junk, I need a quick favor: **could you provide a detailed breakdown of the leads that did turn into estimates?**",
+      "tsUtc": "2026-03-09T17:10:01.126000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1440010670232834118/1480613643686117376"
+    },
+    {
+      "id": "1480626848042979520",
+      "channelId": "1440010670232834118",
+      "author": "nick_73256",
+      "content": "Ill send over some Names of the leads that has transitioned to Estimates and actually work completed.",
+      "tsUtc": "2026-03-09T18:02:29.290000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1440010670232834118/1480626848042979520"
+    },
+    {
+      "id": "1480973576801747064",
+      "channelId": "1440010670232834118",
+      "author": "davi_dinicio",
+      "content": "Thanks <@1438984878107529248>",
+      "tsUtc": "2026-03-10T17:00:15.868000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1440010670232834118/1480973576801747064"
+    },
+    {
+      "id": "1483133287810465942",
+      "channelId": "1440010670232834118",
+      "author": "nick_73256",
+      "content": "Can you please show me the new ad you guys put out on Facebook.  Im getting a tremendous amount of inquires for hiring",
+      "tsUtc": "2026-03-16T16:02:11.098000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1440010670232834118/1483133287810465942"
+    }
+  ],
+  "fetchedAt": "2026-03-16T16:21:57.073Z"
+}

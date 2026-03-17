@@ -56,6 +56,20 @@ function buildPermalink({ guildId, channelId, messageId }) {
   return `https://discord.com/channels/${guildId}/${channelId}/${messageId}`
 }
 
+export async function listGuildChannels({ guildId, token }) {
+  if (!token) throw new Error('Missing DISCORD_BOT_TOKEN for listGuildChannels')
+  if (!guildId) throw new Error('listGuildChannels requires guildId')
+  return await discordRequest(`/guilds/${guildId}/channels`, { token })
+}
+
+export async function fetchRecentChannel({ channelId, limit = 50, token }) {
+  if (!token) throw new Error('Missing DISCORD_BOT_TOKEN for fetchRecentChannel')
+  if (!channelId) throw new Error('fetchRecentChannel requires channelId')
+  const capped = Math.max(1, Math.min(100, limit))
+  const res = await discordRequest(`/channels/${channelId}/messages`, { token, query: { limit: capped } })
+  return Array.isArray(res) ? res : []
+}
+
 export async function fetchChannelWindow({
   channelIds = [],
   date, // YYYY-MM-DD (window: inclusive [00:00:00 – 23:59:59] in repo timezone)

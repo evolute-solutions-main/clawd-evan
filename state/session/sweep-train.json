@@ -1,0 +1,17 @@
+{
+  "key": "sweep-train",
+  "asOf": "2026-03-13T17:20:00Z",
+  "completed": [
+    {"client": "Satin Touch", "status": "Onboarding; waiting on lead list/spreadsheet", "next": "Get spreadsheet"},
+    {"client": "Lone Star", "status": "Launched/recently live", "next": "Verify setup + follow up on leads"},
+    {"client": "Four Seasons", "status": "Onboarding; CRM/login confirmation pending", "next": "Confirm login then launch"},
+    {"client": "Velento", "status": "Launched; pending client deliverable", "next": "Follow up on client info"},
+    {"client": "JJ Remodeling", "status": "Launch-ready", "next": "Turn campaigns on"}
+  ],
+  "tests": {"passed": 8, "failing": ["Prestige — waiting on pictures and Loom watch"]},
+  "nextUp": [
+    {"client": "The Redwood Exotics", "id": "redwood"},
+    {"client": "Prestige Home Remodeling", "id": "prestige"}
+  ],
+  "meta": {"version": 1, "lastActor": "setup", "lastSurface": "webchat"}
+}

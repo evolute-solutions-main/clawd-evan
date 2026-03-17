@@ -1,0 +1,42 @@
+{
+  "client": {
+    "name": "🎨-satin-touch",
+    "channelId": "1474386422705164379",
+    "parentId": "1478798565810770104"
+  },
+  "clientMessages": [
+    {
+      "id": "1480636323181101158",
+      "channelId": "1474386422705164379",
+      "author": "davi_dinicio",
+      "content": "hey <@1474159358802788402>",
+      "tsUtc": "2026-03-09T18:40:08.339000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1474386422705164379/1480636323181101158"
+    },
+    {
+      "id": "1480636346740772894",
+      "channelId": "1474386422705164379",
+      "author": "davi_dinicio",
+      "content": "any updates?",
+      "tsUtc": "2026-03-09T18:40:13.956000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1474386422705164379/1480636346740772894"
+    },
+    {
+      "id": "1480978772743291092",
+      "channelId": "1474386422705164379",
+      "author": "davi_dinicio",
+      "content": "https://tenor.com/view/dog-crying-meme-doggo-crys-megan-soo-crying-dog-gif-5276199764143986284",
+      "tsUtc": "2026-03-10T17:20:54.677000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1474386422705164379/1480978772743291092"
+    },
+    {
+      "id": "1482057309504016427",
+      "channelId": "1474386422705164379",
+      "author": "davi_dinicio",
+      "content": "<@1474159358802788402> Good Morning",
+      "tsUtc": "2026-03-13T16:46:37.879000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1474386422705164379/1482057309504016427"
+    }
+  ],
+  "fetchedAt": "2026-03-16T16:22:26.793Z"
+}

@@ -1,0 +1,14 @@
+{
+  "clientName": "🎨-satin-touch",
+  "context": [
+    "Davi has sent multiple messages (Mar 9, 10, 13) pinging a team member with no response from anyone on the team over the full 7-day window.",
+    "No campaign updates, deliverables, or status information have been shared — client appears to be waiting for any engagement."
+  ],
+  "status": "Client (Davi) has been reaching out repeatedly over the past week — asking for updates on Mar 9, sending a sad/crying dog meme on Mar 10, and pinging again on Mar 13 — with zero team responses. The client is being ignored and frustration appears to be building.",
+  "next": "The team member tagged (ID 1474159358802788402) → respond to Davi immediately with a status update on the account/campaign, acknowledge the delayed response, and provide next steps.",
+  "teamChatter": null,
+  "risk": "Churn risk: client has gone completely unanswered for 4+ days across multiple attempts to reach the team. The crying meme suggests growing frustration.",
+  "urgencyScore": 0,
+  "needsManualReview": true,
+  "reviewNote": "Unable to identify the tagged team member by name (Discord ID 1474159358802788402). Also unclear what the current campaign/account status is — no context in the channel about whether campaigns are live, paused, or in onboarding. A human should verify who owns this relationship and what the client is waiting on."
+}

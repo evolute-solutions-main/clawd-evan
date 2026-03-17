@@ -1,0 +1,14 @@
+{
+  "clientName": "👌🏻-the-perfectionist-construction",
+  "context": [
+    "18 leads generated at $36.40/lead; client (Zack) reported 1 definite yes (pending contract/deposit), several maybes (price/tax-return timing), some cancellations, and outstanding follow-ups still needed.",
+    "Davi requested a call to review numbers and optimize; no call has been scheduled yet as of Mar 11."
+  ],
+  "status": "Zack provided a qualitative lead breakdown on Mar 11 — 1 near-close, several maybes, some cancellations, and pending follow-ups. Davi acknowledged the feedback and proposed a call to review numbers and optimize, but no call has actually been scheduled yet. Campaign is still running.",
+  "next": "Davi → follow up with Zack to lock in a specific call time to review lead quality in detail and discuss campaign optimizations based on the feedback received.",
+  "teamChatter": null,
+  "risk": "Conversion rate appears low (1 solid deal from 18 leads); if follow-up appointments and maybes don't materialize, client could question ROI.",
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}

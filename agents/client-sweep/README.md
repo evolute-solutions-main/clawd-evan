@@ -1,23 +1,25 @@
-# Client Sweep — Single Canonical Compute
+# Client Sweep
 
-Entry: scripts/clientSweepDaily.mjs
-- Function: clientSweepDaily(date?) → Report
-  - If date omitted, uses previous calendar day in GLOBAL_TZ (from .env; defaults to America/Bogota).
-- IDs (from env, with sane defaults):
-  - Guild: EVOLUTE_GUILD_ID
-  - Categories: ACTIVE_CLIENTS_CATEGORY_ID and ONBOARDING_IN_PROGRESS_CATEGORY_ID
-  - Team chats: Davi 1459289532372357253, Bilal 1469019592302006426, MarkZ 1402266658592002139
-  - Asana Client Hub: ASANA_CLIENT_HUB_PROJECT_GID
+## Active pipeline
 
-Runner responsibilities (fetch+classify then inject):
-1) Enumerate client channels under BOTH categories (Active Clients + Onboarding In Progress)
-2) For each client in the day window (00:00–23:59 GLOBAL_TZ):
-   - Build Context (1–2 factual bullets)
-   - Classify Status (Needs response | Onboarding in progress | Needs follow-up | Stable) using strict rules
-   - Suggested next action: only from explicit asks/promises; no invented actions
-   - If Needs response → Successful response criteria from the explicit ask
-   - Optional: team chatter hits (Davi/Bilal/MarkZ posts mentioning client) and Asana blockers
-   - Escalation: mark if ≥3 outbound by us with no client reply that day
-3) report.setClients(clients[]) then report.renderMarkdown()
+Entry: `scripts/run-pipeline.mjs`
 
-Output: SOP-conformant per-client blocks ready for Markdown/Discord.
+Architecture (deterministic + LLM interpretation):
+1. [Code] Enumerate client channels from Discord categories (Active + Onboarding)
+2. [Code] Fetch last 7 days of messages per client channel + team chat mentions
+3. [Code] Save raw message snapshots to `outputs/YYYY-MM-DD/raw/` for audit
+4. [LLM]  Analyze each client → structured ClientState JSON (validated against schema)
+5. [Code] Sort by urgency, assemble sweep.md
+6. [Code] Publish to Notion
+
+Output: narrative per-client blocks (no enums/buckets), consistent format.
+
+```
+node scripts/run-pipeline.mjs [--dry-run] [--skip-notion] [--client <name>]
+```
+
+Env overrides: `SWEEP_WINDOW_DAYS` (default 7), `SWEEP_CONCURRENCY` (default 4), `SWEEP_MODEL` (default gpt-4o).
+
+## Deprecated pipeline
+
+`scripts/run-loop.mjs` — the old gateway-backed LLM orchestrator. Kept for rollback comparison only. Do not extend.

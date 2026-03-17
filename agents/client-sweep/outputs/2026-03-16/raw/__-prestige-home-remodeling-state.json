@@ -1,0 +1,14 @@
+{
+  "clientName": "🟧-prestige-home-remodeling",
+  "context": [
+    "Max requested photos and asked if the client reviewed something (likely a previous message/link); Mike said they plan to shoot photos on Thursday (Mar 12).",
+    "No confirmation yet on whether the client reviewed the other item Max referenced."
+  ],
+  "status": "Team is waiting on the client to deliver new photos, with a shoot tentatively planned for Thursday Mar 12. Max also asked if the client reviewed a prior item (referenced with \"^\") but that question appears unanswered.",
+  "next": "Max → follow up Thursday/Friday to confirm the photo shoot happened and photos are incoming; also re-ask whether Mike has reviewed the previously referenced item.",
+  "teamChatter": null,
+  "risk": null,
+  "urgencyScore": 1,
+  "needsManualReview": true,
+  "reviewNote": "Max's message references a prior item with \"^\" (likely something shared above the 7-day window). It's unclear what that item is and whether it's a blocker. A human should check the earlier channel history to confirm."
+}

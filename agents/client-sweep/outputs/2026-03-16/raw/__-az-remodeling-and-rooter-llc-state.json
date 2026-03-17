@@ -1,0 +1,14 @@
+{
+  "clientName": "🚬-az-remodeling-and-rooter-llc",
+  "context": [
+    "Client (philsegev) is waiting on someone named Alex for an update on a license needed before campaigns can launch — no resolution yet as of Mar 13.",
+    "Davi has followed up multiple times (Mar 9, 10, 13) with no substantive progress; client only responded once on Mar 13 saying he'd check with Alex 'later today.'"
+  ],
+  "status": "Campaign launch is blocked by an unresolved license issue. Phil said on Mar 13 he would check with Alex for an update \"later today,\" but no follow-up has been posted since. Davi has been reaching out repeatedly with minimal response.",
+  "next": "Davi → follow up with Phil today to ask if he got the update from Alex on the license status; if no response within 24 hours, escalate internally as potential disengagement risk.",
+  "teamChatter": null,
+  "risk": "Client is increasingly unresponsive — multiple unanswered pings over several days suggest possible disengagement or deprioritization. Campaign has not launched and there is no clear timeline for the license issue to resolve.",
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}

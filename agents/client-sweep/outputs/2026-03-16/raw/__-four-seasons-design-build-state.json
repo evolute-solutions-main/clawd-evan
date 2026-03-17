@@ -1,0 +1,14 @@
+{
+  "clientName": "🍂-four-seasons-design-build",
+  "context": [
+    "Ads launched Mar 14; leads are now coming in. Kenneth requested a call on Mar 16 to discuss important issues.",
+    "Post-call recap (Mar 16): Kenneth needs to send screenshots so team can verify he sees all lead info; team will update first automated message to remove his name."
+  ],
+  "status": "Campaign is live and generating leads. After a call on Mar 16, two open items remain: Kenneth owes screenshots showing his lead view so the team can confirm he's seeing all info, and the team needs to update the first automated message to remove Kenneth's name.",
+  "next": "Max → update the first automated message to remove Kenneth's name. Kenneth → send screenshots of his lead view for verification; Max should follow up if screenshots aren't received within a day.",
+  "teamChatter": null,
+  "risk": "Kenneth has shown repeated confusion with the tech stack (Discord, Lead Connector, CRM login, Facebook page visibility, bank fraud block) and prefers phone calls over Discord. Risk of frustration/churn if onboarding friction continues.",
+  "urgencyScore": 2,
+  "needsManualReview": false,
+  "reviewNote": null
+}

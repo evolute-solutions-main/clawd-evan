@@ -1,0 +1,14 @@
+{
+  "clientName": "⭐-lone-star",
+  "context": [
+    "Facebook ad spend is being declined by both cards on file (3747 and 8860); client says bank declined a $9 Facebook charge and they cannot access Ads Manager.",
+    "Client's Google Calendar is not syncing booked appointments from GoHighLevel despite linking it, and client has asked about an onboarding call at least twice with no direct answer."
+  ],
+  "status": "Campaigns launched on 3/12 but are currently blocked — Facebook is declining both payment cards on file, so ads are not running. Additionally, the client's Google Calendar is not showing booked appointments from the CRM, and the client has repeatedly asked about scheduling an onboarding call without receiving a clear response. The client also reports being unable to access Ads Manager.",
+  "next": "Max → Urgently follow up with the client on the declined Facebook payments (confirm whether the bank was contacted or if a new card needs to be added) and address the Google Calendar sync issue. Also respond directly to the client's repeated request to schedule an onboarding call.",
+  "teamChatter": null,
+  "risk": "Multiple unresolved issues (payment decline, calendar sync, no onboarding call, Ads Manager access) stacking up in the first week post-launch could erode client confidence and risk early churn.",
+  "urgencyScore": 0,
+  "needsManualReview": false,
+  "reviewNote": null
+}

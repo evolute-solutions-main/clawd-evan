@@ -1,0 +1,14 @@
+{
+  "clientName": "🥐interior-redesign-llc",
+  "context": [
+    "Client expressed frustration over $1,600 spent with no closed jobs, called leads \"bs,\" questioned the guarantee, and accused the team of being a grifter (Mar 13).",
+    "Client stated they will no longer respond about ad money, will wait out the contract, and then revoke page access — effectively disengaging."
+  ],
+  "status": "Client is deeply dissatisfied and has effectively disengaged. On Mar 13 they vented frustration about spending ~$1,600 with no closed deals, called the leads worthless, questioned the agency's guarantee, and stated they will not respond further about ad spend. They plan to revoke business page access once the contract expires. No team member has responded to the escalation messages beyond Max's initial \"What's up.\"",
+  "next": "Max → immediately acknowledge the client's frustration with empathy, avoid being defensive. Present a concrete plan: review lead quality data, outline what the guarantee covers, and propose a path forward (e.g., agency-funded test spend, adjusted targeting, or an honest conversation about winding down). Loop in a manager if guarantee/refund authority is needed.",
+  "teamChatter": null,
+  "risk": "High churn / cancellation risk. Client is out of ad budget, openly angry, used the word \"grifter,\" and declared intent to leave at contract end and revoke page access. Reputation risk if grievance goes public.",
+  "urgencyScore": 0,
+  "needsManualReview": false,
+  "reviewNote": null
+}

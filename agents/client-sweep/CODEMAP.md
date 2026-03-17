@@ -1,0 +1,27 @@
+# Client Sweep — CODEMAP
+
+- SOP.md — operational playbook (process, rendering, publication). Narrative, recent-first.
+- DECISION-RULES.md — canonical decision-making spec (mandatory checks + open scan; narrative; service-first next steps).
+- schemas/
+  - client-state.schema.json — JSON schema for structured LLM output (ClientState object)
+- data/
+  - active-clients.md — source of truth for active client list (channel IDs)
+- scripts/
+  - run-pipeline.mjs — ✅ ACTIVE: deterministic pipeline v2 (fetch in code → LLM interprets → code assembles)
+  - run-loop.mjs — ⚠️ DEPRECATED: old gateway-backed LLM orchestrator (kept for rollback only)
+  - dump-channels.mjs — utility to list Discord channels
+  - lib/
+    - fetch-messages.mjs — deterministic Discord message fetcher (7-day window + team chat mentions)
+    - analyze-client.mjs — LLM module: pre-fetched messages → validated ClientState JSON
+    - assemble-report.mjs — deterministic formatter: ClientState[] → sweep.md markdown
+- tests/
+  - ground-truth.json — regression fixtures (pattern examples → narrative/next)
+  - run-tests.mjs — executes summarize/generator against fixtures
+- training/
+  - single-client-sweep.md — per-client sweep reference (process, output format, enrichment rules)
+  - progress.json — human ledger of reinforced clients (informational)
+  - CHANGELOG.md — narrative/rule updates with timestamps (source-of-learning log)
+- outputs/YYYY-MM-DD/
+  - sweep.md — final rendered report
+  - raw/{client}.json — raw message snapshot (audit trail)
+  - raw/{client}-state.json — validated ClientState JSON (audit trail)

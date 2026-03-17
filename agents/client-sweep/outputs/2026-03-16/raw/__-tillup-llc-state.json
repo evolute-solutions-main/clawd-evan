@@ -1,0 +1,14 @@
+{
+  "clientName": "🪑-tillup-llc",
+  "context": [
+    "Lead form was updated to require full street address; future leads will include addresses.",
+    "Client met with a lead and asked about sending estimates; Max clarified that post-meeting follow-up is on the client's side."
+  ],
+  "status": "Campaign is running and generating in-person appointments. The address field issue on the lead form has been resolved. Client had a successful meeting with a lead and was guided on the estimate process. No open issues remain.",
+  "next": "Max → light check-in to ask how the estimate went and whether the client closed the deal, reinforcing value of the campaign.",
+  "teamChatter": null,
+  "risk": null,
+  "urgencyScore": 3,
+  "needsManualReview": false,
+  "reviewNote": null
+}

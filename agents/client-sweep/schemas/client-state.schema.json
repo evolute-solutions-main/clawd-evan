@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ClientState",
+  "description": "Structured LLM analysis output for a single client sweep. All properties required; nullable fields use anyOf with null.",
+  "type": "object",
+  "properties": {
+    "clientName": {
+      "type": "string",
+      "description": "Client Discord channel name, exactly as provided"
+    },
+    "context": {
+      "type": "array",
+      "description": "1-2 short bullets summarising the most recent relevant facts (current state only; omit resolved items)",
+      "items": { "type": "string" }
+    },
+    "status": {
+      "type": "string",
+      "description": "Short narrative sentence(s) describing the current situation — NOT an enum or label"
+    },
+    "next": {
+      "type": "string",
+      "description": "Owner → concrete action(s). Must name a real person and a specific task."
+    },
+    "teamChatter": {
+      "anyOf": [{ "type": "string" }, { "type": "null" }],
+      "description": "Brief note on relevant team chat mentions if they affect current state, otherwise null"
+    },
+    "risk": {
+      "anyOf": [{ "type": "string" }, { "type": "null" }],
+      "description": "Brief risk note (churn, escalation, access loss) if genuinely present, otherwise null"
+    },
+    "urgencyScore": {
+      "type": "integer",
+      "enum": [0, 1, 2, 3],
+      "description": "0=urgent/blocked/complaint/cancellation, 1=awaiting/follow-up-needed, 2=active/minor-open-items, 3=stable/light-checkin-only"
+    },
+    "needsManualReview": {
+      "type": "boolean",
+      "description": "True if situation was unclear after reading all messages and a human should verify"
+    },
+    "reviewNote": {
+      "anyOf": [{ "type": "string" }, { "type": "null" }],
+      "description": "Explanation of what is unclear, required when needsManualReview is true, otherwise null"
+    }
+  },
+  "required": [
+    "clientName",
+    "context",
+    "status",
+    "next",
+    "teamChatter",
+    "risk",
+    "urgencyScore",
+    "needsManualReview",
+    "reviewNote"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,14 @@
+{
+  "clientName": "🅱️-braymiller-builders",
+  "context": [
+    "No messages in the client channel over the last 7 days.",
+    "Current campaign status and client engagement level are unknown."
+  ],
+  "status": "No activity has occurred in the channel for at least 7 days. It is unclear whether campaigns are running, paused, or if the client relationship is still active.",
+  "next": "<UNKNOWN> → Reach out to Braymiller Builders with a light check-in to confirm campaign status, verify ads are running as expected, and ensure no outstanding issues.",
+  "teamChatter": null,
+  "risk": "Prolonged silence with no channel activity could indicate disengagement or churn risk; a proactive check-in is warranted.",
+  "urgencyScore": 1,
+  "needsManualReview": true,
+  "reviewNote": "No messages found in the last 7 days. Unable to determine whether campaigns are active, paused, or if the client is still engaged. A team member should verify account status and reach out."
+}

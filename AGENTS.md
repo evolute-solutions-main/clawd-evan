@@ -13,6 +13,17 @@ Before doing anything else:
 2. Read `USER.md` — this is who you're helping
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+5. Load shared task state (channel-agnostic):
+   - Use the state helpers at agents/_shared/state/index.mjs
+   - Example: loadState('sweep-train') from state/session/sweep-train.json
+   - Always write via saveState() (atomic) and appendEvent() for audit at state/events/<task>.jsonl
+
+### Messaging Policy (global)
+- All sends MUST use the allowlist/denylist gate at agents/_shared/messaging/send.mjs
+- Allow POST: server 1475336170048065538, channel 1475336170916544524 (links-only by convention)
+- READ-ONLY: server 1164939432722440282 — never post
+- Do not post anywhere else
+
 
 ## ⚠️ CRITICAL: Never Claim an Integration Doesn't Exist
 
@@ -218,7 +229,21 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
 
+## Global Chat History (channel-agnostic)
+- All instances MUST append every significant inbound/outbound message to: state/chats/global.jsonl
+- Use helpers in agents/_shared/chat/index.mjs:
+  - appendInbound({ surface, guildId, channelId, threadId, messageId, author, role, text, meta })
+  - appendOutbound({ surface, guildId, channelId, threadId, messageId, text, meta })
+- Do this for Discord, webchat, CLI — same log for all surfaces
+
 ## Routing Rules (Operational)
+
+- Client Sweep:
+  - Intent trigger phrases: "run a client sweep", "run client sweep", "do the client sweep", "run the sweep", "client sweep for [date]", natural English like "run today's sweep" or "sweep the clients".
+  - Action: Execute `node /Users/max/clawd/agents/client-sweep/scripts/run-pipeline.mjs` as a shell command. Do NOT attempt to do the sweep inline as an LLM agent. The script handles all steps: Discord fetch → LLM analysis → report assembly → Notion publish.
+  - Optional flags: `--skip-notion` (skip Notion publish), `--client <name>` (single client), `--dry-run` (list clients without running).
+  - Output: agents/client-sweep/outputs/YYYY-MM-DD/sweep.md
+  - SOP: agents/client-sweep/SOP.md
 
 - Cold SMS Appointment Reports:
   - Intent trigger phrases: "cold sms report", "cold sms appointment report", "outbound sms report", natural English like "make the cold sms report for <date>" or "give me cold sms report for <date>".

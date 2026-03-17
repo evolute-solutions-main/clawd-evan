@@ -1,0 +1,25 @@
+{
+  "asOf": "2026-03-13T19:51:00Z",
+  "completed": [
+    {"client": "Satin Touch", "status": "Onboarding; waiting on lead list/spreadsheet", "next": "Get spreadsheet"},
+    {"client": "Lone Star", "status": "Launched/recently live", "next": "Verify setup + follow up on leads"},
+    {"client": "Four Seasons", "status": "Onboarding; CRM/login confirmation pending", "next": "Confirm login then launch"},
+    {"client": "Velento", "status": "Launched; pending client deliverable", "next": "Follow up on client info"},
+    {"client": "JJ Remodeling", "status": "Launch-ready", "next": "Turn campaigns on"},
+    {"client": "Prestige Home Remodeling", "status": "Launch-ready but missing assets", "next": "Collect requested pictures/videos; then relaunch updated creative."},
+    {"client": "The Redwood Exotics", "status": "Launched/recently live", "next": "Verify launch setup quality and follow up on lead handling over next few days."},
+    {"client": "Be-Decking and Construction", "status": "Launch-ready; outcomes requested", "next": "Follow up for lead report/outcomes and confirm handling process."},
+    {"client": "The Perfectionist Construction", "status": "CRM/login confirmation pending", "next": "Confirm CRM login completed; then launch/turn everything on."},
+    {"client": "MIBH Construction", "status": "Launched; CRM/login follow-up", "next": "Confirm CRM login is set up and everything is clear; monitor leads and support."},
+    {"client": "FLH Services", "status": "Payment method issue blocking launch", "next": "Schedule a call and resolve Meta payment linking."},
+    {"client": "Innavik", "status": "Launched; awaiting outcomes", "next": "Follow up for lead report/outcomes and confirm handling process."},
+    {"client": "Interior Redesign LLC", "status": "Needs response", "next": "Acknowledge concerns, outline fixes (incl. campaign adjustments), and reply now."},
+    {"client": "American Designer Homes", "status": "Needs response", "next": "Acknowledge concerns, outline fixes (incl. campaign adjustments), and reply now."},
+    {"client": "Tillup LLC", "status": "Launched (ongoing)", "next": "Light check-in on outcomes later this week (not urgent)."},
+    {"client": "STP Floors", "status": "Launched; CRM/login follow-up", "next": "Confirm CRM login is set up and everything is clear; monitor leads and support."}
+  ],
+  "tests": {"passed": 18, "failing": []},
+  "nextUp": [
+    {"client": "Braymiller Builders", "id": "braymiller"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "clientName": "🪵-stp-floors",
+  "context": [
+    "Ads have been paused; Davi requested a detailed lead-by-lead breakdown of 28 leads before reactivating campaigns — Stephen has not yet provided this.",
+    "Stephen confirmed the new sales guy is good and asked for CRM access to be resent; Davi resent the access on 3/11."
+  ],
+  "status": "Ads remain paused. Davi resent CRM access for the new sales guy on 3/11, but Stephen still has not provided the detailed lead performance breakdown Davi needs before reactivating campaigns. Stephen mentioned working 16-hour days on a stadium job, explaining delayed responses.",
+  "next": "Davi → Follow up with Stephen to confirm the new sales guy received CRM access, and re-request the lead-by-lead breakdown of the 28 leads so campaigns can be turned back on.",
+  "teamChatter": null,
+  "risk": "Ads paused with no clear reactivation date; client is extremely busy with outside work and slow to respond — risk of extended pause drifting toward churn.",
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}

@@ -1,0 +1,34 @@
+{
+  "client": {
+    "name": "🟧-prestige-home-remodeling",
+    "channelId": "1471221296330178802",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1480933115236192398",
+      "channelId": "1471221296330178802",
+      "author": "max.hastings",
+      "content": "<@1471187036064059586> hope you had a nice weekend, can you please provide those pics? Also have you gotten a chance to check this out ^ ?",
+      "tsUtc": "2026-03-10T14:19:29.079000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1471221296330178802/1480933115236192398"
+    },
+    {
+      "id": "1480971592262746195",
+      "channelId": "1471221296330178802",
+      "author": "mike_318564",
+      "content": "Hi Max.  We're going to try to get togethr on Thursday to shoot the photos.",
+      "tsUtc": "2026-03-10T16:52:22.717000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1471221296330178802/1480971592262746195"
+    },
+    {
+      "id": "1480971806989877288",
+      "channelId": "1471221296330178802",
+      "author": "davi_dinicio",
+      "content": "Thanks Mike!",
+      "tsUtc": "2026-03-10T16:53:13.912000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1471221296330178802/1480971806989877288"
+    }
+  ],
+  "fetchedAt": "2026-03-16T16:22:06.570Z"
+}

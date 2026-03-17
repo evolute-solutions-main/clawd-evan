@@ -1,0 +1,14 @@
+{
+  "clientName": "🍕-velento-electric-company",
+  "context": [
+    "Client (Nick) reported on Mar 16 that he's receiving a large number of hiring inquiries from a new Facebook ad — implies the ad may be targeting the wrong audience or has wrong messaging.",
+    "Nick was previously asked (Mar 9) to send a breakdown of leads that turned into estimates; unclear if this was ever provided."
+  ],
+  "status": "Nick messaged on Mar 16 asking to see the new Facebook ad, reporting he's getting a \"tremendous amount\" of hiring inquiries rather than customer leads — suggesting the ad creative or targeting is misdirected. This message has not yet received a response from the team. The earlier lead-quality breakdown Nick promised has not visibly been delivered either.",
+  "next": "Davi → respond to Nick immediately: share the current Facebook ad creative, investigate why the ad is generating hiring inquiries instead of customer leads, and adjust targeting/copy as needed. Also follow up on whether Nick can still provide the lead-to-estimate breakdown.",
+  "teamChatter": null,
+  "risk": "Client is frustrated with lead quality (junk/hiring inquiries instead of real leads) — if the ad issue isn't resolved quickly this could become a churn signal.",
+  "urgencyScore": 0,
+  "needsManualReview": false,
+  "reviewNote": null
+}

@@ -8,7 +8,7 @@ This index maps the three independent daily outputs and their single sources of 
 - Employee Breakdowns → sops/employee-breakdown.md, sops/davi-breakdown-sop.md, sops/bilal-breakdown-sop.md
 
 ## Implementation Notes
-- Client Sweep canonical compute: workflows/clients/clientSweepDaily.mjs (renders SOP-conformant per‑client blocks)
+- Client Sweep canonical compute: `node agents/client-sweep/scripts/run-pipeline.mjs` — deterministic pipeline (fetches Discord messages in code, LLM interprets, code assembles report). SOP: agents/client-sweep/SOP.md
 - Appointments: see sops/appointments-kpi-sop.md for logic and sops/appointment-setting-daily-report.md for output format
 - Employees (Davi/Bilal): sops/employee-breakdown.md shared structure + person‑specific SOPs
 

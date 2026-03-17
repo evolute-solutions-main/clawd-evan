@@ -1,0 +1,14 @@
+{
+  "clientName": "🌭-flh-services",
+  "context": [
+    "Meta payment error unresolved — ticket submitted but no update; Glenn's bank says charges are passing ($0.00 pings) so issue appears to be on Meta's side.",
+    "Glenn offered availability for a call (Mar 15, said he's free all day Mar 16 due to rain) — no confirmation or scheduled time from Davi yet."
+  ],
+  "status": "Glenn is a new client still in onboarding. A Meta payment error is blocking ad launch (ticket submitted, no resolution yet). Photos and app integration are still outstanding. Glenn offered to be available all day Mar 16, but Davi has not yet confirmed a call time.",
+  "next": "Davi → immediately confirm a specific call time with Glenn for Mar 16 (or ASAP) to complete app integration, collect photos, and check on the Meta payment ticket status.",
+  "teamChatter": null,
+  "risk": "Glenn is unfamiliar with Discord and has expressed confusion multiple times; slow follow-up could erode trust with a client who is already struggling with the onboarding process.",
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}
