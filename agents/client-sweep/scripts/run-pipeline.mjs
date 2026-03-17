@@ -119,8 +119,43 @@ async function processClient({ client, rawDir }) {
     JSON.stringify({ client, clientMessages, fetchedAt: new Date().toISOString() }, null, 2)
   )
 
-  // [LLM] Analyze → structured ClientState JSON (validated against schema)
-  const state = await analyzeClient({ client, clientMessages })
+  let state
+
+  if (clientMessages.length === 0) {
+    // Sparse client path (code-first): look back another 7 days and synthesize a minimal block
+    const extendedWindow = WINDOW_DAYS + 7
+    const { clientMessages: extended } = await fetchClientMessages({
+      clientChannelId: client.channelId,
+      clientName:      client.name,
+      guildId:         DISCORD.guildId,
+      windowDays:      extendedWindow,
+      repoRoot:        REPO_ROOT
+    })
+
+    const last = extended[extended.length - 1]
+    const todayIso = new Date().toISOString().slice(0, 10)
+    const cutoffIso = new Date(Date.now() - WINDOW_DAYS * 24 * 60 * 60 * 1000).toISOString().slice(0, 10)
+
+    // Build a deterministic minimal ClientState without LLM
+    state = {
+      clientName: client.name,
+      context: [
+        `No Discord activity in the last ${WINDOW_DAYS} days (since ${cutoffIso}).`,
+        last ? `Last activity on ${last.tsUtc.slice(0,10)} by ${last.author}.` : `No historical messages found in the past ${extendedWindow} days.`
+      ].slice(0, 2),
+      status: last
+        ? `Inactive window. Last touch was ${last.tsUtc.slice(0,10)}; recommend confirming status and next steps.`
+        : `Inactive window with no retrievable context in ${extendedWindow} days.`,
+      next: `Max → Light check-in with client to confirm status and re-open the loop if needed.`,
+      teamChatter: null,
+      risk: last ? null : 'Potential churn/inactivity risk — no recent activity.',
+      urgencyScore: 3,
+      needsManualReview: false
+    }
+  } else {
+    // [LLM] Analyze → structured ClientState JSON (validated against schema)
+    state = await analyzeClient({ client, clientMessages })
+  }
 
   // [Code] Save state snapshot for audit
   fs.writeFileSync(
