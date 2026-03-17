@@ -1,0 +1,14 @@
+{
+  "clientName": "⭐-lone-star",
+  "context": [
+    "Client experiencing issues with Google Calendar integration and declined Facebook transaction.",
+    "Scheduled onboarding call and screen-share for March 17th at 9am to resolve issues."
+  ],
+  "status": "The client is facing issues with calendar integration and declined transactions for Facebook Ads. A screen-share session is scheduled to resolve these issues.",
+  "next": "Davi → Conduct the screen-share session with the client to resolve calendar and payment issues.",
+  "teamChatter": null,
+  "risk": "Potential risk of campaign disruption due to payment issues.",
+  "urgencyScore": 0,
+  "needsManualReview": false,
+  "reviewNote": null
+}

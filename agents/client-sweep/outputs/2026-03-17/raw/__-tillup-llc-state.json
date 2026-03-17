@@ -1,0 +1,14 @@
+{
+  "clientName": "🪑-tillup-llc",
+  "context": [
+    "Client asked about sending an estimate to a customer.",
+    "Forms were updated to include customer addresses for future leads."
+  ],
+  "status": "Tillup LLC is preparing to send an estimate to a customer after a meeting, and they have been informed that future leads will include addresses.",
+  "next": "Max → Follow up with Tillup LLC to ensure they have successfully sent the estimate and address any further questions.",
+  "teamChatter": null,
+  "risk": null,
+  "urgencyScore": 2,
+  "needsManualReview": false,
+  "reviewNote": null
+}

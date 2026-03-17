@@ -1,0 +1,14 @@
+{
+  "clientName": "🤖-mibh-construction",
+  "context": [
+    "The ad campaign has been launched and the client has been provided with login credentials for the CRM software.",
+    "The client has not yet confirmed access to the CRM and is inquiring about managing multiple usernames."
+  ],
+  "status": "The ad campaign is live, but the client has not confirmed access to the CRM software, which is essential for managing leads. The client is also seeking guidance on connecting multiple usernames to the app.",
+  "next": "Davi → Follow up with Moshe to confirm access to the CRM and provide assistance on connecting multiple usernames.",
+  "teamChatter": null,
+  "risk": "Potential risk of client dissatisfaction if CRM access issues are not resolved promptly.",
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}

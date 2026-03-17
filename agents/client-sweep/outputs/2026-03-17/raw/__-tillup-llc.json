@@ -1,0 +1,90 @@
+{
+  "client": {
+    "name": "🪑-tillup-llc",
+    "channelId": "1469355379166019760",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1481048319114612861",
+      "channelId": "1469355379166019760",
+      "author": "tillup15322",
+      "content": "DAVID hello!",
+      "tsUtc": "2026-03-10T21:57:15.824000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1469355379166019760/1481048319114612861"
+    },
+    {
+      "id": "1481048478535913482",
+      "channelId": "1469355379166019760",
+      "author": "tillup15322",
+      "content": "How to send the estimate to the costumer?",
+      "tsUtc": "2026-03-10T21:57:53.833000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1469355379166019760/1481048478535913482"
+    },
+    {
+      "id": "1481048559515205794",
+      "channelId": "1469355379166019760",
+      "author": "max.hastings",
+      "content": "Hi, nice to hear you are sending an estimate! How did the meeting go?",
+      "tsUtc": "2026-03-10T21:58:13.140000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1469355379166019760/1481048559515205794"
+    },
+    {
+      "id": "1481048728440668232",
+      "channelId": "1469355379166019760",
+      "author": "tillup15322",
+      "content": "good but we still needing the address of the cotumer",
+      "tsUtc": "2026-03-10T21:58:53.415000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1469355379166019760/1481048728440668232"
+    },
+    {
+      "id": "1481048736363712523",
+      "channelId": "1469355379166019760",
+      "author": "max.hastings",
+      "content": "After you meet with the customer, we recommend you send estimates however you normally do. After you meet with them in person, we recommend you take it out of our systems, because the main goal of what we built is to get you meeting with people - after you meet with them it’s on you",
+      "tsUtc": "2026-03-10T21:58:55.304000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1469355379166019760/1481048736363712523"
+    },
+    {
+      "id": "1481048836163240197",
+      "channelId": "1469355379166019760",
+      "author": "max.hastings",
+      "content": "We updated the forms today so all future leads will have addresses",
+      "tsUtc": "2026-03-10T21:59:19.098000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1469355379166019760/1481048836163240197"
+    },
+    {
+      "id": "1481048898007994408",
+      "channelId": "1469355379166019760",
+      "author": "tillup15322",
+      "content": "ok thanks i will do it",
+      "tsUtc": "2026-03-10T21:59:33.843000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1469355379166019760/1481048898007994408"
+    },
+    {
+      "id": "1481048921160683752",
+      "channelId": "1469355379166019760",
+      "author": "max.hastings",
+      "content": "Good luck 🤙🤙",
+      "tsUtc": "2026-03-10T21:59:39.363000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1469355379166019760/1481048921160683752"
+    },
+    {
+      "id": "1481048946699669524",
+      "channelId": "1469355379166019760",
+      "author": "max.hastings",
+      "content": "How much is the estimate for?",
+      "tsUtc": "2026-03-10T21:59:45.452000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1469355379166019760/1481048946699669524"
+    },
+    {
+      "id": "1481048976441737256",
+      "channelId": "1469355379166019760",
+      "author": "tillup15322",
+      "content": "thanks",
+      "tsUtc": "2026-03-10T21:59:52.543000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1469355379166019760/1481048976441737256"
+    }
+  ],
+  "fetchedAt": "2026-03-17T13:44:57.908Z"
+}

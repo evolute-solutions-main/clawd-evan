@@ -1,0 +1,58 @@
+{
+  "client": {
+    "name": "🐝-be-decking-and-construction",
+    "channelId": "1394239403366285382",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1480970342074945597",
+      "channelId": "1394239403366285382",
+      "author": "davi_dinicio",
+      "content": "<@1392579058499326065> Morning",
+      "tsUtc": "2026-03-10T16:47:24.649000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1394239403366285382/1480970342074945597"
+    },
+    {
+      "id": "1480996414367465645",
+      "channelId": "1394239403366285382",
+      "author": "bedeckkings",
+      "content": "David, I was in the field yesterday all day. I will update everything now on the site. Also the calendar is working fine.",
+      "tsUtc": "2026-03-10T18:31:00.768000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1394239403366285382/1480996414367465645"
+    },
+    {
+      "id": "1480996771428565123",
+      "channelId": "1394239403366285382",
+      "author": "davi_dinicio",
+      "content": "Thanks",
+      "tsUtc": "2026-03-10T18:32:25.898000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1394239403366285382/1480996771428565123"
+    },
+    {
+      "id": "1481002600718532711",
+      "channelId": "1394239403366285382",
+      "author": "bedeckkings",
+      "content": "Everything is updated on my end",
+      "tsUtc": "2026-03-10T18:55:35.709000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1394239403366285382/1481002600718532711"
+    },
+    {
+      "id": "1481324371841777936",
+      "channelId": "1394239403366285382",
+      "author": "davi_dinicio",
+      "content": "Thanks <@1392579058499326065> !",
+      "tsUtc": "2026-03-11T16:14:11.923000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1394239403366285382/1481324371841777936"
+    },
+    {
+      "id": "1481326512077803764",
+      "channelId": "1394239403366285382",
+      "author": "bedeckkings",
+      "content": "No problem! Hopefully this nice weather we are having will get people thinking about the outdoor projects. That’s usually what happens.",
+      "tsUtc": "2026-03-11T16:22:42.195000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1394239403366285382/1481326512077803764"
+    }
+  ],
+  "fetchedAt": "2026-03-17T13:44:51.921Z"
+}

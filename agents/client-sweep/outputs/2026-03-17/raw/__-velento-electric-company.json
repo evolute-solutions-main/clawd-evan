@@ -1,0 +1,26 @@
+{
+  "client": {
+    "name": "🍕-velento-electric-company",
+    "channelId": "1440010670232834118",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1480973576801747064",
+      "channelId": "1440010670232834118",
+      "author": "davi_dinicio",
+      "content": "Thanks <@1438984878107529248>",
+      "tsUtc": "2026-03-10T17:00:15.868000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1440010670232834118/1480973576801747064"
+    },
+    {
+      "id": "1483133287810465942",
+      "channelId": "1440010670232834118",
+      "author": "nick_73256",
+      "content": "Can you please show me the new ad you guys put out on Facebook.  Im getting a tremendous amount of inquires for hiring",
+      "tsUtc": "2026-03-16T16:02:11.098000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1440010670232834118/1483133287810465942"
+    }
+  ],
+  "fetchedAt": "2026-03-17T13:44:55.427Z"
+}

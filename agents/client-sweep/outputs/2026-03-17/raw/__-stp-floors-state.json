@@ -1,0 +1,14 @@
+{
+  "clientName": "🪵-stp-floors",
+  "context": [
+    "Stephen requested a resend of CRM access email for a team member.",
+    "Davi confirmed the email was resent."
+  ],
+  "status": "The CRM access email has been resent to the specified team member, resolving the access issue.",
+  "next": "Davi \u00192 Confirm with Stephen that the team member has successfully accessed the CRM.",
+  "teamChatter": null,
+  "risk": null,
+  "urgencyScore": 3,
+  "needsManualReview": false,
+  "reviewNote": null
+}

@@ -1,0 +1,14 @@
+{
+  "clientName": "🌭-flh-services",
+  "context": [
+    "Glenn is experiencing error codes related to Meta payments, and there is an ongoing issue with his Facebook profile.",
+    "David proposed hosting everything from their end to bypass restrictions, and Glenn agreed to proceed this way."
+  ],
+  "status": "Glenn is facing issues with Meta payment error codes and Facebook profile setup. David is working on a workaround by hosting the campaign from their end to avoid these issues.",
+  "next": "David → Follow up with Glenn to finalize the setup from their end and ensure the campaign can be launched without further delays.",
+  "teamChatter": null,
+  "risk": "There is a risk of delay in campaign launch due to ongoing technical issues with Meta and Facebook profile setup.",
+  "urgencyScore": 0,
+  "needsManualReview": false,
+  "reviewNote": null
+}

@@ -1,0 +1,14 @@
+{
+  "clientName": "🟧-prestige-home-remodeling",
+  "context": [
+    "Client planned to take photos on Thursday but no confirmation of completion yet.",
+    "Davi requested an update on the photos."
+  ],
+  "status": "The team is waiting for the client to provide photos that were supposed to be taken last Thursday. There is no confirmation yet if the photos have been taken or shared.",
+  "next": "Max → Follow up with Mike to confirm if the photos were taken and request them if available.",
+  "teamChatter": null,
+  "risk": null,
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}
