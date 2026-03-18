@@ -36,7 +36,7 @@
 - (Optional) human-readable recap: `memory/travel/summary_2021_2026.md`
 
 ## Evolute operating context
-- Daily Client Sweep is scheduled via Gateway Cron for **07:00 America/Bogota**, posting to Discord channel `1475336170916544524` (#general).
+- Daily Client Sweep is scheduled via Gateway Cron for **06:00 America/Sao_Paulo**, posting to Discord channel `1475336170916544524` (#general).
 - Git autosync cron runs **every 30 minutes** and only commits when changes are “significant” (currently heuristic-based: >=3 files or >=30 lines).
 - See `memory/Evolute Solutions memory.md` (source of truth for Evolute business context, clients, ops, and checklists).
 

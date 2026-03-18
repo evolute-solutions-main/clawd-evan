@@ -5,7 +5,7 @@
 - **Name:** Max
 - **What to call them:** Max
 - **Pronouns:** he/him
-- **Timezone:** America/Bogota
+- **Timezone:** America/Sao_Paulo
 - **Notes:** 
 - **Signature emoji:** 👁️
 
