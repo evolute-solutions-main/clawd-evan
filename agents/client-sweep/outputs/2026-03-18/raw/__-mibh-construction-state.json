@@ -1,14 +1,14 @@
 {
   "clientName": "🤖-mibh-construction",
   "context": [
-    "The client launched their campaign and has access to GoHighLevel as of March 12.",
-    "Ads were paused to finalize an automation but are now live again as of March 17."
+    "The client has launched and needs assistance with GoHighLevel access and setup.",
+    "Ads were paused to finalize automation but are now live again."
   ],
-  "status": "The client is currently live with their ad campaign after a brief pause to finalize automation. They are seeking confirmation on lead reception and have requested a Zoom call to discuss leads.",
-  "next": "Max → Confirm with Moshe that he received the leads and schedule a Zoom call to discuss any questions or concerns.",
+  "status": "Moshe Baruh is seeking leads and requested a Zoom call for further assistance. Max Hastings confirmed that ads are live again after a brief pause to finalize automation.",
+  "next": "Max → Schedule a Zoom call with Moshe to address his questions and ensure he is receiving leads as expected.",
   "teamChatter": null,
   "risk": null,
-  "urgencyScore": 2,
+  "urgencyScore": 1,
   "needsManualReview": false,
   "reviewNote": null
 }

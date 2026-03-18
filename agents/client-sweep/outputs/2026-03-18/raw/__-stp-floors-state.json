@@ -3,8 +3,8 @@
   "context": [
     "Access was resent to Stephen's email."
   ],
-  "status": "Stephen has received the resent access, and there are no further issues reported.",
-  "next": "Davi → Confirm with Stephen that he has successfully accessed the necessary resources and if any further assistance is needed.",
+  "status": "Stephen has received the resent access email, and there are no further issues reported at this time.",
+  "next": "Davi → Confirm with Stephen that he has successfully accessed the necessary resources and offer assistance if needed.",
   "teamChatter": null,
   "risk": null,
   "urgencyScore": 3,

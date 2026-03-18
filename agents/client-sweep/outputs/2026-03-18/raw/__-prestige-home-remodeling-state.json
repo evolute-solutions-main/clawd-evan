@@ -1,12 +1,12 @@
 {
   "clientName": "🟧-prestige-home-remodeling",
   "context": [
-    "Client asked for updates on March 16, 2026."
+    "Client requested an update on March 16."
   ],
-  "status": "The client is awaiting an update from the team as of March 16, 2026.",
-  "next": "Davi → Provide the client with the latest updates on their campaign.",
+  "status": "The client is awaiting an update from the team as they have requested information and have not yet received a response.",
+  "next": "Davi → Provide the requested update to the client as soon as possible.",
   "teamChatter": null,
-  "risk": null,
+  "risk": "There is a risk of dissatisfaction due to the lack of response to the client's request for an update.",
   "urgencyScore": 1,
   "needsManualReview": false,
   "reviewNote": null

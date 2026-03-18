@@ -1,13 +1,13 @@
 {
   "clientName": "🌭-flh-services",
   "context": [
-    "Glenn is experiencing payment error codes with Meta, and the team has submitted a ticket to resolve it.",
-    "The team plans to use their own ad accounts to bypass the issue and may need Glenn's credit card information for the new setup."
+    "Glenn is experiencing issues with Meta payment error codes, and the team is setting up ads using their own accounts to bypass restrictions.",
+    "Glenn and David have been coordinating to resolve the issue, including a remote session attempt via AnyDesk."
   ],
-  "status": "The team is working to resolve payment issues with Meta by using their own ad accounts for Glenn's campaigns. They are coordinating with Glenn to finalize setup and may need his credit card information soon.",
-  "next": "Max → Coordinate with Glenn to obtain credit card information and finalize the ad account setup.",
+  "status": "The team is working on setting up the ad campaign using their own accounts due to ongoing issues with Glenn's Facebook profile. They plan to launch soon and may need Glenn's credit card information for the ad account.",
+  "next": "Max → Follow up with Glenn to obtain credit card information and confirm the ad account setup.",
   "teamChatter": null,
-  "risk": "Potential risk of delay in campaign launch due to unresolved payment issues with Meta.",
+  "risk": null,
   "urgencyScore": 1,
   "needsManualReview": false,
   "reviewNote": null

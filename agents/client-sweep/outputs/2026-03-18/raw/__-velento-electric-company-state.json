@@ -1,11 +1,11 @@
 {
   "clientName": "🍕-velento-electric-company",
   "context": [
-    "Nick requested to see the new Facebook ad.",
-    "Nick inquired about the contract duration, noting it started in November and is nearing completion."
+    "Client is receiving a high volume of hiring inquiries from the new Facebook ad.",
+    "Client's 4-month package started in November and is nearing completion."
   ],
-  "status": "Nick is awaiting a response regarding the new Facebook ad and confirmation on the contract duration.",
-  "next": "Alex → Provide Nick with the new Facebook ad details and confirm the contract end date.",
+  "status": "Nick is requesting to see the new Facebook ad and is inquiring about the status of their contract as it is nearing its end.",
+  "next": "Account Manager → Confirm the end date of the current contract and provide Nick with the new Facebook ad details.",
   "teamChatter": null,
   "risk": null,
   "urgencyScore": 1,

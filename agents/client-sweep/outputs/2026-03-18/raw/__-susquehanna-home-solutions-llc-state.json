@@ -1,13 +1,13 @@
 {
   "clientName": "🪶-susquehanna-home-solutions-llc",
   "context": [
-    "Campaigns were reactivated on March 17, 2026.",
-    "Client experienced a security issue with their Facebook account, which was resolved by Max Hastings."
+    "Ernie experienced a security breach in his Facebook account due to a phishing attempt.",
+    "Max assisted Ernie in regaining control and securing the account."
   ],
-  "status": "The client's ad campaigns are running again, and a recent security issue with their Facebook account was addressed and resolved by Max Hastings.",
-  "next": "Max Hastings → Follow up with Ernie to ensure no further security issues and confirm all account settings are correct.",
+  "status": "Ernie's Facebook account was compromised, but Max helped him regain access and secure it by removing unauthorized changes. The situation is now under control.",
+  "next": "Max → Follow up with Ernie to ensure no further unauthorized access attempts occur and confirm everything is functioning correctly.",
   "teamChatter": null,
-  "risk": null,
+  "risk": "Potential risk of future phishing attempts if security practices are not improved.",
   "urgencyScore": 2,
   "needsManualReview": false,
   "reviewNote": null

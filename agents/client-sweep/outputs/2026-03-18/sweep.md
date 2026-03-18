@@ -1,66 +1,74 @@
 ## ⭐-lone-star
 - **Context (recent):**
-  - Client experiencing issues with Google Calendar sync and Facebook Ads Manager access.
-  - Payment issues with declined transactions on cards 3747 and 8860; client requested not to use card 8860.
-- **Status:** The client is facing technical issues with calendar synchronization and ads manager access, and there are unresolved payment issues with declined transactions. A screen-share session is scheduled to resolve these issues.
-- **Next:** Davi → Conduct the scheduled screen-share session with the client to resolve calendar and ads manager access issues, and confirm the payment method to use for transactions.
+  - Client is experiencing issues with Google Calendar integration and Facebook Ads Manager access.
+  - Payment issues with declined transactions on specific cards; client prefers not to use card ending in 8860.
+- **Status:** The client is facing technical issues with calendar integration and ads manager access, and there are unresolved payment issues with declined transactions. A screen-share session was planned to resolve these issues, but it seems there was a missed connection for the scheduled call.
+- **Next:** Davi → Follow up with the client to reschedule the screen-share session to resolve the calendar and ads manager issues, and confirm the payment method to use.
 - **Risk:** Potential risk of dissatisfaction due to unresolved technical and payment issues.
-
-## 👌🏻-the-perfectionist-construction
-- **Context (recent):**
-  - Davi acknowledged the client's success in securing a definite yes despite cancellations.
-  - Davi proposed a call to review numbers and optimize the campaign.
-- **Status:** Davi is looking to optimize the campaign further by scheduling a call to review the current numbers and discuss potential improvements.
-- **Next:** Davi → Schedule a call with the client to review campaign performance and discuss optimization strategies.
 
 ## 🍕-velento-electric-company
 - **Context (recent):**
-  - Nick requested to see the new Facebook ad.
-  - Nick inquired about the contract duration, noting it started in November and is nearing completion.
-- **Status:** Nick is awaiting a response regarding the new Facebook ad and confirmation on the contract duration.
-- **Next:** Alex → Provide Nick with the new Facebook ad details and confirm the contract end date.
+  - Client is receiving a high volume of hiring inquiries from the new Facebook ad.
+  - Client's 4-month package started in November and is nearing completion.
+- **Status:** Nick is requesting to see the new Facebook ad and is inquiring about the status of their contract as it is nearing its end.
+- **Next:** Account Manager → Confirm the end date of the current contract and provide Nick with the new Facebook ad details.
 
 ## 🟧-prestige-home-remodeling
 - **Context (recent):**
-  - Client asked for updates on March 16, 2026.
-- **Status:** The client is awaiting an update from the team as of March 16, 2026.
-- **Next:** Davi → Provide the client with the latest updates on their campaign.
-
-## 🌭-flh-services
-- **Context (recent):**
-  - Glenn is experiencing payment error codes with Meta, and the team has submitted a ticket to resolve it.
-  - The team plans to use their own ad accounts to bypass the issue and may need Glenn's credit card information for the new setup.
-- **Status:** The team is working to resolve payment issues with Meta by using their own ad accounts for Glenn's campaigns. They are coordinating with Glenn to finalize setup and may need his credit card information soon.
-- **Next:** Max → Coordinate with Glenn to obtain credit card information and finalize the ad account setup.
-- **Risk:** Potential risk of delay in campaign launch due to unresolved payment issues with Meta.
-
-## 🪶-susquehanna-home-solutions-llc
-- **Context (recent):**
-  - Campaigns were reactivated on March 17, 2026.
-  - Client experienced a security issue with their Facebook account, which was resolved by Max Hastings.
-- **Status:** The client's ad campaigns are running again, and a recent security issue with their Facebook account was addressed and resolved by Max Hastings.
-- **Next:** Max Hastings → Follow up with Ernie to ensure no further security issues and confirm all account settings are correct.
-
-## 🍂-four-seasons-design-build
-- **Context (recent):**
-  - Kenneth had login issues with the CRM and a bank issue with Meta charges, both resolved.
-  - Leads are now coming through, but Kenneth needs a call to discuss important matters.
-- **Status:** Kenneth has resolved the login and bank issues, and the campaign is running with leads coming in. He has requested a call with Max to discuss important matters that are easier to handle over the phone.
-- **Next:** Max → Call Kenneth to discuss his important questions and ensure he is comfortable with the lead process.
-
-## 🚬-az-remodeling-and-rooter-llc
-- **Context (recent):**
-  - Phil mentioned needing to find out information from Alex.
-  - Phil confirmed they are ready on March 16.
-- **Status:** Phil is ready to proceed with the campaign but was waiting for information from Alex earlier in the week.
-- **Next:** Phil → Confirm with Alex that all necessary information has been gathered and communicate readiness to the team.
+  - Client requested an update on March 16.
+- **Status:** The client is awaiting an update from the team as they have requested information and have not yet received a response.
+- **Next:** Davi → Provide the requested update to the client as soon as possible.
+- **Risk:** There is a risk of dissatisfaction due to the lack of response to the client's request for an update.
 
 ## 🤖-mibh-construction
 - **Context (recent):**
-  - The client launched their campaign and has access to GoHighLevel as of March 12.
-  - Ads were paused to finalize an automation but are now live again as of March 17.
-- **Status:** The client is currently live with their ad campaign after a brief pause to finalize automation. They are seeking confirmation on lead reception and have requested a Zoom call to discuss leads.
-- **Next:** Max → Confirm with Moshe that he received the leads and schedule a Zoom call to discuss any questions or concerns.
+  - The client has launched and needs assistance with GoHighLevel access and setup.
+  - Ads were paused to finalize automation but are now live again.
+- **Status:** Moshe Baruh is seeking leads and requested a Zoom call for further assistance. Max Hastings confirmed that ads are live again after a brief pause to finalize automation.
+- **Next:** Max → Schedule a Zoom call with Moshe to address his questions and ensure he is receiving leads as expected.
+
+## 🚬-az-remodeling-and-rooter-llc
+- **Context (recent):**
+  - Phil is checking with Alex about the current situation.
+  - Phil confirmed readiness on March 16.
+- **Status:** Phil has confirmed that they are ready to proceed, but it is unclear what specific actions or information are needed from Alex.
+- **Next:** Phil → Follow up with Alex to clarify the current situation and any necessary next steps.
+
+## 🌭-flh-services
+- **Context (recent):**
+  - Glenn is experiencing issues with Meta payment error codes, and the team is setting up ads using their own accounts to bypass restrictions.
+  - Glenn and David have been coordinating to resolve the issue, including a remote session attempt via AnyDesk.
+- **Status:** The team is working on setting up the ad campaign using their own accounts due to ongoing issues with Glenn's Facebook profile. They plan to launch soon and may need Glenn's credit card information for the ad account.
+- **Next:** Max → Follow up with Glenn to obtain credit card information and confirm the ad account setup.
+
+## 👌🏻-the-perfectionist-construction
+- **Context (recent):**
+  - Davi acknowledged the success in securing a definite yes despite some cancellations.
+  - Davi proposed a call to review numbers and optimize the campaign.
+- **Status:** Davi is planning to review the campaign performance and discuss optimization strategies with the client.
+- **Next:** Davi → Schedule a call with the client to review campaign numbers and discuss optimization strategies.
+
+## 🪶-susquehanna-home-solutions-llc
+- **Context (recent):**
+  - Ernie experienced a security breach in his Facebook account due to a phishing attempt.
+  - Max assisted Ernie in regaining control and securing the account.
+- **Status:** Ernie's Facebook account was compromised, but Max helped him regain access and secure it by removing unauthorized changes. The situation is now under control.
+- **Next:** Max → Follow up with Ernie to ensure no further unauthorized access attempts occur and confirm everything is functioning correctly.
+- **Risk:** Potential risk of future phishing attempts if security practices are not improved.
+
+## 🍂-four-seasons-design-build
+- **Context (recent):**
+  - Kenneth had login issues with the CRM and a bank issue with Meta's test charge, both resolved.
+  - Kenneth received several leads and requested a call with Max for important discussion.
+- **Status:** Kenneth has resolved the login and bank issues, and the campaign is now live with leads coming in. He has requested a call with Max for further discussion on important matters.
+- **Next:** Max → Call Kenneth to discuss his important questions and ensure he is comfortable with the lead process.
+
+## 🍷-jj-remodeling
+- **Context (recent):**
+  - Ads are scripted and expected to launch by the end of the week.
+  - Client is preparing to start receiving lead calls.
+- **Status:** The ad campaign is in the final preparation stages and is expected to launch soon. The client is being prepared for lead calls and app usage.
+- **Next:** Max → Notify Jesus when the ads are launched and provide guidance on app usage and lead handling.
 
 ## 🦃-innavik
 - **Context (recent):**
@@ -71,16 +79,15 @@
 
 ## 🎋-the-redwood-exotics
 - **Context (recent):**
-  - Client is satisfied with the recent upload and launch of new ad campaigns.
-  - Client is looking forward to seeing the performance of the new ads.
-- **Status:** The client is currently satisfied and awaiting the performance results of the newly launched ad campaigns.
+  - Client is satisfied with the recent upload of photos and videos and the quick launch of new ad campaigns.
+- **Status:** The client is currently satisfied and looking forward to the performance of the new ad campaigns.
 - **Next:** David → Monitor the performance of the new ad campaigns and prepare a report for the client.
 
 ## 🐝-be-decking-and-construction
 - **Context (recent):**
-  - Client expressed hope that good weather will drive interest in outdoor projects.
-- **Status:** The client is optimistic about the impact of current weather on potential project interest, with no issues raised.
-- **Next:** Davi → Check in with the client next week to see if the weather has indeed increased interest in their services.
+  - Client expressed hope that good weather will boost interest in outdoor projects.
+- **Status:** The client is optimistic about the impact of current weather conditions on potential customer interest in their services.
+- **Next:** Davi → Check in with the client next week to see if there has been an increase in inquiries or interest due to the weather.
 
 ## 🅱️-braymiller-builders
 - **Context (recent):**
@@ -99,17 +106,11 @@
 ## 🪵-stp-floors
 - **Context (recent):**
   - Access was resent to Stephen's email.
-- **Status:** Stephen has received the resent access, and there are no further issues reported.
-- **Next:** Davi → Confirm with Stephen that he has successfully accessed the necessary resources and if any further assistance is needed.
+- **Status:** Stephen has received the resent access email, and there are no further issues reported at this time.
+- **Next:** Davi → Confirm with Stephen that he has successfully accessed the necessary resources and offer assistance if needed.
 
 ## 🎨-satin-touch
 - **Context (recent):**
-  - Davi Dinicio greeted the client on March 13.
-- **Status:** The client channel has had minimal interaction with only a greeting from Davi Dinicio.
-- **Next:** Davi → Follow up with the client to check in and ensure everything is running smoothly.
-
----
-
-## ⚠️ Errors (1 client(s) not processed)
-- **🍷-jj-remodeling:** Discord API /api/v10/channels/1483469565798121723/messages failed: 403 Forbidden {"message": "Missing Access", "code": 50001}
-
+  - Client sent a greeting message.
+- **Status:** The client has sent a greeting message, but there are no specific issues or requests mentioned.
+- **Next:** Davi → Respond to the client's greeting to maintain engagement and check if there are any needs or updates.
