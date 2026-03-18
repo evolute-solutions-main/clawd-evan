@@ -17,6 +17,7 @@ Work tasks for Evolute Solutions. Updated 2026-03-18.
 
 ### Lower Priority / Ideas
 - [ ] **Closing tracker: "Created By" column** — make it say "Ads" instead of being blank when source is Ads
+- [ ] **Fathom follow-up agent** — AI scans Fathom calls and generates follow-up plans (solve: no follow-up after calls)
 - [ ] Asana visibility — surface overdue/stalled tasks in sweeps
 - [ ] Calendar proactive alerts — flag upcoming meetings, prep reminders
 - [ ] Payment tracker and reminder
