@@ -17,6 +17,8 @@ Work tasks for Evolute Solutions. Updated 2026-03-18.
 ### Lower Priority / Ideas
 - [ ] Asana visibility — surface overdue/stalled tasks in sweeps
 - [ ] Calendar proactive alerts — flag upcoming meetings, prep reminders
+- [ ] Payment tracker and reminder
+- [ ] Service term tracker and reminder
 
 ## Completed
 
