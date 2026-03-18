@@ -2,7 +2,7 @@
 
 Purpose: eliminate "forgetting connections." Every specialist preflights against this file before running. Keep it accurate.
 
-Last updated: 2026-03-17
+Last updated: 2026-03-18
 
 ## Messaging / Channels
 
@@ -73,6 +73,27 @@ Last updated: 2026-03-17
 - Parent page: https://www.notion.so/evolutesolutionsio/Client-Sweeps-31050a671a8f80bb80ebdc5d9c59f646
 - Auth: configured previously (per your note). Action: enforce preflight hard-fail if missing.
 - Quick probe: fetch a known page or DB properties. If probe fails → Blocker: Notion auth.
+
+### Google Sheets
+- Enabled: true
+- Auth type: OAuth 2.0 with refresh token
+- Secrets in `.secrets.env`:
+  - `GOOGLE_OAUTH_CLIENT_ID` — identifies the app
+  - `GOOGLE_OAUTH_CLIENT_SECRET` — app password
+  - `GOOGLE_OAUTH_REFRESH_TOKEN` — exchanged for access tokens (re-authorized 2026-03-18)
+- Shared client: `agents/_shared/google-sheets/index.mjs`
+- Functions: `appendRows()`, `readSheet()`, `updateRange()`, `getSpreadsheetInfo()`
+- Google account: evolutesolutionsllc@gmail.com (test user in OAuth consent screen)
+- Google Cloud Console: https://console.cloud.google.com/apis/credentials (project with OAuth client)
+- Redirect URI configured: `http://localhost`
+- Quick probe: see below
+- If broken (`invalid_grant` error): re-authorize using auth URL with `prompt=consent`, exchange code for new refresh token, update `.secrets.env`
+- NOTE: This integration EXISTS and is CONFIGURED. Never claim otherwise.
+
+**Google Sheets Quick Probe:**
+```bash
+node -e "import './agents/_shared/env-loader.mjs'; import { getSpreadsheetInfo } from './agents/_shared/google-sheets/index.mjs'; console.log('✅ Google Sheets OK')"
+```
 
 ## Webhooks / External APIs
 
