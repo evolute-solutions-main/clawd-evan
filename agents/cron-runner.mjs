@@ -8,44 +8,23 @@
  *   node cron-runner.mjs appt-collect   # Appt data collection (no post)
  */
 
+// Load secrets first
+import './_shared/env-loader.mjs'
+
 import { execSync } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
+import { postMessage } from './_shared/discord/index.mjs'
+
+// Note: This file is at /root/clawd/agents/cron-runner.mjs
+// Imports are relative to that location
 
 const REPO_ROOT = '/root/clawd'
 const DISCORD_CHANNEL = '1475336170916544524'
-const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL // Optional: use webhook instead of bot
 
-// Load secrets
-function loadSecrets() {
-  const p = path.join(REPO_ROOT, '.secrets.env')
-  const text = fs.readFileSync(p, 'utf8')
-  for (const line of text.split(/\r?\n/)) {
-    const m = /^([A-Z][A-Z0-9_]*)=(.*)$/.exec(line)
-    if (m) process.env[m[1]] = m[2]
-  }
-}
-
-// Post to Discord via bot token (use CHAT bot which has send permission)
+// Post to Discord — uses correct token automatically
 async function postToDiscord(message) {
-  const token = process.env.DISCORD_CHAT_BOT_TOKEN || process.env.DISCORD_BOT_TOKEN
-  if (!token) throw new Error('Missing DISCORD_CHAT_BOT_TOKEN or DISCORD_BOT_TOKEN')
-  
-  const res = await fetch(`https://discord.com/api/v10/channels/${DISCORD_CHANNEL}/messages`, {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bot ${token}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ content: message })
-  })
-  
-  if (!res.ok) {
-    const text = await res.text()
-    throw new Error(`Discord post failed: ${res.status} ${text}`)
-  }
-  
-  return res.json()
+  return postMessage(DISCORD_CHANNEL, message)
 }
 
 // Get yesterday's date in São Paulo timezone
@@ -173,8 +152,7 @@ async function runApptCollect() {
 
 // Main
 async function main() {
-  loadSecrets()
-  
+  // Secrets already loaded by env-loader.mjs import
   const cmd = process.argv[2]
   
   switch (cmd) {
