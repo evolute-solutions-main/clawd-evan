@@ -16,6 +16,7 @@ Work tasks for Evolute Solutions. Updated 2026-03-18.
 - [ ] **Meta integration** — pull CPL data, check for payment issues, verify campaigns are live
 
 ### Lower Priority / Ideas
+- [ ] **Closing tracker: "Created By" column** — make it say "Ads" instead of being blank when source is Ads
 - [ ] Asana visibility — surface overdue/stalled tasks in sweeps
 - [ ] Calendar proactive alerts — flag upcoming meetings, prep reminders
 - [ ] Payment tracker and reminder
