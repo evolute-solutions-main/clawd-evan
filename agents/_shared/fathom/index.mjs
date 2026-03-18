@@ -49,28 +49,21 @@ async function fetchJson(url, { method = 'GET', headers = {}, body } = {}) {
  * @param {Object} opts
  * @param {number} [opts.limit=50]
  * @param {string} [opts.cursor]
+ * @param {boolean} [opts.includeTranscript=false] - Include full transcript in response
+ * @param {boolean} [opts.includeSummary=false] - Include summary in response
+ * @param {boolean} [opts.includeActionItems=false] - Include action items in response
  * @param {string} [opts.repoRoot]
  */
-export async function listMeetings({ limit = 50, cursor, repoRoot } = {}) {
+export async function listMeetings({ limit = 50, cursor, includeTranscript = false, includeSummary = false, includeActionItems = false, repoRoot } = {}) {
   const { token, base } = getConfig(repoRoot)
   const u = new URL(base.replace(/\/$/, '') + '/meetings')
   if (limit) u.searchParams.set('limit', String(limit))
   if (cursor) u.searchParams.set('cursor', cursor)
+  if (includeTranscript) u.searchParams.set('include_transcript', 'true')
+  if (includeSummary) u.searchParams.set('include_summary', 'true')
+  if (includeActionItems) u.searchParams.set('include_action_items', 'true')
 
   const { json, headers } = await fetchJson(u.toString(), {
-    headers: { 'X-Api-Key': token }
-  })
-  return { ...json, rate: extractRate(headers) }
-}
-
-/**
- * Get a single meeting by recording_id.
- * @param {number|string} id
- */
-export async function getMeeting(id, { repoRoot } = {}) {
-  const { token, base } = getConfig(repoRoot)
-  const url = base.replace(/\/$/, '') + `/meetings/${id}`
-  const { json, headers } = await fetchJson(url, {
     headers: { 'X-Api-Key': token }
   })
   return { ...json, rate: extractRate(headers) }
@@ -86,26 +79,49 @@ function extractRate(h) {
 }
 
 /**
- * Paged iterator for meetings
+ * Format transcript array into readable text
+ * @param {Array} transcript - Array of {speaker, text, timestamp} objects
+ * @param {Object} [opts]
+ * @param {boolean} [opts.includeTimestamps=false]
+ * @param {boolean} [opts.includeSpeakerNames=true]
+ * @returns {string}
  */
-export async function* iterateMeetings({ pageSize = 50, maxPages = 100, repoRoot } = {}) {
+export function formatTranscript(transcript, { includeTimestamps = false, includeSpeakerNames = true } = {}) {
+  if (!Array.isArray(transcript)) return ''
+  return transcript.map(entry => {
+    const parts = []
+    if (includeTimestamps && entry.timestamp) parts.push(`[${entry.timestamp}]`)
+    if (includeSpeakerNames && entry.speaker?.display_name) parts.push(`${entry.speaker.display_name}:`)
+    parts.push(entry.text || '')
+    return parts.join(' ')
+  }).join('\n')
+}
+
+/**
+ * Paged iterator for meetings
+ * @param {Object} opts
+ * @param {number} [opts.pageSize=50]
+ * @param {number} [opts.maxPages=100]
+ * @param {boolean} [opts.includeTranscript=false]
+ * @param {boolean} [opts.includeSummary=false]
+ * @param {boolean} [opts.includeActionItems=false]
+ * @param {string} [opts.repoRoot]
+ */
+export async function* iterateMeetings({ pageSize = 50, maxPages = 100, includeTranscript = false, includeSummary = false, includeActionItems = false, repoRoot } = {}) {
   let cursor
   for (let i = 0; i < maxPages; i++) {
-    const { items = [], next_cursor } = await listMeetings({ limit: pageSize, cursor, repoRoot })
+    const { items = [], next_cursor } = await listMeetings({ 
+      limit: pageSize, 
+      cursor, 
+      includeTranscript, 
+      includeSummary, 
+      includeActionItems, 
+      repoRoot 
+    })
     for (const it of items) yield it
     if (!next_cursor || items.length === 0) break
     cursor = next_cursor
   }
 }
 
-// CLI probe
-if (process.argv[1] === import.meta.url.replace('file://', '') || process.argv[1]?.endsWith('index.mjs')) {
-  const cmd = process.argv[2]
-  if (cmd === 'probe') {
-    const { items = [], next_cursor, limit } = await listMeetings({ limit: 5 })
-    console.log('limit:', limit, 'items:', items.length, 'next_cursor:', !!next_cursor)
-    for (const m of items) {
-      console.log('-', m.title || m.meeting_title || '(untitled)', m.url || '', '@', m.created_at)
-    }
-  }
-}
+// Note: Use agents/fathom/scripts/probe.mjs for CLI testing
