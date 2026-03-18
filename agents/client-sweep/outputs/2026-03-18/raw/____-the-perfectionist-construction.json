@@ -1,0 +1,26 @@
+{
+  "client": {
+    "name": "👌🏻-the-perfectionist-construction",
+    "channelId": "1410653307227213914",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1481326731678842972",
+      "channelId": "1410653307227213914",
+      "author": "davi_dinicio",
+      "content": "Hi <@835366914469396500>, great work on securing that definite yes! Even with the cancellations, having a pipeline of 'maybes', upcoming appointments, and follow-ups means there's still a lot of potential there. I'd love to schedule a call to review the numbers and see how we can optimize things",
+      "tsUtc": "2026-03-11T16:23:34.552000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1410653307227213914/1481326731678842972"
+    },
+    {
+      "id": "1481326899480236053",
+      "channelId": "1410653307227213914",
+      "author": "davi_dinicio",
+      "content": "But even this feedback already helps a lot in improving the campaign, so I’ll keep you updated with any changes.",
+      "tsUtc": "2026-03-11T16:24:14.559000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1410653307227213914/1481326899480236053"
+    }
+  ],
+  "fetchedAt": "2026-03-18T10:30:43.688Z"
+}

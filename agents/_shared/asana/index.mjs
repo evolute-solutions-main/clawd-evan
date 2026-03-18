@@ -1,4 +1,5 @@
-// Simple Asana client using Personal Access Token from env (.secrets.env)
+// Simple Asana client using Personal Access Token from process.env
+// Expects env-loader.mjs to have populated ASANA_PAT
 // Usage:
 //   import { asanaGet, asanaListProjectTasks, asanaListStories } from '../asana/index.mjs'
 //   const tasks = await asanaListProjectTasks({ projectGid, opt_fields: 'name,completed,completed_at,modified_at' })
@@ -7,7 +8,7 @@ const API = 'https://app.asana.com/api/1.0'
 
 function requireToken() {
   const token = process.env.ASANA_PAT
-  if (!token) throw new Error('Missing ASANA_PAT in environment')
+  if (!token) throw new Error('Missing ASANA_PAT - ensure env-loader.mjs was imported first')
   return token
 }
 

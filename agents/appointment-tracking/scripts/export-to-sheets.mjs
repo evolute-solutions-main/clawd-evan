@@ -6,6 +6,9 @@
  * Usage: node export-to-sheets.mjs --date=YYYY-MM-DD [--dry-run]
  */
 
+// MUST be first import - loads and validates all secrets
+import '../../_shared/env-loader.mjs'
+
 import fs from 'node:fs'
 import path from 'node:path'
 import { appendRows, readSheet } from '../../_shared/google-sheets/index.mjs'

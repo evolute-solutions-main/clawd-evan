@@ -1,0 +1,13 @@
+{
+  "clientName": "🟧-prestige-home-remodeling",
+  "context": [
+    "Client asked for updates on March 16, 2026."
+  ],
+  "status": "The client is awaiting an update from the team as of March 16, 2026.",
+  "next": "Davi → Provide the client with the latest updates on their campaign.",
+  "teamChatter": null,
+  "risk": null,
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}

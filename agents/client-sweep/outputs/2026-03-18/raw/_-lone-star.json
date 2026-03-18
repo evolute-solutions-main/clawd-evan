@@ -1,0 +1,202 @@
+{
+  "client": {
+    "name": "⭐-lone-star",
+    "channelId": "1479154282665349210",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1481654765300482068",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Couldnt connect my icloud calendar but i connected my google calendar and downloaded the google calendar app",
+      "tsUtc": "2026-03-12T14:07:03.862000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1481654765300482068"
+    },
+    {
+      "id": "1481673723433189561",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "Sounds good",
+      "tsUtc": "2026-03-12T15:22:23.833000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1481673723433189561"
+    },
+    {
+      "id": "1481703939610120223",
+      "channelId": "1479154282665349210",
+      "author": "davi_dinicio",
+      "content": "Hey <@293214402310832128> , we have officially launched!",
+      "tsUtc": "2026-03-12T17:22:27.931000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1481703939610120223"
+    },
+    {
+      "id": "1481703982064861315",
+      "channelId": "1479154282665349210",
+      "author": "davi_dinicio",
+      "content": "https://tenor.com/view/cheering-baby-yeah-woo-hoo-lets-go-excited-kid-gif-8986898329054329350",
+      "tsUtc": "2026-03-12T17:22:38.053000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1481703982064861315"
+    },
+    {
+      "id": "1482423649632784404",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "I see there was a booked appointment, but I’m not seeing it on my Google calendar. Pretty sure I linked it right. Can we do that on boarding call?",
+      "tsUtc": "2026-03-14T17:02:20.172000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1482423649632784404"
+    },
+    {
+      "id": "1482747859165122653",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Got a text from the bank for a declined transaction for $9 from FACEBOOK. I tried to look at the campaigns or something but don’t see them.",
+      "tsUtc": "2026-03-15T14:30:37.748000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1482747859165122653"
+    },
+    {
+      "id": "1483075723307515926",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "Hey google calendar is updated, but the facebook is still being declined by the 3747 and 8860 cards. Did you approve it w the bank, or can you please try again?",
+      "tsUtc": "2026-03-16T12:13:26.651000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483075723307515926"
+    },
+    {
+      "id": "1483122412647092245",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Dont see anything on my google Calander still. Then this is what I get when I try to go into ads manager. You see my question about the on boarding call?",
+      "tsUtc": "2026-03-16T15:18:58.257000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483122412647092245"
+    },
+    {
+      "id": "1483171466534195212",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "?",
+      "tsUtc": "2026-03-16T18:33:53.615000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483171466534195212"
+    },
+    {
+      "id": "1483179599461351514",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Do not use card 8860.",
+      "tsUtc": "2026-03-16T19:06:12.656000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483179599461351514"
+    },
+    {
+      "id": "1483180393707339808",
+      "channelId": "1479154282665349210",
+      "author": "davi_dinicio",
+      "content": "card 8860, we won't touch it. Let me know when the bank clears 3747 or if you want to use a different one.\n\nRegarding the Calendar and Ads Manager errors, the fastest way to fix this is to jump on a quick screen-share. It usually takes 5 minutes to fix these permission bugs. Let's combine this with your onboarding call.\n\nWhat times work best for you today or tomorrow? Let's get you completely set up and running.",
+      "tsUtc": "2026-03-16T19:09:22.019000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483180393707339808"
+    },
+    {
+      "id": "1483180803772125346",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Today 6:30pm works or tomorrow morning",
+      "tsUtc": "2026-03-16T19:10:59.786000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483180803772125346"
+    },
+    {
+      "id": "1483180976002564277",
+      "channelId": "1479154282665349210",
+      "author": "davi_dinicio",
+      "content": "<@293214402310832128> ok, let’s schedule it for tomorrow morning.",
+      "tsUtc": "2026-03-16T19:11:40.849000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483180976002564277"
+    },
+    {
+      "id": "1483200908060921917",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "9am work for you ?",
+      "tsUtc": "2026-03-16T20:30:53.022000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483200908060921917"
+    },
+    {
+      "id": "1483208294062624980",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "?",
+      "tsUtc": "2026-03-16T21:00:13.982000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483208294062624980"
+    },
+    {
+      "id": "1483208486870454543",
+      "channelId": "1479154282665349210",
+      "author": "davi_dinicio",
+      "content": "yes",
+      "tsUtc": "2026-03-16T21:00:59.951000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483208486870454543"
+    },
+    {
+      "id": "1483456945238311115",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Zoom link?",
+      "tsUtc": "2026-03-17T13:28:17.042000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483456945238311115"
+    },
+    {
+      "id": "1483457528800088237",
+      "channelId": "1479154282665349210",
+      "author": "davi_dinicio",
+      "content": "https://meet.google.com/rej-mnox-cjm",
+      "tsUtc": "2026-03-17T13:30:36.174000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483457528800088237"
+    },
+    {
+      "id": "1483466066309943472",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "waiting for you?",
+      "tsUtc": "2026-03-17T14:04:31.675000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483466066309943472"
+    },
+    {
+      "id": "1483482745102663801",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "",
+      "tsUtc": "2026-03-17T15:10:48.209000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483482745102663801"
+    },
+    {
+      "id": "1483482864917156110",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Anthony Starks. Where is this lead? I don’t see it in the system, or Instagram, or Facebook.",
+      "tsUtc": "2026-03-17T15:11:16.775000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483482864917156110"
+    },
+    {
+      "id": "1483483433224376340",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "",
+      "tsUtc": "2026-03-17T15:13:32.270000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483483433224376340"
+    },
+    {
+      "id": "1483483801916018939",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Hey Josie, it’s Hector with Lone Star Garage Repair. Our appointment is in 24 hrs—just checking if 10:00 AM still works for you?*",
+      "tsUtc": "2026-03-17T15:15:00.173000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483483801916018939"
+    },
+    {
+      "id": "1483524284239446181",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Found it sorry",
+      "tsUtc": "2026-03-17T17:55:51.911000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483524284239446181"
+    }
+  ],
+  "fetchedAt": "2026-03-18T10:30:51.135Z"
+}

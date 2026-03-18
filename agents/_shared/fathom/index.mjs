@@ -1,35 +1,18 @@
 #!/usr/bin/env node
 /**
  * Fathom (fathom.ai) API client
- * - Loads FATHOM_API_TOKEN or FATHOM_API_KEY from .secrets.env
+ * - Expects FATHOM_API_TOKEN or FATHOM_API_KEY to be in process.env
+ * - Caller should import env-loader.mjs first to ensure secrets are loaded
  * - Provides helpers for common operations
  */
 
-import fs from 'node:fs'
-import path from 'node:path'
-
 const DEFAULT_BASE = 'https://api.fathom.ai/external/v1'
 
-function loadSecrets(repoRoot = process.cwd()) {
-  try {
-    const envPath = path.join(repoRoot, '.secrets.env')
-    const text = fs.readFileSync(envPath, 'utf8')
-    const out = {}
-    for (const line of text.split(/\r?\n/)) {
-      const m = /^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/.exec(line)
-      if (m) out[m[1]] = m[2]
-    }
-    return out
-  } catch {
-    return {}
-  }
-}
-
-function getConfig(repoRoot = process.cwd()) {
-  const env = { ...process.env, ...loadSecrets(repoRoot) }
-  const token = env.FATHOM_API_TOKEN || env.FATHOM_API_KEY
-  const base = env.FATHOM_API_BASE || DEFAULT_BASE
-  if (!token) throw new Error('Missing FATHOM_API_TOKEN in .secrets.env')
+function getConfig() {
+  // Expect env-loader.mjs to have populated process.env already
+  const token = process.env.FATHOM_API_TOKEN || process.env.FATHOM_API_KEY
+  const base = process.env.FATHOM_API_BASE || DEFAULT_BASE
+  if (!token) throw new Error('Missing FATHOM_API_TOKEN/FATHOM_API_KEY - ensure env-loader.mjs was imported first')
   return { token, base }
 }
 

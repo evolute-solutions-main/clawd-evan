@@ -4,6 +4,9 @@
  * Usage: node agents/fathom/scripts/probe.mjs [--limit=10]
  */
 
+// MUST be first import - loads and validates all secrets
+import '../../_shared/env-loader.mjs'
+
 import { listMeetings } from '../../_shared/fathom/index.mjs'
 
 const limitArg = process.argv.find(a => a.startsWith('--limit='))

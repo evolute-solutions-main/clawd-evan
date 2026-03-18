@@ -24,6 +24,9 @@
  * Old pipeline: node run-loop.mjs (deprecated — kept for comparison)
  */
 
+// MUST be first import - loads and validates all secrets
+import '../../_shared/env-loader.mjs'
+
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'url'
@@ -56,18 +59,7 @@ const NOTION_PARENT_PAGE_ID = '31050a67-1a8f-80bb-80eb-dc5d9c59f646'
 const WINDOW_DAYS  = Number(process.env.SWEEP_WINDOW_DAYS  || 7)
 const CONCURRENCY  = Number(process.env.SWEEP_CONCURRENCY  || 4)
 
-// ── Secrets ───────────────────────────────────────────────────────────────────
-
-function loadSecrets() {
-  try {
-    const p = path.join(REPO_ROOT, '.secrets.env')
-    const text = fs.readFileSync(p, 'utf8')
-    for (const line of text.split(/\r?\n/)) {
-      const m = /^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/.exec(line)
-      if (m && !process.env[m[1]]) process.env[m[1]] = m[2]
-    }
-  } catch {}
-}
+// Secrets loaded by env-loader.mjs import at top
 
 // ── Client list ───────────────────────────────────────────────────────────────
 
@@ -176,7 +168,7 @@ async function main() {
   const skipNotion  = args.includes('--skip-notion')
   const clientFilter = args.find((_, i, arr) => arr[i - 1] === '--client')
 
-  loadSecrets()
+  // Secrets already loaded by env-loader.mjs import
 
   console.log('🔄 Client Sweep — Deterministic Pipeline v2')
   console.log(`Mode: ${dryRun ? 'DRY RUN' : 'LIVE'} | Window: ${WINDOW_DAYS}d | Concurrency: ${CONCURRENCY}`)

@@ -1,0 +1,18 @@
+{
+  "client": {
+    "name": "🟧-prestige-home-remodeling",
+    "channelId": "1471221296330178802",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1483181347643064534",
+      "channelId": "1471221296330178802",
+      "author": "davi_dinicio",
+      "content": "Hey <@1471187036064059586> , do you have any updates?",
+      "tsUtc": "2026-03-16T19:13:09.455000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1471221296330178802/1483181347643064534"
+    }
+  ],
+  "fetchedAt": "2026-03-18T10:30:48.178Z"
+}

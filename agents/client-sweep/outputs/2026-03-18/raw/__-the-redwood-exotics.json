@@ -1,0 +1,26 @@
+{
+  "client": {
+    "name": "🎋-the-redwood-exotics",
+    "channelId": "1403092736055447672",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1481300676649812031",
+      "channelId": "1403092736055447672",
+      "author": "sevilla_rw_96091",
+      "content": "Hi David, I’m doing well, thank you for checking in! I’m glad the photos and videos were helpful. I appreciate you getting everything uploaded and the campaigns running so quickly. Looking forward to seeing how the new ads perform over the next few days.💪🎯",
+      "tsUtc": "2026-03-11T14:40:02.549000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1403092736055447672/1481300676649812031"
+    },
+    {
+      "id": "1481327119438053559",
+      "channelId": "1403092736055447672",
+      "author": "davi_dinicio",
+      "content": "Thanks <@1403088581341347870>",
+      "tsUtc": "2026-03-11T16:25:07.001000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1403092736055447672/1481327119438053559"
+    }
+  ],
+  "fetchedAt": "2026-03-18T10:30:43.773Z"
+}

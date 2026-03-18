@@ -1,29 +1,14 @@
 #!/usr/bin/env node
 /**
  * Google Sheets helper using OAuth refresh token
- * Requires: GOOGLE_OAUTH_CLIENT_ID, GOOGLE_OAUTH_CLIENT_SECRET, GOOGLE_OAUTH_REFRESH_TOKEN
+ * Expects env-loader.mjs to have populated process.env with:
+ * GOOGLE_OAUTH_CLIENT_ID, GOOGLE_OAUTH_CLIENT_SECRET, GOOGLE_OAUTH_REFRESH_TOKEN
  */
 
-import fs from 'node:fs'
-import path from 'node:path'
-
-function loadSecrets(repoRoot) {
-  const secrets = {}
-  try {
-    const p = path.join(repoRoot, '.secrets.env')
-    const text = fs.readFileSync(p, 'utf8')
-    for (const line of text.split(/\r?\n/)) {
-      const m = /^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/.exec(line)
-      if (m) secrets[m[1]] = m[2]
-    }
-  } catch {}
-  return secrets
-}
-
-async function getAccessToken(secrets) {
-  const { GOOGLE_OAUTH_CLIENT_ID, GOOGLE_OAUTH_CLIENT_SECRET, GOOGLE_OAUTH_REFRESH_TOKEN } = secrets
+async function getAccessToken() {
+  const { GOOGLE_OAUTH_CLIENT_ID, GOOGLE_OAUTH_CLIENT_SECRET, GOOGLE_OAUTH_REFRESH_TOKEN } = process.env
   if (!GOOGLE_OAUTH_CLIENT_ID || !GOOGLE_OAUTH_CLIENT_SECRET || !GOOGLE_OAUTH_REFRESH_TOKEN) {
-    throw new Error('Missing Google OAuth credentials in .secrets.env')
+    throw new Error('Missing Google OAuth credentials - ensure env-loader.mjs was imported first')
   }
 
   const res = await fetch('https://oauth2.googleapis.com/token', {
@@ -52,11 +37,9 @@ async function getAccessToken(secrets) {
  * @param {string} opts.spreadsheetId - The spreadsheet ID from the URL
  * @param {string} opts.range - Sheet range like "Sheet1!A:F" or just "Sheet1"
  * @param {Array<Array<any>>} opts.values - 2D array of row values
- * @param {string} [opts.repoRoot] - Path to repo root for loading secrets
  */
-export async function appendRows({ spreadsheetId, range, values, repoRoot = process.cwd() }) {
-  const secrets = loadSecrets(repoRoot)
-  const accessToken = await getAccessToken(secrets)
+export async function appendRows({ spreadsheetId, range, values }) {
+  const accessToken = await getAccessToken()
 
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${encodeURIComponent(range)}:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS`
 
@@ -82,11 +65,9 @@ export async function appendRows({ spreadsheetId, range, values, repoRoot = proc
  * @param {Object} opts
  * @param {string} opts.spreadsheetId
  * @param {string} opts.range
- * @param {string} [opts.repoRoot]
  */
-export async function readSheet({ spreadsheetId, range, repoRoot = process.cwd() }) {
-  const secrets = loadSecrets(repoRoot)
-  const accessToken = await getAccessToken(secrets)
+export async function readSheet({ spreadsheetId, range }) {
+  const accessToken = await getAccessToken()
 
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${encodeURIComponent(range)}`
 
@@ -108,11 +89,9 @@ export async function readSheet({ spreadsheetId, range, repoRoot = process.cwd()
  * @param {string} opts.spreadsheetId
  * @param {string} opts.range
  * @param {Array<Array<any>>} opts.values
- * @param {string} [opts.repoRoot]
  */
-export async function updateRange({ spreadsheetId, range, values, repoRoot = process.cwd() }) {
-  const secrets = loadSecrets(repoRoot)
-  const accessToken = await getAccessToken(secrets)
+export async function updateRange({ spreadsheetId, range, values }) {
+  const accessToken = await getAccessToken()
 
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${encodeURIComponent(range)}?valueInputOption=USER_ENTERED`
 
@@ -137,11 +116,9 @@ export async function updateRange({ spreadsheetId, range, values, repoRoot = pro
  * Get spreadsheet metadata (sheet names, etc.)
  * @param {Object} opts
  * @param {string} opts.spreadsheetId
- * @param {string} [opts.repoRoot]
  */
-export async function getSpreadsheetInfo({ spreadsheetId, repoRoot = process.cwd() }) {
-  const secrets = loadSecrets(repoRoot)
-  const accessToken = await getAccessToken(secrets)
+export async function getSpreadsheetInfo({ spreadsheetId }) {
+  const accessToken = await getAccessToken()
 
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}?fields=sheets.properties`
 
@@ -155,17 +132,4 @@ export async function getSpreadsheetInfo({ spreadsheetId, repoRoot = process.cwd
   }
 
   return res.json()
-}
-
-// CLI test
-if (process.argv[1] === import.meta.url.replace('file://', '') || process.argv[1]?.endsWith('index.mjs')) {
-  const [,, cmd, ...args] = process.argv
-  if (cmd === 'test') {
-    const spreadsheetId = args[0] || '1lZzukpw0VTm-TZDBPzzNUW2hYK69nWlx1JsmF_BZ_yI'
-    getSpreadsheetInfo({ spreadsheetId })
-      .then(info => {
-        console.log('Sheets:', info.sheets?.map(s => s.properties?.title))
-      })
-      .catch(e => console.error('Error:', e.message))
-  }
 }

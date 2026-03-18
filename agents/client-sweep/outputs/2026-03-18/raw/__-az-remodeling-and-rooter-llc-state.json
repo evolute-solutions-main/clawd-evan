@@ -1,0 +1,14 @@
+{
+  "clientName": "🚬-az-remodeling-and-rooter-llc",
+  "context": [
+    "Phil mentioned needing to find out information from Alex.",
+    "Phil confirmed they are ready on March 16."
+  ],
+  "status": "Phil is ready to proceed with the campaign but was waiting for information from Alex earlier in the week.",
+  "next": "Phil → Confirm with Alex that all necessary information has been gathered and communicate readiness to the team.",
+  "teamChatter": null,
+  "risk": null,
+  "urgencyScore": 2,
+  "needsManualReview": false,
+  "reviewNote": null
+}

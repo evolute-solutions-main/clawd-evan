@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 // Runner for appointment-tracking using the shared Discord fetcher
+
+// MUST be first import - loads and validates all secrets
+import '../../_shared/env-loader.mjs'
+
 import fs from 'node:fs'
 import path from 'node:path'
 import { fetchChannelWindow } from '../../_shared/discord-fetcher/index.mjs'
@@ -9,19 +13,7 @@ const CHANNELS = {
   confirmed:   '1332578941407334430'
 }
 
-function loadSecrets(repoRoot) {
-  try {
-    const p = path.join(repoRoot, '.secrets.env')
-    const text = fs.readFileSync(p, 'utf8')
-    for (const line of text.split(/\r?\n/)) {
-      const m = /^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/.exec(line)
-      if (m) {
-        const [, k, v] = m
-        if (!process.env[k]) process.env[k] = v
-      }
-    }
-  } catch {}
-}
+// Secrets already loaded by env-loader.mjs import
 
 function fmtTimeLocal(isoUtc, tz) {
   const d = new Date(isoUtc)
@@ -31,7 +23,7 @@ function fmtTimeLocal(isoUtc, tz) {
 }
 
 const repoRoot = process.cwd()
-loadSecrets(repoRoot)
+// Secrets already loaded at import time
 
 const tz = (()=>{
   try {

@@ -1,0 +1,14 @@
+{
+  "clientName": "⭐-lone-star",
+  "context": [
+    "Client experiencing issues with Google Calendar sync and Facebook Ads Manager access.",
+    "Payment issues with declined transactions on cards 3747 and 8860; client requested not to use card 8860."
+  ],
+  "status": "The client is facing technical issues with calendar synchronization and ads manager access, and there are unresolved payment issues with declined transactions. A screen-share session is scheduled to resolve these issues.",
+  "next": "Davi → Conduct the scheduled screen-share session with the client to resolve calendar and ads manager access issues, and confirm the payment method to use for transactions.",
+  "teamChatter": null,
+  "risk": "Potential risk of dissatisfaction due to unresolved technical and payment issues.",
+  "urgencyScore": 0,
+  "needsManualReview": false,
+  "reviewNote": null
+}

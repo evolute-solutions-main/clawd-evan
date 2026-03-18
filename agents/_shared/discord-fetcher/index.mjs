@@ -1,5 +1,5 @@
 // Shared Discord fetcher (minimal, generic)
-// - Reads DISCORD_BOT_TOKEN from process.env (load .secrets.env in your runner)
+// - Reads DISCORD_BOT_TOKEN from process.env (ensure env-loader.mjs is imported first)
 // - Timezone read from SETTINGS.md (repo root)
 // - Exposes:
 //     fetchChannelWindow({ channelIds, date, filters?, guildId?, repoRoot? })

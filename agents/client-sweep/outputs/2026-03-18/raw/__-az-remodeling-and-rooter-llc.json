@@ -1,0 +1,58 @@
+{
+  "client": {
+    "name": "🚬-az-remodeling-and-rooter-llc",
+    "channelId": "1468303418018893935",
+    "parentId": "1478798565810770104"
+  },
+  "clientMessages": [
+    {
+      "id": "1482057188838080596",
+      "channelId": "1468303418018893935",
+      "author": "davi_dinicio",
+      "content": "<@1468301826725249138> ?",
+      "tsUtc": "2026-03-13T16:46:09.110000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1468303418018893935/1482057188838080596"
+    },
+    {
+      "id": "1482097560574492922",
+      "channelId": "1468303418018893935",
+      "author": "davi_dinicio",
+      "content": "<@1468301826725249138> are you ok?",
+      "tsUtc": "2026-03-13T19:26:34.482000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1468303418018893935/1482097560574492922"
+    },
+    {
+      "id": "1482097675242573874",
+      "channelId": "1468303418018893935",
+      "author": "philsegev",
+      "content": "I’m good thank you! I need to find out from Alex what’s going on I’m gonna find out later on today",
+      "tsUtc": "2026-03-13T19:27:01.821000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1468303418018893935/1482097675242573874"
+    },
+    {
+      "id": "1482097994626240572",
+      "channelId": "1468303418018893935",
+      "author": "davi_dinicio",
+      "content": "Sounds good",
+      "tsUtc": "2026-03-13T19:28:17.968000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1468303418018893935/1482097994626240572"
+    },
+    {
+      "id": "1483207086639808573",
+      "channelId": "1468303418018893935",
+      "author": "philsegev",
+      "content": "Hey, how are you?",
+      "tsUtc": "2026-03-16T20:55:26.110000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1468303418018893935/1483207086639808573"
+    },
+    {
+      "id": "1483207102729162846",
+      "channelId": "1468303418018893935",
+      "author": "philsegev",
+      "content": "We are ready",
+      "tsUtc": "2026-03-16T20:55:29.946000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1468303418018893935/1483207102729162846"
+    }
+  ],
+  "fetchedAt": "2026-03-18T10:30:51.652Z"
+}

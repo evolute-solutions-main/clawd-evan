@@ -16,6 +16,9 @@
  * Scheduled for removal after run-pipeline.mjs has been validated in prod.
  */
 
+// MUST be first import - loads and validates all secrets
+import '../../_shared/env-loader.mjs'
+
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'url'

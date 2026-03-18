@@ -9,6 +9,9 @@
  *   node agents/fathom/scripts/run.mjs [--from=YYYY-MM-DD] [--to=YYYY-MM-DD] [--limit=50] [--max-pages=50]
  */
 
+// MUST be first import - loads and validates all secrets
+import '../../_shared/env-loader.mjs'
+
 import fs from 'node:fs'
 import path from 'node:path'
 import { iterateMeetings } from '../../_shared/fathom/index.mjs'
