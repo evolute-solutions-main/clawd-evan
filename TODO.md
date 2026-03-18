@@ -12,7 +12,7 @@ Work tasks for Evolute Solutions. Updated 2026-03-18.
 ### Medium Priority
 - [ ] **GHL Calendar appointments** — pull scheduled appointments by date (source of truth for *who should show*)
 - [ ] **Show rate calculation** — match GHL scheduled appointments against Fathom recordings (Fathom = source of truth for *who actually showed*)
-- [ ] **Meta CPL integration** — pull cost-per-lead data per client for reporting
+- [ ] **Meta integration** — pull CPL data, check for payment issues, verify campaigns are live
 
 ### Lower Priority / Ideas
 - [ ] Asana visibility — surface overdue/stalled tasks in sweeps
