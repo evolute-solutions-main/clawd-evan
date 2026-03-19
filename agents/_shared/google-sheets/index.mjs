@@ -113,6 +113,34 @@ export async function updateRange({ spreadsheetId, range, values }) {
 }
 
 /**
+ * Send batchUpdate requests to a spreadsheet (sheet ops, conditional formatting, etc.)
+ * @param {Object} opts
+ * @param {string} opts.spreadsheetId
+ * @param {Array<Object>} opts.requests
+ */
+export async function batchUpdate({ spreadsheetId, requests }) {
+  const accessToken = await getAccessToken()
+
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}:batchUpdate`
+
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${accessToken}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ requests })
+  })
+
+  if (!res.ok) {
+    const text = await res.text()
+    throw new Error(`Failed to batchUpdate: ${res.status} ${text}`)
+  }
+
+  return res.json()
+}
+
+/**
  * Get spreadsheet metadata (sheet names, etc.)
  * @param {Object} opts
  * @param {string} opts.spreadsheetId

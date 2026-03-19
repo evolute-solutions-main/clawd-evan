@@ -1,4 +1,4 @@
-// sales-tests-ghl.mjs — Read-only test runner for 4 GHL-backed checks
+// sales-tests-ghl.mjs — Read-only test runner for 6 GHL-backed checks
 // Usage examples (do NOT write to any sheets; prints JSON summaries):
 //   node tests/sales-tests-ghl.mjs --from 2026-03-10 --to 2026-03-18
 //   node tests/sales-tests-ghl.mjs --from 2026-02-01 --to 2026-03-18
@@ -9,19 +9,20 @@
 //
 // Tests produced (read-only; no writes):
 // 1) ghl_cancelled_updates_status           → want: "Cancelled/Rejected"
-// 2) setter_from_created_by_on_blank        → focus day=2026-03-12; createdBy Daniel
-// 3) calendar_to_source_mapping_consistency → family vs sheet.Source
-// 4) status_parity_with_ghl                 → included statuses parity
+// 2) createdBy_setter_full_range            → all known setters across full date range
+// 3) source_setter_consistency              → Cold SMS source cannot have Ads setter
+// 4) showed_fathom_link                     → Showed status must have Fathom link
+// 5) calendar_to_source_mapping_consistency → family vs sheet.Source
+// 6) status_parity_with_ghl                 → included statuses parity
 
 import '../agents/_shared/env-loader.mjs'
 import { readSheet } from '../agents/_shared/google-sheets/index.mjs'
 import * as GHL from '../agents/_shared/ghl/index.mjs'
+import { SETTER_MAP } from '../agents/closing-tracker/lib/row-builder.mjs'
 
 // Config
 const SHEET_ID = '1lZzukpw0VTm-TZDBPzzNUW2hYK69nWlx1JsmF_BZ_yI'
 const TAB_RANGE = "'All Booked Calls Data'!A1:R4000"
-const CREATED_BY_TARGET_DAY = '2026-03-12' // ISO (YYYY-MM-DD)
-const CREATED_BY_TARGET_NAME = 'daniel'    // lowercase compare
 
 // CLI args
 const argv = Object.fromEntries(process.argv.slice(2).map(s=>{
@@ -118,17 +119,45 @@ async function t_cancelled(sheet, ghl){
 async function t_createdBy_setter(sheet, ghl){
   const issues=[]
   for(const a of ghl){
-    if(a.day!==CREATED_BY_TARGET_DAY) continue
-    if(norm(CREATED_BY_TARGET_NAME) && norm(CREATED_BY_TARGET_NAME)!==''){
-      // We only have createdBy userId in this client; flag when Setter is blank regardless
-      const hit = findSheetRow(sheet, a)
-      if(hit){
-        const setter = (hit.r[4]||'').toString().trim()
-        if(!setter){ issues.push({ row: hit.idx, date: hit.r[0], name: hit.r[2], expectedSetterHint: 'Daniel' }) }
-      }
+    if(!inWindowUS(a.dayUS, FROM, TO)) continue
+    const expectedSetter = SETTER_MAP[a.createdBy]
+    if(!expectedSetter) continue  // unknown userId, no assertion possible
+    const hit = findSheetRow(sheet, a)
+    if(!hit) continue
+    const actual = (hit.r[4]||'').toString().trim()
+    if(!actual){
+      issues.push({ type:'blank_setter', row: hit.idx, date: hit.r[0], name: hit.r[2], want: expectedSetter, createdBy: a.createdBy })
+    } else if(norm(actual) !== norm(expectedSetter)){
+      issues.push({ type:'wrong_setter', row: hit.idx, date: hit.r[0], name: hit.r[2], have: actual, want: expectedSetter, createdBy: a.createdBy })
     }
   }
-  return { name:'setter_from_created_by_on_blank', day: CREATED_BY_TARGET_DAY, issues }
+  return { name:'createdBy_setter_full_range', issues }
+}
+
+async function t_source_setter_consistency(sheet){
+  const issues=[]
+  for(const { idx, r } of sheet.rows){
+    if(!inWindowUS(r[0], FROM, TO)) continue
+    const src = norm(r[3])
+    const setter = norm(r[4])
+    if(src.includes('cold') && setter.includes('ads')){
+      issues.push({ row: idx, date: r[0], name: r[2], source: r[3], setter: r[4] })
+    }
+  }
+  return { name:'source_setter_consistency', issues }
+}
+
+async function t_showed_fathom_link(sheet){
+  const issues=[]
+  for(const { idx, r } of sheet.rows){
+    if(!inWindowUS(r[0], FROM, TO)) continue
+    const status = norm(r[5])
+    const fathomLink = (r[13]||'').trim()
+    if(status === 'showed' && !fathomLink){
+      issues.push({ row: idx, date: r[0], name: r[2] })
+    }
+  }
+  return { name:'showed_fathom_link', issues }
 }
 
 async function t_calendar_source_mapping(sheet, ghl){
@@ -176,6 +205,8 @@ async function main(){
   const out = []
   out.push(await t_cancelled(sheet, ghl))
   out.push(await t_createdBy_setter(sheet, ghl))
+  out.push(await t_source_setter_consistency(sheet))
+  out.push(await t_showed_fathom_link(sheet))
   out.push(await t_calendar_source_mapping(sheet, ghl))
   out.push(await t_status_parity(sheet, ghl))
   console.log(JSON.stringify({ ok:true, window:{ from:FROM, to:TO }, results: out }, null, 2))
