@@ -1,0 +1,13 @@
+{
+  "clientName": "🪑-tillup-llc",
+  "context": [
+    "Max reached out to inquire about the status of leads and offered a call to review them."
+  ],
+  "status": "Max is awaiting a response from the client regarding the status of their leads and the outcome of recent estimates.",
+  "next": "Max \u00192 Follow up with the client if no response is received by the end of the week to schedule a call.",
+  "teamChatter": null,
+  "risk": null,
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}

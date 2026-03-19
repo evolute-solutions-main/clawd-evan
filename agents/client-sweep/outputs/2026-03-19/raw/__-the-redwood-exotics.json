@@ -1,0 +1,18 @@
+{
+  "client": {
+    "name": "🎋-the-redwood-exotics",
+    "channelId": "1403092736055447672",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1483784183691083800",
+      "channelId": "1403092736055447672",
+      "author": "max.hastings",
+      "content": "Hi <@1403088581341347870> I hope you've been doing great.\n\nSince we launched the flooring ads, we've had about a lead per day coming in for the past week or two.\n\nHave you been able to get in contact with any of these leads? How have things been going with being able to get in touch with them, book appointments, the types of projects theyre asking for, etc?\n\nThis info is important for me to understand what's going on and see what we can do to improve. Because I see now we're generating a good number of leads, and I need to make sure they're actually the right type, and converting.",
+      "tsUtc": "2026-03-18T11:08:36.769000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1403092736055447672/1483784183691083800"
+    }
+  ],
+  "fetchedAt": "2026-03-19T09:00:02.413Z"
+}

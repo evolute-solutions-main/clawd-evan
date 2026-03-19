@@ -1,0 +1,14 @@
+{
+  "clientName": "👌🏻-the-perfectionist-construction",
+  "context": [
+    "Ads have been paused due to declined payment cards.",
+    "Client needs to provide information on closed jobs and estimates for ongoing optimization."
+  ],
+  "status": "The ad campaigns are currently paused because of payment issues, but they perform well when active. Max is waiting for the client to resolve the payment issue with the bank and provide details on closed jobs and estimates.",
+  "next": "Max → Follow up with the client to ensure they have contacted the bank about the payment issue and to collect the requested job and estimate details.",
+  "teamChatter": null,
+  "risk": "Potential risk of campaign disruption if payment issues are not resolved.",
+  "urgencyScore": 0,
+  "needsManualReview": false,
+  "reviewNote": null
+}

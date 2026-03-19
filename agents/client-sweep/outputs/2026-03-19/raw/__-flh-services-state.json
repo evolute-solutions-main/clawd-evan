@@ -1,0 +1,14 @@
+{
+  "clientName": "🌭-flh-services",
+  "context": [
+    "Glenn is experiencing issues with Meta payment error codes, and the team has decided to use their own ad accounts to bypass these restrictions.",
+    "The team needs Glenn's credit card information to link to the new ad account."
+  ],
+  "status": "The team is setting up the ad campaign using their own accounts due to ongoing issues with Glenn's Facebook profile. They are awaiting Glenn's credit card information to proceed.",
+  "next": "Max → Follow up with Glenn to obtain his credit card information for the new ad account setup.",
+  "teamChatter": null,
+  "risk": "Potential delay in campaign launch if credit card information is not provided promptly.",
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}

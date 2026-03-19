@@ -1,0 +1,14 @@
+{
+  "clientName": "🦃-innavik",
+  "context": [
+    "Leads are coming in at a good cost with a 3x increase in lead flow.",
+    "Feedback on lead quality and conversion is needed from the client to optimize further."
+  ],
+  "status": "The client is experiencing a significant increase in lead volume, but there is a need for feedback on lead quality and conversion to ensure these leads are turning into actual sales.",
+  "next": "Max → Follow up with the client to request detailed feedback on lead quality, booking rates, and closed jobs.",
+  "teamChatter": null,
+  "risk": null,
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}

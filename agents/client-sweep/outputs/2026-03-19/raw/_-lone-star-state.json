@@ -1,0 +1,14 @@
+{
+  "clientName": "⭐-lone-star",
+  "context": [
+    "Client had issues with Google Calendar and Facebook Ads Manager access.",
+    "Payment issues with declined transactions on specific cards."
+  ],
+  "status": "The client is experiencing ongoing issues with calendar synchronization and Facebook Ads Manager access, as well as declined payment transactions. A meeting was held to address these issues, and the team is actively working on implementing changes and resolving access problems.",
+  "next": "Max → Follow up with Hector to ensure the calendar and Ads Manager access issues are resolved, and confirm the payment method with the bank for card 3747.",
+  "teamChatter": null,
+  "risk": null,
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}

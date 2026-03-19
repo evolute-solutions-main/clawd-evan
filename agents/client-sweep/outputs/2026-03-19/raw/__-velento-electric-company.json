@@ -1,0 +1,50 @@
+{
+  "client": {
+    "name": "🍕-velento-electric-company",
+    "channelId": "1440010670232834118",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1483133287810465942",
+      "channelId": "1440010670232834118",
+      "author": "nick_73256",
+      "content": "Can you please show me the new ad you guys put out on Facebook.  Im getting a tremendous amount of inquires for hiring",
+      "tsUtc": "2026-03-16T16:02:11.098000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1440010670232834118/1483133287810465942"
+    },
+    {
+      "id": "1483536005104664759",
+      "channelId": "1440010670232834118",
+      "author": "nick_73256",
+      "content": "Also.  I know that we purchased a 4 month package that started in November.  I believe we are almost complete with our contract this month.  Please let me know thank you",
+      "tsUtc": "2026-03-17T18:42:26.383000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1440010670232834118/1483536005104664759"
+    },
+    {
+      "id": "1483782038921154630",
+      "channelId": "1440010670232834118",
+      "author": "max.hastings",
+      "content": "Hi <@1438984878107529248> good morning. \n\nWe're still running the pics you sent us. Here's the text used in the ads. \n\nAd 1:\n\n⚡ Protect your home before the next power surge hits.\n⚠️ Is your electrical panel outdated or unsafe?\n💡 Small electrical issues today can turn into costly problems tomorrow.\n\nYour electrical system should be safe, modern, and fully code-compliant. Our licensed electricians provide:\n\n• ⚙️ Electrical Panel Replacements\n• 🔒 Whole-Home Surge Protection\n• 🛠️ Troubleshooting & Electrical Repairs\n• 💡 Indoor & Outdoor Lighting Installations\n\n📍 Proudly serving Essex, Bergen, Morris, Union & Hudson County.\n\n\n👉🏻 Tap “Get Quote” for a transparent estimate & to schedule your service call 👈🏻\n\nAd 2:\n\n⚠️ Flickering lights? Breaker constantly tripping?\n🚫 Electrical problems should never be ignored.\n👷 Reliable solutions from experienced professionals.\n\nWe handle:\n\n• 🛠️ Electrical Troubleshooting & Repairs\n• ⚙️ Panel Upgrades\n• 🔒 Surge Protection Installations\n• 💡 Lighting & Security System Installations\n\n📍 Serving Essex, Bergen, Morris, Union & Hudson County.\n\n👉🏻 Tap “Get Quote” for a transparent estimate & to schedule your service call 👈🏻",
+      "tsUtc": "2026-03-18T11:00:05.416000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1440010670232834118/1483782038921154630"
+    },
+    {
+      "id": "1483782254315704400",
+      "channelId": "1440010670232834118",
+      "author": "max.hastings",
+      "content": "What I'm diong to prevent this, is I am adding a question into the form people fill out. \n\nI am going to ask: are you looking to get hired for a job, or to get electrical work done on your home?\n\nIf they choose job, we will disqualify them, and not let them fill out the form.\n\nThis should help weed out people who are reaching out for that reason",
+      "tsUtc": "2026-03-18T11:00:56.770000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1440010670232834118/1483782254315704400"
+    },
+    {
+      "id": "1483783206351143083",
+      "channelId": "1440010670232834118",
+      "author": "max.hastings",
+      "content": "Yes, regarding the 4 month agreement, the 120 days of active ad delivery were completed today. Although the contract technically ended a few days ago, I did not count the initial setup period toward that timeline. I only counted the days the campaigns were actually live and generating leads. And at this point we've completed that (today).\n\nAt this point, we now have a meaningful amount of data to work from, which puts us in a much better position to evaluate performance and identify what needs to be refined. For example, the updated form to filter out people looking for employment is one clear improvement, but I’m sure there are other insights from your side that could help us sharpen the process further. That could include changes to the ad messaging, adjustments to the follow-up sequence, or refining how we position the offer so we attract more of the right type of customer.\n\nTo make smart decisions on next steps, we need a clearer picture of what happened after the leads came in. Specifically, which leads turned into real opportunities, which jobs were closed, where drop-off happened, and what points of failure may have affected overall conversion. That will allow us to separate lead generation performance from sales process issues and identify the highest-leverage optimizations moving forward.\n\nI’d love to get on a call with you this week to do a full retro on the campaign, review the results together, and get clarity on the overall outcome. From our side, leads were being generated consistently and follow-up was happening throughout the campaign. What I do not have full visibility on yet is what ultimately happened with those leads beyond hearing that a couple of jobs closed and that some unqualified inquiries about people looking for employment came through.\n\nDo you have time this week to review everything together?",
+      "tsUtc": "2026-03-18T11:04:43.753000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1440010670232834118/1483783206351143083"
+    }
+  ],
+  "fetchedAt": "2026-03-19T09:00:07.242Z"
+}

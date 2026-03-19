@@ -1,0 +1,14 @@
+{
+  "clientName": "🍕-velento-electric-company",
+  "context": [
+    "Client is receiving a high volume of inquiries, some of which are unrelated to their services.",
+    "The 4-month ad campaign contract has concluded as of March 18, 2026."
+  ],
+  "status": "The client is experiencing a mix of qualified and unqualified inquiries from the ad campaign. The contract period has ended, and there is a need to evaluate the campaign's performance and refine the strategy based on the data collected.",
+  "next": "Max → Schedule a call with Nick to review the campaign performance, discuss the outcomes of the leads, and plan next steps for refining the ad strategy.",
+  "teamChatter": null,
+  "risk": null,
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}

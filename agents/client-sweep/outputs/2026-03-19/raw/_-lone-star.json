@@ -1,0 +1,298 @@
+{
+  "client": {
+    "name": "⭐-lone-star",
+    "channelId": "1479154282665349210",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1481654765300482068",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Couldnt connect my icloud calendar but i connected my google calendar and downloaded the google calendar app",
+      "tsUtc": "2026-03-12T14:07:03.862000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1481654765300482068"
+    },
+    {
+      "id": "1481673723433189561",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "Sounds good",
+      "tsUtc": "2026-03-12T15:22:23.833000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1481673723433189561"
+    },
+    {
+      "id": "1481703939610120223",
+      "channelId": "1479154282665349210",
+      "author": "davi_dinicio",
+      "content": "Hey <@293214402310832128> , we have officially launched!",
+      "tsUtc": "2026-03-12T17:22:27.931000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1481703939610120223"
+    },
+    {
+      "id": "1481703982064861315",
+      "channelId": "1479154282665349210",
+      "author": "davi_dinicio",
+      "content": "https://tenor.com/view/cheering-baby-yeah-woo-hoo-lets-go-excited-kid-gif-8986898329054329350",
+      "tsUtc": "2026-03-12T17:22:38.053000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1481703982064861315"
+    },
+    {
+      "id": "1482423649632784404",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "I see there was a booked appointment, but I’m not seeing it on my Google calendar. Pretty sure I linked it right. Can we do that on boarding call?",
+      "tsUtc": "2026-03-14T17:02:20.172000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1482423649632784404"
+    },
+    {
+      "id": "1482747859165122653",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Got a text from the bank for a declined transaction for $9 from FACEBOOK. I tried to look at the campaigns or something but don’t see them.",
+      "tsUtc": "2026-03-15T14:30:37.748000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1482747859165122653"
+    },
+    {
+      "id": "1483075723307515926",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "Hey google calendar is updated, but the facebook is still being declined by the 3747 and 8860 cards. Did you approve it w the bank, or can you please try again?",
+      "tsUtc": "2026-03-16T12:13:26.651000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483075723307515926"
+    },
+    {
+      "id": "1483122412647092245",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Dont see anything on my google Calander still. Then this is what I get when I try to go into ads manager. You see my question about the on boarding call?",
+      "tsUtc": "2026-03-16T15:18:58.257000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483122412647092245"
+    },
+    {
+      "id": "1483171466534195212",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "?",
+      "tsUtc": "2026-03-16T18:33:53.615000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483171466534195212"
+    },
+    {
+      "id": "1483179599461351514",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Do not use card 8860.",
+      "tsUtc": "2026-03-16T19:06:12.656000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483179599461351514"
+    },
+    {
+      "id": "1483180393707339808",
+      "channelId": "1479154282665349210",
+      "author": "davi_dinicio",
+      "content": "card 8860, we won't touch it. Let me know when the bank clears 3747 or if you want to use a different one.\n\nRegarding the Calendar and Ads Manager errors, the fastest way to fix this is to jump on a quick screen-share. It usually takes 5 minutes to fix these permission bugs. Let's combine this with your onboarding call.\n\nWhat times work best for you today or tomorrow? Let's get you completely set up and running.",
+      "tsUtc": "2026-03-16T19:09:22.019000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483180393707339808"
+    },
+    {
+      "id": "1483180803772125346",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Today 6:30pm works or tomorrow morning",
+      "tsUtc": "2026-03-16T19:10:59.786000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483180803772125346"
+    },
+    {
+      "id": "1483180976002564277",
+      "channelId": "1479154282665349210",
+      "author": "davi_dinicio",
+      "content": "<@293214402310832128> ok, let’s schedule it for tomorrow morning.",
+      "tsUtc": "2026-03-16T19:11:40.849000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483180976002564277"
+    },
+    {
+      "id": "1483200908060921917",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "9am work for you ?",
+      "tsUtc": "2026-03-16T20:30:53.022000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483200908060921917"
+    },
+    {
+      "id": "1483208294062624980",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "?",
+      "tsUtc": "2026-03-16T21:00:13.982000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483208294062624980"
+    },
+    {
+      "id": "1483208486870454543",
+      "channelId": "1479154282665349210",
+      "author": "davi_dinicio",
+      "content": "yes",
+      "tsUtc": "2026-03-16T21:00:59.951000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483208486870454543"
+    },
+    {
+      "id": "1483456945238311115",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Zoom link?",
+      "tsUtc": "2026-03-17T13:28:17.042000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483456945238311115"
+    },
+    {
+      "id": "1483457528800088237",
+      "channelId": "1479154282665349210",
+      "author": "davi_dinicio",
+      "content": "https://meet.google.com/rej-mnox-cjm",
+      "tsUtc": "2026-03-17T13:30:36.174000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483457528800088237"
+    },
+    {
+      "id": "1483466066309943472",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "waiting for you?",
+      "tsUtc": "2026-03-17T14:04:31.675000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483466066309943472"
+    },
+    {
+      "id": "1483482745102663801",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "",
+      "tsUtc": "2026-03-17T15:10:48.209000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483482745102663801"
+    },
+    {
+      "id": "1483482864917156110",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Anthony Starks. Where is this lead? I don’t see it in the system, or Instagram, or Facebook.",
+      "tsUtc": "2026-03-17T15:11:16.775000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483482864917156110"
+    },
+    {
+      "id": "1483483433224376340",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "",
+      "tsUtc": "2026-03-17T15:13:32.270000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483483433224376340"
+    },
+    {
+      "id": "1483483801916018939",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Hey Josie, it’s Hector with Lone Star Garage Repair. Our appointment is in 24 hrs—just checking if 10:00 AM still works for you?*",
+      "tsUtc": "2026-03-17T15:15:00.173000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483483801916018939"
+    },
+    {
+      "id": "1483524284239446181",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Found it sorry",
+      "tsUtc": "2026-03-17T17:55:51.911000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483524284239446181"
+    },
+    {
+      "id": "1483789906735005768",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "Good morning <@293214402310832128> \n\nJust got all the notes form your meeting w Davi yesterday, and will be taking care of that today for you",
+      "tsUtc": "2026-03-18T11:31:21.249000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483789906735005768"
+    },
+    {
+      "id": "1483838910860890193",
+      "channelId": "1479154282665349210",
+      "author": "packtrader",
+      "content": "Thanks",
+      "tsUtc": "2026-03-18T14:46:04.743000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483838910860890193"
+    },
+    {
+      "id": "1483907030057095328",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "Hey Hector, thanks again for taking the time to go through everything with Davi and for all the detailed feedback. This was really helpful and we’ve already started implementing the changes so everything runs smoother for you.\n\nI know you’re running the business solo and have invested a lot into this, so I want you to know we take that seriously. We’re committed to making this work for you and dialing everything in so the system runs clean and consistently brings you good opportunities.\n\nHere’s where things currently stand:",
+      "tsUtc": "2026-03-18T19:16:45.625000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483907030057095328"
+    },
+    {
+      "id": "1483907096998314135",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "**Meta Business / Ad Account Access**\n\nI’m not fully sure yet what the issue is with the business portfolio access.\n\nCan you send me a screenshot of exactly what you’re seeing when you try to access or invite yourself?\n\nSorry if this repeats what you already showed Davi, but seeing it directly will help me understand exactly where the problem is so I can fix it properly.\n----------",
+      "tsUtc": "2026-03-18T19:17:01.585000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483907096998314135"
+    },
+    {
+      "id": "1483907236009873409",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "**Instagram → Facebook Auto Posting**\n\nI did some research on this and found the exact setting Meta uses for this.\n\nPath in the Instagram app:\n\nGo to your Instagram profile\nTap the ☰ menu (top right)\nTap Accounts Center\nTap Sharing across profiles\nSelect Instagram → Facebook\nTurn on “Your Instagram posts” (toggle)\n\nWhen this is on, every new Instagram post automatically goes to Facebook.\n\nThe reverse (Facebook → Instagram)\n\nYou enable it from the same place:\n\nGo to Facebook\nTap Create Post\nTap the Instagram toggle under your name\n\nOr enable automatic sharing in:\n\nAccounts Center → Sharing across profiles\n\nThen Facebook posts can also publish to Instagram if the format is supported.\n----------",
+      "tsUtc": "2026-03-18T19:17:34.728000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483907236009873409"
+    },
+    {
+      "id": "1483907271439421481",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "**Messenger Conversation (Omar Rios)**\n\nOmar Rios is appearing in the system on our end.\n\nYou can verify it here:\nhttps://app.evolutesolutions.io/v2/location/RCq1KbPbbCqoPolTIh0J/contacts/detail/Nv3HcxCGbCMbBAvx5CKi\n----------",
+      "tsUtc": "2026-03-18T19:17:43.175000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483907271439421481"
+    },
+    {
+      "id": "1483907307896045708",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "**Offer updates**\n\nWe added the offers you mentioned directly into the ads.\n\nThese are running as the headlines:\n\n• $59 Garage Lube & Tune Up Special!\n• $29 Garage Door Service Call!\n\nThese are simply the ad hooks people see before clicking.\n----------",
+      "tsUtc": "2026-03-18T19:17:51.867000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483907307896045708"
+    },
+    {
+      "id": "1483907378129801257",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "**Lead Form (Simplified)**\n\nThe lead form was simplified exactly as you requested.\n\nWe removed all the small garage door option boxes and extra questions so the process is very straightforward now.\n\nFirst Page (Welcome Page)\n\nThis is the first thing people see:\n\nGet Your Garage Door Upgraded By a Trusted Local Expert!\n\nWhether you need a quick lube and tune-up, help fixing an issue with your garage door, or even a full garage door replacement, I'm Hector, the owner of Lone Star Garage Repair, and I will take good care of you! My goal is simple: show up quickly, fix the problem the right way, and charge fair, honest prices.\n\nWe’ve earned 100+ five-star reviews by being reliable, doing quality work, and taking care of people the way we’d want someone to take care of our own home.\n\nJust fill out the form and we’ll reach out shortly to schedule a time that works for you and get your garage door working properly again.\n\nLooking forward to helping you out.\n\n— Hector\n\nAfter this page, the customer simply enters their contact information.\n\nAll the extra garage door questions were removed so the form is fast and easy.\n\nThank You Page\n\nAfter submitting the form, this is the page they see:\n\nWait! One Last Step Before You Are Done\n\nThe next step is to pick a time for your appointment so I can come out and take care of the issue.\n\nWhen I arrive, I'll take a look at your garage door, explain exactly what needs to be done, and in most cases fix it right on the spot at a fair price!\n\nClick the blue button below to open the calendar and choose a time that works best for you. This will schedule a visit with Hector, the owner, to come out to your home.\n\nOnce you book, you’ll receive a text confirmation for your appointment.\n\nGo ahead and click the blue button now to pick your time now!\n----------",
+      "tsUtc": "2026-03-18T19:18:08.612000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483907378129801257"
+    },
+    {
+      "id": "1483907412371964055",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "**Scheduling Update**\n\nWe added a 1.5 hour buffer before and after appointments, which gives you the 3-hour windows you asked for. This should give you enough time to travel and complete the current job before the next one.\n----------",
+      "tsUtc": "2026-03-18T19:18:16.776000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483907412371964055"
+    },
+    {
+      "id": "1483907435700682877",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "**24-Hour Reminder Message**\n\nI updated the 24-hour reminder message exactly how you requested.\n----------",
+      "tsUtc": "2026-03-18T19:18:22.338000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483907435700682877"
+    },
+    {
+      "id": "1483907457754468444",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "**AI Conversation Script**\n\nJust wanted to clarify one thing here.\n\nWere the changes you wanted mainly the 24-hour reminder, or did you want broader control over the rest of the AI conversation as well?\n\nYou mentioned you might send the exact changes in Discord, so once you send those we’ll implement them.\n----------",
+      "tsUtc": "2026-03-18T19:18:27.596000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483907457754468444"
+    },
+    {
+      "id": "1483907495151013960",
+      "channelId": "1479154282665349210",
+      "author": "max.hastings",
+      "content": "Again, thanks for all the feedback and for working through this with us.\n\nWhen campaigns first start running it’s completely normal to make adjustments like this while we dial everything in.\n\nJust know we’re putting a lot of attention into this and we’re committed to making sure everything runs smoothly for you and brings in real jobs.\n\nWe’ve got you on this and we’ll keep tightening things until it’s exactly where it needs to be.",
+      "tsUtc": "2026-03-18T19:18:36.512000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1479154282665349210/1483907495151013960"
+    }
+  ],
+  "fetchedAt": "2026-03-19T09:00:11.634Z"
+}

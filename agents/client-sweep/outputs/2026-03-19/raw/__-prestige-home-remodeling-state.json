@@ -1,0 +1,14 @@
+{
+  "clientName": "🟧-prestige-home-remodeling",
+  "context": [
+    "Awaiting client to provide pictures for ad campaign.",
+    "Max Hastings has followed up twice requesting the pictures."
+  ],
+  "status": "The campaign is currently blocked because the client has not yet provided the necessary pictures for the ads. Max Hastings is actively trying to get the client to send these assets.",
+  "next": "Max Hastings → Follow up with the client again to request the pictures needed for the campaign.",
+  "teamChatter": null,
+  "risk": "There is a risk of delay in campaign launch due to missing client deliverables.",
+  "urgencyScore": 0,
+  "needsManualReview": false,
+  "reviewNote": null
+}

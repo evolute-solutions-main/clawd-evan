@@ -1,0 +1,34 @@
+{
+  "client": {
+    "name": "🟧-prestige-home-remodeling",
+    "channelId": "1471221296330178802",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1483181347643064534",
+      "channelId": "1471221296330178802",
+      "author": "davi_dinicio",
+      "content": "Hey <@1471187036064059586> , do you have any updates?",
+      "tsUtc": "2026-03-16T19:13:09.455000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1471221296330178802/1483181347643064534"
+    },
+    {
+      "id": "1483787169934999602",
+      "channelId": "1471221296330178802",
+      "author": "max.hastings",
+      "content": "<@1471187036064059586> hope you've been doing well. \n\nI want to help you out here getting more leads coming in, and am very confident that once we get some pics from you we'll be able to generate much higher quality leds. \n\nI'm eager to get this up and running and start getting you closing jobs asap, but we're blocked until we get those pics from you. \n\nWhen can you get those over?",
+      "tsUtc": "2026-03-18T11:20:28.745000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1471221296330178802/1483787169934999602"
+    },
+    {
+      "id": "1483912758444691628",
+      "channelId": "1471221296330178802",
+      "author": "max.hastings",
+      "content": "<@1471187036064059586> I wanna get you some bathrooms!! Where you at??",
+      "tsUtc": "2026-03-18T19:39:31.379000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1471221296330178802/1483912758444691628"
+    }
+  ],
+  "fetchedAt": "2026-03-19T09:00:09.981Z"
+}

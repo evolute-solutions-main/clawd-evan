@@ -1,0 +1,14 @@
+{
+  "clientName": "🚬-az-remodeling-and-rooter-llc",
+  "context": [
+    "Phil is waiting for an update from Alex regarding the campaign.",
+    "Max is reviewing the status of the campaign build-out."
+  ],
+  "status": "Phil is awaiting information from Alex to proceed, and Max is currently reviewing the campaign setup to determine the next steps.",
+  "next": "Max → Provide Phil with an update on the campaign build-out status and any next steps required.",
+  "teamChatter": null,
+  "risk": null,
+  "urgencyScore": 1,
+  "needsManualReview": false,
+  "reviewNote": null
+}

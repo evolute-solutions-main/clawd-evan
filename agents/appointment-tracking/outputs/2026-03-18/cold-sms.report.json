@@ -1,0 +1,124 @@
+{
+  "date": "2026-03-18",
+  "timezone": "America/Sao_Paulo",
+  "generatedAt": "2026-03-19T09:05:02.700Z",
+  "totals": {
+    "confirmed": 3,
+    "unconfirmed": 7
+  },
+  "byOwner": [
+    {
+      "name": "Eddie Murillo",
+      "confirmed": 1,
+      "unconfirmed": 3,
+      "notes": [
+        "egor oliveira",
+        "+15868831377",
+        "scot",
+        "BEN"
+      ]
+    },
+    {
+      "name": "Randy Nadera",
+      "confirmed": 0,
+      "unconfirmed": 4,
+      "notes": [
+        "Gary",
+        "James",
+        "Marcus Construction",
+        "Jose Construction Corp"
+      ]
+    },
+    {
+      "name": "Richard Ramilo",
+      "confirmed": 2,
+      "unconfirmed": 0,
+      "notes": [
+        "+18024302008",
+        "+12604176746"
+      ]
+    }
+  ],
+  "appointments": [
+    {
+      "time": "19:08:39",
+      "setter": "Richard Ramilo",
+      "name": "",
+      "phone": "+18024302008",
+      "status": "confirmed",
+      "permalink": "https://discord.com/channels/1164939432722440282/1332578941407334430/1483950288460316803"
+    },
+    {
+      "time": "17:44:57",
+      "setter": "Randy Nadera",
+      "name": "Gary",
+      "phone": "+15862064836",
+      "status": "unconfirmed",
+      "permalink": "https://discord.com/channels/1164939432722440282/1387098677646196887/1483929226041229426"
+    },
+    {
+      "time": "16:09:46",
+      "setter": "Randy Nadera",
+      "name": "James",
+      "phone": "+18122784045",
+      "status": "unconfirmed",
+      "permalink": "https://discord.com/channels/1164939432722440282/1387098677646196887/1483905272773738536"
+    },
+    {
+      "time": "16:03:04",
+      "setter": "Eddie Murillo",
+      "name": "egor oliveira",
+      "phone": "+12399891791",
+      "status": "unconfirmed",
+      "permalink": "https://discord.com/channels/1164939432722440282/1387098677646196887/1483903587196338417"
+    },
+    {
+      "time": "22:46:25",
+      "setter": "Eddie Murillo",
+      "name": "",
+      "phone": "+15868831377",
+      "status": "confirmed",
+      "permalink": "https://discord.com/channels/1164939432722440282/1332578941407334430/1484005092112990320"
+    },
+    {
+      "time": "14:36:37",
+      "setter": "Randy Nadera",
+      "name": "Marcus Construction",
+      "phone": "+15085793080",
+      "status": "unconfirmed",
+      "permalink": "https://discord.com/channels/1164939432722440282/1387098677646196887/1483881830523469886"
+    },
+    {
+      "time": "13:56:40",
+      "setter": "Eddie Murillo",
+      "name": "scot",
+      "phone": "+18595337976",
+      "status": "unconfirmed",
+      "permalink": "https://discord.com/channels/1164939432722440282/1387098677646196887/1483871774969036871"
+    },
+    {
+      "time": "12:56:01",
+      "setter": "Eddie Murillo",
+      "name": "BEN",
+      "phone": "+15862152205",
+      "status": "unconfirmed",
+      "permalink": "https://discord.com/channels/1164939432722440282/1387098677646196887/1483856514161840219"
+    },
+    {
+      "time": "11:46:03",
+      "setter": "Randy Nadera",
+      "name": "Jose Construction Corp",
+      "phone": "+19789877286",
+      "status": "unconfirmed",
+      "permalink": "https://discord.com/channels/1164939432722440282/1387098677646196887/1483838906804731914"
+    },
+    {
+      "time": "20:44:41",
+      "setter": "Richard Ramilo",
+      "name": "",
+      "phone": "+12604176746",
+      "status": "confirmed",
+      "permalink": "https://discord.com/channels/1164939432722440282/1332578941407334430/1483974456375377961"
+    }
+  ]
+}

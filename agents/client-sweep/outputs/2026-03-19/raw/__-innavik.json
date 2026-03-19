@@ -1,0 +1,18 @@
+{
+  "client": {
+    "name": "🦃-innavik",
+    "channelId": "1400236255370936490",
+    "parentId": "1334610131647987742"
+  },
+  "clientMessages": [
+    {
+      "id": "1483788699396345968",
+      "channelId": "1400236255370936490",
+      "author": "max.hastings",
+      "content": "<@343180720212017154> <@1461063191483121750> \n\nAny update on your end?\n\nFrom what we can see, leads are coming in at a good cost, and volume is significantly up compared to the previous campaigns. Right now we’re seeing roughly a 3x increase in lead flow, which is a very positive signal. At the same time, whenever volume increases that much, it can sometimes affect overall lead quality, so the key now is understanding what’s actually happening after the leads come in.\n\nAt this stage, the main thing that matters is not whether every single lead responds, but whether strong opportunities are coming through and turning into real jobs. That’s the part we need clarity on.\n\nOne variable worth looking at is the offer and messaging in the ads. We are currently leading with a discount and keeping the messaging fairly broad. In some cases, that performs very well and helps businesses close a high number of deals. In other cases, it can attract more low-intent or less qualified leads. If that’s what you and your team are seeing, we can absolutely tighten the messaging and make adjustments so we attract more of the right people.\n\nFrom our side, we can clearly see the leads being generated. What we do not have visibility on unless it’s shared with us is what happens after that, such as who was contacted, who responded, who was qualified, who booked, and who turned into an actual sale.\n\nThe best way for us to optimize this properly is to get cleaner feedback from your team through one of these two ways:\n    1.    Keeping the CRM updated so each opportunity is moved into the correct column\n    2.    Sending us direct feedback on lead quality, booking rate, and closed jobs\n\nWe want to make sure we’re doing everything possible to improve performance and get you the best result here. But right now, without that downstream feedback, we’re operating with limited visibility. Once we have that information, we can make much smarter decisions and optimize much faster.",
+      "tsUtc": "2026-03-18T11:26:33.397000+00:00",
+      "permalink": "https://discord.com/channels/1164939432722440282/1400236255370936490/1483788699396345968"
+    }
+  ],
+  "fetchedAt": "2026-03-19T09:00:02.455Z"
+}

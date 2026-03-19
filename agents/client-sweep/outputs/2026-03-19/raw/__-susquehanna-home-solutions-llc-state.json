@@ -1,0 +1,14 @@
+{
+  "clientName": "🪶-susquehanna-home-solutions-llc",
+  "context": [
+    "Client's Facebook business account was compromised, leading to unauthorized ad spend.",
+    "Client has paused ads and destroyed credit cards due to security breach."
+  ],
+  "status": "Ernie's Facebook business account was hacked, resulting in unauthorized transactions exceeding $600. The client has paused all ads and is working with Max to resolve the issue and secure the account.",
+  "next": "Max → Continue working with Meta support to secure Ernie's account and ensure all unauthorized transactions are refunded.",
+  "teamChatter": null,
+  "risk": "Potential risk of client dissatisfaction due to security breach and financial loss.",
+  "urgencyScore": 0,
+  "needsManualReview": false,
+  "reviewNote": null
+}
