@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Sales Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --navy:#1F3864;--navy-l:#2A4A7F;--bg:#F0F4FF;--card:#fff;--alt:#EEF2FF;
+  --border:#E2E8F0;--text:#1E293B;--muted:#64748B;--light:#94A3B8;
+  --daniel:#1A237E;--eddie:#004D40;--randy:#BF360C;--richard:#37474F;--max-c:#1B5E20;--ads:#757575;
+  --showed:#2E7D32;--noshow:#C62828;--cancelled:#6A1B9A;--rescheduled:#E65100;--followup:#F57F17;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+
+/* ── Upload ── */
+#upload-zone{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:2rem}
+.up-card{background:var(--card);border:2px dashed var(--border);border-radius:16px;padding:4rem 3rem;text-align:center;max-width:460px;width:100%;transition:.2s;cursor:pointer}
+.up-card.drag{border-color:var(--navy);background:var(--alt)}
+.up-card .icon{font-size:3rem;margin-bottom:1rem}
+.up-card h2{color:var(--navy);font-size:1.5rem;font-weight:700;margin-bottom:.5rem}
+.up-card p{color:var(--muted);margin-bottom:1.5rem;font-size:.9rem}
+.up-btn{background:var(--navy);color:#fff;border:none;padding:.7rem 2rem;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer;font-family:inherit}
+.up-btn:hover{background:var(--navy-l)}
+.up-hint{margin-top:1rem;font-size:.73rem;color:var(--light)}
+#file-input{display:none}
+
+/* ── Dashboard ── */
+#dashboard{display:none}
+header{background:var(--navy);color:#fff;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+header h1{font-size:1.2rem;font-weight:700}
+.h-sub{font-size:.78rem;opacity:.65;margin-top:2px}
+.re-btn{background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);padding:.45rem 1.1rem;border-radius:6px;font-size:.82rem;font-weight:500;cursor:pointer;font-family:inherit}
+.re-btn:hover{background:rgba(255,255,255,.25)}
+.main{padding:1.5rem 2rem;max-width:1700px;margin:0 auto}
+
+/* ── Cards / Sections ── */
+.section{background:var(--card);border-radius:12px;padding:1.5rem;box-shadow:0 1px 4px rgba(0,0,0,.06);margin-bottom:1.5rem}
+.sec-title{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:1.2rem;display:flex;align-items:center;gap:.4rem}
+
+/* ── KPI ── */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem}
+.kpi{background:var(--card);border-radius:12px;padding:1.25rem 1.4rem;box-shadow:0 1px 4px rgba(0,0,0,.06);border-top:3px solid var(--navy)}
+.kpi-lbl{font-size:.7rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.45rem}
+.kpi-val{font-size:1.7rem;font-weight:800;color:var(--navy);line-height:1}
+.kpi-sub{font-size:.72rem;color:var(--muted);margin-top:.3rem}
+
+/* ── Layouts ── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem}
+.ratio-col{display:grid;grid-template-columns:3fr 2fr;gap:1.5rem;margin-bottom:1.5rem}
+
+/* ── Tables ── */
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th{background:var(--navy);color:#fff;padding:.65rem .9rem;text-align:left;font-weight:600;font-size:.7rem;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+th:first-child{border-radius:6px 0 0 0}th:last-child{border-radius:0 6px 0 0}
+td{padding:.65rem .9rem;border-bottom:1px solid var(--border);white-space:nowrap}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:var(--alt)}
+tr:hover td{background:#dde8ff!important}
+
+/* ── Pills / Badges ── */
+.pill{display:inline-flex;align-items:center;padding:.2rem .65rem;border-radius:20px;font-size:.75rem;font-weight:600;color:#fff;white-space:nowrap}
+.badge{display:inline-block;padding:.18rem .5rem;border-radius:4px;font-size:.72rem;font-weight:600}
+
+/* ── Source cards ── */
+.src-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:1rem}
+.src-card{border-radius:10px;padding:1.1rem;border:2px solid}
+.src-card.cold{border-color:var(--daniel);background:#F3F4FF}
+.src-card.ads{border-color:var(--randy);background:#FFF5F2}
+.src-card h3{font-size:.78rem;font-weight:700;margin-bottom:.65rem;text-transform:uppercase;letter-spacing:.05em}
+.src-card.cold h3{color:var(--daniel)}.src-card.ads h3{color:var(--randy)}
+.src-stat{display:flex;justify-content:space-between;align-items:center;padding:.25rem 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.78rem}
+.src-stat:last-child{border-bottom:none}
+.src-stat .v{font-weight:700;font-size:.85rem}
+
+/* ── Chart containers ── */
+.ch{position:relative;height:280px}
+.ch-lg{position:relative;height:320px}
+.ch-sm{position:relative;height:190px}
+
+/* ── Filters ── */
+.filters{display:flex;gap:.65rem;margin-bottom:1rem;flex-wrap:wrap;align-items:center}
+.fl{font-size:.72rem;font-weight:600;color:var(--muted)}
+select,input[type=date]{border:1px solid var(--border);border-radius:6px;padding:.35rem .65rem;font-size:.78rem;font-family:inherit;color:var(--text);background:#fff;cursor:pointer}
+select:focus,input[type=date]:focus{outline:2px solid var(--navy);outline-offset:1px}
+.rst{padding:.35rem .85rem;border-radius:6px;font-size:.78rem;font-weight:600;border:none;background:var(--navy);color:#fff;cursor:pointer;font-family:inherit}
+.rst:hover{background:var(--navy-l)}
+
+/* ── Chart toggles ── */
+.ch-tgls{display:flex;gap:.45rem;margin-bottom:.75rem;flex-wrap:wrap}
+.ch-tgl{display:flex;align-items:center;gap:.3rem;padding:.25rem .65rem;border-radius:20px;font-size:.72rem;font-weight:600;border:2px solid;cursor:pointer;font-family:inherit;background:transparent;transition:.15s}
+.ch-tgl.on{color:#fff}
+
+/* ── Fathom ── */
+a.fth{color:var(--navy);text-decoration:none;font-size:.95rem}
+
+/* ── Responsive ── */
+@media(max-width:1100px){.kpi-grid{grid-template-columns:repeat(2,1fr)}.two-col,.ratio-col{grid-template-columns:1fr}}
+@media(max-width:600px){.kpi-grid{grid-template-columns:1fr 1fr}.main{padding:1rem}.src-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- Upload -->
+<div id="upload-zone">
+  <div class="up-card" id="drop-zone">
+    <div class="icon">📊</div>
+    <h2>Sales Dashboard</h2>
+    <p>Drag & drop your Excel file or click to browse. The full dashboard populates instantly.</p>
+    <button class="up-btn" onclick="document.getElementById('file-input').click()">Choose File</button>
+    <input type="file" id="file-input" accept=".xlsx,.xls"/>
+    <p class="up-hint">Requires "All Booked Calls" + "EOD Reports (Setters)" sheets</p>
+  </div>
+</div>
+
+<!-- Dashboard -->
+<div id="dashboard">
+  <header>
+    <div><h1>📊 Sales Dashboard</h1><div class="h-sub" id="h-sub">Loading…</div></div>
+    <button class="re-btn" onclick="resetApp()">↑ Upload New File</button>
+  </header>
+  <div class="main">
+
+    <!-- KPIs -->
+    <div class="kpi-grid" id="kpi-grid"></div>
+
+    <!-- Setter Table + Source Comparison -->
+    <div class="ratio-col">
+      <div class="section">
+        <div class="sec-title">🏆 Setter Performance</div>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>Setter</th><th>Dials</th><th>Contacts</th><th>Booked</th><th>Showed</th><th>Show%</th><th>Closed</th><th>Close%</th><th>Revenue</th><th>Cash</th></tr></thead>
+            <tbody id="setter-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="section">
+        <div class="sec-title">📡 Cold SMS vs Ads</div>
+        <div class="src-grid">
+          <div class="src-card cold"><h3>❄️ Cold SMS</h3><div id="cold-stats"></div></div>
+          <div class="src-card ads"><h3>📢 Ads</h3><div id="ads-stats"></div></div>
+        </div>
+        <div class="ch-sm"><canvas id="src-chart"></canvas></div>
+      </div>
+    </div>
+
+    <!-- Status + Daily -->
+    <div class="two-col">
+      <div class="section">
+        <div class="sec-title">📋 Call Status Breakdown</div>
+        <div class="ch"><canvas id="status-chart"></canvas></div>
+      </div>
+      <div class="section">
+        <div class="sec-title">📈 Daily Activity (EOD)</div>
+        <div class="ch-tgls" id="daily-tgls"></div>
+        <div class="ch"><canvas id="daily-chart"></canvas></div>
+      </div>
+    </div>
+
+    <!-- Revenue -->
+    <div class="section">
+      <div class="sec-title">💰 Revenue Over Time</div>
+      <div class="ch-lg"><canvas id="rev-chart"></canvas></div>
+    </div>
+
+    <!-- EOD Detail -->
+    <div class="section">
+      <div class="sec-title">📝 Setter Daily Breakdown (EOD)</div>
+      <div class="filters">
+        <span class="fl">Setter:</span>
+        <select id="eod-setter"></select>
+        <span class="fl">From:</span><input type="date" id="eod-from"/>
+        <span class="fl">To:</span><input type="date" id="eod-to"/>
+        <button class="rst" onclick="resetEOD()">Reset</button>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Date</th><th>Setter</th><th>Dials</th><th>Contacts</th><th>Confirmed</th><th>Unconfirmed</th><th>Notes</th></tr></thead>
+          <tbody id="eod-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Call Log -->
+    <div class="section">
+      <div class="sec-title">📞 Individual Call Log</div>
+      <div class="filters">
+        <span class="fl">Setter:</span><select id="lg-setter"></select>
+        <span class="fl">Source:</span>
+        <select id="lg-source"><option value="">All</option><option>Cold SMS</option><option>Ads</option></select>
+        <span class="fl">Status:</span>
+        <select id="lg-status"><option value="">All</option><option>Showed</option><option>No-Show</option><option>Cancelled/Rejected</option><option>Rescheduled</option></select>
+        <span class="fl">Outcome:</span>
+        <select id="lg-outcome"><option value="">All</option><option>Closed</option><option>No Closed</option><option>Follow-up required</option></select>
+        <button class="rst" onclick="resetLog()">Reset</button>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Date</th><th>Name</th><th>Source</th><th>Setter</th><th>Status</th><th>Outcome</th><th>Closer</th><th>Revenue</th><th>Cash</th><th>🎥</th></tr></thead>
+          <tbody id="log-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── Constants ──────────────────────────────────────────────
+const SC = {
+  Daniel:'#1A237E', Eddie:'#004D40', Randy:'#BF360C',
+  'Richard Ramilo':'#37474F', Max:'#1B5E20', 'Ads - No Setter':'#757575', Unknown:'#9E9E9E'
+}
+const STATUS_C = {
+  Showed:'#2E7D32','No-Show':'#C62828','Cancelled/Rejected':'#6A1B9A',
+  Rescheduled:'#E65100',Closed:'#2E7D32','No Closed':'#C62828','Follow-up required':'#F57F17'
+}
+const ALIASES = {
+  daniel:'Daniel','daniel franco':'Daniel',
+  eddie:'Eddie','eddie murillo':'Eddie',
+  randy:'Randy','randy nadera':'Randy',
+  'richard ramilo':'Richard Ramilo',richard:'Richard Ramilo',
+  max:'Max','ads - no setter':'Ads - No Setter','ads-no setter':'Ads - No Setter'
+}
+
+// ── State ──────────────────────────────────────────────────
+let charts = {}
+let _calls = [], _eod = []
+let dailyOn = {dials:true,contacts:true,confirmed:true}
+
+// ── Upload ─────────────────────────────────────────────────
+const dropZone = document.getElementById('drop-zone')
+const fileInput = document.getElementById('file-input')
+dropZone.addEventListener('dragover', e=>{e.preventDefault();dropZone.classList.add('drag')})
+dropZone.addEventListener('dragleave', ()=>dropZone.classList.remove('drag'))
+dropZone.addEventListener('drop', e=>{e.preventDefault();dropZone.classList.remove('drag');if(e.dataTransfer.files[0])loadFile(e.dataTransfer.files[0])})
+dropZone.addEventListener('click', ()=>fileInput.click())
+fileInput.addEventListener('change', e=>{if(e.target.files[0])loadFile(e.target.files[0])})
+
+function loadFile(file){
+  const r=new FileReader()
+  r.onload=e=>{
+    const wb=XLSX.read(new Uint8Array(e.target.result),{type:'array',cellDates:false})
+    const data=parseWB(wb)
+    _calls=data.calls; _eod=data.eod
+    render()
+    document.getElementById('upload-zone').style.display='none'
+    document.getElementById('dashboard').style.display='block'
+  }
+  r.readAsArrayBuffer(file)
+}
+
+function resetApp(){
+  document.getElementById('upload-zone').style.display='flex'
+  document.getElementById('dashboard').style.display='none'
+  fileInput.value=''
+  Object.values(charts).forEach(c=>c.destroy())
+  charts={}
+}
+
+// ── Parse ──────────────────────────────────────────────────
+function normSetter(v){
+  if(!v)return'Unknown'
+  const k=v.toString().trim().toLowerCase()
+  return ALIASES[k]||v.toString().trim()
+}
+
+function pDate(v){
+  if(!v)return null
+  if(v instanceof Date)return v
+  if(typeof v==='number'){
+    const d=new Date(Math.round((v-25569)*86400000))
+    return isNaN(d)?null:d
+  }
+  if(typeof v==='string'){
+    const m=v.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/)
+    if(m)return new Date(+m[3],+m[1]-1,+m[2])
+    const d=new Date(v);if(!isNaN(d))return d
+  }
+  return null
+}
+
+function fmtD(d){if(!d)return'';return`${String(d.getMonth()+1).padStart(2,'0')}/${String(d.getDate()).padStart(2,'0')}/${d.getFullYear()}`}
+function isoD(d){if(!d)return'';return`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function n(v){const x=parseFloat(String(v||'').replace(/[^0-9.-]/g,''));return isNaN(x)?0:x}
+
+function colIdx(header,q){
+  if(typeof q==='string'){
+    const ql=q.toLowerCase()
+    let i=header.findIndex(h=>h.toLowerCase().trim()===ql)
+    if(i<0)i=header.findIndex(h=>h.toLowerCase().includes(ql))
+    return i
+  }
+  return -1
+}
+
+function parseCalls(ws){
+  const rows=XLSX.utils.sheet_to_json(ws,{header:1,raw:true,defval:''})
+  if(!rows.length)return[]
+  const h=rows[0].map(x=>x?x.toString().trim():'')
+  const I={
+    date:colIdx(h,'date'), name:colIdx(h,'client'),
+    source:colIdx(h,'source'), setter:colIdx(h,'setter'),
+    status:colIdx(h,'status'), outcome:colIdx(h,'outcome'),
+    closer:colIdx(h,'closer'), cash:colIdx(h,'cash collected'),
+    rev:colIdx(h,'revenue'), notes:colIdx(h,'notes'),
+    fathom:colIdx(h,'fathom'), entered:colIdx(h,'entered')
+  }
+  return rows.slice(1).map(r=>({
+    date:pDate(r[I.date]), name:(r[I.name]||'').toString().trim(),
+    source:(r[I.source]||'').toString().trim(),
+    setter:normSetter(r[I.setter]),
+    status:(r[I.status]||'').toString().trim(),
+    outcome:(r[I.outcome]||'').toString().trim(),
+    closer:(r[I.closer]||'').toString().trim(),
+    cashCollected:n(r[I.cash]), revenue:n(r[I.rev]),
+    notes:(r[I.notes]||'').toString().trim(),
+    fathomLink:(I.fathom>=0?r[I.fathom]:'').toString().trim()
+  })).filter(r=>r.date&&r.name)
+}
+
+function parseEOD(ws){
+  const rows=XLSX.utils.sheet_to_json(ws,{header:1,raw:true,defval:''})
+  if(!rows.length)return[]
+  const h=rows[0].map(x=>x?x.toString().trim():'')
+  const iS=colIdx(h,'setter')>=0?colIdx(h,'setter'):0
+  const iD=colIdx(h,'date')>=0?colIdx(h,'date'):1
+  const iUC=colIdx(h,'unique')>=0?colIdx(h,'unique'):2
+  const iDl=colIdx(h,'dials')>=0?colIdx(h,'dials'):3
+  // exact match for confirmed/unconfirmed to avoid collision
+  let iUn=h.findIndex(x=>x.trim().toLowerCase()==='unconfirmed')
+  let iCo=h.findIndex(x=>x.trim().toLowerCase()==='confirmed')
+  if(iUn<0)iUn=4; if(iCo<0)iCo=5
+  const iN=colIdx(h,'notes')>=0?colIdx(h,'notes'):6
+  return rows.slice(1).map(r=>({
+    setter:normSetter(r[iS]), date:pDate(r[iD]),
+    uniqueContacts:n(r[iUC]), dials:n(r[iDl]),
+    unconfirmed:n(r[iUn]), confirmed:n(r[iCo]),
+    notes:(r[iN]||'').toString().trim()
+  })).filter(r=>r.date&&r.setter&&r.setter!=='Unknown')
+}
+
+function parseWB(wb){
+  const find=kw=>wb.SheetNames.find(s=>s.toLowerCase().includes(kw))||null
+  const callsName=find('booked')||find('calls')||wb.SheetNames[0]
+  const eodName=find('eod')||find('report')||wb.SheetNames[1]
+  return{calls:parseCalls(wb.Sheets[callsName]),eod:parseEOD(wb.Sheets[eodName])}
+}
+
+// ── KPIs ───────────────────────────────────────────────────
+function kpis(){
+  const c=_calls, e=_eod
+  const rev=c.reduce((s,r)=>s+r.revenue,0)
+  const cash=c.reduce((s,r)=>s+r.cashCollected,0)
+  const booked=c.length
+  const showed=c.filter(r=>r.status==='Showed').length
+  const closed=c.filter(r=>r.outcome==='Closed').length
+  const dials=e.reduce((s,r)=>s+r.dials,0)
+  const conf=e.reduce((s,r)=>s+r.confirmed,0)
+  return{rev,cash,booked,showed,closed,dials,conf,
+    showRate:booked?showed/booked:0,
+    closeRate:showed?closed/showed:0,
+    avgCash:closed?cash/closed:0,
+    dialBook:dials?conf/dials:0}
+}
+
+// ── Helpers ────────────────────────────────────────────────
+const $=(id)=>document.getElementById(id)
+const fmt$=(n)=>'$'+Math.round(n).toLocaleString('en-US')
+const fmtP=(n)=>(n*100).toFixed(1)+'%'
+const fmtN=(n)=>Math.round(n).toLocaleString('en-US')
+function mkChart(id,cfg){if(charts[id])charts[id].destroy();charts[id]=new Chart($(id).getContext('2d'),cfg);return charts[id]}
+
+function pill(setter){const c=SC[setter]||'#9E9E9E';return`<span class="pill" style="background:${c}">${setter}</span>`}
+function badgeSt(st){const c=STATUS_C[st]||'#999';return`<span class="badge" style="background:${c}22;color:${c}">${st||'—'}</span>`}
+
+// ── Render All ─────────────────────────────────────────────
+function render(){
+  const k=kpis()
+  // header date range
+  const dd=[..._calls.map(r=>r.date),..._eod.map(r=>r.date)].filter(Boolean).sort((a,b)=>a-b)
+  if(dd.length)$('h-sub').textContent=`${fmtD(dd[0])} – ${fmtD(dd[dd.length-1])}`
+  renderKPIs(k)
+  renderSetterTable()
+  renderSourceComp()
+  renderStatusChart()
+  renderDailyChart()
+  renderRevChart()
+  renderEODTable()
+  renderCallLog()
+}
+
+// ── KPI Cards ──────────────────────────────────────────────
+function renderKPIs(k){
+  $('kpi-grid').innerHTML=[
+    {l:'Total Revenue',v:fmt$(k.rev),s:`${k.closed} closes`},
+    {l:'Cash Collected',v:fmt$(k.cash),s:`${fmtP(k.rev?k.cash/k.rev:0)} of revenue`},
+    {l:'Calls Booked',v:fmtN(k.booked),s:`${k.showed} showed`},
+    {l:'Show Rate',v:fmtP(k.showRate),s:`${k.showed} of ${k.booked}`},
+    {l:'Close Rate',v:fmtP(k.closeRate),s:`${k.closed} of ${k.showed} showed`},
+    {l:'Avg Cash / Close',v:fmt$(k.avgCash),s:`across ${k.closed} closes`},
+    {l:'Total Dials',v:fmtN(k.dials),s:`${fmtN(k.conf)} confirmed`},
+    {l:'Dial → Book Rate',v:fmtP(k.dialBook),s:`${fmtN(k.conf)} booked from ${fmtN(k.dials)}`},
+  ].map(c=>`<div class="kpi"><div class="kpi-lbl">${c.l}</div><div class="kpi-val">${c.v}</div><div class="kpi-sub">${c.s}</div></div>`).join('')
+}
+
+// ── Setter Table ───────────────────────────────────────────
+function renderSetterTable(){
+  const eodBySetter={}
+  for(const r of _eod){if(!eodBySetter[r.setter])eodBySetter[r.setter]={dials:0,contacts:0};eodBySetter[r.setter].dials+=r.dials;eodBySetter[r.setter].contacts+=r.uniqueContacts}
+  const setters=[...new Set(_calls.map(r=>r.setter))].filter(s=>s&&s!=='Unknown')
+  const rows=setters.map(s=>{
+    const sc=_calls.filter(r=>r.setter===s)
+    const showed=sc.filter(r=>r.status==='Showed').length
+    const closed=sc.filter(r=>r.outcome==='Closed').length
+    const e=eodBySetter[s]||{dials:0,contacts:0}
+    return{s,dials:e.dials,contacts:e.contacts,booked:sc.length,showed,closed,
+      rev:sc.reduce((t,r)=>t+r.revenue,0),cash:sc.reduce((t,r)=>t+r.cashCollected,0)}
+  }).sort((a,b)=>b.rev-a.rev)
+  $('setter-tbody').innerHTML=rows.map(r=>{
+    const c=SC[r.s]||'#9E9E9E'
+    return`<tr>
+      <td style="border-left:4px solid ${c}">${pill(r.s)}</td>
+      <td>${fmtN(r.dials)}</td><td>${fmtN(r.contacts)}</td><td>${r.booked}</td><td>${r.showed}</td>
+      <td>${r.booked?Math.round(r.showed/r.booked*100)+'%':'—'}</td>
+      <td>${r.closed}</td>
+      <td>${r.showed?Math.round(r.closed/r.showed*100)+'%':'—'}</td>
+      <td><strong>${fmt$(r.rev)}</strong></td><td>${fmt$(r.cash)}</td>
+    </tr>`
+  }).join('')
+}
+
+// ── Source Comparison ──────────────────────────────────────
+function srcStats(src){
+  const sc=_calls.filter(r=>r.source===src)
+  const showed=sc.filter(r=>r.status==='Showed').length
+  const closed=sc.filter(r=>r.outcome==='Closed').length
+  const cash=sc.reduce((s,r)=>s+r.cashCollected,0)
+  return{booked:sc.length,showed,closed,rev:sc.reduce((s,r)=>s+r.revenue,0),cash,
+    showR:sc.length?showed/sc.length:0,closeR:showed?closed/showed:0,cpc:closed?cash/closed:0}
+}
+function srcBlock(s){
+  return`<div class="src-stat"><span>Calls Booked</span><span class="v">${s.booked}</span></div>
+  <div class="src-stat"><span>Showed</span><span class="v">${s.showed} (${fmtP(s.showR)})</span></div>
+  <div class="src-stat"><span>Closed</span><span class="v">${s.closed} (${fmtP(s.closeR)})</span></div>
+  <div class="src-stat"><span>Revenue</span><span class="v">${fmt$(s.rev)}</span></div>
+  <div class="src-stat"><span>Cash</span><span class="v">${fmt$(s.cash)}</span></div>
+  <div class="src-stat"><span>Cash / Close</span><span class="v">${fmt$(s.cpc)}</span></div>`
+}
+function renderSourceComp(){
+  const cold=srcStats('Cold SMS'),ads=srcStats('Ads')
+  $('cold-stats').innerHTML=srcBlock(cold)
+  $('ads-stats').innerHTML=srcBlock(ads)
+  mkChart('src-chart',{type:'doughnut',data:{
+    labels:['Cold SMS','Ads'],
+    datasets:[{data:[cold.booked,ads.booked],backgroundColor:['#1A237E','#BF360C'],borderWidth:2,borderColor:'#fff'}]
+  },options:{responsive:true,maintainAspectRatio:false,cutout:'65%',
+    plugins:{legend:{position:'bottom',labels:{font:{family:'Inter',size:11}}},
+      tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed} calls`}}}}})
+}
+
+// ── Status Chart ───────────────────────────────────────────
+function renderStatusChart(){
+  const sts=['Showed','No-Show','Cancelled/Rejected','Rescheduled']
+  mkChart('status-chart',{type:'doughnut',data:{
+    labels:sts,
+    datasets:[{data:sts.map(s=>_calls.filter(r=>r.status===s).length),
+      backgroundColor:sts.map(s=>STATUS_C[s]),borderWidth:2,borderColor:'#fff'}]
+  },options:{responsive:true,maintainAspectRatio:false,cutout:'60%',
+    plugins:{legend:{position:'right',labels:{font:{family:'Inter',size:11},padding:10}},
+      tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed} (${fmtP(c.parsed/_calls.length)})`}}}}})
+}
+
+// ── Daily Activity Chart ───────────────────────────────────
+function renderDailyChart(){
+  const byD={}
+  for(const r of _eod){const k=isoD(r.date);if(!k)continue;if(!byD[k])byD[k]={dials:0,contacts:0,confirmed:0};byD[k].dials+=r.dials;byD[k].contacts+=r.uniqueContacts;byD[k].confirmed+=r.confirmed}
+  const lbls=Object.keys(byD).sort()
+  const fLbls=lbls.map(l=>{const d=new Date(l+'T12:00:00');return`${d.getMonth()+1}/${d.getDate()}`})
+  const cfg=[{key:'dials',label:'Dials',color:'#1A237E'},{key:'contacts',label:'Contacts',color:'#004D40'},{key:'confirmed',label:'Confirmed',color:'#BF360C'}]
+  $('daily-tgls').innerHTML=cfg.map(t=>`<button class="ch-tgl ${dailyOn[t.key]?'on':''}" style="border-color:${t.color};${dailyOn[t.key]?`background:${t.color}`:`color:${t.color}`}" onclick="tglDaily('${t.key}','${t.color}',this)">${t.label}</button>`).join('')
+  mkChart('daily-chart',{type:'line',data:{labels:fLbls,datasets:[
+    {label:'Dials',data:lbls.map(k=>byD[k].dials),borderColor:'#1A237E',tension:.3,fill:false,pointRadius:2,hidden:!dailyOn.dials},
+    {label:'Contacts',data:lbls.map(k=>byD[k].contacts),borderColor:'#004D40',tension:.3,fill:false,pointRadius:2,hidden:!dailyOn.contacts},
+    {label:'Confirmed',data:lbls.map(k=>byD[k].confirmed),borderColor:'#BF360C',tension:.3,fill:false,pointRadius:2,hidden:!dailyOn.confirmed},
+  ]},options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{mode:'index',intersect:false}},
+    scales:{x:{ticks:{font:{size:9},maxTicksLimit:14,maxRotation:45},grid:{color:'rgba(0,0,0,.05)'}},
+      y:{beginAtZero:true,ticks:{font:{size:9}},grid:{color:'rgba(0,0,0,.05)'}}}}})
+}
+
+function tglDaily(key,color,btn){
+  dailyOn[key]=!dailyOn[key]
+  const c=charts['daily-chart']
+  if(c){const i={dials:0,contacts:1,confirmed:2}[key];c.data.datasets[i].hidden=!dailyOn[key];c.update()}
+  btn.classList.toggle('on')
+  btn.style.background=dailyOn[key]?color:'transparent'
+  btn.style.color=dailyOn[key]?'#fff':color
+}
+
+// ── Revenue Chart ──────────────────────────────────────────
+function renderRevChart(){
+  const byD={}
+  for(const r of _calls.filter(c=>c.outcome==='Closed')){
+    const k=isoD(r.date);if(!k)continue
+    if(!byD[k])byD[k]={rev:0,cash:0}
+    byD[k].rev+=r.revenue;byD[k].cash+=r.cashCollected
+  }
+  const lbls=Object.keys(byD).sort()
+  let cum=0
+  const cumData=lbls.map(k=>{cum+=byD[k].cash;return cum})
+  const fLbls=lbls.map(l=>{const d=new Date(l+'T12:00:00');return`${d.getMonth()+1}/${d.getDate()}`})
+  mkChart('rev-chart',{type:'bar',data:{labels:fLbls,datasets:[
+    {type:'bar',label:'Revenue per Close',data:lbls.map(k=>byD[k].rev),backgroundColor:'rgba(26,35,126,.7)',borderColor:'#1A237E',borderWidth:1,yAxisID:'y'},
+    {type:'line',label:'Cumulative Cash Collected',data:cumData,borderColor:'#BF360C',backgroundColor:'rgba(191,54,12,.1)',tension:.3,pointRadius:5,yAxisID:'y1'}
+  ]},options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{labels:{font:{family:'Inter',size:11}}},tooltip:{mode:'index',intersect:false,callbacks:{label:c=>` ${c.dataset.label}: ${fmt$(c.parsed.y)}`}}},
+    scales:{x:{ticks:{font:{size:9}},grid:{color:'rgba(0,0,0,.05)'}},
+      y:{beginAtZero:true,position:'left',ticks:{font:{size:9},callback:v=>'$'+v.toLocaleString()},grid:{color:'rgba(0,0,0,.05)'}},
+      y1:{beginAtZero:true,position:'right',ticks:{font:{size:9},callback:v=>'$'+v.toLocaleString()},grid:{drawOnChartArea:false}}}}})
+}
+
+// ── EOD Table ──────────────────────────────────────────────
+function renderEODTable(){
+  const setters=[...new Set(_eod.map(r=>r.setter))].filter(Boolean).sort()
+  $('eod-setter').innerHTML='<option value="">All Setters</option>'+setters.map(s=>`<option>${s}</option>`).join('')
+  const dd=_eod.map(r=>r.date).filter(Boolean).sort((a,b)=>a-b)
+  if(dd.length){$('eod-from').value=isoD(dd[0]);$('eod-to').value=isoD(dd[dd.length-1])}
+  $('eod-setter').onchange=updEOD;$('eod-from').onchange=updEOD;$('eod-to').onchange=updEOD
+  updEOD()
+}
+function updEOD(){
+  let rows=[..._eod]
+  const s=$('eod-setter').value,f=$('eod-from').value,t=$('eod-to').value
+  if(s)rows=rows.filter(r=>r.setter===s)
+  if(f)rows=rows.filter(r=>r.date>=new Date(f+'T00:00:00'))
+  if(t)rows=rows.filter(r=>r.date<=new Date(t+'T23:59:59'))
+  rows.sort((a,b)=>a.date-b.date)
+  $('eod-tbody').innerHTML=rows.map(r=>`<tr>
+    <td>${fmtD(r.date)}</td>
+    <td>${pill(r.setter)}</td>
+    <td>${fmtN(r.dials)}</td><td>${fmtN(r.uniqueContacts)}</td>
+    <td><strong style="color:#2E7D32">${r.confirmed}</strong></td>
+    <td>${r.unconfirmed}</td>
+    <td style="max-width:220px;white-space:normal;font-size:.77rem;color:var(--muted)">${r.notes}</td>
+  </tr>`).join('')
+}
+function resetEOD(){
+  $('eod-setter').value=''
+  const dd=_eod.map(r=>r.date).filter(Boolean).sort((a,b)=>a-b)
+  if(dd.length){$('eod-from').value=isoD(dd[0]);$('eod-to').value=isoD(dd[dd.length-1])}
+  updEOD()
+}
+
+// ── Call Log ───────────────────────────────────────────────
+function renderCallLog(){
+  const setters=[...new Set(_calls.map(r=>r.setter))].filter(Boolean).sort()
+  $('lg-setter').innerHTML='<option value="">All</option>'+setters.map(s=>`<option>${s}</option>`).join('')
+  $('lg-setter').onchange=updLog;$('lg-source').onchange=updLog;$('lg-status').onchange=updLog;$('lg-outcome').onchange=updLog
+  updLog()
+}
+function updLog(){
+  let rows=[..._calls]
+  const s=$('lg-setter').value,src=$('lg-source').value,st=$('lg-status').value,oc=$('lg-outcome').value
+  if(s)rows=rows.filter(r=>r.setter===s)
+  if(src)rows=rows.filter(r=>r.source===src)
+  if(st)rows=rows.filter(r=>r.status===st)
+  if(oc)rows=rows.filter(r=>r.outcome===oc)
+  rows.sort((a,b)=>a.date-b.date)
+  $('log-tbody').innerHTML=rows.map(r=>`<tr>
+    <td>${fmtD(r.date)}</td>
+    <td style="max-width:140px;white-space:normal;font-size:.8rem">${r.name}</td>
+    <td><span class="badge" style="background:${r.source==='Cold SMS'?'#E8EAF6':'#FBE9E7'};color:${r.source==='Cold SMS'?'#1A237E':'#BF360C'}">${r.source||'—'}</span></td>
+    <td>${pill(r.setter)}</td>
+    <td>${badgeSt(r.status)}</td>
+    <td>${r.outcome?badgeSt(r.outcome):'—'}</td>
+    <td style="font-size:.8rem">${r.closer||'—'}</td>
+    <td>${r.revenue?fmt$(r.revenue):'—'}</td>
+    <td>${r.cashCollected?fmt$(r.cashCollected):'—'}</td>
+    <td>${r.fathomLink?`<a href="${r.fathomLink}" target="_blank" class="fth">🎥</a>`:''}</td>
+  </tr>`).join('')
+}
+function resetLog(){
+  ['lg-setter','lg-source','lg-status','lg-outcome'].forEach(id=>$(id).value='')
+  updLog()
+}
+</script>
+</body>
+</html>

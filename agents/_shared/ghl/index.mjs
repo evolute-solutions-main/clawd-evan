@@ -223,6 +223,92 @@ export async function getAppointmentsMultiCalendar(calendarIds, date) {
 }
 
 /**
+ * Get a single contact by ID.
+ * @param {string} contactId
+ * @returns {Promise<{ id: string, firstName: string, lastName: string, fullName: string, phone: string, email: string, companyName: string }>}
+ */
+export async function getContact(contactId) {
+  const data = await ghlRequest(`/contacts/${contactId}`)
+  const c = data.contact
+  return {
+    id: c.id,
+    firstName: c.firstName || '',
+    lastName: c.lastName || '',
+    fullName: [c.firstName, c.lastName].filter(Boolean).join(' '),
+    phone: c.phone || '',
+    email: c.email || c.additionalEmails?.[0] || '',
+    companyName: c.companyName || '',
+  }
+}
+
+/**
+ * Fetch all appointments for a calendar over a date range, handling pagination.
+ * Returns raw GHL fields needed for raw_appt_data — caller is responsible for
+ * mapping createdBy.userId → setter name via SETTER_MAP.
+ *
+ * @param {string} calendarId - GHL calendar ID
+ * @param {string} fromIso    - Start date inclusive, 'YYYY-MM-DD'
+ * @param {string} toIso      - End date inclusive, 'YYYY-MM-DD'
+ * @returns {Promise<Array<{
+ *   id: string,
+ *   title: string,
+ *   contactName: string,
+ *   contactId: string,
+ *   calendarId: string,
+ *   startTime: string,
+ *   endTime: string,
+ *   appointmentStatus: string,
+ *   dateAdded: string,
+ *   dateUpdated: string,
+ *   createdBy: { source: string, userId: string|null },
+ *   assignedUserId: string|null,
+ * }>>}
+ */
+export async function fetchAppointments(calendarId, fromIso, toIso) {
+  const startMs = new Date(fromIso + 'T00:00:00Z').getTime()
+  const endMs   = new Date(toIso   + 'T23:59:59Z').getTime()
+
+  let allEvents = []
+  let page = 1
+  const PER_PAGE = 200
+
+  while (true) {
+    const data = await ghlRequest('/calendars/events', {
+      calendarId,
+      startTime: startMs.toString(),
+      endTime:   endMs.toString(),
+      ...(page > 1 ? { page } : {}),
+    })
+
+    const events = data.events || []
+    allEvents = allEvents.concat(events)
+
+    // Stop if GHL returned fewer than a full page (no more pages)
+    if (events.length < PER_PAGE) break
+
+    // Safety: also stop if meta says we're on the last page
+    if (data.meta && data.meta.currentPage >= data.meta.totalPages) break
+
+    page++
+  }
+
+  return allEvents.map(evt => ({
+    id:                evt.id,
+    title:             evt.title || '',
+    contactName:       extractContactName(evt.title),
+    contactId:         evt.contactId || '',
+    calendarId:        evt.calendarId || calendarId,
+    startTime:         evt.startTime  || '',
+    endTime:           evt.endTime    || '',
+    appointmentStatus: evt.appointmentStatus || '',
+    dateAdded:         evt.dateAdded   || '',
+    dateUpdated:       evt.dateUpdated || '',
+    createdBy:         evt.createdBy   || { source: 'unknown', userId: null },
+    assignedUserId:    evt.assignedUserId || null,
+  }))
+}
+
+/**
  * Well-known calendar IDs for quick reference
  */
 export const CALENDARS = {
@@ -238,5 +324,7 @@ export default {
   getCalendar,
   getCalendarAppointments,
   getAppointmentsMultiCalendar,
+  getContact,
+  fetchAppointments,
   CALENDARS
 }
