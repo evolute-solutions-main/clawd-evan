@@ -86,14 +86,23 @@ async function loadGHLRange(fromIso,toIso){
   return out
 }
 
-// Find a matching row in the sheet by (date, family, lead fuzzy)
+// Find a matching row in the sheet by (date, lead fuzzy name).
+// When multiple rows match, prefer the closest name (fewest extra characters).
 function findSheetRow(sheet, gh){
-  return sheet.rows.find(x=>{
+  if(!gh.name) return undefined  // blank-named GHL appts match everything — skip
+  const gn = norm(gh.name)
+  const isMultiWord = gn.includes(' ')
+  const candidates = sheet.rows.filter(x=>{
     const d = parseUS(x.r[0])
     if(!d || d!==gh.dayUS) return false
-    // Accept any source if the row exists; mapping test checks source separately
-    return norm(x.r[2]).includes(norm(gh.name))
+    const sn = norm(x.r[2])
+    return isMultiWord ? sn.includes(gn) : sn === gn
   })
+  if(!candidates.length) return undefined
+  // Prefer exact match, then shortest name (most specific match wins)
+  const exact = candidates.find(x=>norm(x.r[2])===gn)
+  if(exact) return exact
+  return candidates.reduce((a,b)=>norm(a.r[2]).length<=norm(b.r[2]).length?a:b)
 }
 
 // Tests
@@ -107,7 +116,7 @@ async function t_cancelled(sheet, ghl){
     if(!hit){
       issues.push({ type:'missing_row', date:a.dayUS, name:a.name, source: mapFamilyToSource(a.family) })
     } else {
-      const have = (hit.r[5]||'').toString()
+      const have = (hit.r[6]||'').toString()
       if(have.toLowerCase()!==targetLabel.toLowerCase()){
         issues.push({ type:'status_mismatch', row:hit.idx, date:hit.r[0], name:hit.r[2], have, want: targetLabel })
       }
@@ -124,7 +133,7 @@ async function t_createdBy_setter(sheet, ghl){
     if(!expectedSetter) continue  // unknown userId, no assertion possible
     const hit = findSheetRow(sheet, a)
     if(!hit) continue
-    const actual = (hit.r[4]||'').toString().trim()
+    const actual = (hit.r[5]||'').toString().trim()
     if(!actual){
       issues.push({ type:'blank_setter', row: hit.idx, date: hit.r[0], name: hit.r[2], want: expectedSetter, createdBy: a.createdBy })
     } else if(norm(actual) !== norm(expectedSetter)){
@@ -138,10 +147,10 @@ async function t_source_setter_consistency(sheet){
   const issues=[]
   for(const { idx, r } of sheet.rows){
     if(!inWindowUS(r[0], FROM, TO)) continue
-    const src = norm(r[3])
-    const setter = norm(r[4])
+    const src = norm(r[4])
+    const setter = norm(r[5])
     if(src.includes('cold') && setter.includes('ads')){
-      issues.push({ row: idx, date: r[0], name: r[2], source: r[3], setter: r[4] })
+      issues.push({ row: idx, date: r[0], name: r[2], source: r[4], setter: r[5] })
     }
   }
   return { name:'source_setter_consistency', issues }
@@ -151,8 +160,8 @@ async function t_showed_fathom_link(sheet){
   const issues=[]
   for(const { idx, r } of sheet.rows){
     if(!inWindowUS(r[0], FROM, TO)) continue
-    const status = norm(r[5])
-    const fathomLink = (r[13]||'').trim()
+    const status = norm(r[6])
+    const fathomLink = (r[14]||'').trim()
     if(status === 'showed' && !fathomLink){
       issues.push({ row: idx, date: r[0], name: r[2] })
     }
@@ -169,7 +178,7 @@ async function t_calendar_source_mapping(sheet, ghl){
     if(!inWindowUS(a.dayUS, FROM, TO)) continue
     const hit = findSheetRow(sheet, a)
     if(hit){
-      const have = (hit.r[3]||'').toString()
+      const have = (hit.r[4]||'').toString()
       if(!have) continue
       const n = norm(have)
       const isColdSource = n.includes('cold')
@@ -197,7 +206,7 @@ async function t_status_parity(sheet, ghl){
     if(!want) continue
     const hit = findSheetRow(sheet, a)
     if(hit){
-      const have = (hit.r[5]||'').toString()
+      const have = (hit.r[6]||'').toString()
       if(norm(have)!==norm(want)){
         findings.push({ row: hit.idx, date: hit.r[0], name: hit.r[2], have, want })
       }

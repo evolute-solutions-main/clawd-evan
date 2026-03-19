@@ -9,7 +9,7 @@ export const SETTER_MAP = {
   'ddUpjf6Fj9k9efSf874G': 'Eddie',
   'YQcDJN2MiXUJfaAiKqyj': 'Daniel',
   'VwnP4BSH4oQR6yWOaV4Q': 'Randy',
-  'KHUC7ccubjjmR4sV5DOa': 'Richard',
+  'KHUC7ccubjjmR4sV5DOa': 'Richard Ramilo',
 }
 
 /** Column indices (0-based) that are entered manually and must be preserved on merge */
