@@ -48,15 +48,47 @@ Full docs: `agents/data-analysis/README.md`
 
 ---
 
+## Syncing New Appointments from GHL
+
+Pull the latest appointments from GoHighLevel into `data/sales_data.json`:
+
+```bash
+node scripts/fetch-raw-appts.mjs --from 2026-03-01 --to 2026-03-31
+```
+
+Safe to run repeatedly — upserts only, never overwrites outcome fields (closer, cash, revenue, etc.).
+
+---
+
+## Finding Data Gaps
+
+Check which past appointments are missing outcome data:
+
+```bash
+node scripts/check-gaps.mjs
+```
+
+Outputs groups: showed-but-no-outcome, closed-but-no-cash, stale status, no closer recorded.
+
+---
+
 ## Updating Appointment Outcomes
 
-When Max tells you a call result:
+**Interactive (recommended):** Walk through all gaps and fill them in:
 
-1. Open `data/sales_data.json`
-2. Find the appointment by `contactName` and approximate `startTime`
-3. Update `status` → `"closed"` | `"not_closed"` | `"no_show"` | `"cancelled"`
-4. Add `closer`, `cashCollected`, `cashCollectedAfterFirstCall`, `contractRevenue`, `followUpBooked` if known
-5. Rebuild dashboard: `node scripts/inject-and-open.mjs`
+```bash
+node scripts/log-outcome.mjs
+node scripts/log-outcome.mjs --from 2026-03-01   # limit by date
+node scripts/log-outcome.mjs --name "John Smith"  # single contact
+```
+
+Saves updates and rebuilds the dashboard automatically.
+
+**Manual:** Edit `data/sales_data.json` directly:
+1. Find the appointment by `contactName` and approximate `startTime`
+2. Update `status` → `"closed"` | `"not_closed"` | `"no_show"` | `"cancelled"`
+3. Add `closer`, `cashCollected`, `cashCollectedAfterFirstCall`, `contractRevenue`, `followUpBooked` if known
+4. Rebuild dashboard: `node scripts/inject-and-open.mjs`
 
 Status values: `new` → `confirmed` → `showed` → `closed | not_closed`. Also: `cancelled`, `no_show`.
 
@@ -122,3 +154,5 @@ This regex-replaces all data constants in the HTML from the JSON files and opens
 Any business performance question (revenue, CAC, show rate, LTV, P&L, expenses) → **read `data/*.json` first, compute the answer**. Use the query CLI. Do not ask Max to provide data that's already in these files. Do not generate your own output files for analytics.
 
 Outcome changes → update `data/sales_data.json` → run inject script.
+
+When uncertain about a call outcome (did they close? did they show?): run `node scripts/check-gaps.mjs`, surface the gaps to Max, and ask him to fill in the missing data. Do not guess or assume outcomes. Use `node scripts/log-outcome.mjs` to record his answers interactively.

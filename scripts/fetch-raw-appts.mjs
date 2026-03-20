@@ -1,24 +1,45 @@
 /**
  * Fetch raw appointment data from GHL for a date range.
- * Upserts into raw_appts_march.json — one record per appointment (latest status),
+ * Upserts into data/sales_data.json — one record per appointment (latest GHL status),
  * with an embedded statusHistory array tracking every status change.
  *
+ * IMPORTANT: Preserves all manually-set outcome fields (status, closer, cashCollected,
+ * contractRevenue, followUpBooked, fathomLink, offerMade) — never overwrites them.
+ *
  * Usage:
- *   node scripts/fetch-raw-appts.mjs --from 2026-03-01 --to 2026-03-18
+ *   node scripts/fetch-raw-appts.mjs --from 2026-03-01 --to 2026-03-31
  */
 
+import '../agents/_shared/env-loader.mjs'
 import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
 import { fetchAppointments, getContact, CALENDARS } from '../agents/_shared/ghl/index.mjs'
-import { SETTER_MAP } from '../agents/closing-tracker/lib/row-builder.mjs'
+
+const root     = path.resolve(fileURLToPath(import.meta.url), '../../')
+const DATA_FILE = path.join(root, 'data', 'sales_data.json')
+
+// Setter GHL user ID → display name
+const SETTER_MAP = {
+  'GheOd0K8eB8qosL2Z8RP': 'Max',
+  'ddUpjf6Fj9k9efSf874G': 'Eddie',
+  'YQcDJN2MiXUJfaAiKqyj': 'Daniel',
+  'VwnP4BSH4oQR6yWOaV4Q': 'Randy',
+  'KHUC7ccubjjmR4sV5DOa': 'Richard Ramilo',
+}
 
 const CALENDAR_NAMES = {
   [CALENDARS.COLD_SMS]:     'Cold SMS',
   [CALENDARS.META_INBOUND]: 'AI Strategy Session (Meta Inbound)',
 }
 
-const DATA_FILE = new URL('../sales_data.json', import.meta.url).pathname
+// Fields set manually (outcome data) — never overwrite these from GHL
+const OUTCOME_FIELDS = [
+  'status', 'closer', 'cashCollected', 'cashCollectedAfterFirstCall',
+  'contractRevenue', 'followUpBooked', 'fathomLink', 'offerMade',
+]
 
-const args = process.argv.slice(2)
+const args    = process.argv.slice(2)
 const fromIso = args[args.indexOf('--from') + 1]
 const toIso   = args[args.indexOf('--to')   + 1]
 
@@ -27,13 +48,20 @@ if (!fromIso || !toIso) {
   process.exit(1)
 }
 
-function loadJSON(path, fallback) {
-  try { return JSON.parse(fs.readFileSync(path, 'utf8')) } catch { return fallback }
+function loadData() {
+  try {
+    const raw = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'))
+    // Handle both old flat-array format and new { appointments, dials } format
+    if (Array.isArray(raw)) return { appointments: raw, dials: [] }
+    return raw
+  } catch {
+    return { appointments: [], dials: [] }
+  }
 }
 
 async function main() {
-  const existing = loadJSON(DATA_FILE, [])
-  const existingById = Object.fromEntries(existing.map(a => [a.id, a]))
+  const data = loadData()
+  const existingById = Object.fromEntries(data.appointments.map(a => [a.id, a]))
 
   const [coldAppts, metaAppts] = await Promise.all(
     [CALENDARS.COLD_SMS, CALENDARS.META_INBOUND].map(id => fetchAppointments(id, fromIso, toIso))
@@ -54,16 +82,15 @@ async function main() {
     const statusHistory = prev?.statusHistory ?? []
 
     if (!prev) {
-      // First time seeing this appointment — log initial status
       statusHistory.push({ status: appt.appointmentStatus, at: now })
       console.log(`[new]    ${appt.contactName} — ${appt.appointmentStatus}`)
     } else if (prev.appointmentStatus !== appt.appointmentStatus) {
-      // Status changed — append to history
       statusHistory.push({ status: appt.appointmentStatus, at: now })
       console.log(`[update] ${appt.contactName} — ${prev.appointmentStatus} → ${appt.appointmentStatus}`)
     }
 
-    fresh.push({
+    // Build updated record — GHL fields only
+    const record = {
       id:                appt.id,
       contactName:       appt.contactName,
       calendarName:      CALENDAR_NAMES[appt.calendarId] || appt.calendarId,
@@ -74,19 +101,27 @@ async function main() {
       phone:             contact.phone,
       email:             contact.email,
       statusHistory,
-    })
+    }
+
+    // Preserve all manually-set outcome fields from existing record
+    if (prev) {
+      for (const field of OUTCOME_FIELDS) {
+        if (prev[field] !== undefined) record[field] = prev[field]
+      }
+    }
+
+    fresh.push(record)
   }
 
   // Merge: keep existing records outside this date range, upsert fetched ones
   const freshById = Object.fromEntries(fresh.map(a => [a.id, a]))
   const merged = [
-    ...existing.filter(a => !freshById[a.id]),
-    ...fresh
-  ]
-  merged.sort((a, b) => new Date(a.startTime) - new Date(b.startTime))
-  fs.writeFileSync(DATA_FILE, JSON.stringify(merged, null, 2))
+    ...data.appointments.filter(a => !freshById[a.id]),
+    ...fresh,
+  ].sort((a, b) => new Date(a.startTime) - new Date(b.startTime))
 
-  console.log(`\nDone. ${fresh.length} fetched, ${merged.length} total in file.`)
+  fs.writeFileSync(DATA_FILE, JSON.stringify({ appointments: merged, dials: data.dials }, null, 2))
+  console.log(`\nDone. ${fresh.length} fetched, ${merged.length} total appointments in file.`)
 }
 
 main().catch(err => { console.error(err); process.exit(1) })
