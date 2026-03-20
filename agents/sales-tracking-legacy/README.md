@@ -24,6 +24,7 @@ See `DATA_LAYER_HOWTO.md` for the current workflow.
 | Agent | What it did |
 |---|---|
 | `closing-tracker/` | Matched GHL calendar appointments to Fathom recordings to determine show/no-show. Replaced by outcome updates directly in `data/sales_data.json`. |
+| `appointment-tracking/` | Fetched Zapier webhook posts from Discord (confirmed/unconfirmed channels) to produce daily setter reports. Replaced by `data-analysis` query CLI reading `data/sales_data.json`. |
 
 ---
 

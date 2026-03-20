@@ -245,10 +245,8 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 
 - Cold SMS Appointment Reports:
   - Intent trigger phrases: "cold sms report", "cold sms appointment report", "outbound sms report", natural English like "make the cold sms report for <date>" or "give me cold sms report for <date>".
-  - Action: Evan MUST delegate to the specific agent named "appointment-tracking" (do not handle inline).
-  - Parameters Evan should pass when available: date/timeframe (YYYY-MM-DD or keywords: yesterday/today), campaign, owner, breakdown, include, post target.
-  - Examples Evan should route:
-    - "cold-sms report timeframe=yesterday"
-    - "Make the cold SMS appointment report for March 10th and post to #reports"
-    - "give me cold sms report for 2026-03-10"
-  - Notes: If the agent id/slug for appointment-tracking changes, update this rule immediately.
+  - Action: Use the data-analysis query CLI. Read `data/sales_data.json` directly — do NOT use the legacy appointment-tracking agent.
+  - Examples:
+    - Show rate: `node agents/data-analysis/scripts/query.mjs --metric=show-rate --source "Cold SMS" --from 2026-03-10 --to 2026-03-10 --human`
+    - Revenue: `node agents/data-analysis/scripts/query.mjs --metric=revenue --source "Cold SMS" --from 2026-03-01 --to 2026-03-31 --human`
+  - Full docs: `agents/data-analysis/README.md`
