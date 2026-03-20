@@ -38,6 +38,23 @@ html = html.replace(/const EXPENSES = \[[\s\S]*?\];/,     'const EXPENSES = '   
 html = html.replace(/const DIALS = \[[\s\S]*?\];/,        'const DIALS = '        + dials        + ';')
 html = html.replace(/const TRANSACTIONS = \[[\s\S]*?\];/, 'const TRANSACTIONS = ' + transactions + ';')
 html = html.replace(/const BUS_EXP = \[[\s\S]*?\];/,      'const BUS_EXP = '      + expenses     + ';')
+
+// Bake year/month select options from data (avoids relying on runtime JS to populate them)
+const MONTH_NAMES = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+const apptData  = JSON.parse(appointments)
+const rawMonths = [...new Set(apptData.map(a => a.startTime?.slice(0,7)).filter(Boolean))].sort()
+const rawYears  = [...new Set(rawMonths.map(m => m.slice(0,4)))].sort()
+const yearOpts  = rawYears.map(y => `<option value="${y}">${y}</option>`).join('')
+const monthOpts = [...new Set(rawMonths.map(m => parseInt(m.slice(5))))].sort((a,b)=>a-b)
+  .map(n => `<option value="${String(n).padStart(2,'0')}">${MONTH_NAMES[n]}</option>`).join('')
+html = html.replace(
+  /<select id="selYear"[^>]*>[\s\S]*?<\/select>/,
+  `<select id="selYear" style="background:var(--bg2);border:1px solid var(--border2);color:var(--text);border-radius:6px;padding:3px 8px;font-size:0.8rem;cursor:pointer"><option value="">Year</option>${yearOpts}</select>`
+)
+html = html.replace(
+  /<select id="selMonth"[^>]*>[\s\S]*?<\/select>/,
+  `<select id="selMonth" style="background:var(--bg2);border:1px solid var(--border2);color:var(--text);border-radius:6px;padding:3px 8px;font-size:0.8rem;cursor:pointer"><option value="">Month</option>${monthOpts}</select>`
+)
 fs.writeFileSync(htmlFile, html)
 execSync(`open "${htmlFile}"`)
 console.log('Done.')
