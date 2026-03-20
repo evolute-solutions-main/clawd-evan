@@ -39,6 +39,15 @@ const OUTCOME_FIELDS = [
   'contractRevenue', 'followUpBooked', 'fathomLink', 'offerMade',
 ]
 
+// Map GHL's appointmentStatus → our unified status enum for new records.
+// 'showed' is intentionally omitted — needs a manual close/not_closed outcome.
+const GHL_STATUS_MAP = {
+  new:       'new',
+  confirmed: 'confirmed',
+  cancelled: 'cancelled',
+  noshow:    'no_show',
+}
+
 const args    = process.argv.slice(2)
 const fromIso = args[args.indexOf('--from') + 1]
 const toIso   = args[args.indexOf('--to')   + 1]
@@ -103,11 +112,16 @@ async function main() {
       statusHistory,
     }
 
-    // Preserve all manually-set outcome fields from existing record
+    // Preserve all manually-set outcome fields from existing record.
+    // For any record with no prior status (new or existing), derive from GHL.
     if (prev) {
       for (const field of OUTCOME_FIELDS) {
         if (prev[field] !== undefined) record[field] = prev[field]
       }
+    }
+    if (!record.status) {
+      const derived = GHL_STATUS_MAP[appt.appointmentStatus]
+      if (derived) record.status = derived
     }
 
     fresh.push(record)
