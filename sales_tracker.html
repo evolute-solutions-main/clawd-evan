@@ -29090,9 +29090,23 @@ function renderClients(){
 }
 
 // ── Needs Review ─────────────────────────────────────────────────────────────
+// ── Needs Review — inline editing ─────────────────────────────────────────────
+const API = window.API_BASE || null  // set when served via scripts/serve.mjs
+
+async function saveAppt(id, fields){
+  if(!API) {
+    alert('Run "node scripts/serve.mjs" to enable saving from the dashboard.')
+    return false
+  }
+  const res = await fetch(API+'/api/update-appointment',{
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({id, fields})
+  })
+  return res.ok
+}
+
 function renderReview(){
   const el = document.getElementById('review')
-  const today = new Date().toISOString().slice(0,10)
   const yesterday = new Date(Date.now()-86400000).toISOString().slice(0,10)
 
   const past = RAW.filter(a => {
@@ -29116,23 +29130,52 @@ function renderReview(){
   )
 
   const total = needsOutcome.length + closedNoCash.length + staleStatus.length + noCloser.length
+  const inp = (t,v,p,w)=>`<input type="${t}" value="${v||''}" placeholder="${p||''}" style="background:var(--bg2);border:1px solid var(--border2);color:var(--text);border-radius:4px;padding:3px 6px;font-size:0.75rem;width:${w||'80px'}">`
+  const sel = (name,cur,opts)=>`<select style="background:var(--bg2);border:1px solid var(--border2);color:var(--text);border-radius:4px;padding:3px 5px;font-size:0.75rem">${opts.map(o=>`<option value="${o}" ${o===cur?'selected':''}>${o||'—'}</option>`).join('')}</select>`
 
-  function apptRow(a){
+  function apptRow(a, gapType){
+    const id  = a.id
     const d   = a.startTime?.slice(0,10) || '?'
     const cal = a.calendarName?.toLowerCase().includes('cold') ? 'Cold SMS' : 'Ads'
-    const st  = a.status || a.appointmentStatus || '—'
+    const st  = a.status || a.appointmentStatus || ''
     const stColor = {closed:'#4ade80',not_closed:'#f87171',no_show:'#94a3b8',cancelled:'#64748b',showed:'#fbbf24',confirmed:'#818cf8',new:'#64748b'}[st] || '#94a3b8'
-    return `<tr>
-      <td>${d}</td>
-      <td>${a.contactName||'<em style="color:var(--muted)">Unknown</em>'}</td>
-      <td><span style="font-size:0.7rem;background:var(--bg2);padding:2px 7px;border-radius:4px">${cal}</span></td>
-      <td><span style="color:${stColor}">${st}</span></td>
-      <td style="color:var(--muted);font-size:0.75rem">${a.closer||'—'}</td>
-      <td style="color:var(--muted);font-size:0.75rem">${a.cashCollected?'$'+a.cashCollected.toLocaleString():'—'}</td>
+
+    const showStatusInput = gapType==='outcome' || gapType==='stale'
+    const showCashInput   = gapType==='outcome' || gapType==='nocash'
+    const showCloserInput = gapType==='outcome' || gapType==='nocloser'
+
+    return `<tr data-id="${id}" style="border-bottom:1px solid var(--border)">
+      <td style="padding:8px 6px;font-size:0.78rem;white-space:nowrap">${d}</td>
+      <td style="padding:8px 6px;font-weight:500">${a.contactName||'<em style="color:var(--muted)">Unknown</em>'}</td>
+      <td style="padding:8px 6px"><span style="font-size:0.7rem;background:var(--bg2);padding:2px 7px;border-radius:4px">${cal}</span></td>
+      <td style="padding:8px 6px">
+        ${showStatusInput
+          ? sel('status-'+id, st, ['','closed','not_closed','no_show','cancelled','new','confirmed'])
+          : `<span style="color:${stColor}">${st||'—'}</span>`}
+      </td>
+      <td style="padding:8px 6px">
+        ${showCloserInput
+          ? inp('text', a.closer, 'Closer name', '100px')
+          : `<span style="color:var(--muted);font-size:0.75rem">${a.closer||'—'}</span>`}
+      </td>
+      <td style="padding:8px 6px">
+        ${showCashInput
+          ? inp('number', a.cashCollected||'', 'Cash $', '80px')
+          : `<span style="color:var(--muted);font-size:0.75rem">${a.cashCollected?'$'+a.cashCollected.toLocaleString():'—'}</span>`}
+      </td>
+      <td style="padding:8px 6px">
+        ${showCashInput
+          ? inp('number', a.contractRevenue||'', 'Contract $', '90px')
+          : `<span style="color:var(--muted);font-size:0.75rem">${a.contractRevenue?'$'+a.contractRevenue.toLocaleString():'—'}</span>`}
+      </td>
+      <td style="padding:8px 6px">
+        <button onclick="saveRow('${id}')" style="background:var(--indigo);color:#fff;border:none;border-radius:4px;padding:4px 12px;font-size:0.75rem;cursor:pointer;font-weight:600">Save</button>
+        <span id="rv-msg-${id}" style="font-size:0.72rem;margin-left:6px;color:var(--green)"></span>
+      </td>
     </tr>`
   }
 
-  function section(title, color, items, note){
+  function section(title, color, items, note, gapType){
     if(!items.length) return ''
     return `<div style="margin-bottom:28px">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
@@ -29140,9 +29183,9 @@ function renderReview(){
         <span style="font-weight:600;font-size:0.9rem">${title}</span>
         ${note?`<span style="color:var(--muted);font-size:0.77rem">${note}</span>`:''}
       </div>
-      <div class="tbl-wrap"><table>
-        <thead><tr><th>Date</th><th>Name</th><th>Channel</th><th>Status</th><th>Closer</th><th>Cash</th></tr></thead>
-        <tbody>${items.map(apptRow).join('')}</tbody>
+      <div class="tbl-wrap"><table style="border-collapse:collapse;width:100%">
+        <thead><tr style="border-bottom:1px solid var(--border2)"><th>Date</th><th>Name</th><th>Channel</th><th>Status</th><th>Closer</th><th>Cash</th><th>Contract</th><th></th></tr></thead>
+        <tbody>${items.map(a=>apptRow(a,gapType)).join('')}</tbody>
       </table></div>
     </div>`
   }
@@ -29156,21 +29199,54 @@ function renderReview(){
     return
   }
 
+  const serverNote = API
+    ? `<span style="color:var(--green);font-size:0.78rem">● Live — changes save directly to JSON</span>`
+    : `<span style="color:#f59e0b;font-size:0.78rem">⚠ Static mode — run <code style="background:var(--bg2);padding:1px 5px;border-radius:3px">node scripts/serve.mjs</code> to enable saving</span>`
+
   el.innerHTML = `
-    <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px">
-      <div style="background:#f59e0b22;border:1px solid #f59e0b55;border-radius:8px;padding:10px 18px;display:flex;align-items:center;gap:10px">
-        <span style="font-size:1.3rem">⚠️</span>
-        <div>
-          <div style="font-weight:700;font-size:1rem">${total} appointment${total===1?'':'s'} need your input</div>
-          <div style="color:var(--muted);font-size:0.78rem;margin-top:2px">Run <code style="background:var(--bg2);padding:1px 6px;border-radius:3px">node scripts/log-outcome.mjs</code> to fill these in</div>
-        </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="font-size:1.2rem">⚠️</span>
+        <span style="font-weight:700;font-size:1rem">${total} appointment${total===1?'':'s'} need your input</span>
       </div>
+      ${serverNote}
     </div>
-    ${section('Showed — outcome unknown','#f59e0b', needsOutcome, 'GHL says showed but not marked closed or not_closed')}
-    ${section('Closed — no cash or revenue recorded','#ef4444', closedNoCash, '')}
-    ${section('No closer recorded','#8b5cf6', noCloser, '')}
-    ${section('Still new/confirmed past call date','#64748b', staleStatus, 'likely no-show, cancel, or reschedule never logged')}
+    ${section('Showed — outcome unknown','#f59e0b', needsOutcome, 'GHL says showed but not marked closed or not_closed', 'outcome')}
+    ${section('Closed — no cash or revenue recorded','#ef4444', closedNoCash, '', 'nocash')}
+    ${section('No closer recorded','#8b5cf6', noCloser, '', 'nocloser')}
+    ${section('Still new/confirmed past call date','#64748b', staleStatus, 'likely no-show, cancel, or reschedule', 'stale')}
   `
+}
+
+window.saveRow = async function(id){
+  const row  = document.querySelector(`tr[data-id="${id}"]`)
+  const msg  = document.getElementById('rv-msg-'+id)
+  const statusEl = row.querySelector(`select[style]`)
+  const inputs   = row.querySelectorAll('input')
+
+  const fields = {}
+  if(statusEl && statusEl.value) fields.status = statusEl.value
+  inputs.forEach(inp => {
+    if(inp.placeholder==='Closer name' && inp.value.trim()) fields.closer = inp.value.trim()
+    if(inp.placeholder==='Cash $'      && inp.value !== '') fields.cashCollected   = parseFloat(inp.value)||0
+    if(inp.placeholder==='Contract $'  && inp.value !== '') fields.contractRevenue = parseFloat(inp.value)||0
+  })
+
+  if(!Object.keys(fields).length){ msg.textContent = 'Nothing to save'; return }
+
+  msg.textContent = 'Saving…'
+  const ok = await saveAppt(id, fields)
+  if(ok){
+    // Update RAW in memory so gap counts refresh
+    const appt = RAW.find(a=>a.id===id)
+    if(appt) Object.assign(appt, fields)
+    msg.style.color='var(--green)'
+    msg.textContent = '✓ Saved'
+    setTimeout(()=>{ tabRendered.delete('review'); renderReview() }, 800)
+  } else {
+    msg.style.color='#f87171'
+    msg.textContent = 'Error — is the server running?'
+  }
 }
 
 let rdF=[], rdP=0
@@ -29251,56 +29327,52 @@ function exportRdCsv(){
 // ─── P&L ──────────────────────────────────────────────────────────────────────
 function renderPL(){
   const $d  = n => '$'+Math.round(Math.abs(n)).toLocaleString()
-  const $n2 = n => n.toLocaleString('en-US', {minimumFractionDigits:0, maximumFractionDigits:0})
+  const $n2 = n => Math.round(n).toLocaleString()
+  const pl  = window._m.pl
+  const byMonth = pl.byMonth || []
 
-  // Build monthly buckets for 2025+
-  const rev = {}, exp = {}
+  const totalRev = pl.revenue  || 0
+  const totalExp = pl.expenses || 0
+  const profit   = pl.profit   || 0
+  const n        = byMonth.length || 1
 
-  TRANSACTIONS.forEach(t => {
-    const m = t.date ? t.date.slice(0,7) : null
-    if (!m || m < '2025-01') return
-    const amt = parseFloat(String(t.amount).replace(/[$,]/g,'')) || 0
-    rev[m] = (rev[m]||0) + amt
-  })
-
-  BUS_EXP.forEach(e => {
-    const m = e.date ? e.date.slice(0,7) : null
-    if (!m || m < '2025-01') return
-    exp[m] = (exp[m]||0) + (parseFloat(e.amount)||0)
-  })
-
-  const months = [...new Set([...Object.keys(rev), ...Object.keys(exp)])].filter(m=>m>='2025-01').sort()
-
-  // KPIs
-  const totalRev = months.reduce((s,m)=>s+(rev[m]||0),0)
-  const totalExp = months.reduce((s,m)=>s+(exp[m]||0),0)
-  const profit   = totalRev - totalExp
+  const avgRev = totalRev / n
+  const avgExp = totalExp / n
+  const avgNet = profit   / n
 
   document.getElementById('kpiPL').innerHTML = [
-    ['Total Revenue (2025+)', $d(totalRev)],
-    ['Total Expenses (2025+)', $d(totalExp)],
-    ['Net Profit / Loss', (profit>=0?'+':'-')+$d(profit)],
+    ['Total Revenue', '$'+$n2(totalRev)],
+    ['Total Expenses', '$'+$n2(totalExp)],
+    ['Net Profit / Loss', (profit>=0?'+':'-')+'$'+$n2(Math.abs(profit))],
     ['Margin', totalRev>0 ? (profit/totalRev*100).toFixed(1)+'%' : 'N/A'],
+    ['Avg Monthly Revenue', '$'+$n2(avgRev)],
+    ['Avg Monthly Expenses', '$'+$n2(avgExp)],
+    ['Avg Monthly Net', (avgNet>=0?'+':'-')+'$'+$n2(Math.abs(avgNet))],
   ].map(([l,v])=>`<div class="kpi-card"><div class="kpi-label">${l}</div><div class="kpi-val">${v}</div></div>`).join('')
+
+  const labels = byMonth.map(m=>m.month)
 
   // Chart
   mk('cPLBar', {
     type: 'bar',
     data: {
-      labels: months,
+      labels,
       datasets: [
-        { label: 'Revenue',  data: months.map(m=>rev[m]||0), backgroundColor: 'rgba(99,102,241,0.7)', order: 2 },
-        { label: 'Expenses', data: months.map(m=>exp[m]||0), backgroundColor: 'rgba(248,113,113,0.6)', order: 2 },
-        { label: 'Net Profit', data: months.map(m=>(rev[m]||0)-(exp[m]||0)),
+        { label: 'Revenue',  data: byMonth.map(m=>m.revenue),  backgroundColor: 'rgba(99,102,241,0.7)', order: 2 },
+        { label: 'Expenses', data: byMonth.map(m=>m.expenses), backgroundColor: 'rgba(248,113,113,0.6)', order: 2 },
+        { label: 'Net Profit', data: byMonth.map(m=>m.profit),
           type: 'line', borderColor: '#34d399', backgroundColor: 'transparent',
-          borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#34d399', order: 1 }
+          borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#34d399', order: 1 },
+        { label: 'Avg Net', data: byMonth.map(()=>avgNet),
+          type: 'line', borderColor: 'rgba(251,191,36,0.6)', backgroundColor: 'transparent',
+          borderWidth: 1, borderDash: [6,3], pointRadius: 0, order: 1 },
       ]
     },
     options: {
       responsive: true,
       plugins: {
         legend: { labels: { color: '#9ca3af' } },
-        title: { display: true, text: 'Monthly Revenue vs Expenses (2025+)', color: '#e5e7eb', font: { size: 14 } },
+        title: { display: true, text: 'Monthly Revenue vs Expenses', color: '#e5e7eb', font: { size: 14 } },
         tooltip: {
           callbacks: {
             label: ctx => ' '+ctx.dataset.label+': $'+ctx.parsed.y.toLocaleString('en-US', {maximumFractionDigits:0})
@@ -29315,30 +29387,41 @@ function renderPL(){
   })
 
   // Table
-  const tableRows = months.map(m => {
-    const r = rev[m]||0, e = exp[m]||0, p = r-e
-    const pc = e>0 ? (p/e*100).toFixed(0)+'%' : '—'
-    const clr = p>=0 ? '#34d399' : '#f87171'
+  const tableRows = byMonth.map(m => {
+    const roi = m.expenses>0 ? (m.profit/m.expenses*100).toFixed(0)+'%' : '—'
+    const clr = m.profit>=0 ? '#34d399' : '#f87171'
     return `<tr>
-      <td>${m}</td>
-      <td style="color:#818cf8">$${$n2(r)}</td>
-      <td style="color:#f87171">$${$n2(e)}</td>
-      <td style="color:${clr};font-weight:600">${p>=0?'+':'-'}$${$n2(Math.abs(p))}</td>
-      <td style="color:var(--muted)">${pc}</td>
+      <td>${m.month}</td>
+      <td style="color:#818cf8">$${$n2(m.revenue)}</td>
+      <td style="color:#f87171">$${$n2(m.expenses)}</td>
+      <td style="color:${clr};font-weight:600">${m.profit>=0?'+':'-'}$${$n2(Math.abs(m.profit))}</td>
+      <td style="color:var(--muted)">${roi}</td>
     </tr>`
   }).join('')
+
+  const avgRoi = avgExp>0 ? (avgNet/avgExp*100).toFixed(0)+'%' : '—'
+  const totRoi = totalExp>0 ? (profit/totalExp*100).toFixed(0)+'%' : '—'
 
   document.getElementById('plTable').innerHTML = `
     <table>
       <thead><tr><th>Month</th><th>Revenue</th><th>Expenses</th><th>Net</th><th>ROI on Spend</th></tr></thead>
       <tbody>${tableRows}</tbody>
-      <tfoot><tr style="font-weight:700;border-top:2px solid var(--border2)">
-        <td>Total</td>
-        <td style="color:#818cf8">$${$n2(totalRev)}</td>
-        <td style="color:#f87171">$${$n2(totalExp)}</td>
-        <td style="color:${profit>=0?'#34d399':'#f87171'}">${profit>=0?'+':'-'}$${$n2(Math.abs(profit))}</td>
-        <td style="color:var(--muted)">${totalExp>0?(profit/totalExp*100).toFixed(0)+'%':'—'}</td>
-      </tr></tfoot>
+      <tfoot>
+        <tr style="font-weight:600;border-top:1px solid var(--border2);color:rgba(251,191,36,0.8)">
+          <td>Avg / mo</td>
+          <td>$${$n2(avgRev)}</td>
+          <td>$${$n2(avgExp)}</td>
+          <td>${avgNet>=0?'+':'-'}$${$n2(Math.abs(avgNet))}</td>
+          <td>${avgRoi}</td>
+        </tr>
+        <tr style="font-weight:700;border-top:2px solid var(--border2)">
+          <td>Total</td>
+          <td style="color:#818cf8">$${$n2(totalRev)}</td>
+          <td style="color:#f87171">$${$n2(totalExp)}</td>
+          <td style="color:${profit>=0?'#34d399':'#f87171'}">${profit>=0?'+':'-'}$${$n2(Math.abs(profit))}</td>
+          <td style="color:var(--muted)">${totRoi}</td>
+        </tr>
+      </tfoot>
     </table>`
 }
 
