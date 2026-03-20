@@ -29116,7 +29116,7 @@ function renderReview(){
 
   const needsOutcome = past.filter(a =>
     a.appointmentStatus === 'showed' &&
-    a.status !== 'closed' && a.status !== 'not_closed'
+    !['closed','not_closed','no_show','cancelled'].includes(a.status)
   )
   const closedNoCash = past.filter(a =>
     a.status === 'closed' && !a.cashCollected && !a.contractRevenue
@@ -29215,7 +29215,7 @@ function renderReview(){
     ${section('Showed — outcome unknown','#f59e0b', needsOutcome, 'GHL says showed but not marked closed or not_closed', 'outcome')}
     ${section('Closed — no cash or revenue recorded','#ef4444', closedNoCash, '', 'nocash')}
     ${section('No closer recorded','#8b5cf6', noCloser, '', 'nocloser')}
-    ${section('Still new/confirmed past call date','#64748b', staleStatus, 'likely no-show, cancel, or reschedule', 'stale')}
+    ${section('Confirmed calls that need update','#64748b', staleStatus, 'likely no-show, cancel, or reschedule', 'stale')}
   `
 }
 
