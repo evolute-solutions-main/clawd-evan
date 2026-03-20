@@ -4,16 +4,17 @@ import { fileURLToPath } from 'url'
 import path from 'path'
 
 const root     = path.resolve(fileURLToPath(import.meta.url), '../../')
+const data     = path.join(root, 'data')
 const htmlFile = path.join(root, 'sales_tracker.html')
 
 // sales_data.json is now { appointments: [...], dials: [...] }
-const salesData    = JSON.parse(fs.readFileSync(path.join(root, 'sales_data.json'), 'utf8'))
+const salesData    = JSON.parse(fs.readFileSync(path.join(data, 'sales_data.json'), 'utf8'))
 const appointments = JSON.stringify(salesData.appointments)
 const dials        = JSON.stringify(salesData.dials)
 
 // expenses.json is now the single unified expenses file
-const expenses     = fs.readFileSync(path.join(root, 'expenses.json'), 'utf8').trim()
-const transactions = fs.readFileSync(path.join(root, 'transactions.json'), 'utf8').trim()
+const expenses     = fs.readFileSync(path.join(data, 'expenses.json'), 'utf8').trim()
+const transactions = fs.readFileSync(path.join(data, 'transactions.json'), 'utf8').trim()
 
 let html = fs.readFileSync(htmlFile, 'utf8')
 html = html.replace(/const RAW = \[[\s\S]*?\];/,          'const RAW = '          + appointments + ';')

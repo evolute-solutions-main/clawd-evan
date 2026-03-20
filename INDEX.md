@@ -10,19 +10,19 @@ These three files are the single source of truth for all Evolute Solutions busin
 
 | File | Contents | Key fields |
 |---|---|---|
-| `sales_data.json` | All GHL appointments + monthly dial counts | `{ appointments: [{id, contactName, status, startTime, setter, channel, closer, cashCollected, contractRevenue, followUpBooked}], dials: [{setter, date, dials}] }` |
-| `expenses.json` | All business expenses 2022–2026 (1,066 entries, unified from bank statements + manual records) | `{ id, date, vendor, amount, category, channel, department, excludeFromCAC, source }` — categories: ad_spend, software, payroll, consulting, refund, other |
-| `transactions.json` | All client payments 2025+ (Stripe + Fanbasis, 153 records) | `{ email, name, amount, net, fee, date, source }` |
+| `data/sales_data.json` | All GHL appointments + monthly dial counts | `{ appointments: [{id, contactName, status, startTime, setter, channel, closer, cashCollected, contractRevenue, followUpBooked}], dials: [{setter, date, dials}] }` |
+| `data/expenses.json` | All business expenses 2022–2026 (1,066 entries, unified from bank statements + manual records) | `{ id, date, vendor, amount, category, channel, department, excludeFromCAC, source }` — categories: ad_spend, software, payroll, consulting, refund, other |
+| `data/transactions.json` | All client payments 2025+ (Stripe + Fanbasis, 153 records) | `{ email, name, amount, net, fee, date, source }` |
 
 ### How to answer business questions using the data
 
 | Question | Where to look |
 |---|---|
 | Closes, show rate, CAC this month | `sales_data.json → appointments` filtered by date + status |
-| Ad spend or SMS spend | `expenses.json` where category=ad_spend or channel=cold_sms |
-| Client LTV / payment history | `transactions.json` grouped by email then normalized name |
+| Ad spend or SMS spend | `data/expenses.json` where category=ad_spend or channel=cold_sms |
+| Client LTV / payment history | `data/transactions.json` grouped by email then normalized name |
 | Outbound dials per setter | `sales_data.json → dials` |
-| Monthly P&L | `transactions.json` (revenue) minus `expenses.json` (costs) by month |
+| Monthly P&L | `data/transactions.json` (revenue) minus `data/expenses.json` (costs) by month |
 
 ### Dashboard
 `sales_tracker.html` is a self-contained analytics dashboard. It's updated by running:

@@ -3,8 +3,9 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 const root = path.resolve(fileURLToPath(import.meta.url), '../../')
-const busExp = JSON.parse(fs.readFileSync(path.join(root, 'business_expenses.json'), 'utf8'))
-const curExp = JSON.parse(fs.readFileSync(path.join(root, 'expenses.json'), 'utf8'))
+const data = path.join(root, 'data')
+const busExp = JSON.parse(fs.readFileSync(path.join(data, 'business_expenses.json'), 'utf8'))
+const curExp = JSON.parse(fs.readFileSync(path.join(data, 'expenses.json'), 'utf8'))
 
 // Payroll entries from expenses.json (manual records, Jan-Mar 2026)
 const payrollRecords = curExp.filter(e => e.category === 'payroll' && e.date)
@@ -165,5 +166,5 @@ if (unmatched.length) {
   unmatched.forEach(p=>console.log(' ',p.date,p.vendor,'$'+p.amount))
 }
 
-fs.writeFileSync(path.join(root, 'expenses_unified.json'), JSON.stringify(unified, null, 2))
+fs.writeFileSync(path.join(data, 'expenses_unified.json'), JSON.stringify(unified, null, 2))
 console.log(`\nWrote expenses_unified.json (${unified.length} entries)`)
