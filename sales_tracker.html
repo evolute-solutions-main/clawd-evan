@@ -273,10 +273,9 @@ a:hover { color: #fff; }
   <span class="sep2">→</span>
   <input type="date" id="dtTo">
   <button class="range-pill" data-range="all">All Time</button>
-  <button class="range-pill" data-range="jan">Jan</button>
-  <button class="range-pill" data-range="feb">Feb</button>
-  <button class="range-pill" data-range="mar">Mar</button>
   <button class="range-pill" data-range="ytd">YTD</button>
+  <select id="selYear" style="background:var(--bg2);border:1px solid var(--border2);color:var(--text);border-radius:6px;padding:3px 8px;font-size:0.8rem;cursor:pointer"><option value="">Year</option></select>
+  <select id="selMonth" style="background:var(--bg2);border:1px solid var(--border2);color:var(--text);border-radius:6px;padding:3px 8px;font-size:0.8rem;cursor:pointer"><option value="">Month</option></select>
   <div class="topbar-right" id="rangeLabel"></div>
 </div>
 
@@ -28088,15 +28087,53 @@ const allDates = RAW.map(a=>a.startTime?.slice(0,10)).filter(Boolean).sort()
 const minDate  = allDates[0]||'2026-01-01'
 const maxDate  = allDates[allDates.length-1]||'2026-12-31'
 
+// Populate year/month selects from actual data
+;(function(){
+  const months = [...new Set(RAW.map(a=>a.startTime?.slice(0,7)).filter(Boolean))].sort()
+  const years  = [...new Set(months.map(m=>m.slice(0,4)))].sort()
+  const MONTH_NAMES = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+
+  const selY = document.getElementById('selYear')
+  const selM = document.getElementById('selMonth')
+
+  years.forEach(y => { const o=document.createElement('option'); o.value=y; o.textContent=y; selY.appendChild(o) })
+
+  function populateMonths(year){
+    selM.innerHTML = '<option value="">Month</option>'
+    const available = year
+      ? months.filter(m=>m.startsWith(year)).map(m=>parseInt(m.slice(5)))
+      : [...new Set(months.map(m=>parseInt(m.slice(5))))].sort((a,b)=>a-b)
+    available.forEach(n => { const o=document.createElement('option'); o.value=String(n).padStart(2,'0'); o.textContent=MONTH_NAMES[n]; selM.appendChild(o) })
+  }
+  populateMonths('')
+
+  function applyMonthYear(){
+    const y = selY.value
+    const m = selM.value
+    document.querySelectorAll('[data-range]').forEach(x=>x.classList.remove('on'))
+    if(!y && !m){ setRange(null,null); return }
+    if(y && !m){
+      const lastDay = new Date(parseInt(y),12,0).getDate()
+      setRange(`${y}-01-01`, `${y}-12-${lastDay}`)
+    } else {
+      const yr = y || new Date().getFullYear()
+      const lastDay = new Date(parseInt(yr), parseInt(m), 0).getDate()
+      setRange(`${yr}-${m}-01`, `${yr}-${m}-${String(lastDay).padStart(2,'0')}`)
+    }
+  }
+
+  selY.addEventListener('change', ()=>{ populateMonths(selY.value); applyMonthYear() })
+  selM.addEventListener('change', applyMonthYear)
+})()
+
 document.querySelectorAll('[data-range]').forEach(b => b.addEventListener('click',()=>{
   document.querySelectorAll('[data-range]').forEach(x=>x.classList.remove('on'))
   b.classList.add('on')
+  document.getElementById('selYear').value  = ''
+  document.getElementById('selMonth').value = ''
   const r = b.dataset.range
-  if(r==='all')  setRange(null,null)
-  if(r==='jan')  setRange('2026-01-01','2026-01-31')
-  if(r==='feb')  setRange('2026-02-01','2026-02-28')
-  if(r==='mar')  setRange('2026-03-01','2026-03-31')
-  if(r==='ytd')  setRange('2026-01-01', maxDate)
+  if(r==='all') setRange(null,null)
+  if(r==='ytd') setRange(`${new Date().getFullYear()}-01-01`, maxDate)
 }))
 document.getElementById('dtFrom').addEventListener('change',e=>{ dateFrom=e.target.value||null; recompute() })
 document.getElementById('dtTo').addEventListener('change',  e=>{ dateTo  =e.target.value||null; recompute() })
