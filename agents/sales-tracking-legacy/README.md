@@ -19,6 +19,14 @@ See `DATA_LAYER_HOWTO.md` for the current workflow.
 
 ---
 
+## Archived agents
+
+| Agent | What it did |
+|---|---|
+| `closing-tracker/` | Matched GHL calendar appointments to Fathom recordings to determine show/no-show. Replaced by outcome updates directly in `data/sales_data.json`. |
+
+---
+
 ## Archived scripts
 
 | Script | What it did |
