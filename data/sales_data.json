@@ -3860,7 +3860,7 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "not_closed",
+      "status": "no_show",
       "source": "Cold SMS",
       "closer": "Max"
     },
@@ -4640,9 +4640,10 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "not_closed",
+      "status": "no_show",
       "closer": "Max",
-      "followUpBooked": false
+      "followUpBooked": false,
+      "source": "Cold SMS"
     },
     {
       "id": "v0gupMcq7ZjhdAcEpDFK",
@@ -4848,10 +4849,17 @@
         {
           "status": "confirmed",
           "at": "2026-03-23T18:45:18.494Z"
+        },
+        {
+          "status": "not_closed",
+          "at": "2026-03-23T21:59:45.690Z",
+          "source": "manual"
         }
       ],
-      "status": "no_show",
-      "source": "Cold SMS"
+      "status": "not_closed",
+      "source": "Cold SMS",
+      "fathomLink": "https://fathom.video/share/qRuxmqty6QboJst3KF9Lxik4eZtZNAz4",
+      "closer": "Max"
     },
     {
       "id": "ReEsAFq30KX1AzWvMpj6",
