@@ -812,6 +812,42 @@
       "fathomLink": "https://fathom.video/share/jBbQeeNeXGECxGuCC7FYx6i1h-qvPV9j"
     },
     {
+      "id": "9CgT6jOw93u8udxh3UGp",
+      "contactName": "Evolute Solutions AI Strategy Session: Chris Falcone",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-08T16:00:00-05:00",
+      "timeCreated": "2026-01-08T19:49:49.599Z",
+      "appointmentStatus": "noshow",
+      "createdBy": "",
+      "phone": "+16106366839",
+      "email": "chrifalcone11121964@gmail.comgmail.com",
+      "statusHistory": [
+        {
+          "status": "noshow",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "no_show"
+    },
+    {
+      "id": "JjNvZASljlj42na9e6RX",
+      "contactName": "Evolute Solutions AI Strategy Session: Todd Ferrara",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-08T17:00:00-05:00",
+      "timeCreated": "2026-01-08T17:47:02.904Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+12144176390",
+      "email": "todd@lonestarhomepro.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
       "id": "v0Vf1mn7prD1cosKofkB",
       "contactName": "Stephen Villard",
       "calendarName": "Cold SMS",
@@ -833,6 +869,42 @@
       "contractRevenue": 0
     },
     {
+      "id": "jRKSdtAFA7pICPRgivcD",
+      "contactName": "Evolute Solutions AI Strategy Session: Watson Krick",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-08T18:00:00-05:00",
+      "timeCreated": "2026-01-08T20:11:36.378Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+15512613523",
+      "email": "dem68653@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "l4StWx7yadBKZ6sYfQfz",
+      "contactName": "Evolute Solutions AI Strategy Session: Jerry Vines",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-09T10:00:00-05:00",
+      "timeCreated": "2026-01-09T06:53:32.538Z",
+      "appointmentStatus": "noshow",
+      "createdBy": "",
+      "phone": "+18106109294",
+      "email": "devinesjjjj@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "noshow",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "no_show"
+    },
+    {
       "id": "Ck18SozVjErxayXzC6Ee",
       "contactName": "Anthony",
       "calendarName": "Cold SMS",
@@ -849,6 +921,24 @@
         }
       ],
       "status": "no_show"
+    },
+    {
+      "id": "VpPlBc3JaaRWSgfP5sF0",
+      "contactName": "Evolute Solutions AI Strategy Session: Watson Krick",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-09T16:00:00-05:00",
+      "timeCreated": "2026-01-08T07:05:53.630Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "",
+      "phone": "+15512613523",
+      "email": "dem68653@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
     },
     {
       "id": "jVxgA2uoHWCMnRWCy8fZ",
@@ -869,6 +959,24 @@
       "status": "cancelled"
     },
     {
+      "id": "BASfNdTgqqzNVrorT2a3",
+      "contactName": "Evolute Solutions AI Strategy Session: Nathan Moraru",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-09T18:00:00-05:00",
+      "timeCreated": "2026-01-08T06:38:13.764Z",
+      "appointmentStatus": "noshow",
+      "createdBy": "",
+      "phone": "+12532302615",
+      "email": "nathanielmoraru@gmail.com",
+      "statusHistory": [
+        {
+          "status": "noshow",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "no_show"
+    },
+    {
       "id": "9SCTGMpFHGZS7ySXg5lj",
       "contactName": "Dale Construction Services",
       "calendarName": "Cold SMS",
@@ -885,6 +993,23 @@
         }
       ],
       "status": "new"
+    },
+    {
+      "id": "xOzTTKfeHJqBKKFtjLwm",
+      "contactName": "Evolute Solutions AI Strategy Session: Olivia Wong",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-10T11:00:00-05:00",
+      "timeCreated": "2026-01-08T05:12:04.069Z",
+      "appointmentStatus": "showed",
+      "createdBy": "",
+      "phone": "+17202779016",
+      "email": "luis@superiorcomfortpros.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
     },
     {
       "id": "nKX4I0CzpBjFc5HcGnL5",
@@ -979,6 +1104,23 @@
       "status": "new"
     },
     {
+      "id": "mUSz6sbesLQCANxMcVBF",
+      "contactName": "Evolute Solutions AI Strategy Session: Basim Sawaged",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-12T12:00:00-05:00",
+      "timeCreated": "2026-01-11T20:01:47.502Z",
+      "appointmentStatus": "showed",
+      "createdBy": "",
+      "phone": "+17206091016",
+      "email": "sawaqedb@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
       "id": "UltVut6rNyPS68Ycsns3",
       "contactName": "Jorge - JS Painting Hernandez",
       "calendarName": "Cold SMS",
@@ -997,6 +1139,23 @@
       "status": "new"
     },
     {
+      "id": "fjWuor3SUigRPzdCNJCI",
+      "contactName": "Mike",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-12T13:00:00-05:00",
+      "timeCreated": "2026-01-05T21:05:06.696Z",
+      "appointmentStatus": "showed",
+      "createdBy": "",
+      "phone": "+17169832274",
+      "email": "mikewebster@braymillerbuilders.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
       "id": "FFlrzcby7H9bdPeA2Omd",
       "contactName": "Jarred Exteriors LLC",
       "calendarName": "Cold SMS",
@@ -1013,6 +1172,77 @@
         }
       ],
       "status": "cancelled"
+    },
+    {
+      "id": "sdaOfLZ6TUC57PytcvBp",
+      "contactName": "Evolute Solutions AI Strategy Session: Jesse Pasqualucci",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-12T15:00:00-05:00",
+      "timeCreated": "2026-01-12T15:21:48.592Z",
+      "appointmentStatus": "showed",
+      "createdBy": "",
+      "phone": "+13304193688",
+      "email": "jmexteriors27@gmail.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
+      "id": "uCadJLYlMVWRP5wlpWeQ",
+      "contactName": "Evolute Solutions AI Strategy Session: Zakery Nalbone",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-12T16:30:00-05:00",
+      "timeCreated": "2026-01-12T20:33:09.621Z",
+      "appointmentStatus": "noshow",
+      "createdBy": "",
+      "phone": "+17169361320",
+      "email": "zakery@builtdifferentconstructionco.com",
+      "statusHistory": [
+        {
+          "status": "noshow",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "no_show"
+    },
+    {
+      "id": "FQCvFkiX4rX3LILFmUO7",
+      "contactName": "Evolute Solutions AI Strategy Session: Thomas Peterson",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-12T17:30:00-05:00",
+      "timeCreated": "2026-01-12T22:26:05.688Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "",
+      "phone": "+12086999601",
+      "email": "tompete310@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "ht3p7SRei3RJ5i8Z6j4I",
+      "contactName": "Evolute Solutions AI Strategy Session: Stephen Rich",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-13T16:00:00-05:00",
+      "timeCreated": "2026-01-10T18:35:02.149Z",
+      "appointmentStatus": "noshow",
+      "createdBy": "",
+      "phone": "+12315340906",
+      "email": "richstephen257@gmail.com",
+      "statusHistory": [
+        {
+          "status": "noshow",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "no_show"
     },
     {
       "id": "ykVwcbR3FOelvjpHkUiT",
@@ -1053,6 +1283,23 @@
       "fathomLink": "https://fathom.video/share/diGfqm3EYizskoqTn4-5kNrRSUshT_tX"
     },
     {
+      "id": "PfeJABo11ilYf7EfKd2l",
+      "contactName": "Evolute Solutions AI Strategy Session: Jack",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-14T11:00:00-05:00",
+      "timeCreated": "2026-01-14T15:56:58.047Z",
+      "appointmentStatus": "showed",
+      "createdBy": "",
+      "phone": "+14049935895",
+      "email": "jkfconstruction1@gmail.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
       "id": "2crdutxyI3FGcgSvS7yS",
       "contactName": "Fred Home Improvement",
       "calendarName": "Cold SMS",
@@ -1071,6 +1318,41 @@
       "status": "new"
     },
     {
+      "id": "DBMPGHyJDSWiOJCpghgt",
+      "contactName": "Evolute Solutions AI Strategy Session: Andrew Delmaro",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-14T16:30:00-05:00",
+      "timeCreated": "2026-01-11T15:31:50.897Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "",
+      "phone": "+15862207418",
+      "email": "quantumroofingmi@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "0wIGfLEmeaFs2aSBuEy6",
+      "contactName": "Evolute Solutions AI Strategy Session: Jake Baker",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-14T18:00:00-05:00",
+      "timeCreated": "2026-01-14T18:47:51.369Z",
+      "appointmentStatus": "showed",
+      "createdBy": "",
+      "phone": "+15039950128",
+      "email": "ecoconcretedesign@gmail.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
       "id": "cJKqxwt2HRRt3AU2jbDQ",
       "contactName": "Tomas",
       "calendarName": "Cold SMS",
@@ -1087,6 +1369,24 @@
         }
       ],
       "status": "new"
+    },
+    {
+      "id": "dew7Q01MK92UAdfRkrjJ",
+      "contactName": "Evolute Solutions AI Strategy Session: T Donovan",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-16T10:00:00-05:00",
+      "timeCreated": "2026-01-13T05:57:20.996Z",
+      "appointmentStatus": "noshow",
+      "createdBy": "",
+      "phone": "+19178412396",
+      "email": "tony@donovanproperty.com",
+      "statusHistory": [
+        {
+          "status": "noshow",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "no_show"
     },
     {
       "id": "GIkcdCa4zUHSy0rztLBy",
@@ -1144,6 +1444,24 @@
         }
       ],
       "status": "new"
+    },
+    {
+      "id": "0vrfwF1FCY06yBHWCp8V",
+      "contactName": "Evolute Solutions AI Strategy Session: Paul Rudometkin",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-19T09:30:00-05:00",
+      "timeCreated": "2026-01-17T02:54:28.874Z",
+      "appointmentStatus": "noshow",
+      "createdBy": "",
+      "phone": "+15125755927",
+      "email": "fortresspaul@gmail.com",
+      "statusHistory": [
+        {
+          "status": "noshow",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "no_show"
     },
     {
       "id": "Ci8Ds5SgTre2Jx5wEH6J",
@@ -1531,8 +1849,8 @@
         }
       ],
       "status": "not_closed",
-      "fathomLink": "https://fathom.video/share/ACs_roxvMN67xC2bZgRxM1ENeWWhEQxs",
-      "closer": "Max"
+      "closer": "Max",
+      "fathomLink": "https://fathom.video/share/ACs_roxvMN67xC2bZgRxM1ENeWWhEQxs"
     },
     {
       "id": "yrrbq78Yiy6Mf5OEiCOe",
@@ -1917,8 +2235,64 @@
         }
       ],
       "status": "not_closed",
-      "fathomLink": "https://fathom.video/share/tSHkxrc8FVhDFWbr6fStNwuW8QywjbfE",
-      "closer": "Max"
+      "closer": "Max",
+      "fathomLink": "https://fathom.video/share/tSHkxrc8FVhDFWbr6fStNwuW8QywjbfE"
+    },
+    {
+      "id": "nixz575moAwHA7lFBAc2",
+      "contactName": "David Mackey Construction",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-31T09:00:00-05:00",
+      "timeCreated": "2026-01-30T17:00:54.669Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+19044349361",
+      "email": "mackeyrd2@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-20T02:08:12.734Z"
+        }
+      ],
+      "status": "not_closed",
+      "closer": "Max",
+      "fathomLink": "https://fathom.video/share/tSHkxrc8FVhDFWbr6fStNwuW8QywjbfE"
+    },
+    {
+      "id": "9ogDKi1gUBAiGHP1dK0D",
+      "contactName": "Curtis Roofing And Construction",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-31T10:00:00-05:00",
+      "timeCreated": "2026-01-30T17:59:06.896Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+14074341770",
+      "email": "curtis@racsfl.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-20T02:08:12.734Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "kMnBUEaP8RcLOleTn4WW",
+      "contactName": "EMILIO ZAMBRANO",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-31T10:00:00-05:00",
+      "timeCreated": "2026-01-30T21:02:56.123Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18135703323",
+      "email": "zambranoemilio89@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-20T02:08:12.734Z"
+        }
+      ],
+      "status": "new"
     },
     {
       "id": "9ogDKi1gUBAiGHP1dK0D",
@@ -1973,8 +2347,46 @@
         }
       ],
       "status": "not_closed",
-      "fathomLink": "https://fathom.video/share/iMihk-wTkJLHyd_9xrh79gKC-fugoM54",
-      "closer": "Max"
+      "closer": "Max",
+      "fathomLink": "https://fathom.video/share/iMihk-wTkJLHyd_9xrh79gKC-fugoM54"
+    },
+    {
+      "id": "kdgaPMcKvaIBdubehNrY",
+      "contactName": "Alston Green Carpentry And Refurbishing LLC",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-31T11:00:00-05:00",
+      "timeCreated": "2026-01-28T20:11:38.174Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+19547024837",
+      "email": "tacarpentryllc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-20T02:08:12.734Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "MKte73eC8uB1Z97XmLlc",
+      "contactName": "Dr Micheael Cambridge",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-31T11:00:00-05:00",
+      "timeCreated": "2026-01-30T20:31:54.280Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+12392555551",
+      "email": "michealcambridge@home4us.solutions",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-20T02:08:12.734Z"
+        }
+      ],
+      "status": "not_closed",
+      "closer": "Max",
+      "fathomLink": "https://fathom.video/share/iMihk-wTkJLHyd_9xrh79gKC-fugoM54"
     },
     {
       "id": "kdgaPMcKvaIBdubehNrY",
@@ -2013,6 +2425,24 @@
       "status": "new"
     },
     {
+      "id": "YMhe6VvdpHttjtfRBTDq",
+      "contactName": "Alfonso Sosa",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-31T12:00:00-05:00",
+      "timeCreated": "2026-01-29T17:21:14.303Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+12105040130",
+      "email": "eliteconstruction2grande@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-20T02:08:12.734Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
       "id": "eeUGL3DyK6feZDUNfwKe",
       "contactName": "Danilo Remodeling",
       "calendarName": "Cold SMS",
@@ -2022,6 +2452,78 @@
       "createdBy": "",
       "phone": "+15617071590",
       "email": "olympusr@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-20T02:08:12.734Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "eeUGL3DyK6feZDUNfwKe",
+      "contactName": "Danilo Remodeling",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-31T13:00:00-05:00",
+      "timeCreated": "2026-01-30T15:01:45.918Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+15617071590",
+      "email": "olympusr@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-20T02:08:12.734Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "VtEM1uFGhw6mxpT2Zvui",
+      "contactName": "Evolute Solutions AI Strategy Session: Anthony Neil",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-31T13:00:00-05:00",
+      "timeCreated": "2026-01-21T22:32:58.657Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+16462425330",
+      "email": "onemomentconstruction@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "VtEM1uFGhw6mxpT2Zvui",
+      "contactName": "Evolute Solutions AI Strategy Session: Anthony Neil",
+      "calendarName": "Inbound Strategy Session",
+      "startTime": "2026-01-31T13:00:00-05:00",
+      "timeCreated": "2026-01-21T22:32:58.657Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+16462425330",
+      "email": "onemomentconstruction@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "68t6GJOiK8F5Pnb2Uli2",
+      "contactName": "James Heinz",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-31T14:30:00-05:00",
+      "timeCreated": "2026-01-28T20:48:24.368Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+12406089120",
+      "email": "h2bprofessionalcustoms@gmail.com",
       "statusHistory": [
         {
           "status": "new",
@@ -2094,6 +2596,96 @@
       "createdBy": "",
       "phone": "+14079213602",
       "email": "vhsilva@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-20T02:08:12.734Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "6Wd1nqvQlgqEfzP87nPL",
+      "contactName": "Roger Young",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-31T15:30:00-05:00",
+      "timeCreated": "2026-01-30T14:32:34.023Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17727225918",
+      "email": "rogeryoungconstructionllc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-20T02:08:12.734Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "fEaqsvFXBTv74OjQgvU7",
+      "contactName": "Martin Sudzina",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-31T15:30:00-05:00",
+      "timeCreated": "2026-01-29T17:37:40.579Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+19543475033",
+      "email": "progressivegroup@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-20T02:08:12.734Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "oHRTHikheuyQZJEm8B7z",
+      "contactName": "David Silva",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-31T15:30:00-05:00",
+      "timeCreated": "2026-01-30T21:05:38.757Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+14079213602",
+      "email": "vhsilva@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-20T02:08:12.734Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "RZQcOXjnIw1h0kjl9h54",
+      "contactName": "Eric - Tarajano'S Const & Remodel Obras Tarajano",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-31T16:30:00-05:00",
+      "timeCreated": "2026-01-29T21:17:03.121Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17862225456",
+      "email": "tarajanoproservices@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-20T02:08:12.734Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "lUqLG0WisjQlBsjTnt7x",
+      "contactName": "TORREZ PRECISION PAINTING",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-01-31T16:30:00-05:00",
+      "timeCreated": "2026-01-30T21:38:00.308Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+14074096347",
+      "email": "torrezprecisionpainting@gmail.com",
       "statusHistory": [
         {
           "status": "new",
@@ -2239,6 +2831,238 @@
       "fathomLink": "https://fathom.video/share/LCkk45kjSAond8o45MbDUF3_61a-EZF2"
     },
     {
+      "id": "26IPUW7AwbZJMZOycAYJ",
+      "contactName": "Adolfo Solutions",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-02T11:00:00-05:00",
+      "timeCreated": "2026-01-30T16:45:32.533Z",
+      "appointmentStatus": "noshow",
+      "createdBy": "",
+      "phone": "+17863916363",
+      "email": "pgsolutionsllc@outlook.com",
+      "statusHistory": [
+        {
+          "status": "noshow",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "no_show"
+    },
+    {
+      "id": "GiIvvOTxqsMl8gX11If7",
+      "contactName": "Renaissance Men",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-02T11:00:00-05:00",
+      "timeCreated": "2026-01-29T15:54:29.228Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17279065787",
+      "email": "lvl727main@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "LocFKVHlEKsxDRT9NGzK",
+      "contactName": "Mike Aiello",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-02T12:00:00-05:00",
+      "timeCreated": "2026-01-29T20:15:39.011Z",
+      "appointmentStatus": "showed",
+      "createdBy": "",
+      "phone": "+14103036808",
+      "email": "mike@prestigehomeremodeling.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
+      "id": "dZsGQyZxRf4LnO7xXl2u",
+      "contactName": "Carlos Air Solutions",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-02T13:00:00-05:00",
+      "timeCreated": "2026-01-30T14:21:47.513Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17863033025",
+      "email": "ccarrazana881011@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "UYZBlnMzLhLtlwtIRPX5",
+      "contactName": "Morgan Conley Roofing And Repair LLC",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-02T16:00:00-05:00",
+      "timeCreated": "2026-01-29T20:39:05.890Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+19044908390",
+      "email": "morganconley@morganconleyroofing.net",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "eLseBdF1Coz99G5VwQxd",
+      "contactName": "Gloria Diaz",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-02T16:00:00-05:00",
+      "timeCreated": "2026-01-28T23:12:05.010Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17866303000",
+      "email": "argeda.gc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "1bRCIpNPckT6K8379er7",
+      "contactName": "Esdra ALL IN ONE SERVICES INC-DBA:Machuat's Brick And Pavers",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-02T17:30:00-05:00",
+      "timeCreated": "2026-02-02T15:59:23.061Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17863123559",
+      "email": "machuatesdra@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "FxkJJNusuJQv0YULQeDJ",
+      "contactName": "Sheldon Renovation",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-02T17:30:00-05:00",
+      "timeCreated": "2026-01-30T19:50:59.838Z",
+      "appointmentStatus": "noshow",
+      "createdBy": "",
+      "phone": "+19542134177",
+      "email": "mixmasterskid@gmail.com",
+      "statusHistory": [
+        {
+          "status": "noshow",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "no_show"
+    },
+    {
+      "id": "Zb6gzTjqxmZvj0KiBtEn",
+      "contactName": "Nate Plus",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-02T17:30:00-05:00",
+      "timeCreated": "2026-02-02T15:26:43.887Z",
+      "appointmentStatus": "showed",
+      "createdBy": "",
+      "phone": "+19043830809",
+      "email": "improvementsplus12@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
+      "id": "PunU0RpLta7uOSYaymfo",
+      "contactName": "Antony Castro",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-02T18:30:00-05:00",
+      "timeCreated": "2026-01-30T19:06:07.865Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+19044652526",
+      "email": "florida@castrosconstruction.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "TYUqXUSTk23ILQLRm4sk",
+      "contactName": "Joseph Property Maintenance And Remodeling",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-02T18:30:00-05:00",
+      "timeCreated": "2026-02-02T19:10:27.165Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18136940404",
+      "email": "jtoro1987@icloud.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "X3T7gLJSmkzLNmVbaYLE",
+      "contactName": "Mario Design Planning And Construction",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-02T18:30:00-05:00",
+      "timeCreated": "2026-01-30T18:45:05.445Z",
+      "appointmentStatus": "noshow",
+      "createdBy": "",
+      "phone": "+12398250653",
+      "email": "masdesignplan@gmail.com",
+      "statusHistory": [
+        {
+          "status": "noshow",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "no_show"
+    },
+    {
+      "id": "qymdvga8zdMPAlos3xxw",
+      "contactName": "Harley Remodel & Renovations LLC",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-02T18:30:00-05:00",
+      "timeCreated": "2026-01-30T20:34:31.051Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+19803293703",
+      "email": "harleysremodelrenovations@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
       "id": "xl_2026-02-03_justin",
       "contactName": "Justin",
       "calendarName": "Cold SMS",
@@ -2339,6 +3163,94 @@
       "fathomLink": null
     },
     {
+      "id": "1lcYkFLe56RtpC1lCGlc",
+      "contactName": "George Designer Homes",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-03T13:00:00-05:00",
+      "timeCreated": "2026-02-02T18:09:49.792Z",
+      "appointmentStatus": "showed",
+      "createdBy": "",
+      "phone": "+17726267205",
+      "email": "georgemeyer0907@gmail.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
+      "id": "Chac68YwZcqeVIJRPvk2",
+      "contactName": "Tim Home Repair And Renovations Llc.",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-03T15:30:00-05:00",
+      "timeCreated": "2026-02-02T14:01:07.923Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "",
+      "phone": "+12399220927",
+      "email": "mrtimshomes@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "NP124KNqmuYhLPloYbVw",
+      "contactName": "Justin",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-03T16:00:00-05:00",
+      "timeCreated": "2026-01-30T22:07:59.744Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "",
+      "phone": "+17039662486",
+      "email": "justin@apexdesignandbuild.us",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "HZL7W9qi7PZ5o9CPcDFD",
+      "contactName": "Cesar",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-03T16:30:00-05:00",
+      "timeCreated": "2026-02-02T14:25:03.705Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17865919689",
+      "email": "tillupco@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "LMJK3LyJ1Es3LMljcW4M",
+      "contactName": "Pedro Inc",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-03T16:30:00-05:00",
+      "timeCreated": "2026-01-29T18:48:26.802Z",
+      "appointmentStatus": "showed",
+      "createdBy": "",
+      "phone": "+19548354175",
+      "email": "pedro@livark.design",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
       "id": "xl_2026-02-04_fenelon",
       "contactName": "Fenelon",
       "calendarName": "Cold SMS",
@@ -2397,6 +3309,149 @@
       "offerMade": null,
       "followUpBooked": false,
       "fathomLink": null
+    },
+    {
+      "id": "Ls848orU1pw2Au8IEMFY",
+      "contactName": "Cesar Grullon",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-04T11:00:00-05:00",
+      "timeCreated": "2026-02-04T13:13:12.087Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+17865919689",
+      "email": "tillupco@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "5u4zVO6zcwoudlxXYv4V",
+      "contactName": "Jordan Construction Services",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-04T13:00:00-05:00",
+      "timeCreated": "2026-02-02T18:31:39.646Z",
+      "appointmentStatus": "noshow",
+      "createdBy": "",
+      "phone": "+14078107212",
+      "email": "jordantd18@gmail.com",
+      "statusHistory": [
+        {
+          "status": "noshow",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "no_show"
+    },
+    {
+      "id": "dfRMJGsU7QlgCGiQv06D",
+      "contactName": "Ronny Watkins",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-04T13:00:00-05:00",
+      "timeCreated": "2026-02-03T20:40:00.067Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17067415034",
+      "email": "constructioncontractingllc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "OJq3nKVvtyvv6U3ETuVj",
+      "contactName": "Tony Clark",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-04T16:00:00-05:00",
+      "timeCreated": "2026-01-30T13:59:47.785Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17273364649",
+      "email": "tony@flagstaffbuilders.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "ZWxePnxEEnIy9jh90w1G",
+      "contactName": "Joel",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-04T17:00:00-05:00",
+      "timeCreated": "2026-02-02T22:43:27.760Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+19392221214",
+      "email": "canicoservices@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "tKTt877eAb3cgfc94KCd",
+      "contactName": "Fenelon",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-04T17:00:00-05:00",
+      "timeCreated": "2026-02-03T20:24:53.063Z",
+      "appointmentStatus": "showed",
+      "createdBy": "",
+      "phone": "+16788602305",
+      "email": "itaphoenix@outlook.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
+      "id": "6367TvygbVhKTMrX3iZ8",
+      "contactName": "Oluwashe Renovations",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-04T18:00:00-05:00",
+      "timeCreated": "2026-02-02T22:07:07.425Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18134610871",
+      "email": "1797seyi@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "63cSy5TGfPTDzKPkeeWx",
+      "contactName": "Jacob Phillips",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-04T18:00:00-05:00",
+      "timeCreated": "2026-02-04T16:09:22.735Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17066211143",
+      "email": "info@jacobsandsonsconcrete.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
     },
     {
       "id": "xl_2026-02-05_pedro_inc",
@@ -2499,6 +3554,166 @@
       "fathomLink": "https://fathom.video/share/GjBBq22pLqtfpbikM5RdtjyN12mLz-4L"
     },
     {
+      "id": "ecIWck5KfWbjSCQbHwu8",
+      "contactName": "Kevin",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-05T11:00:00-05:00",
+      "timeCreated": "2026-02-04T20:15:27.862Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "",
+      "phone": "+19194821829",
+      "email": "kc7974128@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "SR8ehrmV5YUdMoYVXFXQ",
+      "contactName": "Linda",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-05T12:00:00-05:00",
+      "timeCreated": "2026-02-04T19:34:34.781Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+19253826710",
+      "email": "juniorsinc@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "e5CXYz4KaYFX95mxS5pk",
+      "contactName": "Bill",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-05T12:00:00-05:00",
+      "timeCreated": "2026-02-04T21:37:37.090Z",
+      "appointmentStatus": "showed",
+      "createdBy": "",
+      "phone": "+12039126445",
+      "email": "bill@probuiltco.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
+      "id": "XeT4JNUu0UEmslh9VDfx",
+      "contactName": "Emad Cabinetry Designs",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-05T16:30:00-05:00",
+      "timeCreated": "2026-02-02T21:24:57.194Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+19123372199",
+      "email": "odehdesigns138@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "fwX61QedntD6UGPvTSJk",
+      "contactName": "Willy Romero",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-05T17:30:00-05:00",
+      "timeCreated": "2026-02-04T21:45:41.178Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+14709189982",
+      "email": "romerowilly565@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "mXDOUazSSZLvga3rkPFp",
+      "contactName": "Jimy Remodeling",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-05T17:30:00-05:00",
+      "timeCreated": "2026-02-02T21:07:38.602Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+19544798432",
+      "email": "rockstarremodelingandpainting@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "3cLXoprdMsbZyndM6fvV",
+      "contactName": "Jennifer Coronas Construction LLC",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-05T18:30:00-05:00",
+      "timeCreated": "2026-02-02T21:48:32.767Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17542488153",
+      "email": "jccoronasconstruction@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "801l0sdm9Im8EbrJP7Mp",
+      "contactName": "Oscar",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-05T18:45:00-05:00",
+      "timeCreated": "2026-02-04T21:21:22.259Z",
+      "appointmentStatus": "showed",
+      "createdBy": "",
+      "phone": "+18282168004",
+      "email": "oscar.inova.div9@gmail.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
+      "id": "QPZAtOJOOHBy4kzKLwQ3",
+      "contactName": "",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-05T19:00:00-05:00",
+      "timeCreated": "2026-02-04T18:50:03.964Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "Daniel",
+      "phone": "+19125476188",
+      "email": "",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
       "id": "xl_2026-02-06_john",
       "contactName": "John",
       "calendarName": "Cold SMS",
@@ -2559,6 +3774,114 @@
       "fathomLink": null
     },
     {
+      "id": "U0FUGBxZiYpbkuiQ4ujj",
+      "contactName": "Rafel",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-06T12:00:00-05:00",
+      "timeCreated": "2026-02-06T13:47:38.641Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18643547357",
+      "email": "grdrywall369@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "emDuPkZdalLkHtBGU0SY",
+      "contactName": "MICHAEL Interior Carpentry",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-06T13:00:00-05:00",
+      "timeCreated": "2026-02-02T14:06:56.723Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+12394145483",
+      "email": "brothersinteriorcarpentryllc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "NEWUXXjngZ2zQceqwlIM",
+      "contactName": "John",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-06T16:30:00-05:00",
+      "timeCreated": "2026-02-04T17:42:25.413Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "",
+      "phone": "+19802462339",
+      "email": "greatercharlottecontracting@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "9wQdwJLnp3JcE2xni52x",
+      "contactName": "Brian",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-06T18:00:00-05:00",
+      "timeCreated": "2026-02-06T14:22:51.195Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18649152351",
+      "email": "brian@dillardconstructiongroup.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "R2Inn7LzaY5T6QOBLv9f",
+      "contactName": "RAY",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-06T18:00:00-05:00",
+      "timeCreated": "2026-02-06T20:13:58.750Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+19258775729",
+      "email": "greenhomeimprovments@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "TGlQKLsSCk4Az0bO1vma",
+      "contactName": "Max Construction Services",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-06T18:00:00-05:00",
+      "timeCreated": "2026-02-02T16:20:13.224Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "",
+      "phone": "+19542263676",
+      "email": "mwebster_add@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
       "id": "xl_2026-02-07_jodie",
       "contactName": "Jodie ",
       "calendarName": "Cold SMS",
@@ -2597,6 +3920,132 @@
       "offerMade": null,
       "followUpBooked": false,
       "fathomLink": null
+    },
+    {
+      "id": "4c76GlCMXzpXS4TT0T5C",
+      "contactName": "Anthony",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-07T10:00:00-05:00",
+      "timeCreated": "2026-02-05T15:53:23.674Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18645295666",
+      "email": "anp21666@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "ZkwRRx8Z6BNCaBdxmBGM",
+      "contactName": "William Handyman",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-07T12:00:00-05:00",
+      "timeCreated": "2026-02-03T15:29:46.246Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+13059103491",
+      "email": "glorifiedhandyman@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "aKQ0uUo7aKgbcwKEGHYc",
+      "contactName": "Jahniel",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-07T12:00:00-05:00",
+      "timeCreated": "2026-01-27T23:54:21.319Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18607786232",
+      "email": "info@hindshomeimprovementllc.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "pJYbctXadPdIpcewUbqH",
+      "contactName": "Kenny Remodeling LLC",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-07T12:00:00-05:00",
+      "timeCreated": "2026-02-06T15:15:36.064Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17722070344",
+      "email": "limitlessremodelingfl@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "OA1JnJsNklBn1aqS1qQe",
+      "contactName": "Ernesto Solutions",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-07T13:30:00-05:00",
+      "timeCreated": "2026-02-03T16:05:52.959Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18136015057",
+      "email": "ernesto.carbonell@ernesolutions.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "ygBEavpmeVL621xVyfKi",
+      "contactName": "David",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-07T13:30:00-05:00",
+      "timeCreated": "2026-02-05T21:17:02.498Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18438188103",
+      "email": "baxleydocksfactorydocs@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "UophyuJWOHVc94V2tLRF",
+      "contactName": "Gary",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-07T14:00:00-05:00",
+      "timeCreated": "2026-02-06T16:24:09.950Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+18649054446",
+      "email": "gary3721@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
     },
     {
       "id": "xl_2026-02-09_alex",
@@ -2659,6 +4108,294 @@
       "fathomLink": null
     },
     {
+      "id": "Ca2tbh9Wym1OLbpSyini",
+      "contactName": "Jamie",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-09T09:00:00-05:00",
+      "timeCreated": "2026-02-06T22:48:55.000Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+12028198704",
+      "email": "americanrenoproject@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "jROqkWepKMaPH7LzDLzM",
+      "contactName": "Laszlo Development LLC",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-09T10:00:00-05:00",
+      "timeCreated": "2026-02-05T16:14:12.992Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+13055257474",
+      "email": "lf@lfdevelopment.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "DlMIjO8MqbSVA6K65bhS",
+      "contactName": "Ellis",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-09T11:00:00-05:00",
+      "timeCreated": "2026-02-05T14:02:15.568Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18642383248",
+      "email": "ellisderry@charter.net",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "n89z3whjvpZNPf2tI1UT",
+      "contactName": "Mark",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-09T11:00:00-05:00",
+      "timeCreated": "2026-02-06T15:54:27.604Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18438014330",
+      "email": "mkwilinski@live.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "sjZlZmJ8JEeZCJyALhiy",
+      "contactName": "Kennedy",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-09T12:00:00-05:00",
+      "timeCreated": "2026-02-05T14:46:07.247Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+18607900616",
+      "email": "kennedy_nichols@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "wileed4sdPHiWXUoPx2X",
+      "contactName": "ALex",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-09T12:00:00-05:00",
+      "timeCreated": "2026-02-09T13:26:09.319Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+13368302671",
+      "email": "sanlex4289@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "bI6k0zgkt650yEg5Z6e0",
+      "contactName": "Mike",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-09T13:00:00-05:00",
+      "timeCreated": "2026-02-05T19:37:50.213Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+18439084494",
+      "email": "info@lowcountryconstructionllc.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "fv8bEcPafGoj812O4Qg5",
+      "contactName": "Linda",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-09T13:00:00-05:00",
+      "timeCreated": "2026-02-06T16:32:58.949Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17063437003",
+      "email": "lindacastillo1998@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "q3a86IpEsajDczllURFR",
+      "contactName": "Nathan",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-09T13:00:00-05:00",
+      "timeCreated": "2026-02-06T16:50:20.211Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18037835400",
+      "email": "nathanreese72@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "Bj9T4xpDVyFSkDxHEOTJ",
+      "contactName": "Ben Morris",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-09T15:30:00-05:00",
+      "timeCreated": "2026-02-06T21:41:33.741Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17044005258",
+      "email": "benmorriselectric@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "MXM3HOrOGfdhEto11Vm1",
+      "contactName": "Lacy",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-09T15:30:00-05:00",
+      "timeCreated": "2026-02-09T16:37:33.133Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+19103015601",
+      "email": "lacydakota25@icloud.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "S0kXiM26kmaiGV0O2PVl",
+      "contactName": "Ben",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-10T11:00:00-05:00",
+      "timeCreated": "2026-02-06T16:10:00.040Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17704030579",
+      "email": "ben@ecrahome.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:10.267Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "36i4jOtraePPUHa149bU",
+      "contactName": "Rodney",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-10T16:00:00-05:00",
+      "timeCreated": "2026-02-05T16:06:47.546Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18283019290",
+      "email": "sf828flooring@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:10.267Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "Sbsz1hUnOd6LAiUxzlpE",
+      "contactName": "",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-10T16:00:00-05:00",
+      "timeCreated": "2026-02-10T17:22:19.477Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+19844844863",
+      "email": "kellysconstructionsolutions@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:10.267Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "FnLZTKHNPT2kjUe8xM5d",
+      "contactName": "",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-10T17:00:00-05:00",
+      "timeCreated": "2026-02-10T20:35:27.386Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+19102971378",
+      "email": "",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:10.267Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "PP9HEGG33TNN69zSj7ny",
+      "contactName": "",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-10T17:00:00-05:00",
+      "timeCreated": "2026-02-10T20:43:07.524Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+19102971378",
+      "email": "",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:10.267Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
       "id": "xl_2026-02-11_sean_mabrey_roofing",
       "contactName": "Sean Mabrey Roofing",
       "calendarName": "Cold SMS",
@@ -2679,6 +4416,348 @@
       "fathomLink": "https://fathom.video/share/3HzQGmge72Jp6LqyzH1mRWNESZsdMB9y"
     },
     {
+      "id": "iRRAA2OeKa2Cpq5XfZ7T",
+      "contactName": "Tony",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T10:00:00-05:00",
+      "timeCreated": "2026-02-10T18:17:19.654Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "Randy",
+      "phone": "+13367382773",
+      "email": "tonycdavis6033@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "GZJrRZXaAhbh3YeCL6jw",
+      "contactName": "Test-D Lastname-Test-D",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T11:00:00-05:00",
+      "timeCreated": "2026-02-11T15:07:54.695Z",
+      "appointmentStatus": "new",
+      "createdBy": "Max",
+      "phone": "+17048951771",
+      "email": "d@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "K3DOI8wX5e1wgpi6rJPj",
+      "contactName": "Test-D Lastname-Test-D",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T11:00:00-05:00",
+      "timeCreated": "2026-02-11T15:06:51.057Z",
+      "appointmentStatus": "new",
+      "createdBy": "Max",
+      "phone": "+17048951771",
+      "email": "d@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "hgViEDyR2Ebx014pUb7X",
+      "contactName": "Sean Mabrey Roofing & Construction Services",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T11:00:00-05:00",
+      "timeCreated": "2026-02-11T14:48:39.126Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Randy",
+      "phone": "+19197956983",
+      "email": "smabrey.kdr@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "yGWZoZPCDEhNr9ee6bbl",
+      "contactName": "Test-D Lastname-Test-D",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T11:00:00-05:00",
+      "timeCreated": "2026-02-11T15:04:49.171Z",
+      "appointmentStatus": "new",
+      "createdBy": "Max",
+      "phone": "+17048951771",
+      "email": "d@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "SVzAXgmqTjwE1M9OtxCP",
+      "contactName": "Test-D Lastname-Test-D",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T12:00:00-05:00",
+      "timeCreated": "2026-02-11T15:11:00.813Z",
+      "appointmentStatus": "new",
+      "createdBy": "i2fhshpdWro1jfccUKxF",
+      "phone": "+17048951771",
+      "email": "d@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "uRVh2wfWIRyEvP8klh7k",
+      "contactName": "Jodie",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T12:30:00-05:00",
+      "timeCreated": "2026-02-06T15:51:11.082Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "",
+      "phone": "+18032404759",
+      "email": "jo.b19722@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "9ZzaGrjX3AEHRlePv16m",
+      "contactName": "Carlos Interiors",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T16:00:00-05:00",
+      "timeCreated": "2026-02-10T20:41:16.695Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+13053053550",
+      "email": "carlos@crcinteriorsmiami.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "P4xSdJr6NFvOYAV4JMQT",
+      "contactName": "Test-D Lastname-Test-D",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T16:00:00-05:00",
+      "timeCreated": "2026-02-11T15:17:30.130Z",
+      "appointmentStatus": "new",
+      "createdBy": "Max",
+      "phone": "+17048951771",
+      "email": "d@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "SPJm2DSyfXeNRLZFdqP8",
+      "contactName": "Test-D Lastname-Test-D",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T16:00:00-05:00",
+      "timeCreated": "2026-02-11T15:13:44.511Z",
+      "appointmentStatus": "new",
+      "createdBy": "Max",
+      "phone": "+17048951771",
+      "email": "d@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "uIMYHScLbMmPIT9ZFeVZ",
+      "contactName": "Test-D Lastname-Test-D",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T16:00:00-05:00",
+      "timeCreated": "2026-02-11T15:16:36.589Z",
+      "appointmentStatus": "new",
+      "createdBy": "Max",
+      "phone": "+17048951771",
+      "email": "d@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "GA43X5R8jFES6btLgFpf",
+      "contactName": "Test-D Lastname-Test-D",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T17:00:00-05:00",
+      "timeCreated": "2026-02-11T16:08:28.573Z",
+      "appointmentStatus": "new",
+      "createdBy": "i2fhshpdWro1jfccUKxF",
+      "phone": "+17048951771",
+      "email": "d@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "PcgHiw9SxgQX7WnvHWVw",
+      "contactName": "Brandon Tavars",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T17:00:00-05:00",
+      "timeCreated": "2026-02-11T13:13:47.769Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Eddie",
+      "phone": "+19193083263",
+      "email": "brandontavares37@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "alCtE2Ub2OzrXVJ40mKb",
+      "contactName": "Test-D Lastname-Test-D",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T17:00:00-05:00",
+      "timeCreated": "2026-02-11T17:22:43.054Z",
+      "appointmentStatus": "new",
+      "createdBy": "Max",
+      "phone": "+17048951771",
+      "email": "d@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "djqOvYgEdbuU5RPlw7K2",
+      "contactName": "Test-D Lastname-Test-D",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T17:00:00-05:00",
+      "timeCreated": "2026-02-11T15:19:46.417Z",
+      "appointmentStatus": "new",
+      "createdBy": "Max",
+      "phone": "+17048951771",
+      "email": "d@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "6dWmCDg6r2gzc2vWIssR",
+      "contactName": "Test-D Lastname-Test-D",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T18:00:00-05:00",
+      "timeCreated": "2026-02-11T17:27:39.633Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "i2fhshpdWro1jfccUKxF",
+      "phone": "+17048951771",
+      "email": "d@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "MUxxCY0FkvTBKw04VzIt",
+      "contactName": "George Builders Inc",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T18:00:00-05:00",
+      "timeCreated": "2026-02-10T22:26:20.212Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+15612399923",
+      "email": "george@arzbuilders.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "jnFGbhO9CWmEGoanAVfI",
+      "contactName": "Angel",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T18:00:00-05:00",
+      "timeCreated": "2026-02-10T20:12:54.647Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+19108532371",
+      "email": "angelyirma1@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "jzbH7PR5ubZpo0tIqVyz",
+      "contactName": "Test-D Lastname-Test-D",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-11T18:00:00-05:00",
+      "timeCreated": "2026-02-11T17:26:46.745Z",
+      "appointmentStatus": "new",
+      "createdBy": "Max",
+      "phone": "+17048951771",
+      "email": "d@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
       "id": "xl_2026-02-12_rashad_construction",
       "contactName": "Rashad Construction",
       "calendarName": "Cold SMS",
@@ -2697,6 +4776,132 @@
       "offerMade": null,
       "followUpBooked": false,
       "fathomLink": "https://fathom.video/share/jtQCdWQBziz8chLspa4KGoXNNX8ywzUz"
+    },
+    {
+      "id": "JX4LSk3S3z1t8W5VLeXd",
+      "contactName": "ALLAN Road Construction",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-12T11:00:00-05:00",
+      "timeCreated": "2026-02-11T21:00:08.895Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+14438073134",
+      "email": "allan@castleroadconst.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "PwfjYrxkWyQFYtQU2XPH",
+      "contactName": "Kadeem Hylton",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-12T11:00:00-05:00",
+      "timeCreated": "2026-01-26T16:38:33.501Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+13013853644",
+      "email": "klhcontractor@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "9jVl7aakbg0zZQd5WQN0",
+      "contactName": "Dr Handyman Service",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-12T12:30:00-05:00",
+      "timeCreated": "2026-02-10T22:21:04.911Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+17865083803",
+      "email": "davidroash6@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "8ikEhXHd1sI3rR9IImxR",
+      "contactName": "Ezequiel Management Rental Cars",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-12T13:00:00-05:00",
+      "timeCreated": "2026-02-11T17:09:53.965Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+19295751420",
+      "email": "hhrentalsmiami@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "sdI8FS9F3mzpbYMu6JEZ",
+      "contactName": "Louis Ordonez",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-12T16:30:00-05:00",
+      "timeCreated": "2026-02-11T16:37:39.218Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+13055702969",
+      "email": "lordonezjr@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "zSs07GNqi7wNvOjcut5J",
+      "contactName": "Rashad Construction",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-12T18:30:00-05:00",
+      "timeCreated": "2026-02-11T23:05:45.763Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Daniel",
+      "phone": "+14432485540",
+      "email": "rashadminhas786@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "XmkvzEO0JircAqwfvn9q",
+      "contactName": "Christina Costruction",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-12T19:30:00-05:00",
+      "timeCreated": "2026-02-12T14:23:13.795Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+12409600285",
+      "email": "artcocontructionllc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
     },
     {
       "id": "xl_2026-02-13_grace_construction",
@@ -2737,6 +4942,276 @@
       "offerMade": null,
       "followUpBooked": false,
       "fathomLink": "https://fathom.video/share/DzTasaayouyhyBswkhPRTTgqGdBzy6as"
+    },
+    {
+      "id": "EO3xk03PGtxWix2EobtD",
+      "contactName": "Ivan Home Remodeling",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T11:00:00-05:00",
+      "timeCreated": "2026-02-03T15:36:55.216Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+15619781999",
+      "email": "avanigroupllc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "LTK4zeasHmDSQtqeHynF",
+      "contactName": "Epr - Eladio Plumbing&remodeling",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T11:00:00-05:00",
+      "timeCreated": "2026-02-12T21:05:41.074Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Randy",
+      "phone": "+12403819035",
+      "email": "eprplumbing2@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "bRoT4yP0XVGIEeA5ghBf",
+      "contactName": "Ali",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T11:00:00-05:00",
+      "timeCreated": "2026-02-10T23:18:29.990Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+19253604956",
+      "email": "superiorconstructionrenovation@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "8nsXO8PVbhdX8u7J4ngL",
+      "contactName": "Gus",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T12:00:00-05:00",
+      "timeCreated": "2026-02-11T16:15:33.419Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+17867310202",
+      "email": "mark@ggbuildersnc.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "FJRoBDCGTkzDhpBCwrqm",
+      "contactName": "",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T12:00:00-05:00",
+      "timeCreated": "2026-02-10T22:41:52.384Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+19253604956",
+      "email": "superiorconstructionrenovation@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "kDkHDfH4SQg0Fea0DwCi",
+      "contactName": "Grace Construction",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T12:00:00-05:00",
+      "timeCreated": "2026-02-13T01:24:27.082Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Eddie",
+      "phone": "+12404398434",
+      "email": "info@gracegc.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "zsAnY83ciWgipYMX4rtm",
+      "contactName": "",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T12:00:00-05:00",
+      "timeCreated": "2026-02-10T22:59:29.430Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+19253604956",
+      "email": "superiorconstructionrenovation@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "I5GYv7jLTEtrnXKsp2IG",
+      "contactName": "Omar Unique Remodeling & Maintenance Llc",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T13:00:00-05:00",
+      "timeCreated": "2026-02-11T22:57:23.827Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+13016331493",
+      "email": "portilloomar2009@hotmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "XlZbHwNIhnt8PreLD7Oo",
+      "contactName": "Bravo. GABRIEL Designs - Kitchen And Bath",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T13:00:00-05:00",
+      "timeCreated": "2026-02-12T18:55:18.440Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+12406544454",
+      "email": "info@bravodesigns.net",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "Nsoj6eAGAFaRZyMF5Ahm",
+      "contactName": "Arht Home Solutions",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T14:30:00-05:00",
+      "timeCreated": "2026-02-12T14:07:58.987Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+13019130650",
+      "email": "admin@arthomesolutions.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "D0IIkFGel4VtsRG0uaEj",
+      "contactName": "Mendez Contracting",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T15:30:00-05:00",
+      "timeCreated": "2026-02-12T19:10:49.441Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+14109848391",
+      "email": "rigo@mendez-contracting.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "AqnJm1NkmKWMOFuOQ3MC",
+      "contactName": "Hugh",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T16:00:00-05:00",
+      "timeCreated": "2026-02-04T20:13:33.154Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+13362078672",
+      "email": "hugh@btlsidingandwindows.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "jMeEtrYf5hd03wnn1jjv",
+      "contactName": "Ray Drywall&painting",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T17:00:00-05:00",
+      "timeCreated": "2026-02-12T16:04:33.244Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+14103204675",
+      "email": "shorelinedrywallandpainting@outlook.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "nB4UUcUUzJxfQwLJWOhS",
+      "contactName": "Jerry Of Maryland",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T17:00:00-05:00",
+      "timeCreated": "2026-02-13T16:14:56.724Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+14105529944",
+      "email": "stampcreteofmdinc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "J5pIY2kmg3z2CoXsNNXP",
+      "contactName": "Joe",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-13T18:00:00-05:00",
+      "timeCreated": "2026-02-10T23:13:07.274Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+19108236962",
+      "email": "dfv2027@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
     },
     {
       "id": "xl_2026-02-14_edward",
@@ -2799,6 +5274,222 @@
       "fathomLink": "https://fathom.video/share/waMKzkQ-xkQPbRzLJt5vfBADxdiUsSsx"
     },
     {
+      "id": "oJmIdVkTqWYlkPjp3TRn",
+      "contactName": "Kenneth Hewitt",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-14T09:00:00-05:00",
+      "timeCreated": "2026-02-13T17:59:11.840Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+12407509795",
+      "email": "knhewitt@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "y2KxGSZnUowQsyVoKXsO",
+      "contactName": "Erik Home Improvement",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-14T10:30:00-05:00",
+      "timeCreated": "2026-02-11T18:45:36.422Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+19546017677",
+      "email": "bennybee767@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "SRnjleJjpONOkYrXc2Th",
+      "contactName": "MAURICIO Ponce Remodeling Llc",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-14T11:30:00-05:00",
+      "timeCreated": "2026-02-11T21:13:06.617Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+14438026635",
+      "email": "ponceremodelingllc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "bZvOH7ceoFzXKKluxCLk",
+      "contactName": "Coziel.  AZTEC Painting & Home Repair",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-14T11:30:00-05:00",
+      "timeCreated": "2026-02-13T15:09:33.850Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+14433369730",
+      "email": "cozielcastro@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "paLTtcZoxZDDjqwWOIQZ",
+      "contactName": "Datis Construction",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-14T11:30:00-05:00",
+      "timeCreated": "2026-02-13T20:01:15.105Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+12029995987",
+      "email": "pooyan.nk@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "mfsjO21ziona8XGeK4Ov",
+      "contactName": "Jermaine Campbell",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-14T12:30:00-05:00",
+      "timeCreated": "2026-02-09T23:04:07.632Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+18034143445",
+      "email": "jermainescampbell37@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "kP6o0d1tuQ1sUtNgknDx",
+      "contactName": "Kevin Construction Group",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-14T13:00:00-05:00",
+      "timeCreated": "2026-02-10T20:26:35.473Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+17865389691",
+      "email": "k.s.h.constructiongroup@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "K6epTsj19BDmujyPv5hu",
+      "contactName": "Smart Fix Handyman & Renovations LLC",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-14T14:00:00-05:00",
+      "timeCreated": "2026-02-12T19:13:47.069Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+13016935203",
+      "email": "info@smartfixrenovations.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "hMoWw6DR6545o6B3XtXk",
+      "contactName": "Rafael E81Studio",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-14T14:00:00-05:00",
+      "timeCreated": "2026-02-13T16:36:37.914Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+12402053758",
+      "email": "info@e81studio.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "tritiAYWVLnQN8vRDFfZ",
+      "contactName": "Rafael E81Studio",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-14T14:00:00-05:00",
+      "timeCreated": "2026-02-13T16:11:38.188Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Eddie",
+      "phone": "+12402053758",
+      "email": "info@e81studio.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "y9gFfsYGq4ra275vAmr2",
+      "contactName": "Ddl Construction",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-14T15:00:00-05:00",
+      "timeCreated": "2026-02-13T14:42:07.190Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+14107071681",
+      "email": "ddlconstruction12@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "BqsflR1rEAHFPT0P526c",
+      "contactName": "Edward",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-14T16:00:00-05:00",
+      "timeCreated": "2026-02-06T22:02:23.531Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+18438146631",
+      "email": "hhmaintainance@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
       "id": "xl_2026-02-16_mullineaux_glenn",
       "contactName": "Mullineaux Glenn",
       "calendarName": "Cold SMS",
@@ -2857,6 +5548,274 @@
       "offerMade": null,
       "followUpBooked": false,
       "fathomLink": "https://fathom.video/share/wfosvDubMC3oWgSeweFnpy314KXtWhWo"
+    },
+    {
+      "id": "F445mx6pU5XcBLwlbcGZ",
+      "contactName": "William Home Design",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-16T10:00:00-05:00",
+      "timeCreated": "2026-02-13T14:00:37.057Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+13019174997",
+      "email": "william_lopez08@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "2fVNGUdkTwJGiK8PGHrh",
+      "contactName": "William Home Design",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-16T11:30:00-05:00",
+      "timeCreated": "2026-02-13T14:00:58.069Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+13019174997",
+      "email": "william_lopez08@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "y0WUkYsgiZGnE4bHm4FG",
+      "contactName": "Ag Electrical ARRON Power Academy",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-16T11:30:00-05:00",
+      "timeCreated": "2026-02-16T14:37:36.300Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+13016131067",
+      "email": "agelectrical.ag@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "8f6q4nKWZ4OyJdaEnjZT",
+      "contactName": "M&z Contracting",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-16T12:30:00-05:00",
+      "timeCreated": "2026-02-13T14:17:15.962Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+13013886504",
+      "email": "mandz.contracting.llc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "oA1QVZDHiTqW7r4bxHL7",
+      "contactName": "Carlos Carpentry General Contractors",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-16T12:30:00-05:00",
+      "timeCreated": "2026-02-13T15:29:40.579Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+13016748279",
+      "email": "accarpentry40@hotmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "uO6OM8laCfMrZy0LvKi6",
+      "contactName": "Remodeling - Derek Brigade Llc",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-16T14:30:00-05:00",
+      "timeCreated": "2026-02-13T16:30:35.890Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Randy",
+      "phone": "+13016515584",
+      "email": "remodelingbrigade@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "v0gupMcq7ZjhdAcEpDFK",
+      "contactName": "A-1.  GARY Parking Lot Renewal",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-16T16:00:00-05:00",
+      "timeCreated": "2026-02-16T14:27:13.811Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+13866817244",
+      "email": "gary@a1parkinglotrenewal.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "U7d4QsMRglB3CRdpH1Nr",
+      "contactName": "Harold Howard Painting",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-16T17:00:00-05:00",
+      "timeCreated": "2026-02-16T15:53:14.819Z",
+      "appointmentStatus": "showed",
+      "createdBy": "Randy",
+      "phone": "+14102186261",
+      "email": "hhawkhoward@aol.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
+      "id": "EBbBkmliFVEg5qXeXpNs",
+      "contactName": "Frederick-Loudoun Home Services",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-16T18:30:00-05:00",
+      "timeCreated": "2026-02-16T14:56:36.801Z",
+      "appointmentStatus": "showed",
+      "createdBy": "Randy",
+      "phone": "+13013052174",
+      "email": "flhservices4u@gmail.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
+      "id": "DfZERBGpkBXINdg9p9Q8",
+      "contactName": "RON ALL STAR HEATING AND AIR",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-17T11:00:00-05:00",
+      "timeCreated": "2026-02-11T13:40:16.073Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+18438752314",
+      "email": "allstarhvacr@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:12.556Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "bYmFQxscGZDBRkGaCaHI",
+      "contactName": "Jason Home Improvement",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-17T11:00:00-05:00",
+      "timeCreated": "2026-02-12T14:16:38.440Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+17032201727",
+      "email": "handjhome@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:12.556Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "sZMg5af2GuNC9zlmqy3m",
+      "contactName": "Danyco - Cornelius Gen Contractors",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-17T12:00:00-05:00",
+      "timeCreated": "2026-02-13T17:44:50.448Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+12404356315",
+      "email": "danycogeneralcontractors@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:12.556Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "DA9kYZl2l02Av6S7o0qy",
+      "contactName": "Igor",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-17T13:00:00-05:00",
+      "timeCreated": "2026-02-16T17:53:14.409Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+12169065520",
+      "email": "dviconstruction3@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:12.556Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "MotTXg8o448pRoTieRJw",
+      "contactName": "Raymond",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-17T13:00:00-05:00",
+      "timeCreated": "2026-02-17T14:07:08.066Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+12347068383",
+      "email": "victoryroofing@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:12.556Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "E9FyXNwgML9AKmZemqoD",
+      "contactName": "Todd",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-17T16:00:00-05:00",
+      "timeCreated": "2026-02-16T18:51:10.761Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+12167732891",
+      "email": "atoddmiles1960@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:12.556Z"
+        }
+      ],
+      "status": "new"
     },
     {
       "id": "xl_2026-02-18_matthew",
@@ -2957,6 +5916,204 @@
       "offerMade": null,
       "followUpBooked": false,
       "fathomLink": null
+    },
+    {
+      "id": "oF8yS3rc5Be6yziBEto2",
+      "contactName": "",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-18T09:00:00-05:00",
+      "timeCreated": "2026-02-10T16:16:01.878Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+13365903976",
+      "email": "charles.more16@icloud.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "HpDR6Y0cnE1M1gJS0TT8",
+      "contactName": "George",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-18T11:00:00-05:00",
+      "timeCreated": "2026-01-21T22:19:04.341Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+18034456348",
+      "email": "contact@thomasgrae.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "ReEsAFq30KX1AzWvMpj6",
+      "contactName": "Dmj Contractors",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-18T11:00:00-05:00",
+      "timeCreated": "2026-02-16T16:31:33.649Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Eddie",
+      "phone": "+12405796033",
+      "email": "",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "ayPjl7liCIMmBiFM9Tct",
+      "contactName": "Gl - Gus Contracting Group",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-18T11:00:00-05:00",
+      "timeCreated": "2026-02-13T23:03:38.073Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+12404605779",
+      "email": "info@glgroupdmv.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "gyjncqBWqYeUd1VkUFFv",
+      "contactName": "Castillo Construction",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-18T11:00:00-05:00",
+      "timeCreated": "2026-02-16T14:12:53.062Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+14438188129",
+      "email": "castillo_construction@outlook.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "2Lckk7JWHsc6BHttIv7M",
+      "contactName": "Ted Helton",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-18T12:00:00-05:00",
+      "timeCreated": "2026-02-17T15:06:23.609Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Eddie",
+      "phone": "+13303968087",
+      "email": "helton.teddy@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "NNPa3RxAIJ6v4GZMr6zy",
+      "contactName": "Lewis",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-18T15:00:00-05:00",
+      "timeCreated": "2026-02-17T20:41:29.785Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "Eddie",
+      "phone": "+14405530139",
+      "email": "lewis360distribution@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "ZN4MElk6I385xeUyzIpi",
+      "contactName": "George",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-18T16:00:00-05:00",
+      "timeCreated": "2026-02-17T18:57:24.555Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+14408216209",
+      "email": "cordonpaving@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "jhU4rJZT4SXXpmHKYTVc",
+      "contactName": "Ash",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-18T17:00:00-05:00",
+      "timeCreated": "2026-02-17T22:14:07.224Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+19723121414",
+      "email": "finefloors@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "grxo6pBI0DL8bwuKf3MK",
+      "contactName": "Matthew - Hennessy Bros",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-18T18:00:00-05:00",
+      "timeCreated": "2026-02-17T17:42:55.957Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Randy",
+      "phone": "+14198360528",
+      "email": "hennessybrosllc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "ixZud6jcsCpaccYgcivc",
+      "contactName": "Mr Ruggerio",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-18T18:00:00-05:00",
+      "timeCreated": "2026-02-17T15:58:59.332Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Eddie",
+      "phone": "+16147467455",
+      "email": "ep.ruggieros@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
     },
     {
       "id": "xl_2026-02-19_stace",
@@ -3079,6 +6236,186 @@
       "fathomLink": null
     },
     {
+      "id": "OypoRm0gFbgyK2Zer3xW",
+      "contactName": "Mike",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-19T10:00:00-05:00",
+      "timeCreated": "2026-02-18T22:41:57.305Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+18596003650",
+      "email": "roipropertiesnky@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "jvLc8KvPNapLWYka6ww1",
+      "contactName": "William Baker",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-19T11:00:00-05:00",
+      "timeCreated": "2026-02-17T14:36:29.619Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Daniel",
+      "phone": "+18127731054",
+      "email": "wlbaker.construction@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "ciHie9vUm9Fo5tJHZfpT",
+      "contactName": "Chad Lange",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-19T12:00:00-05:00",
+      "timeCreated": "2026-02-18T17:54:31.504Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+16123887275",
+      "email": "chadlange@satintouch.us",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "BhIkbpoyZ7gBYnTXiYWg",
+      "contactName": "Isaac",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-19T13:30:00-05:00",
+      "timeCreated": "2026-02-18T23:14:14.296Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Eddie",
+      "phone": "+13023318354",
+      "email": "isaacprzch@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "BuALbHLTzI0QZiXRZI10",
+      "contactName": "Isaac",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-19T13:30:00-05:00",
+      "timeCreated": "2026-02-18T22:28:25.435Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+16149069946",
+      "email": "isaac6594@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "6R7WpaIH7ZkRRsXpxAKC",
+      "contactName": "Doug",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-19T14:30:00-05:00",
+      "timeCreated": "2026-02-16T21:24:44.641Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Randy",
+      "phone": "+16149177992",
+      "email": "doug@alphabaths.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "rTkde6Wgm6GXcLyOhbX0",
+      "contactName": "William",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-19T15:30:00-05:00",
+      "timeCreated": "2026-02-18T14:06:02.445Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+12162132013",
+      "email": "twhfremodeling@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "oJ02Exf0n6MjPhRMpGhq",
+      "contactName": "Stace  Thiessen",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-19T15:30:00-05:00",
+      "timeCreated": "2026-02-18T23:53:02.634Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+14058224404",
+      "email": "thiessen40@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "2AYEd9UK2W9adyjMmMxS",
+      "contactName": "Greg Cutting",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-19T16:30:00-05:00",
+      "timeCreated": "2026-02-19T17:51:03.936Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Daniel",
+      "phone": "+13304141918",
+      "email": "cuttingcustomllc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "XV61ciA0JcXy8wd5GASS",
+      "contactName": "Mike",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-19T16:30:00-05:00",
+      "timeCreated": "2026-02-18T15:58:39.420Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+13302091243",
+      "email": "changeit2020@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
       "id": "xl_2026-02-20_shannon_swiscott",
       "contactName": "Shannon Swiscott",
       "calendarName": "Cold SMS",
@@ -3199,6 +6536,312 @@
       "fathomLink": null
     },
     {
+      "id": "5ao294kcUtnDVtAfLzXd",
+      "contactName": "Shannon Swiscott",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T09:30:00-05:00",
+      "timeCreated": "2026-02-19T14:17:01.958Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Daniel",
+      "phone": "+13309211660",
+      "email": "swiscott2@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "tUHDsWNGXZ8fedQbAd5g",
+      "contactName": "Hernriquez",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T10:00:00-05:00",
+      "timeCreated": "2026-02-19T20:18:07.952Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "Eddie",
+      "phone": "+17409090910",
+      "email": "contact@gdbuildersusa.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "wMzwlj1mi8li9SP9RMPJ",
+      "contactName": "Roby",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T10:52:00-05:00",
+      "timeCreated": "2026-02-18T15:52:35.536Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+15139152509",
+      "email": "rnd45206@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "krv4ZX815T4sAAPQhCtv",
+      "contactName": "Chris",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T11:00:00-05:00",
+      "timeCreated": "2026-02-16T21:04:44.266Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "Randy",
+      "phone": "+14408647232",
+      "email": "buddiesgeneralcontractingllc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "EXivrOit2mv00uPxkbsO",
+      "contactName": "Robert",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T11:30:00-05:00",
+      "timeCreated": "2026-02-19T14:29:03.934Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+14403423232",
+      "email": "therengroup@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "w6n0QnJO24yuWusZv2G9",
+      "contactName": "Ted Helton",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T12:00:00-05:00",
+      "timeCreated": "2026-02-18T17:05:09.661Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Eddie",
+      "phone": "+13303968087",
+      "email": "helton.teddy@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "IA0zctE3lViRY8ihH3lI",
+      "contactName": "Bradley Cross",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-20T13:30:00-05:00",
+      "timeCreated": "2026-02-20T02:48:52.543Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+13465687771",
+      "email": "crossbrad1125@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "0GUQa3B9uvPsDMPoIuP7",
+      "contactName": "Jacob - Clevelandflooringandremodel",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T14:00:00-05:00",
+      "timeCreated": "2026-02-19T15:54:14.623Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+12169305520",
+      "email": "clevelandflooringandremodel@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "H0nZT7i1sCGWyVRepeUG",
+      "contactName": "Luis",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T14:00:00-05:00",
+      "timeCreated": "2026-02-19T13:33:16.967Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+14696102158",
+      "email": "arborsandpatios@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "H2OE1PWVDOlAWC4wgQys",
+      "contactName": "Ray Paterson",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-20T16:00:00-05:00",
+      "timeCreated": "2026-02-20T03:12:25.854Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "",
+      "phone": "+15616337774",
+      "email": "bggconstruction@myyahoo.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "6lvrWFJWaFxlZS7kdgzI",
+      "contactName": "Rex Bridges",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-20T17:00:00-05:00",
+      "timeCreated": "2026-02-18T22:02:38.604Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+18168130904",
+      "email": "meko8550@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "wnIXkGkJbdc7ZVhtrkL4",
+      "contactName": "Donald",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T17:30:00-05:00",
+      "timeCreated": "2026-02-19T00:10:25.827Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Randy",
+      "phone": "+12168323124",
+      "email": "mmlremodelingllc3@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "cU5A6UEYaE60V4SsHHVL",
+      "contactName": "Deija",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T18:00:00-05:00",
+      "timeCreated": "2026-02-19T23:14:50.727Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+16147066302",
+      "email": "deja-anne@proton.me",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "iDvGsYl1AoKfcchEq2YA",
+      "contactName": "John",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T18:00:00-05:00",
+      "timeCreated": "2026-02-20T14:02:47.451Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "Eddie",
+      "phone": "+12162647842",
+      "email": "customservicegrp@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "TKvuZ9btS4qIRfk2ppH5",
+      "contactName": "Carol",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T18:30:00-05:00",
+      "timeCreated": "2026-02-18T18:05:04.098Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "Eddie",
+      "phone": "+13138154065",
+      "email": "cjsprojectmgt@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "qYfqWxRJR365eSdf9rUm",
+      "contactName": "Carol",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T18:45:00-05:00",
+      "timeCreated": "2026-02-18T23:01:43.003Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "Daniel",
+      "phone": "+13138154065",
+      "email": "cjsprojectmgt@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "pYZvTbDCjLIkJRMYNw97",
+      "contactName": "Steve",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-20T19:00:00-05:00",
+      "timeCreated": "2026-02-20T14:11:57.082Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+14407522202",
+      "email": "cledrivewayco@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
       "id": "xl_2026-02-21_carlos_t",
       "contactName": "Carlos T",
       "calendarName": "AI Strategy Session (Meta Inbound)",
@@ -3237,6 +6880,150 @@
       "offerMade": null,
       "followUpBooked": false,
       "fathomLink": null
+    },
+    {
+      "id": "RxJwaU6zhw3wj9LWYJUo",
+      "contactName": "Zack",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-21T10:00:00-05:00",
+      "timeCreated": "2026-02-19T22:06:00.958Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+12109479483",
+      "email": "zaxxconstruction@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "tp7DdzelGoxIvIxi4ZrI",
+      "contactName": "BRAD LEWIS",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-21T10:00:00-05:00",
+      "timeCreated": "2026-02-16T19:14:45.641Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+17348589731",
+      "email": "bradlewispainting@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "nwnBqW1lkDg4slyE73qL",
+      "contactName": "Eugene",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-21T11:00:00-05:00",
+      "timeCreated": "2026-02-19T16:01:39.323Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+13305094898",
+      "email": "hardestyeugene3@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "1fT2KbUTNwlsHnAVwxaP",
+      "contactName": "Jeff",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-21T12:00:00-05:00",
+      "timeCreated": "2026-02-20T15:52:12.848Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+13305039712",
+      "email": "jdmco01@aol.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "I5rAhR2gZPDzOkBLsB5U",
+      "contactName": "Carlos T",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-21T13:30:00-05:00",
+      "timeCreated": "2026-02-18T22:57:33.899Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "",
+      "phone": "+12138100968",
+      "email": "altairrenovation@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "PdQ9lK0Z0phNedttt0LZ",
+      "contactName": "Tasha Elsie And Brotherhood Llc",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-21T15:00:00-05:00",
+      "timeCreated": "2026-02-20T14:36:05.716Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Eddie",
+      "phone": "+14406819936",
+      "email": "latashya2@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "kFDBvuvETLceVUeRXGRv",
+      "contactName": "Leo",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-21T16:30:00-05:00",
+      "timeCreated": "2026-02-20T19:06:48.775Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+12163758076",
+      "email": "oneleo768@hotmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "RNXCSdiJCCynOVgPvEOz",
+      "contactName": "Ivan Davalos",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-21T17:30:00-05:00",
+      "timeCreated": "2026-02-19T07:34:27.652Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+19098274713",
+      "email": "ivan@superiormaintenanceent.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
     },
     {
       "id": "xl_2026-02-23_dan_sullivan",
@@ -3339,6 +7126,149 @@
       "fathomLink": "https://fathom.video/share/cZhL8dPpQywBWXXmY7Gw8HMzw-8mWzrz"
     },
     {
+      "id": "AQzxJZqiWA63rkpVhNlg",
+      "contactName": "Lou",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-23T10:00:00-05:00",
+      "timeCreated": "2026-02-18T15:53:23.159Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "Randy",
+      "phone": "+19107421170",
+      "email": "kingqualitykitchens@mail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "LRqeVQXx65q7d8vpJmKT",
+      "contactName": "Dan Sullivan",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-23T11:00:00-05:00",
+      "timeCreated": "2026-02-21T13:07:43.752Z",
+      "appointmentStatus": "noshow",
+      "createdBy": "",
+      "phone": "+14012653858",
+      "email": "sullivandan84@gmail.com",
+      "statusHistory": [
+        {
+          "status": "noshow",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "no_show"
+    },
+    {
+      "id": "mLvjKv5jFUOzxPkjzEbL",
+      "contactName": "Gene Campbell",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-23T14:00:00-05:00",
+      "timeCreated": "2026-02-21T16:33:36.674Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+19257855157",
+      "email": "campbell@pinnacleconstruction.co",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "sRGiMKhWDmaiJwsC8XRF",
+      "contactName": "Laszlo Development LLC",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-23T15:00:00-05:00",
+      "timeCreated": "2026-02-19T17:19:56.908Z",
+      "appointmentStatus": "showed",
+      "createdBy": "Daniel",
+      "phone": "+13055257474",
+      "email": "lf@lfdevelopment.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ]
+    },
+    {
+      "id": "uMJaK99KubKxCT9Z7Jdb",
+      "contactName": "Leo",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-23T15:00:00-05:00",
+      "timeCreated": "2026-02-23T14:32:40.266Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+12163758076",
+      "email": "oneleo768@hotmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "EyzniwuJidGysXfmpjpX",
+      "contactName": "David",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-23T16:00:00-05:00",
+      "timeCreated": "2026-02-20T21:25:03.949Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+15673221113",
+      "email": "davespaint419@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "dscMTGzcHw0QYZ5gpQ78",
+      "contactName": "Victor Rodrigues",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-23T16:00:00-05:00",
+      "timeCreated": "2026-02-23T13:46:58.657Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+17745738831",
+      "email": "baystategroup1@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "kTvRJ4GW5v7irHG6NNZE",
+      "contactName": "Sio Fuentes",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-23T18:00:00-05:00",
+      "timeCreated": "2026-02-23T20:13:02.508Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+17145802248",
+      "email": "jdanja42@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
       "id": "xl_2026-02-24_chris",
       "contactName": "Chris",
       "calendarName": "AI Strategy Session (Meta Inbound)",
@@ -3439,6 +7369,707 @@
       "fathomLink": "https://fathom.video/share/cJPmyXrcqSgy_5tGojszCHi4-7kSt3xk"
     },
     {
+      "id": "ZvCJdFT5o2XpU0qV8Qxo",
+      "contactName": "Matt - Interior Redesign",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-24T11:30:00-05:00",
+      "timeCreated": "2026-02-19T16:38:19.923Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Randy",
+      "phone": "+13305192036",
+      "email": "interiorredesignllc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "FNxgNnxswDAWHo8d9yve",
+      "contactName": "Shaun",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-24T13:00:00-05:00",
+      "timeCreated": "2026-02-23T15:53:25.241Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Daniel",
+      "phone": "+12163722977",
+      "email": "info@clevelandpropainters.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "UYmrDjh6B24ppPqNDusm",
+      "contactName": "Fabiana Williams",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-24T14:30:00-05:00",
+      "timeCreated": "2026-02-24T00:09:19.396Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+19412272030",
+      "email": "fabi@sarasotakitchencompany.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "gCilDd8avtWKbDma0gsh",
+      "contactName": "Chris",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-24T16:00:00-05:00",
+      "timeCreated": "2026-02-23T21:49:23.995Z",
+      "appointmentStatus": "noshow",
+      "createdBy": "Max",
+      "phone": "+15229072232",
+      "email": "ccanel@cssteelinc.com",
+      "statusHistory": [
+        {
+          "status": "noshow",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "no_show"
+    },
+    {
+      "id": "Cqi5elDQqrxRiPAkx9u1",
+      "contactName": "Nick",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-24T17:00:00-05:00",
+      "timeCreated": "2026-02-20T00:02:21.061Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+14402838795",
+      "email": "provisionco.23@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "MeWhdyeltsbEwf8vVVoj",
+      "contactName": "Esdarl",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-24T17:00:00-05:00",
+      "timeCreated": "2026-02-24T15:55:10.915Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+13013794238",
+      "email": "eggaragedoorsplus@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "1geCds45qJna3U8xjFmB",
+      "contactName": "Ray",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-24T18:00:00-05:00",
+      "timeCreated": "2026-02-24T16:02:23.672Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+17572401654",
+      "email": "grayghost33@hotmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "UrAoaG89ai6NazVDViNO",
+      "contactName": "Ryan Perchinski",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-24T18:00:00-05:00",
+      "timeCreated": "2026-02-23T20:06:44.698Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+14402429218",
+      "email": "ryan.sr.perchinski@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "erSiaH9XQhkcSRv2AFbU",
+      "contactName": "Ivan",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-24T18:00:00-05:00",
+      "timeCreated": "2026-02-23T17:10:43.591Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Randy",
+      "phone": "+14045381052",
+      "email": "gennisivancanales@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "mUyfTPKJ30RQrxztJJny",
+      "contactName": "James",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-25T09:00:00-05:00",
+      "timeCreated": "2026-02-24T23:22:54.946Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Randy",
+      "phone": "+17578182651",
+      "email": "amassinc777@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "KEPNWpCRcVBbHCI0axgo",
+      "contactName": "Michael",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-25T10:00:00-05:00",
+      "timeCreated": "2026-02-24T20:27:38.421Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Daniel",
+      "phone": "+15408179805",
+      "email": "mebark73@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "w6M31gRzrYl4vTohyAx6",
+      "contactName": "Ernest Edwards",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-25T11:30:00-05:00",
+      "timeCreated": "2026-02-25T09:18:33.572Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+16303627196",
+      "email": "eedwards@glassma.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "Av7xQfe2kOb1t7pr52zY",
+      "contactName": "Christ",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-25T12:00:00-05:00",
+      "timeCreated": "2026-02-20T23:24:53.507Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+18145727475",
+      "email": "harpstconstruct@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "xNci1HadBHLpi0IXJVAW",
+      "contactName": "Darrel  Polk",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-25T14:30:00-05:00",
+      "timeCreated": "2026-02-25T03:07:11.058Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+16603467372",
+      "email": "homepros1575@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "JnCbzYSS6ek3dd5vWumO",
+      "contactName": "Raenesha",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-25T15:00:00-05:00",
+      "timeCreated": "2026-02-19T21:15:50.773Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+15138861497",
+      "email": "rstorey@diamondsmarbles.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "mAFQBxUywowZIcIjfYSX",
+      "contactName": "Chance",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-25T15:00:00-05:00",
+      "timeCreated": "2026-02-24T14:36:39.801Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+17579294314",
+      "email": "chancesharpe734@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "JY82ZvaM1f2pQcOIU4xo",
+      "contactName": "Skyler Brucher",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-25T17:00:00-05:00",
+      "timeCreated": "2026-02-25T05:16:14.410Z",
+      "appointmentStatus": "new",
+      "createdBy": "",
+      "phone": "+17192352828",
+      "email": "info@peak-west.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "mKfNMClWKb2qdgKElTLe",
+      "contactName": "Skyler Brucher",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-25T17:00:00-05:00",
+      "timeCreated": "2026-02-25T05:16:52.464Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+17192352828",
+      "email": "info@peak-west.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "Xpg91ECzeCCnoa1Vkttc",
+      "contactName": "Merlin",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-25T18:00:00-05:00",
+      "timeCreated": "2026-02-25T15:52:35.305Z",
+      "appointmentStatus": "showed",
+      "createdBy": "Daniel",
+      "phone": "+17032493234",
+      "email": "jmerlindelgado68@gmail.com",
+      "statusHistory": [
+        {
+          "status": "showed",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ]
+    },
+    {
+      "id": "ru61hkVnUy1FMCaYDBsl",
+      "contactName": "Ryan Perchinski",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-25T18:30:00-05:00",
+      "timeCreated": "2026-02-25T18:35:55.040Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+14402429218",
+      "email": "ryan.sr.perchinski@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "CX0A340BvNylemjoxhf6",
+      "contactName": "Jeff",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-26T12:00:00-05:00",
+      "timeCreated": "2026-02-21T16:44:56.676Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+15138244704",
+      "email": "russelldarling03@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "ORWTBDwUSfkocWFSTpFL",
+      "contactName": "",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-26T12:00:00-05:00",
+      "timeCreated": "2026-02-25T14:33:24.216Z",
+      "appointmentStatus": "new",
+      "createdBy": "UCNVd9UWwpZ9VT0NhYKd",
+      "phone": "+18049296059",
+      "email": "tyrrellbuilders@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "eY8ihXO22EyYxaI5bV4w",
+      "contactName": "Bryan",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-26T12:00:00-05:00",
+      "timeCreated": "2026-02-25T17:09:33.497Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+15517990814",
+      "email": "bryancampuzano7@icloud.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "4xRbtLghw5WKvFj0UwLI",
+      "contactName": "MARCELO",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-26T13:15:00-05:00",
+      "timeCreated": "2026-02-26T13:37:45.985Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+17039394268",
+      "email": "ljp26@hotmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "dYFS8kMNoNSBcxVFo3aI",
+      "contactName": "Troy",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-26T16:00:00-05:00",
+      "timeCreated": "2026-02-24T22:28:38.875Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+18042968417",
+      "email": "renovationsexpert333@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "w5XH4oEcFLFuE1A7Kk5v",
+      "contactName": "Frank",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-26T17:00:00-05:00",
+      "timeCreated": "2026-02-25T19:35:54.398Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+18049827752",
+      "email": "frankcuba511@icloud.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "lgCQXhN3RKF5ycoD7BFp",
+      "contactName": "David Ramos",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-26T18:00:00-05:00",
+      "timeCreated": "2026-02-19T22:25:44.656Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Daniel",
+      "phone": "+12165079710",
+      "email": "casarenovations216@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:41:15.232Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "PKA8VFjm2px40EYkyhbR",
+      "contactName": "Isaac Ybarra",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-27T11:00:00-05:00",
+      "timeCreated": "2026-02-26T20:15:07.618Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "",
+      "phone": "+13034355424",
+      "email": "isaacibarra986@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:39:45.646Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "k6jQ9TXrlEWutRUrnPaW",
+      "contactName": "Eddie",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-28T10:00:00-05:00",
+      "timeCreated": "2026-02-27T18:31:55.873Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+18178427819",
+      "email": "remodelingtx@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:39:45.646Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "oMhdGp9hjs6P6GCJxrj3",
+      "contactName": "Clifford",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-28T11:00:00-05:00",
+      "timeCreated": "2026-02-27T18:43:14.223Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Eddie",
+      "phone": "+18048952023",
+      "email": "cliffordsexton1967@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:39:45.646Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "RwoIYSKAjH3WGUf2Gz5u",
+      "contactName": "John",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-28T12:00:00-05:00",
+      "timeCreated": "2026-02-24T21:47:25.026Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+14405300113",
+      "email": "odconstruction440@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:39:45.646Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "kEoxmvfA91SwxErYBzXk",
+      "contactName": "Dessy",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-28T12:00:00-05:00",
+      "timeCreated": "2026-02-26T16:20:48.306Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+16676008299",
+      "email": "ppservices24@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:39:45.646Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "OLDSSqnOnotb3ZWY6tQZ",
+      "contactName": "Gary Johnson",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-02-28T12:00:00-05:00",
+      "timeCreated": "2026-02-28T02:59:50.459Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "+12259387245",
+      "email": "gary.johnson@pauldavis.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:39:45.646Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "m8DdVuH15Bt2VNI4imtS",
+      "contactName": "MARCELO",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-28T13:00:00-05:00",
+      "timeCreated": "2026-02-26T22:14:46.016Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Eddie",
+      "phone": "+17039394268",
+      "email": "ljp26@hotmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:39:45.646Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "449L2kskrN6LUyPZAlI5",
+      "contactName": "Joe",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-28T14:00:00-05:00",
+      "timeCreated": "2026-02-17T20:38:27.919Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+13309064484",
+      "email": "mjmetcals92@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:39:45.646Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "XrfMlk3rVIpBR0G2SV5J",
+      "contactName": "Saul",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-28T14:00:00-05:00",
+      "timeCreated": "2026-02-27T00:06:49.450Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+13614252146",
+      "email": "jaquezsaul53@gamil.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:39:45.646Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "bhjcrmHKYlPaDuNLBbCA",
+      "contactName": "Saul",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-28T14:00:00-05:00",
+      "timeCreated": "2026-02-26T22:23:17.327Z",
+      "appointmentStatus": "new",
+      "createdBy": "Randy",
+      "phone": "+15048831632",
+      "email": "dubonesau5@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:39:45.646Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "byF8aXsrArcpyVcCBWmq",
+      "contactName": "Darrel",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-28T15:00:00-05:00",
+      "timeCreated": "2026-02-27T14:33:40.882Z",
+      "appointmentStatus": "new",
+      "createdBy": "Daniel",
+      "phone": "+17576466314",
+      "email": "atlantischr@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:39:45.646Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "hd2KrcREbahJYeOIPLMU",
+      "contactName": "max",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-02-28T15:00:00-05:00",
+      "timeCreated": "2026-02-27T17:24:17.004Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+16024340746",
+      "email": "services@allstylepainting.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:39:45.646Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
       "id": "XN36VJArzKFCxy3PfQ62",
       "contactName": "Dan Sullivan",
       "calendarName": "AI Strategy Session (Meta Inbound)",
@@ -3449,6 +8080,24 @@
       "phone": "+14012653858",
       "email": "sullivandan84@gmail.com",
       "statusHistory": [],
+      "status": "cancelled"
+    },
+    {
+      "id": "tLFHa2M2TkmNBopYkV2O",
+      "contactName": "Dan Sullivan",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-03-02T09:00:00-05:00",
+      "timeCreated": "2026-02-26T20:49:27.348Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "Daniel",
+      "phone": "+14012653858",
+      "email": "sullivandan84@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
       "status": "cancelled"
     },
     {
@@ -3476,8 +8125,8 @@
       "email": "ljp26@hotmail.com",
       "statusHistory": [],
       "status": "not_closed",
-      "fathomLink": "https://fathom.video/share/witjQ3uNRtJGHuc-dy7W3x1C9Siexa2g",
-      "closer": "Max"
+      "closer": "Max",
+      "fathomLink": "https://fathom.video/share/witjQ3uNRtJGHuc-dy7W3x1C9Siexa2g"
     },
     {
       "id": "XQ1lEbaXB4uzlpCHW3wH",
@@ -3516,14 +8165,14 @@
       "phone": "+13057467307",
       "email": "mikebaruh@gmail.com",
       "statusHistory": [],
-      "cashCollectedAfterFirstCall": null,
-      "offerMade": null,
       "status": "closed",
       "closer": "Max",
       "cashCollected": 1000,
+      "cashCollectedAfterFirstCall": null,
       "contractRevenue": 1000,
+      "followUpBooked": false,
       "fathomLink": "https://fathom.video/share/wNfmSM5DQxw5K62or9Ga9vEwzBxEjkzs",
-      "followUpBooked": false
+      "offerMade": null
     },
     {
       "id": "BkTHriKw1mRbZ7uRhQ5R",
@@ -3606,9 +8255,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": "https://fathom.video/share/joxUM911sL74pdZFofGdXzxi5z91wt2G"
+      "fathomLink": "https://fathom.video/share/joxUM911sL74pdZFofGdXzxi5z91wt2G",
+      "offerMade": null
     },
     {
       "id": "IqoGMLykOCVMuX1bFXr4",
@@ -3639,9 +8288,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "244OaC8xYxx72D41FOJS",
@@ -3738,9 +8387,9 @@
       "cashCollected": 6000,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": "https://fathom.video/share/on47jqiHrKpEMT4HFuRAjM1z4-rnxjc5"
+      "fathomLink": "https://fathom.video/share/on47jqiHrKpEMT4HFuRAjM1z4-rnxjc5",
+      "offerMade": null
     },
     {
       "id": "xZOEx39K80c5STShGOTm",
@@ -3860,6 +8509,24 @@
       "status": "new"
     },
     {
+      "id": "eAAaYtSv5UJ7S1DEEHj8",
+      "contactName": "",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-03-05T13:00:00-05:00",
+      "timeCreated": "2026-03-05T13:52:26.154Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Daniel",
+      "phone": "+16028155038",
+      "email": "demolitionexpressarizona@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
       "id": "KF8sToWj8411SrF1FAd4",
       "contactName": "Hector",
       "calendarName": "Cold SMS",
@@ -3974,14 +8641,14 @@
       "phone": "+16027104100",
       "email": "jjremodelingservicesaz@gmail.com",
       "statusHistory": [],
-      "cashCollectedAfterFirstCall": null,
-      "offerMade": null,
       "status": "closed",
       "closer": "Max",
       "cashCollected": 2000,
+      "cashCollectedAfterFirstCall": null,
       "contractRevenue": 8000,
+      "followUpBooked": false,
       "fathomLink": "https://fathom.video/share/cjzp2QcrxquezX_2Py6VceEjC2ZofvDF",
-      "followUpBooked": false
+      "offerMade": null
     },
     {
       "id": "2X6XqTu3l3DMNYja8TZy",
@@ -4028,9 +8695,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "0ZmBtf8NuzT4iS6cyBXN",
@@ -4112,7 +8779,7 @@
     },
     {
       "id": "zZ6Xm8DF3yVl5bhQqh6s",
-      "contactName": "Joe",
+      "contactName": "",
       "calendarName": "Cold SMS",
       "startTime": "2026-03-09T12:00:00-04:00",
       "timeCreated": "2026-03-04T14:52:10.970Z",
@@ -4126,9 +8793,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": "https://fathom.video/share/k6mzJ2BDqUbnf6b8p-kUF3BnFzRye3mS"
+      "fathomLink": "https://fathom.video/share/k6mzJ2BDqUbnf6b8p-kUF3BnFzRye3mS",
+      "offerMade": null
     },
     {
       "id": "6zvZ21FFklyEojP7vHPR",
@@ -4197,6 +8864,24 @@
       "email": "carlosdominguez413@hotmail.com",
       "statusHistory": [],
       "status": "no_show"
+    },
+    {
+      "id": "u1CKKVSjRigNhy18AWKR",
+      "contactName": "",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-03-09T16:00:00-04:00",
+      "timeCreated": "2026-03-09T13:32:57.587Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Daniel",
+      "phone": "+14804309978",
+      "email": "khawk@acuitybuilders.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
     },
     {
       "id": "WXooqmZq7wgkQxNSfwrx",
@@ -4279,9 +8964,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "VUDQVLYoy6SBZdSw7rnk",
@@ -4326,9 +9011,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "KOHyLKke48AMvMyo0Hb2",
@@ -4346,9 +9031,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "6k1hNfqnd9MKGzgMRblX",
@@ -4366,9 +9051,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "iUVNTLT7I1FCyjJvSbEc",
@@ -4386,9 +9071,27 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": "https://fathom.video/share/FDAK8szEy-vJ_SCLZRnffUWBPnbsmx_M"
+      "fathomLink": "https://fathom.video/share/FDAK8szEy-vJ_SCLZRnffUWBPnbsmx_M",
+      "offerMade": null
+    },
+    {
+      "id": "gCVCtVwVhmRuHSLJHvmg",
+      "contactName": "😎 HighLevel March Promotion  2026 Reveal 🎆",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-03-11T13:00:00-04:00",
+      "timeCreated": "2026-03-10T19:22:55.798Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "",
+      "phone": "",
+      "email": "evolutesolutionsllc@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
     },
     {
       "id": "6rKbYO6KKaoNErGaN4Lw",
@@ -4432,9 +9135,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "6G5JG7NkHEBAQ5loxbro",
@@ -4452,9 +9155,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "GPR9nufH9fxCQxt8fB3b",
@@ -4511,9 +9214,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "ytbeEUO8ngAblMeZY70q",
@@ -4531,9 +9234,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": true,
-      "fathomLink": "https://fathom.video/share/xsd3t3aNUbcAU9z1FCJjFzpZpPoD_wtx"
+      "fathomLink": "https://fathom.video/share/xsd3t3aNUbcAU9z1FCJjFzpZpPoD_wtx",
+      "offerMade": null
     },
     {
       "id": "vMP153xG4DLBB8s33Fyi",
@@ -4551,9 +9254,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "2cWJ59iLv3FfluOzKT1Y",
@@ -4584,9 +9287,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "9RCZSRsgdvyLqtsNIDFD",
@@ -4617,9 +9320,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": "https://fathom.video/share/SS_hdEmKEVSTvDJGw2DgL-ajecTrzP4h"
+      "fathomLink": "https://fathom.video/share/SS_hdEmKEVSTvDJGw2DgL-ajecTrzP4h",
+      "offerMade": null
     },
     {
       "id": "HEMTV2KdxR3bDhnRbMUe",
@@ -4650,9 +9353,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "WmrAXoel4Yk9BjXtJV6F",
@@ -4670,9 +9373,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "GVpjNgLuDf99wO5VD94K",
@@ -4690,9 +9393,27 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
+    },
+    {
+      "id": "4VZYc4Bzq1Fxxo7frz1g",
+      "contactName": "Jim",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-03-12T18:00:00-04:00",
+      "timeCreated": "2026-03-12T17:37:23.051Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Daniel",
+      "phone": "+14807096442",
+      "email": "jon@azbathmasters.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
     },
     {
       "id": "FqiiHTTerc4vYyzzerfe",
@@ -4723,9 +9444,9 @@
       "cashCollected": null,
       "cashCollectedAfterFirstCall": null,
       "contractRevenue": null,
-      "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": null,
+      "offerMade": null
     },
     {
       "id": "zIHX5tiL5vnlTNDZHEgc",
@@ -4778,6 +9499,24 @@
       "email": "vanceljosh@gmail.com",
       "statusHistory": [],
       "status": "new"
+    },
+    {
+      "id": "uk6dTZIaRkuctpQ9wKn7",
+      "contactName": "",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-03-13T15:00:00-04:00",
+      "timeCreated": "2026-03-13T16:48:49.341Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Daniel",
+      "phone": "+13013188438",
+      "email": "pabakcontractors@yahoo.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
     },
     {
       "id": "9PuESupWlyveftgwDWoj",
@@ -4922,6 +9661,24 @@
       "email": "franceabbo1@icloud.com",
       "statusHistory": [],
       "status": "new"
+    },
+    {
+      "id": "p2zG50reiRKDJZTtZpbY",
+      "contactName": "",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-03-14T13:00:00-04:00",
+      "timeCreated": "2026-03-13T17:55:52.264Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Eddie",
+      "phone": "+12263509676",
+      "email": "dadshandymanservices2022@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
     },
     {
       "id": "uE53cV6EJVuYAV6sVLAK",
@@ -5371,11 +10128,16 @@
       "calendarName": "AI Strategy Session (Meta Inbound)",
       "startTime": "2026-03-18T15:00:00-04:00",
       "timeCreated": "2026-03-15T06:32:54.130Z",
-      "appointmentStatus": "confirmed",
+      "appointmentStatus": "cancelled",
       "createdBy": "",
       "phone": "+13107746828",
       "email": "dannyprostar@gmail.com",
-      "statusHistory": [],
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
       "status": "no_show"
     },
     {
@@ -5508,6 +10270,24 @@
       "status": "no_show"
     },
     {
+      "id": "8tHKhcFQNv24jZXP8oZB",
+      "contactName": "",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-03-19T16:30:00-04:00",
+      "timeCreated": "2026-03-18T13:07:38.821Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Richard Ramilo",
+      "phone": "+12604176746",
+      "email": "matthewgraber102@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
       "id": "va4p6vWCO4QrXveFSk7l",
       "contactName": "KEVIN BATROOMS",
       "calendarName": "Cold SMS",
@@ -5562,24 +10342,6 @@
       "status": "new"
     },
     {
-      "id": "oIPr5v9FZq102I5fitDw",
-      "contactName": "Keith Hall",
-      "calendarName": "AI Strategy Session (Meta Inbound)",
-      "startTime": "2026-03-20T15:00:00-04:00",
-      "timeCreated": "2026-03-17T16:41:11.185Z",
-      "appointmentStatus": "confirmed",
-      "createdBy": "Daniel",
-      "phone": "+15303542667",
-      "email": "primetym01@gmail.com",
-      "statusHistory": [
-        {
-          "status": "confirmed",
-          "at": "2026-03-20T09:41:20.655Z"
-        }
-      ],
-      "status": "confirmed"
-    },
-    {
       "id": "tH5Tf4bxnCKKn7miRlKq",
       "contactName": "Rick Utley",
       "calendarName": "AI Strategy Session (Meta Inbound)",
@@ -5603,7 +10365,7 @@
       "calendarName": "AI Strategy Session (Meta Inbound)",
       "startTime": "2026-03-20T17:00:00-04:00",
       "timeCreated": "2026-03-19T17:13:44.229Z",
-      "appointmentStatus": "confirmed",
+      "appointmentStatus": "cancelled",
       "createdBy": "Daniel",
       "phone": "+13107746828",
       "email": "dannyprostar@gmail.com",
@@ -5611,6 +10373,10 @@
         {
           "status": "confirmed",
           "at": "2026-03-20T09:41:20.655Z"
+        },
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
         }
       ],
       "status": "confirmed"
@@ -5632,6 +10398,96 @@
         }
       ],
       "status": "new"
+    },
+    {
+      "id": "xBvLFaMyFXEcJbWrgiOj",
+      "contactName": "KEVIN BATROOMS",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-03-21T09:00:00-04:00",
+      "timeCreated": "2026-03-18T17:35:25.999Z",
+      "appointmentStatus": "cancelled",
+      "createdBy": "Eddie",
+      "phone": "+15868831377",
+      "email": "elitebathroomremodeling@gmail.com",
+      "statusHistory": [
+        {
+          "status": "cancelled",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "cancelled"
+    },
+    {
+      "id": "SClzSndMkCPG4cXcTcPh",
+      "contactName": "Scot",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-03-21T13:00:00-04:00",
+      "timeCreated": "2026-03-18T16:56:33.020Z",
+      "appointmentStatus": "new",
+      "createdBy": "Eddie",
+      "phone": "+18595337976",
+      "email": "sbrowning859@gmail.com",
+      "statusHistory": [
+        {
+          "status": "new",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "new"
+    },
+    {
+      "id": "PA5G791G2hLVAFmC8fIA",
+      "contactName": "Max Hastings",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-03-23T14:15:00-04:00",
+      "timeCreated": "2026-03-23T17:40:21.039Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Max",
+      "phone": "+15164974538",
+      "email": "mwellhastings@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "oIPr5v9FZq102I5fitDw",
+      "contactName": "Keith Hall",
+      "calendarName": "AI Strategy Session (Meta Inbound)",
+      "startTime": "2026-03-23T15:00:00-04:00",
+      "timeCreated": "2026-03-17T16:41:11.185Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Daniel",
+      "phone": "+15303542667",
+      "email": "primetym01@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-20T09:41:20.655Z"
+        }
+      ],
+      "status": "confirmed"
+    },
+    {
+      "id": "Bi9sKrxe1c5rk2PMqrrV",
+      "contactName": "John Kitchen And Granite",
+      "calendarName": "Cold SMS",
+      "startTime": "2026-03-23T18:00:00-04:00",
+      "timeCreated": "2026-03-19T20:12:59.933Z",
+      "appointmentStatus": "confirmed",
+      "createdBy": "Richard Ramilo",
+      "phone": "+19176424410",
+      "email": "dyitaliano@gmail.com",
+      "statusHistory": [
+        {
+          "status": "confirmed",
+          "at": "2026-03-23T18:45:18.494Z"
+        }
+      ],
+      "status": "confirmed"
     }
   ],
   "dials": [

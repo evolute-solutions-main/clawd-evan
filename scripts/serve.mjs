@@ -98,6 +98,31 @@ const server = http.createServer(async (req, res) => {
     }
   }
 
+  // API: update dials count for a specific week
+  if (req.method === 'POST' && req.url === '/api/update-dials') {
+    try {
+      const body = JSON.parse(await readBody(req))
+      const { week, dials } = body
+      if (!week || dials === undefined) return json(res, 400, { error: 'week and dials required' })
+
+      const file = path.join(dataDir, 'weekly_dials.json')
+      const data = JSON.parse(fs.readFileSync(file, 'utf8'))
+      const idx  = data.findIndex(w => w.week === week)
+      if (idx !== -1) {
+        data[idx].dials = Number(dials)
+      } else {
+        data.push({ week, dials: Number(dials) })
+        data.sort((a, b) => a.week.localeCompare(b.week))
+      }
+      fs.writeFileSync(file, JSON.stringify(data, null, 2))
+      execSync('node scripts/inject-and-open.mjs', { cwd: root, stdio: 'ignore' })
+      console.log(`[dials] ${week} → ${dials}`)
+      return json(res, 200, { ok: true })
+    } catch (e) {
+      return json(res, 500, { error: e.message })
+    }
+  }
+
   res.writeHead(404)
   res.end('Not found')
 })

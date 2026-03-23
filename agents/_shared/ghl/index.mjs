@@ -269,27 +269,33 @@ export async function fetchAppointments(calendarId, fromIso, toIso) {
   const endMs   = new Date(toIso   + 'T23:59:59Z').getTime()
 
   let allEvents = []
-  let page = 1
   const PER_PAGE = 200
 
-  while (true) {
+  // GHL does not support a page param on this endpoint — fetch in smaller time
+  // windows (one month at a time) to avoid hitting the 200-event page limit
+  const from = new Date(fromIso + 'T00:00:00Z')
+  const to   = new Date(toIso   + 'T23:59:59Z')
+  let cursor = new Date(from)
+
+  while (cursor <= to) {
+    const windowEnd = new Date(cursor)
+    windowEnd.setMonth(windowEnd.getMonth() + 1)
+    if (windowEnd > to) windowEnd.setTime(to.getTime())
+
     const data = await ghlRequest('/calendars/events', {
       calendarId,
-      startTime: startMs.toString(),
-      endTime:   endMs.toString(),
-      ...(page > 1 ? { page } : {}),
+      startTime: cursor.getTime().toString(),
+      endTime:   windowEnd.getTime().toString(),
     })
 
     const events = data.events || []
     allEvents = allEvents.concat(events)
 
-    // Stop if GHL returned fewer than a full page (no more pages)
-    if (events.length < PER_PAGE) break
+    if (events.length >= PER_PAGE) {
+      console.warn(`  ⚠ ${events.length} events in window ${cursor.toISOString().slice(0,10)} → ${windowEnd.toISOString().slice(0,10)} — may be truncated, consider narrowing range`)
+    }
 
-    // Safety: also stop if meta says we're on the last page
-    if (data.meta && data.meta.currentPage >= data.meta.totalPages) break
-
-    page++
+    cursor = new Date(windowEnd.getTime() + 1000)
   }
 
   return allEvents.map(evt => ({
