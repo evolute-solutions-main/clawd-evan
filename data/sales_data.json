@@ -4518,26 +4518,6 @@
       "fathomLink": "https://fathom.video/share/j3jNTYKjSqcy-Vixo6mzuHsk2V-yTyVh"
     },
     {
-      "id": "xl_2026-02-16_mullineaux_glenn",
-      "contactName": "Mullineaux Glenn",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-16T09:00:00-05:00",
-      "timeCreated": null,
-      "appointmentStatus": "Showed",
-      "createdBy": "Randy",
-      "phone": "",
-      "email": "",
-      "statusHistory": [],
-      "status": "closed",
-      "closer": "Max",
-      "cashCollected": 1200,
-      "cashCollectedAfterFirstCall": 2400,
-      "contractRevenue": 4800,
-      "offerMade": null,
-      "followUpBooked": false,
-      "fathomLink": null
-    },
-    {
       "id": "F445mx6pU5XcBLwlbcGZ",
       "contactName": "William Home Design",
       "calendarName": "Cold SMS",
@@ -4688,7 +4668,7 @@
     },
     {
       "id": "EBbBkmliFVEg5qXeXpNs",
-      "contactName": "Frederick-Loudoun Home Services",
+      "contactName": "Mullineaux Glenn",
       "calendarName": "Cold SMS",
       "startTime": "2026-02-16T18:30:00-05:00",
       "timeCreated": "2026-02-16T14:56:36.801Z",
@@ -4703,7 +4683,13 @@
         }
       ],
       "fathomLink": "https://fathom.video/share/ekfs4QsSvaY8ZxNG1rsK218pY9mmTd6o",
-      "status": "confirmed"
+      "status": "closed",
+      "closer": "Max",
+      "cashCollected": 1200,
+      "cashCollectedAfterFirstCall": 2400,
+      "contractRevenue": 4800,
+      "followUpBooked": false,
+      "offerMade": null
     },
     {
       "id": "DfZERBGpkBXINdg9p9Q8",
