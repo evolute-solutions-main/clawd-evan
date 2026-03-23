@@ -75,7 +75,8 @@
         }
       ],
       "status": "cancelled",
-      "closer": "Max"
+      "closer": "Max",
+      "excluded": true
     },
     {
       "id": "mM1HNsX0Fctf4PjB6G8u",
@@ -6182,9 +6183,6 @@
         }
       ],
       "status": "no_show",
-      "closer": "Max",
-      "cashCollected": 2000,
-      "contractRevenue": 8000,
       "followUpBooked": false
     },
     {
@@ -7139,7 +7137,7 @@
       "closer": "Max",
       "cashCollected": 6000,
       "cashCollectedAfterFirstCall": null,
-      "contractRevenue": null,
+      "contractRevenue": 6000,
       "followUpBooked": false,
       "fathomLink": "https://fathom.video/share/on47jqiHrKpEMT4HFuRAjM1z4-rnxjc5",
       "offerMade": null
