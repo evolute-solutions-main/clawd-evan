@@ -43,9 +43,9 @@ const past = appts.filter(a => {
 })
 
 // ── Gap type 1: GHL says "showed" but no outcome recorded ────────────────────
-// appointmentStatus=showed but status is not closed/not_closed
+// appointmentStatus=showed OR status=showed but not yet resolved to closed/not_closed
 const needsOutcome = past.filter(a =>
-  a.appointmentStatus === 'showed' &&
+  (a.appointmentStatus === 'showed' || a.status === 'showed') &&
   a.status !== 'closed' &&
   a.status !== 'not_closed'
 )

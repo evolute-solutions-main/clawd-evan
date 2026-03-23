@@ -29546,8 +29546,8 @@ function renderReview(){
   })
 
   const needsOutcome = past.filter(a =>
-    a.appointmentStatus === 'showed' &&
-    !['closed','not_closed','no_show','cancelled'].includes(a.status)
+    (a.appointmentStatus === 'showed' || a.status === 'showed') &&
+    !['closed','not_closed'].includes(a.status)
   )
   const closedNoCash = past.filter(a =>
     a.status === 'closed' && !a.cashCollected && !a.contractRevenue
