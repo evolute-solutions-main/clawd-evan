@@ -24,7 +24,7 @@ const noOpen    = process.argv.includes('--no-open')
 
 // ── Inject fresh data into HTML first ────────────────────────────────────────
 console.log('Injecting data...')
-execSync('node scripts/inject-and-open.mjs', { cwd: root, stdio: 'ignore' })
+execSync('node scripts/inject-and-open.mjs --no-open', { cwd: root, stdio: 'ignore' })
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function loadSalesData() {
@@ -46,8 +46,25 @@ function json(res, status, obj) {
   res.end(JSON.stringify(obj))
 }
 
+// ── SSE reload ────────────────────────────────────────────────────────────────
+const sseClients = new Set()
+function broadcastReload() {
+  for (const client of sseClients) {
+    try { client.write('event: reload\ndata: {}\n\n') } catch {}
+  }
+}
+
 // ── Request handler ───────────────────────────────────────────────────────────
 const server = http.createServer(async (req, res) => {
+
+  // SSE: live reload events
+  if (req.method === 'GET' && req.url === '/api/events') {
+    res.writeHead(200, { 'Content-Type': 'text/event-stream', 'Cache-Control': 'no-cache', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*' })
+    res.write('data: connected\n\n')
+    sseClients.add(res)
+    req.on('close', () => sseClients.delete(res))
+    return
+  }
 
   // CORS preflight
   if (req.method === 'OPTIONS') {
@@ -58,8 +75,11 @@ const server = http.createServer(async (req, res) => {
   // Serve dashboard HTML
   if (req.method === 'GET' && (req.url === '/' || req.url === '/index.html')) {
     const html = fs.readFileSync(htmlFile, 'utf8')
-    // Patch API base URL into the page so fetch calls use the server
-    const patched = html.replace('</head>', '<script>window.API_BASE="http://localhost:'+PORT+'"</script></head>')
+    // Patch API base URL + SSE live-reload listener into the page
+    const patched = html.replace('</head>',
+      `<script>window.API_BASE="http://localhost:${PORT}";` +
+      `(function(){const es=new EventSource("http://localhost:${PORT}/api/events");` +
+      `es.addEventListener("reload",()=>location.reload())})()</script></head>`)
     res.writeHead(200, { 'Content-Type': 'text/html' })
     return res.end(patched)
   }
@@ -101,12 +121,19 @@ const server = http.createServer(async (req, res) => {
         console.warn(`  ⚠ ${appt.contactName}: status set to ${newStatus} but fathomLink exists — flagged for review`)
       }
 
+      // Audit trail: record status changes in statusHistory
+      if (fields.status && fields.status !== appt.status) {
+        appt.statusHistory = appt.statusHistory || []
+        appt.statusHistory.push({ status: fields.status, at: new Date().toISOString(), source: 'manual' })
+      }
+
       for (const [k, v] of Object.entries(fields)) {
         if (allowed.includes(k)) data.appointments[idx][k] = v
       }
 
       fs.writeFileSync(path.join(dataDir, 'sales_data.json'), JSON.stringify(data, null, 2))
       console.log(`[update] ${data.appointments[idx].contactName} — ${JSON.stringify(fields)}`)
+      broadcastReload()
       return json(res, 200, { ok: true, appointment: data.appointments[idx] })
     } catch (e) {
       return json(res, 500, { error: e.message })
@@ -116,7 +143,8 @@ const server = http.createServer(async (req, res) => {
   // API: reload HTML with fresh data (call after updates)
   if (req.method === 'POST' && req.url === '/api/reload') {
     try {
-      execSync('node scripts/inject-and-open.mjs', { cwd: root, stdio: 'ignore' })
+      execSync('node scripts/inject-and-open.mjs --no-open', { cwd: root, stdio: 'ignore' })
+      broadcastReload()
       return json(res, 200, { ok: true })
     } catch (e) {
       return json(res, 500, { error: e.message })
@@ -140,7 +168,8 @@ const server = http.createServer(async (req, res) => {
         data.sort((a, b) => a.week.localeCompare(b.week))
       }
       fs.writeFileSync(file, JSON.stringify(data, null, 2))
-      execSync('node scripts/inject-and-open.mjs', { cwd: root, stdio: 'ignore' })
+      execSync('node scripts/inject-and-open.mjs --no-open', { cwd: root, stdio: 'ignore' })
+      broadcastReload()
       console.log(`[dials] ${week} → ${dials}`)
       return json(res, 200, { ok: true })
     } catch (e) {

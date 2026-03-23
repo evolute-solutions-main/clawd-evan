@@ -598,9 +598,10 @@
           "at": "2026-03-20T10:51:35.953Z"
         }
       ],
-      "status": "confirmed",
+      "status": "not_closed",
       "fathomLink": "https://fathom.video/share/sMzurysmzqRAy7cJ64vmy7ec6sWe1Pdv",
-      "closer": "Max"
+      "closer": "Max",
+      "source": "Cold SMS"
     },
     {
       "id": "hn1MX0sYIUkTrXZ1iIeo",
@@ -846,8 +847,10 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "confirmed",
-      "fathomLink": "https://fathom.video/share/bx4rzczUyGdtdS9xgP1oJzQzXzyreVVc"
+      "status": "not_closed",
+      "fathomLink": "https://fathom.video/share/bx4rzczUyGdtdS9xgP1oJzQzXzyreVVc",
+      "source": "Ads",
+      "closer": "Max"
     },
     {
       "id": "v0Vf1mn7prD1cosKofkB",
@@ -886,7 +889,8 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "confirmed"
+      "status": "no_show",
+      "source": "Ads"
     },
     {
       "id": "l4StWx7yadBKZ6sYfQfz",
@@ -1013,7 +1017,9 @@
         }
       ],
       "fathomLink": "https://fathom.video/share/ZTgHzKogjrBkQxA5bMxx4L7-YyFDfrAu",
-      "status": "confirmed"
+      "status": "not_closed",
+      "source": "Ads",
+      "closer": "Max"
     },
     {
       "id": "nKX4I0CzpBjFc5HcGnL5",
@@ -1104,7 +1110,9 @@
         }
       ],
       "fathomLink": "https://fathom.video/share/Ppc6_dDRfxreuC-GLjwBd8smviCNVZJF",
-      "status": "confirmed"
+      "status": "not_closed",
+      "source": "Ads",
+      "closer": "Max"
     },
     {
       "id": "UltVut6rNyPS68Ycsns3",
@@ -1183,7 +1191,9 @@
         }
       ],
       "fathomLink": "https://fathom.video/share/sTdyXDc8PBNd6TpyFcL_EyDwhBSW4Las",
-      "status": "confirmed"
+      "status": "not_closed",
+      "source": "Ads",
+      "closer": "Max"
     },
     {
       "id": "uCadJLYlMVWRP5wlpWeQ",
@@ -1274,7 +1284,9 @@
         }
       ],
       "fathomLink": "https://fathom.video/share/qjZ7dg7XDiPs9DMFrnPmsFrxYREmW1ve",
-      "status": "confirmed"
+      "status": "not_closed",
+      "source": "Ads",
+      "closer": "Max"
     },
     {
       "id": "2crdutxyI3FGcgSvS7yS",
@@ -2348,8 +2360,10 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "confirmed",
-      "fathomLink": "https://fathom.video/share/GsB1jzgTSgU5ZTBkdM2pgkYXJSVTqycj"
+      "status": "not_closed",
+      "fathomLink": "https://fathom.video/share/GsB1jzgTSgU5ZTBkdM2pgkYXJSVTqycj",
+      "source": "Ads",
+      "closer": "Max"
     },
     {
       "id": "68t6GJOiK8F5Pnb2Uli2",
@@ -2726,7 +2740,8 @@
       "contractRevenue": 4000,
       "offerMade": null,
       "followUpBooked": false,
-      "fathomLink": null
+      "fathomLink": "https://fathom.video/share/n5FF2xMCBJKHBndRsCqLyexQhhWxUQkx",
+      "source": "Cold SMS"
     },
     {
       "id": "1lcYkFLe56RtpC1lCGlc",
@@ -3845,7 +3860,9 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "confirmed"
+      "status": "not_closed",
+      "source": "Cold SMS",
+      "closer": "Max"
     },
     {
       "id": "MUxxCY0FkvTBKw04VzIt",
@@ -4833,7 +4850,8 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "confirmed"
+      "status": "no_show",
+      "source": "Cold SMS"
     },
     {
       "id": "ReEsAFq30KX1AzWvMpj6",
@@ -5319,7 +5337,8 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "confirmed"
+      "status": "no_show",
+      "source": "Cold SMS"
     },
     {
       "id": "IA0zctE3lViRY8ihH3lI",
@@ -5637,7 +5656,8 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "confirmed"
+      "status": "no_show",
+      "source": "Cold SMS"
     },
     {
       "id": "kFDBvuvETLceVUeRXGRv",
@@ -5892,7 +5912,8 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "confirmed"
+      "status": "confirmed",
+      "excluded": true
     },
     {
       "id": "UYmrDjh6B24ppPqNDusm",
@@ -6023,8 +6044,10 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "confirmed",
-      "fathomLink": "https://fathom.video/share/6kPKZtbxDmQ4d5ufv73Ki1hNcAY22BPy"
+      "status": "not_closed",
+      "fathomLink": "https://fathom.video/share/6kPKZtbxDmQ4d5ufv73Ki1hNcAY22BPy",
+      "source": "Cold SMS",
+      "closer": "Max"
     },
     {
       "id": "mUyfTPKJ30RQrxztJJny",
@@ -6042,8 +6065,10 @@
           "at": "2026-03-23T18:41:15.232Z"
         }
       ],
-      "status": "confirmed",
-      "fathomLink": "https://fathom.video/share/uzMxCw5oWqzMcAkqZ5UosGZxq8py4tvz"
+      "status": "not_closed",
+      "fathomLink": "https://fathom.video/share/uzMxCw5oWqzMcAkqZ5UosGZxq8py4tvz",
+      "source": "Cold SMS",
+      "closer": "Max"
     },
     {
       "id": "KEPNWpCRcVBbHCI0axgo",
@@ -6061,7 +6086,8 @@
           "at": "2026-03-23T18:41:15.232Z"
         }
       ],
-      "status": "confirmed"
+      "status": "no_show",
+      "source": "Cold SMS"
     },
     {
       "id": "w6M31gRzrYl4vTohyAx6",
@@ -6079,7 +6105,8 @@
           "at": "2026-03-23T18:41:15.232Z"
         }
       ],
-      "status": "confirmed"
+      "status": "no_show",
+      "source": "Ads"
     },
     {
       "id": "Av7xQfe2kOb1t7pr52zY",
@@ -6115,7 +6142,8 @@
           "at": "2026-03-23T18:41:15.232Z"
         }
       ],
-      "status": "confirmed"
+      "status": "no_show",
+      "source": "Ads"
     },
     {
       "id": "JnCbzYSS6ek3dd5vWumO",
@@ -6188,7 +6216,9 @@
           "at": "2026-03-23T18:41:15.232Z"
         }
       ],
-      "status": "confirmed"
+      "status": "not_closed",
+      "source": "Cold SMS",
+      "closer": "Max"
     },
     {
       "id": "Xpg91ECzeCCnoa1Vkttc",
@@ -6207,7 +6237,9 @@
         }
       ],
       "fathomLink": "https://fathom.video/share/y3mmAEtrqpvV7g2zT-oc6x8W6AAU3ts3",
-      "status": "confirmed"
+      "status": "not_closed",
+      "source": "Cold SMS",
+      "closer": "Max"
     },
     {
       "id": "ru61hkVnUy1FMCaYDBsl",
@@ -6351,7 +6383,8 @@
           "at": "2026-03-23T18:41:15.232Z"
         }
       ],
-      "status": "confirmed"
+      "status": "no_show",
+      "source": "Cold SMS"
     },
     {
       "id": "PKA8VFjm2px40EYkyhbR",
@@ -6405,8 +6438,10 @@
           "at": "2026-03-23T18:39:45.646Z"
         }
       ],
-      "status": "confirmed",
-      "fathomLink": "https://fathom.video/share/rwjcHFzQ3YUEyZ_D3kBXG3_pybf1skoe"
+      "status": "not_closed",
+      "fathomLink": "https://fathom.video/share/rwjcHFzQ3YUEyZ_D3kBXG3_pybf1skoe",
+      "source": "Cold SMS",
+      "closer": "Max"
     },
     {
       "id": "RwoIYSKAjH3WGUf2Gz5u",
@@ -6460,7 +6495,8 @@
           "at": "2026-03-23T18:39:45.646Z"
         }
       ],
-      "status": "confirmed"
+      "status": "no_show",
+      "source": "Ads"
     },
     {
       "id": "m8DdVuH15Bt2VNI4imtS",
@@ -6478,7 +6514,8 @@
           "at": "2026-03-23T18:39:45.646Z"
         }
       ],
-      "status": "confirmed"
+      "status": "no_show",
+      "source": "Cold SMS"
     },
     {
       "id": "449L2kskrN6LUyPZAlI5",
@@ -7592,7 +7629,8 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "confirmed"
+      "status": "confirmed",
+      "excluded": true
     },
     {
       "id": "6rKbYO6KKaoNErGaN4Lw",
@@ -7914,7 +7952,8 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "confirmed"
+      "status": "no_show",
+      "source": "Cold SMS"
     },
     {
       "id": "FqiiHTTerc4vYyzzerfe",
@@ -8858,7 +8897,8 @@
           "at": "2026-03-20T09:41:20.655Z"
         }
       ],
-      "status": "confirmed"
+      "status": "no_show",
+      "source": "Ads"
     },
     {
       "id": "XZzSLLIgKL0o5NkqcTJP",
@@ -8880,7 +8920,8 @@
           "at": "2026-03-23T18:45:18.494Z"
         }
       ],
-      "status": "confirmed"
+      "status": "no_show",
+      "source": "Ads"
     },
     {
       "id": "oSEmCcu6bj1R5uNUzkfj",

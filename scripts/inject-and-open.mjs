@@ -60,5 +60,5 @@ html = html.replace(
   `<select id="selMonth"><option value="">Month</option>${monthOpts}</select>`
 )
 fs.writeFileSync(htmlFile, html)
-execSync(`open "${htmlFile}"`)
+if (!process.argv.includes('--no-open')) execSync(`open "${htmlFile}"`)
 console.log('Done.')
