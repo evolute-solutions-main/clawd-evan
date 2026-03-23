@@ -6064,26 +6064,6 @@
       "followUpBooked": false
     },
     {
-      "id": "xl_2026-02-24_sean",
-      "contactName": "Sean ",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-24T09:00:00-05:00",
-      "timeCreated": null,
-      "appointmentStatus": "Showed",
-      "createdBy": "Daniel",
-      "phone": "",
-      "email": "",
-      "statusHistory": [],
-      "status": "closed",
-      "closer": "Max",
-      "cashCollected": 1000,
-      "cashCollectedAfterFirstCall": null,
-      "contractRevenue": 5000,
-      "offerMade": null,
-      "followUpBooked": true,
-      "fathomLink": "https://fathom.video/share/cJPmyXrcqSgy_5tGojszCHi4-7kSt3xk"
-    },
-    {
       "id": "xl_manual_sean_youn",
       "contactName": "Sean Youn",
       "calendarName": "Cold SMS",
@@ -6098,7 +6078,7 @@
       "closer": "Max",
       "cashCollected": 1000,
       "cashCollectedAfterFirstCall": null,
-      "contractRevenue": 4800,
+      "contractRevenue": 5000,
       "offerMade": null,
       "followUpBooked": false,
       "fathomLink": "https://fathom.video/share/cJPmyXrcqSgy_5tGojszCHi4-7kSt3xk"
