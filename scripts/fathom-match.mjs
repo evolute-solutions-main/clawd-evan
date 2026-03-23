@@ -19,8 +19,9 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import { iterateMeetings } from '../agents/_shared/fathom/index.mjs'
 
-const root     = path.resolve(fileURLToPath(import.meta.url), '../../')
-const DATA_FILE = path.join(root, 'data', 'sales_data.json')
+const root              = path.resolve(fileURLToPath(import.meta.url), '../../')
+const DATA_FILE         = path.join(root, 'data', 'sales_data.json')
+const UNMATCHED_FILE    = path.join(root, 'data', 'unmatched_fathom.json')
 
 const args   = process.argv.slice(2)
 const _fi    = args.indexOf('--from'); const fromArg = _fi !== -1 ? args[_fi+1] : null
@@ -66,7 +67,7 @@ function externalName(meeting) {
 function isSalesCall(meeting) {
   const t = (meeting.title || '').toLowerCase()
   if (!t) return false
-  const deny = ['promotion', 'reveal', 'highlevel', 'standup', 'internal', 'interview', 'onboarding', 'ops']
+  const deny = ['promotion', 'reveal', 'highlevel', 'standup', 'interview', 'onboarding']
   if (deny.some(w => t.includes(w))) return false
   const allow = ['ai growth game plan', 'ai strategy session', 'strategy session', 'growth game plan', 'discovery call', 'x maxwell', '- maxwell', 'x max', '- max']
   return allow.some(w => t.includes(w))
@@ -99,6 +100,7 @@ console.log(`Found ${calls.length} sales calls in range.\n`)
 
 // ── Match ─────────────────────────────────────────────────────────────────────
 let matched = 0, alreadyHad = 0, unmatched = 0
+const unmatchedRecords = []
 
 for (const call of calls) {
   const fName = externalName(call)
@@ -119,7 +121,9 @@ for (const call of calls) {
   }
 
   if (!appt) {
-    console.log(`[unmatched] ${call._date} — "${fName}" (${call.share_url})`)
+    const link = call.share_url || call.url
+    console.log(`[unmatched] ${call._date} — "${fName}" (${link})`)
+    unmatchedRecords.push({ name: fName, date: call._date, fathomLink: link })
     unmatched++
     continue
   }
@@ -148,6 +152,10 @@ for (const call of calls) {
 if (!dryRun && matched > 0) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(raw, null, 2))
   console.log('\nSaved.')
+}
+if (!dryRun && unmatchedRecords.length > 0) {
+  fs.writeFileSync(UNMATCHED_FILE, JSON.stringify(unmatchedRecords, null, 2))
+  console.log(`Wrote ${unmatchedRecords.length} unmatched recording(s) to unmatched_fathom.json`)
 }
 
 console.log(`

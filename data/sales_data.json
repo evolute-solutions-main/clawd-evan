@@ -3772,42 +3772,6 @@
       "status": "cancelled"
     },
     {
-      "id": "GZJrRZXaAhbh3YeCL6jw",
-      "contactName": "Test-D Lastname-Test-D",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-11T11:00:00-05:00",
-      "timeCreated": "2026-02-11T15:07:54.695Z",
-      "appointmentStatus": "new",
-      "createdBy": "Max",
-      "phone": "+17048951771",
-      "email": "d@gmail.com",
-      "statusHistory": [
-        {
-          "status": "new",
-          "at": "2026-03-23T18:45:18.494Z"
-        }
-      ],
-      "status": "new"
-    },
-    {
-      "id": "K3DOI8wX5e1wgpi6rJPj",
-      "contactName": "Test-D Lastname-Test-D",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-11T11:00:00-05:00",
-      "timeCreated": "2026-02-11T15:06:51.057Z",
-      "appointmentStatus": "new",
-      "createdBy": "Max",
-      "phone": "+17048951771",
-      "email": "d@gmail.com",
-      "statusHistory": [
-        {
-          "status": "new",
-          "at": "2026-03-23T18:45:18.494Z"
-        }
-      ],
-      "status": "new"
-    },
-    {
       "id": "hgViEDyR2Ebx014pUb7X",
       "contactName": "Sean Mabrey Roofing & Construction Services",
       "calendarName": "Cold SMS",
@@ -3827,42 +3791,6 @@
       "closer": "Max",
       "followUpBooked": false,
       "fathomLink": "https://fathom.video/share/3HzQGmge72Jp6LqyzH1mRWNESZsdMB9y"
-    },
-    {
-      "id": "yGWZoZPCDEhNr9ee6bbl",
-      "contactName": "Test-D Lastname-Test-D",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-11T11:00:00-05:00",
-      "timeCreated": "2026-02-11T15:04:49.171Z",
-      "appointmentStatus": "new",
-      "createdBy": "Max",
-      "phone": "+17048951771",
-      "email": "d@gmail.com",
-      "statusHistory": [
-        {
-          "status": "new",
-          "at": "2026-03-23T18:45:18.494Z"
-        }
-      ],
-      "status": "new"
-    },
-    {
-      "id": "SVzAXgmqTjwE1M9OtxCP",
-      "contactName": "Test-D Lastname-Test-D",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-11T12:00:00-05:00",
-      "timeCreated": "2026-02-11T15:11:00.813Z",
-      "appointmentStatus": "new",
-      "createdBy": "i2fhshpdWro1jfccUKxF",
-      "phone": "+17048951771",
-      "email": "d@gmail.com",
-      "statusHistory": [
-        {
-          "status": "new",
-          "at": "2026-03-23T18:45:18.494Z"
-        }
-      ],
-      "status": "new"
     },
     {
       "id": "uRVh2wfWIRyEvP8klh7k",
@@ -3902,78 +3830,6 @@
       "status": "new"
     },
     {
-      "id": "P4xSdJr6NFvOYAV4JMQT",
-      "contactName": "Test-D Lastname-Test-D",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-11T16:00:00-05:00",
-      "timeCreated": "2026-02-11T15:17:30.130Z",
-      "appointmentStatus": "new",
-      "createdBy": "Max",
-      "phone": "+17048951771",
-      "email": "d@gmail.com",
-      "statusHistory": [
-        {
-          "status": "new",
-          "at": "2026-03-23T18:45:18.494Z"
-        }
-      ],
-      "status": "new"
-    },
-    {
-      "id": "SPJm2DSyfXeNRLZFdqP8",
-      "contactName": "Test-D Lastname-Test-D",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-11T16:00:00-05:00",
-      "timeCreated": "2026-02-11T15:13:44.511Z",
-      "appointmentStatus": "new",
-      "createdBy": "Max",
-      "phone": "+17048951771",
-      "email": "d@gmail.com",
-      "statusHistory": [
-        {
-          "status": "new",
-          "at": "2026-03-23T18:45:18.494Z"
-        }
-      ],
-      "status": "new"
-    },
-    {
-      "id": "uIMYHScLbMmPIT9ZFeVZ",
-      "contactName": "Test-D Lastname-Test-D",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-11T16:00:00-05:00",
-      "timeCreated": "2026-02-11T15:16:36.589Z",
-      "appointmentStatus": "new",
-      "createdBy": "Max",
-      "phone": "+17048951771",
-      "email": "d@gmail.com",
-      "statusHistory": [
-        {
-          "status": "new",
-          "at": "2026-03-23T18:45:18.494Z"
-        }
-      ],
-      "status": "new"
-    },
-    {
-      "id": "GA43X5R8jFES6btLgFpf",
-      "contactName": "Test-D Lastname-Test-D",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-11T17:00:00-05:00",
-      "timeCreated": "2026-02-11T16:08:28.573Z",
-      "appointmentStatus": "new",
-      "createdBy": "i2fhshpdWro1jfccUKxF",
-      "phone": "+17048951771",
-      "email": "d@gmail.com",
-      "statusHistory": [
-        {
-          "status": "new",
-          "at": "2026-03-23T18:45:18.494Z"
-        }
-      ],
-      "status": "new"
-    },
-    {
       "id": "PcgHiw9SxgQX7WnvHWVw",
       "contactName": "Brandon Tavars",
       "calendarName": "Cold SMS",
@@ -3983,60 +3839,6 @@
       "createdBy": "Eddie",
       "phone": "+19193083263",
       "email": "brandontavares37@gmail.com",
-      "statusHistory": [
-        {
-          "status": "confirmed",
-          "at": "2026-03-23T18:45:18.494Z"
-        }
-      ],
-      "status": "confirmed"
-    },
-    {
-      "id": "alCtE2Ub2OzrXVJ40mKb",
-      "contactName": "Test-D Lastname-Test-D",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-11T17:00:00-05:00",
-      "timeCreated": "2026-02-11T17:22:43.054Z",
-      "appointmentStatus": "new",
-      "createdBy": "Max",
-      "phone": "+17048951771",
-      "email": "d@gmail.com",
-      "statusHistory": [
-        {
-          "status": "new",
-          "at": "2026-03-23T18:45:18.494Z"
-        }
-      ],
-      "status": "new"
-    },
-    {
-      "id": "djqOvYgEdbuU5RPlw7K2",
-      "contactName": "Test-D Lastname-Test-D",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-11T17:00:00-05:00",
-      "timeCreated": "2026-02-11T15:19:46.417Z",
-      "appointmentStatus": "new",
-      "createdBy": "Max",
-      "phone": "+17048951771",
-      "email": "d@gmail.com",
-      "statusHistory": [
-        {
-          "status": "new",
-          "at": "2026-03-23T18:45:18.494Z"
-        }
-      ],
-      "status": "new"
-    },
-    {
-      "id": "6dWmCDg6r2gzc2vWIssR",
-      "contactName": "Test-D Lastname-Test-D",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-11T18:00:00-05:00",
-      "timeCreated": "2026-02-11T17:27:39.633Z",
-      "appointmentStatus": "confirmed",
-      "createdBy": "i2fhshpdWro1jfccUKxF",
-      "phone": "+17048951771",
-      "email": "d@gmail.com",
       "statusHistory": [
         {
           "status": "confirmed",
@@ -4073,24 +3875,6 @@
       "createdBy": "Randy",
       "phone": "+19108532371",
       "email": "angelyirma1@yahoo.com",
-      "statusHistory": [
-        {
-          "status": "new",
-          "at": "2026-03-23T18:45:18.494Z"
-        }
-      ],
-      "status": "new"
-    },
-    {
-      "id": "jzbH7PR5ubZpo0tIqVyz",
-      "contactName": "Test-D Lastname-Test-D",
-      "calendarName": "Cold SMS",
-      "startTime": "2026-02-11T18:00:00-05:00",
-      "timeCreated": "2026-02-11T17:26:46.745Z",
-      "appointmentStatus": "new",
-      "createdBy": "Max",
-      "phone": "+17048951771",
-      "email": "d@gmail.com",
       "statusHistory": [
         {
           "status": "new",

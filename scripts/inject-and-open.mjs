@@ -16,7 +16,7 @@ const metricsBundle = `<script id="metrics-lib">
 // AUTO-GENERATED from lib/metrics.mjs — do not edit here
 ;(function(){
 ${metricsSource}
-window.Metrics={isColdSMS,isAds,parseDate,inWindow,filterAppts,filterExpenses,computeRevenue,computeShowRate,computeCAC,computeROAS,computePL,computeLTV,computeFunnel,computeSetters,computeSetterTrends,computeMonthlyTrends,computePipeline,computeWeekly}
+window.Metrics={isColdSMS,isAds,parseDate,inWindow,isUnresolved,filterAppts,filterExpenses,computeRevenue,computeShowRate,computeCAC,computeROAS,computePL,computeLTV,computeFunnel,computeSetters,computeSetterTrends,computeMonthlyTrends,computePipeline,computeWeekly}
 })()
 </script>`
 
@@ -28,7 +28,8 @@ const dials        = JSON.stringify(salesData.dials)
 // expenses.json is now the single unified expenses file
 const expenses     = fs.readFileSync(path.join(data, 'expenses.json'), 'utf8').trim()
 const transactions = fs.readFileSync(path.join(data, 'transactions.json'), 'utf8').trim()
-const weeklyDials  = fs.readFileSync(path.join(data, 'weekly_dials.json'), 'utf8').trim()
+const weeklyDials       = fs.readFileSync(path.join(data, 'weekly_dials.json'),    'utf8').trim()
+const unmatchedFathom   = fs.readFileSync(path.join(data, 'unmatched_fathom.json'), 'utf8').trim()
 
 let html = fs.readFileSync(htmlFile, 'utf8')
 // Inject metrics lib (replaces previous bundle between the script tags)
@@ -39,7 +40,8 @@ html = html.replace(/const EXPENSES = \[[\s\S]*?\];/,     'const EXPENSES = '   
 html = html.replace(/const DIALS = \[[\s\S]*?\];/,        'const DIALS = '        + dials        + ';')
 html = html.replace(/const TRANSACTIONS = \[[\s\S]*?\];/, 'const TRANSACTIONS = ' + transactions + ';')
 html = html.replace(/const BUS_EXP = \[[\s\S]*?\];/,          'const BUS_EXP = '          + expenses     + ';')
-html = html.replace(/const WEEKLY_DIALS = \[[\s\S]*?\];/,    'const WEEKLY_DIALS = '    + weeklyDials  + ';')
+html = html.replace(/const WEEKLY_DIALS = \[[\s\S]*?\];/,      'const WEEKLY_DIALS = '      + weeklyDials      + ';')
+html = html.replace(/const UNMATCHED_FATHOM = \[[\s\S]*?\];/, 'const UNMATCHED_FATHOM = ' + unmatchedFathom + ';')
 
 // Bake year/month select options from data (avoids relying on runtime JS to populate them)
 const MONTH_NAMES = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
