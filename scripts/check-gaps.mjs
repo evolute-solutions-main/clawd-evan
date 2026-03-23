@@ -71,6 +71,22 @@ const noCloser = past.filter(a =>
   !a.closer
 )
 
+// ── Gap type 5: Cold SMS appointment with no setter recorded ─────────────────
+// createdBy should always be populated for Cold SMS — blank means the fetch didn't
+// resolve the setter userId, or the appointment was created outside the normal flow
+const noSetter = past.filter(a =>
+  (a.calendarName?.toLowerCase().includes('cold') || a.source === 'Cold SMS') &&
+  !a.createdBy
+)
+
+// ── Gap type 6: showed or closed but no Fathom link ──────────────────────────
+// Every show should have a recording — missing link means fathom-match didn't find it
+// or the call happened outside Fathom and needs manual entry
+const noFathom = past.filter(a =>
+  ['showed', 'closed', 'not_closed'].includes(a.status) &&
+  !a.fathomLink
+)
+
 function fmtAppt(a) {
   const date = a.startTime?.slice(0, 10) || '?'
   const cal  = a.calendarName?.includes('Cold') ? 'Cold SMS' : 'Ads'
@@ -78,11 +94,11 @@ function fmtAppt(a) {
 }
 
 if (jsonOut) {
-  console.log(JSON.stringify({ needsOutcome, closedNoCash, staleStatus, noCloser }, null, 2))
+  console.log(JSON.stringify({ needsOutcome, closedNoCash, staleStatus, noCloser, noSetter, noFathom }, null, 2))
   process.exit(0)
 }
 
-const total = needsOutcome.length + closedNoCash.length + staleStatus.length + noCloser.length
+const total = needsOutcome.length + closedNoCash.length + staleStatus.length + noCloser.length + noSetter.length + noFathom.length
 
 if (total === 0) {
   console.log('✅ No gaps found — all past appointments have complete outcome data.')
@@ -112,6 +128,18 @@ if (staleStatus.length) {
 if (noCloser.length) {
   console.log(`── ${noCloser.length} closed/not_closed with no closer recorded ──`)
   noCloser.forEach(a => console.log(fmtAppt(a)))
+  console.log()
+}
+
+if (noSetter.length) {
+  console.log(`── ${noSetter.length} Cold SMS appointment(s) with no setter recorded ──`)
+  noSetter.forEach(a => console.log(fmtAppt(a)))
+  console.log()
+}
+
+if (noFathom.length) {
+  console.log(`── ${noFathom.length} showed/closed with no Fathom link (run fathom-match or add manually) ──`)
+  noFathom.forEach(a => console.log(fmtAppt(a)))
   console.log()
 }
 
