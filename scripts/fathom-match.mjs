@@ -22,6 +22,7 @@ import { iterateMeetings } from '../agents/_shared/fathom/index.mjs'
 const root              = path.resolve(fileURLToPath(import.meta.url), '../../')
 const DATA_FILE         = path.join(root, 'data', 'sales_data.json')
 const UNMATCHED_FILE    = path.join(root, 'data', 'unmatched_fathom.json')
+const ALIASES_FILE      = path.join(root, 'data', 'fathom_aliases.json')
 
 const args   = process.argv.slice(2)
 const _fi    = args.indexOf('--from'); const fromArg = _fi !== -1 ? args[_fi+1] : null
@@ -69,13 +70,21 @@ function externalEmail(meeting) {
   return ext?.email || null
 }
 
-// Match priority: exact name → email → fuzzy name
-// Returns the matched appointment or undefined.
+// Match priority: alias → exact name → email → fuzzy name
+// Returns { appt, strategy } or undefined.
 function findMatch(candidates, fName, fEmail) {
-  const exactName  = c => normName(fName) === normName(c.contactName)
-  const emailMatch = c => fEmail && c.email && fEmail.toLowerCase() === c.email.toLowerCase()
-  const fuzzy      = c => fuzzyMatch(fName, c.contactName)
-  return candidates.find(exactName) || candidates.find(emailMatch) || candidates.find(fuzzy)
+  const alias = aliases.find(a => normName(a.fathomName) === normName(fName))
+  if (alias) {
+    const hit = candidates.find(c => normName(alias.contactName) === normName(c.contactName))
+    if (hit) return { appt: hit, strategy: 'alias' }
+  }
+  const byExact = candidates.find(c => normName(fName) === normName(c.contactName))
+  if (byExact) return { appt: byExact, strategy: 'exact' }
+  const byEmail = fEmail ? candidates.find(c => c.email && fEmail.toLowerCase() === c.email.toLowerCase()) : null
+  if (byEmail) return { appt: byEmail, strategy: 'email' }
+  const byFuzzy = candidates.find(c => fuzzyMatch(fName, c.contactName))
+  if (byFuzzy) return { appt: byFuzzy, strategy: 'fuzzy' }
+  return null
 }
 
 // ── Is this a sales call? (title-based, no LLM) ──────────────────────────────
@@ -89,8 +98,17 @@ function isSalesCall(meeting) {
 }
 
 // ── Load data ─────────────────────────────────────────────────────────────────
-const raw  = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'))
+const raw   = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'))
 const appts = raw.appointments
+
+// fathom_aliases.json — manual overrides for when Fathom uses a company name,
+// alias, or any name that doesn't match the GHL contact name.
+// Format: [{ "fathomName": "...", "contactName": "..." }, ...]
+// When a Fathom call's external name matches an alias, the alias contactName is
+// used for matching instead — bypassing email and fuzzy matching entirely.
+// Add entries here whenever a call ends up in unmatched_fathom.json due to a name mismatch.
+let aliases = []
+try { aliases = JSON.parse(fs.readFileSync(ALIASES_FILE, 'utf8')) } catch {}
 
 // Index appointments by date → array (multiple appts per day)
 const byDate = {}
@@ -122,22 +140,22 @@ for (const call of calls) {
   const fEmail = externalEmail(call)
   const candidates = byDate[call._date] || []
 
-  // Match priority: exact name → email → fuzzy name
-  let appt = findMatch(candidates, fName, fEmail)
+  // Match priority: alias → exact name → email → fuzzy name
+  let result = findMatch(candidates, fName, fEmail)
   let matchDay = call._date
 
   // ±1 day fallback (call recorded day after scheduled)
-  if (!appt) {
+  if (!result) {
     const prev = new Date(call._date); prev.setDate(prev.getDate() - 1)
     const next = new Date(call._date); next.setDate(next.getDate() + 1)
     const prevD = prev.toISOString().slice(0, 10)
     const nextD = next.toISOString().slice(0, 10)
     const nearby = [...(byDate[prevD]||[]), ...(byDate[nextD]||[])]
-    appt = findMatch(nearby, fName, fEmail)
-    if (appt) matchDay = appt.startTime?.slice(0, 10)
+    result = findMatch(nearby, fName, fEmail)
+    if (result) matchDay = result.appt.startTime?.slice(0, 10)
   }
 
-  if (!appt) {
+  if (!result) {
     const link = call.share_url || call.url
     console.log(`[unmatched] ${call._date} — "${fName}" (${link})`)
     unmatchedRecords.push({ name: fName, date: call._date, fathomLink: link })
@@ -145,13 +163,9 @@ for (const call of calls) {
     continue
   }
 
-  // Log which strategy matched (helps debug future mismatches)
-  const matchStrategy =
-    normName(fName) === normName(appt.contactName) ? 'exact' :
-    (fEmail && appt.email && fEmail.toLowerCase() === appt.email.toLowerCase()) ? 'email' :
-    'fuzzy'
-  if (matchStrategy !== 'exact') {
-    console.log(`[${matchStrategy} match] "${fName}"${fEmail ? ` <${fEmail}>` : ''} → "${appt.contactName}" on ${matchDay}`)
+  const { appt, strategy } = result
+  if (strategy !== 'exact') {
+    console.log(`[${strategy} match] "${fName}"${fEmail ? ` <${fEmail}>` : ''} → "${appt.contactName}" on ${matchDay}`)
   }
 
   const updates = {}
