@@ -110,6 +110,48 @@ const appts = raw.appointments
 let aliases = []
 try { aliases = JSON.parse(fs.readFileSync(ALIASES_FILE, 'utf8')) } catch {}
 
+// ── Alias-driven dedup ────────────────────────────────────────────────────────
+// For each alias, check if there are two appointments on the same date where one
+// has the fathomName (company/alias name from GHL) and another has the contactName
+// (the real person's name, usually from a manual xl_ record). If found, merge them:
+// keep the GHL record (real ID, phone, email, fathom link), pull outcome fields from
+// the person-name record, fix contactName, and drop the duplicate.
+// This prevents the situation where a company-name GHL record and a person-name xl_
+// record coexist for the same call, with outcome and fathom link split across both.
+const OUTCOME_FIELDS = ['status','source','excluded','closer','cashCollected',
+  'cashCollectedAfterFirstCall','contractRevenue','followUpBooked','fathomLink','offerMade']
+
+let aliasDeduped = 0
+for (const alias of aliases) {
+  const fromNorm = normName(alias.fathomName)
+  const toNorm   = normName(alias.contactName)
+
+  // Find all pairs on the same date
+  const companyRecords = appts.filter(a => normName(a.contactName) === fromNorm)
+  for (const company of companyRecords) {
+    const date = company.startTime?.slice(0, 10)
+    if (!date) continue
+    const person = appts.find(a =>
+      normName(a.contactName) === toNorm && a.startTime?.slice(0, 10) === date && a.id !== company.id
+    )
+    if (!person) continue
+
+    // Merge: person's outcome fields → company record; fix name; drop person record
+    for (const f of OUTCOME_FIELDS) {
+      if (person[f] !== undefined && person[f] !== null) company[f] = person[f]
+    }
+    company.contactName = alias.contactName
+    const personIdx = appts.indexOf(person)
+    if (personIdx !== -1) appts.splice(personIdx, 1)
+    aliasDeduped++
+    console.log(`[alias dedup] Merged "${alias.fathomName}" + "${alias.contactName}" → kept GHL record as "${alias.contactName}" (${date})`)
+  }
+}
+if (aliasDeduped > 0 && !dryRun) {
+  fs.writeFileSync(DATA_FILE, JSON.stringify(raw, null, 2))
+  console.log(`Saved ${aliasDeduped} alias-dedup merge(s).\n`)
+}
+
 // Index appointments by date → array (multiple appts per day)
 const byDate = {}
 for (const a of appts) {
