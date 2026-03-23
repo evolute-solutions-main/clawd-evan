@@ -63,6 +63,21 @@ function externalName(meeting) {
   return m ? m[1].trim() : null
 }
 
+// Get the external invitee email from a Fathom meeting
+function externalEmail(meeting) {
+  const ext = meeting.calendar_invitees?.find(i => i.is_external)
+  return ext?.email || null
+}
+
+// Match priority: exact name → email → fuzzy name
+// Returns the matched appointment or undefined.
+function findMatch(candidates, fName, fEmail) {
+  const exactName  = c => normName(fName) === normName(c.contactName)
+  const emailMatch = c => fEmail && c.email && fEmail.toLowerCase() === c.email.toLowerCase()
+  const fuzzy      = c => fuzzyMatch(fName, c.contactName)
+  return candidates.find(exactName) || candidates.find(emailMatch) || candidates.find(fuzzy)
+}
+
 // ── Is this a sales call? (title-based, no LLM) ──────────────────────────────
 function isSalesCall(meeting) {
   const t = (meeting.title || '').toLowerCase()
@@ -103,12 +118,13 @@ let matched = 0, alreadyHad = 0, unmatched = 0
 const unmatchedRecords = []
 
 for (const call of calls) {
-  const fName = externalName(call)
+  const fName  = externalName(call)
+  const fEmail = externalEmail(call)
   const candidates = byDate[call._date] || []
 
-  // Prefer exact normalized match over fuzzy to avoid false positives on common words
-  const exactMatch = c => normName(fName) === normName(c.contactName)
-  let appt = candidates.find(exactMatch) || candidates.find(a => fuzzyMatch(fName, a.contactName))
+  // Match priority: exact name → email → fuzzy name
+  let appt = findMatch(candidates, fName, fEmail)
+  let matchDay = call._date
 
   // ±1 day fallback (call recorded day after scheduled)
   if (!appt) {
@@ -117,7 +133,8 @@ for (const call of calls) {
     const prevD = prev.toISOString().slice(0, 10)
     const nextD = next.toISOString().slice(0, 10)
     const nearby = [...(byDate[prevD]||[]), ...(byDate[nextD]||[])]
-    appt = nearby.find(exactMatch) || nearby.find(a => fuzzyMatch(fName, a.contactName))
+    appt = findMatch(nearby, fName, fEmail)
+    if (appt) matchDay = appt.startTime?.slice(0, 10)
   }
 
   if (!appt) {
@@ -126,6 +143,15 @@ for (const call of calls) {
     unmatchedRecords.push({ name: fName, date: call._date, fathomLink: link })
     unmatched++
     continue
+  }
+
+  // Log which strategy matched (helps debug future mismatches)
+  const matchStrategy =
+    normName(fName) === normName(appt.contactName) ? 'exact' :
+    (fEmail && appt.email && fEmail.toLowerCase() === appt.email.toLowerCase()) ? 'email' :
+    'fuzzy'
+  if (matchStrategy !== 'exact') {
+    console.log(`[${matchStrategy} match] "${fName}"${fEmail ? ` <${fEmail}>` : ''} → "${appt.contactName}" on ${matchDay}`)
   }
 
   const updates = {}
