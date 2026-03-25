@@ -55,10 +55,7 @@ function loadSecrets() {
   
   const chatToken = process.env.DISCORD_CHAT_BOT_TOKEN
   if (!chatToken || chatToken.length < 50 || chatToken.includes('PASTE') || chatToken.includes('YOUR')) {
-    console.error(`FATAL: DISCORD_CHAT_BOT_TOKEN is invalid or placeholder`)
-    console.error(`  Length: ${chatToken?.length || 0}`)
-    console.error(`  Value preview: ${chatToken?.slice(0, 20)}...`)
-    process.exit(1)
+    console.warn(`[env-loader] DISCORD_CHAT_BOT_TOKEN invalid or missing — Discord write features will fail`)
   }
 
   return loaded

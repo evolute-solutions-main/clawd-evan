@@ -1,6 +1,10 @@
 # TODO
 
 Work tasks for Evolute Solutions. Updated 2026-03-25.
+
+## Urgent / Infrastructure
+
+- [ ] **Claude Code on VM** — set up Claude Code directly on the DigitalOcean VM so there's no local/remote discrepancy. Claude should be able to read, edit, and run code on the VM directly.
 See `MASTERPLAN.md` for full vision, roadmap, and open questions.
 
 ---
