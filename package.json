@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/evolute-solutions-main/clawd#readme",
   "dependencies": {
+    "express": "^5.2.1",
+    "stripe": "^20.4.1",
     "xlsx": "^0.18.5"
   }
 }

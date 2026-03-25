@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Evolute Solutions — Business Map</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #fff; font-family: -apple-system, sans-serif; }
+    #legend {
+      position: fixed; top: 16px; right: 16px; z-index: 100;
+      background: #f4f4f4; border: 1px solid #ddd;
+      border-radius: 10px; padding: 12px 16px; color: #333; font-size: 13px;
+    }
+    #legend div { margin: 4px 0; }
+    #title {
+      position: fixed; top: 16px; left: 16px; z-index: 100;
+      color: #888; font-size: 12px; letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    svg.markmap { width: 100vw; height: 100vh; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.16"></script>
+</head>
+<body>
+
+<div id="title">Evolute Solutions — Business Map</div>
+
+<div id="legend">
+  <div>✅ Built</div>
+  <div>🔧 Partial</div>
+  <div>⬜ Not built</div>
+</div>
+
+<div class="markmap">
+
+# Evolute Solutions
+
+## 💼 Sales
+### 🎯 Appointment Generation
+#### Meta Ads (Your Own)
+- ⬜ Daily campaign health check
+- ⬜ CPL tracking per campaign
+- ⬜ Budget pacing alerts
+- ⬜ Payment method status
+- ⬜ Alert on CPL spike or volume drop
+#### Cold SMS / Cold Outreach
+- ⬜ Lead scraping
+- ⬜ Lead filtering — mobile only (Clearout Phone)
+- ✅ Appointment reports per setter
+- ✅ Show rate / close rate tracking
+- ✅ Setter attribution
+- ⬜ Daily setter KPI summary
+- ⬜ Alert when setter activity drops
+#### GHL Lead Tracking (Your Leads)
+- ✅ Appointments pulled from GHL
+- ⬜ Lead response rate
+- ⬜ Lead-to-booked rate
+- ⬜ Follow-up notes per lead
+- ⬜ Next follow-up date + alerts
+- ⬜ Stale lead alerts
+### 🏆 Closing
+#### Appointments
+- ✅ GHL sync (polling)
+- ⬜ GHL webhooks — real-time sync
+- ✅ Status lifecycle tracking
+- ✅ Fathom call matching
+#### Follow-Up
+- ⬜ Notes per lead
+- ⬜ Next follow-up date
+- ⬜ Overdue follow-up alerts
+- ⬜ Attempt sequence tracking
+#### Close Tracking
+- ✅ Cash collected tracking
+- ✅ Contract revenue logged
+- ✅ Closer attribution
+- ⬜ Close rate by lead source
+- ⬜ Close rate by closer
+
+## 🚀 Client Onboarding
+### Contract & Payment
+- ⬜ Contract sent / signed tracking
+- ⬜ Upfront payment confirmation
+- ⬜ Status: closed → signed → paid
+### Access Collection
+- ⬜ Meta Business Manager access
+- ⬜ Ad account access
+- ⬜ GHL access
+- ⬜ Daily alert for missing items
+- ⬜ Draft follow-up messages
+### Creative Production
+- ⬜ Intake form received
+- ⬜ Ad scripts generated
+- ⬜ Video / photo assets
+- ⬜ Script approval tracking
+### Ad Setup & Launch
+- ⬜ Ads built in Meta
+- ⬜ GHL integration connected
+- ⬜ Pixel / tracking verified
+- ⬜ Campaigns launched
+- ⬜ First results review scheduled
+### Onboarding Dashboard
+- ⬜ Per-client checklist view
+- ⬜ Stuck client alerts (overdue steps)
+
+## 🎨 Client Fulfillment
+### Ad Script Generator
+- ⬜ Trained on all past scripts
+- ⬜ Intake info as input
+- ⬜ Personalized hooks, body, CTA
+- ⬜ Ready-to-record output
+### Creative Pipeline
+- ⬜ Video / photo production tracking
+- ⬜ Revision tracking
+- ⬜ Asset delivery log
+### Ads Management
+- ⬜ Weekly performance review cadence
+- ⬜ Campaign update / change log
+- ⬜ A/B test tracking
+- ⬜ Budget change log
+### GHL / CRM Setup
+- ⬜ Pipeline stages configured
+- ⬜ Automations live and tested
+- ⬜ Integration health check
+
+## 🤝 Client Success (CSM)
+### Health Monitoring
+- 🔧 Daily Discord sweep → Notion
+- ⬜ Sentiment trend over time
+- ⬜ Escalation detection
+- ⬜ CSM knowledge base (historical handling)
+- ⬜ Action recommendations per client
+### Client Ad Performance (Their Pipeline)
+- ⬜ Lead volume per client
+- ⬜ Fake / invalid lead detection
+- ⬜ Lead response rate
+- ⬜ Lead-to-booked rate
+- ⬜ Estimates / proposals sent
+- ⬜ Weekly performance summary
+### Client Check-Ins
+- ⬜ Check-in cadence tracker
+- ⬜ Fathom call summaries
+- ⬜ Promise / follow-up tracking
+- ⬜ Contract renewal date tracker
+### Software & Integration Health
+- ⬜ GHL automation status per client
+- ⬜ Ad account health per client
+- ⬜ Alert if client account goes dark
+
+## 💰 Payments & Finance
+### Client Collections
+- ⬜ Contract value per client
+- ⬜ Payment schedule tracking
+- ⬜ Amount paid / outstanding
+- ⬜ Upcoming payment reminders (7d)
+- ⬜ Overdue alerts with days overdue
+- ⬜ Failed payment detection + auto-alert
+- ⬜ Dispute detection + handling workflow
+- ⬜ Chargeback alerts (dispute created)
+- ⬜ Dispute resolution tracking (won/lost/closed)
+- ⬜ Subscription cancellation alerts
+- ⬜ Renewal reminders
+### Payroll & Commissions
+- ⬜ Setter commission rules + calc
+- ⬜ Media buyer pay
+- ⬜ Other contractor pay
+- ⬜ Payroll report on schedule
+- ⬜ Payment log (who, when, how much)
+### Business Financials
+- ✅ Expense tracking
+- ✅ Revenue tracking
+- ✅ P&L calculation
+- ✅ CAC calculation
+- ⬜ Meta ad spend auto-import
+- ⬜ Monthly P&L report to Discord
+- ⬜ Cash flow view
+
+## 👥 Team & People
+### Setter Management
+- ✅ Setter attribution on appointments
+- ✅ Dials tracking (manual)
+- ⬜ Weekly KPI report per setter
+- ⬜ Performance threshold alerts
+- ⬜ Setter scorecard over time
+### Media Buyer
+- ⬜ Weekly performance review
+- ⬜ Campaign change log
+- ⬜ Accountability check-in cadence
+### Hiring
+- ⬜ Applicant pipeline tracker
+- ⬜ Interview tracking
+- ⬜ Scorecard per role
+- ⬜ Offer tracking
+### Team Onboarding
+- ⬜ Setter contract sent / signed
+- ⬜ Onboarding checklist (SOP codified)
+- ⬜ Training resource delivery
+- ⬜ First week check-in
+
+## 📊 Ops & Reporting
+### Daily Briefing
+- ⬜ Morning Discord message (~8am BRT)
+- ⬜ Onboarding blockers
+- ⬜ Overdue collections
+- ⬜ Ads health summary
+- ⬜ Today's appointments
+- ⬜ Client escalations
+- ⬜ Payroll reminders
+### Dashboard
+- ✅ Sales overview
+- ✅ Setter performance
+- ✅ Appointments
+- ✅ P&L + Costs
+- ⬜ Onboarding tracker tab
+- ⬜ Collections tab
+- ⬜ Payroll tab
+- ⬜ Client ad performance tab
+- ⬜ Team KPIs tab
+- ⬜ Week-over-week comparisons (ads, sales, setter KPIs)
+### Reports
+- 🔧 Client sweep → Notion (daily)
+- ⬜ Weekly business summary
+- ⬜ Monthly P&L report
+
+</div>
+
+</body>
+</html>

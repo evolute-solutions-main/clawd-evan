@@ -250,3 +250,21 @@ This is a starting point. Add your own conventions, style, and rules as you figu
     - Show rate: `node agents/data-analysis/scripts/query.mjs --metric=show-rate --source "Cold SMS" --from 2026-03-10 --to 2026-03-10 --human`
     - Revenue: `node agents/data-analysis/scripts/query.mjs --metric=revenue --source "Cold SMS" --from 2026-03-01 --to 2026-03-31 --human`
   - Full docs: `agents/data-analysis/README.md`
+
+- New Client Signed (Onboarding Trigger):
+  - Intent trigger phrases: "just signed [name]", "new client [name]", "signed [name] from [company]", "we signed [company]", "new client signed", any message from Max indicating a deal was just closed.
+  - Action: Extract name, company, email, and any other details from the message. Execute `node /Users/max/clawd/scripts/new-client.mjs --name "..." --company "..." --email "..."` with whatever info is available. Add `--fathom` if Max mentions or pastes a Fathom link. Add `--contract-end` if mentioned.
+  - After running: Confirm to Max that the client was created and onboarding has started. Tell him what the Account Manager/CSM and Media Buyer are now responsible for.
+  - If info is missing (e.g. no email): ask Max for it before running.
+  - Data file: `data/onboarding.json`
+
+- Mark Onboarding Step Done:
+  - Intent trigger phrases: "[step] is done for [client]", "done with [step] for [client]", "[client] [step] complete", "mark [step] done", natural English like "Facebook access is in for Smith Roofing" or "Bilal finished the scripts for [client]".
+  - Action: Identify the client (fuzzy match on company name) and the step (fuzzy match on step key or label). Execute `node /Users/max/clawd/scripts/mark-done.mjs --client "..." --step "..." --by "[who said it]"`.
+  - After running: Parse the JSON output. Confirm what was marked done. If new steps are now unlocked, tell the relevant role what they can now start on.
+  - If ambiguous (multiple clients match, or step unclear): ask for clarification before running.
+
+- Onboarding Status Check:
+  - Intent trigger phrases: "onboarding status", "where are we with [client]", "what's left for [client]", "onboarding briefing", "what needs to happen for [client]".
+  - Action: Execute `node /Users/max/clawd/agents/onboarding/scripts/run.mjs --dry-run` for all clients, or add `--client "[name]"` for a specific client.
+  - Output: Parse and relay the briefing in a clean, readable format. Do not dump raw markdown — summarize by role and highlight the most urgent unlocked steps.
