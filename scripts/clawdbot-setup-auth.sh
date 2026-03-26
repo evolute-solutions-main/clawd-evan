@@ -3,7 +3,7 @@
 # This runs before the clawdbot gateway starts to ensure auth is always configured.
 set -e
 
-SECRETS_FILE="/root/clawd/.secrets.env"
+SECRETS_FILE="/root/clawd-evan/.secrets.env"
 AUTH_DIR="/root/.clawdbot/agents/main/agent"
 AUTH_FILE="${AUTH_DIR}/auth-profiles.json"
 

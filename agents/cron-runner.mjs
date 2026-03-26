@@ -15,40 +15,26 @@ import { execSync } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
 import { postMessage } from './_shared/discord/index.mjs'
+import { getGlobalTimezone } from './_shared/formatters/index.mjs'
 
-// Note: This file is at /root/clawd/agents/cron-runner.mjs
-// Imports are relative to that location
-
-const REPO_ROOT = '/root/clawd'
+const REPO_ROOT = '/root/clawd-evan'
 const DISCORD_CHANNEL = '1475336170916544524'
+const TZ = getGlobalTimezone(REPO_ROOT)
 
 // Post to Discord — uses correct token automatically
 async function postToDiscord(message) {
   return postMessage(DISCORD_CHANNEL, message)
 }
 
-// Get yesterday's date in São Paulo timezone
+// Get yesterday's date in global timezone
 function getYesterdayDate() {
-  const now = new Date()
-  const yesterday = new Date(now.getTime() - 24 * 60 * 60 * 1000)
-  const fmt = new Intl.DateTimeFormat('en-CA', { 
-    timeZone: 'America/Sao_Paulo', 
-    year: 'numeric', 
-    month: '2-digit', 
-    day: '2-digit' 
-  })
-  return fmt.format(yesterday)
+  const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000)
+  return new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(yesterday)
 }
 
-// Get today's date in São Paulo timezone
+// Get today's date in global timezone
 function getTodayDate() {
-  const fmt = new Intl.DateTimeFormat('en-CA', { 
-    timeZone: 'America/Sao_Paulo', 
-    year: 'numeric', 
-    month: '2-digit', 
-    day: '2-digit' 
-  })
-  return fmt.format(new Date())
+  return new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date())
 }
 
 // Run client sweep
@@ -136,6 +122,41 @@ async function runApptReport() {
   console.log('Posted to Discord')
 }
 
+// Run onboarding briefing
+async function runOnboarding() {
+  console.log('Running onboarding briefing...')
+
+  const result = execSync(
+    `cd ${REPO_ROOT} && node agents/onboarding/scripts/run.mjs 2>&1`,
+    { encoding: 'utf8', timeout: 60000 }
+  )
+
+  console.log(result)
+
+  if (!result.trim() || result.includes('No active onboarding clients')) {
+    console.log('No onboarding clients — skipping Discord post')
+    return
+  }
+
+  // Discord max is 2000 chars — split into chunks
+  const chunks = []
+  const lines = result.split('\n')
+  let chunk = ''
+  for (const line of lines) {
+    if ((chunk + line + '\n').length > 1900) {
+      chunks.push(chunk.trimEnd())
+      chunk = ''
+    }
+    chunk += line + '\n'
+  }
+  if (chunk.trim()) chunks.push(chunk.trimEnd())
+
+  for (const c of chunks) {
+    await postToDiscord(c)
+  }
+  console.log(`Posted ${chunks.length} message(s) to Discord`)
+}
+
 // Run appointment data collection (no Discord post)
 async function runApptCollect() {
   const today = getTodayDate()
@@ -165,8 +186,11 @@ async function main() {
     case 'appt-collect':
       await runApptCollect()
       break
+    case 'onboarding':
+      await runOnboarding()
+      break
     default:
-      console.error('Usage: node cron-runner.mjs <sweep|appt-report|appt-collect>')
+      console.error('Usage: node cron-runner.mjs <sweep|appt-report|appt-collect|onboarding>')
       process.exit(1)
   }
 }

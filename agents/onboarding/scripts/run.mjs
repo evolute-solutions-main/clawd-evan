@@ -11,8 +11,8 @@
  *   node agents/onboarding/scripts/run.mjs --client "Smith Roofing"   (single client)
  *   node agents/onboarding/scripts/run.mjs --dry-run                  (console only, no Discord)
  *
- * Output (for now): console + agents/onboarding/outputs/YYYY-MM-DD/briefing.md
- * Discord posting: added once team channels are configured
+ * Output: console + agents/onboarding/outputs/YYYY-MM-DD/briefing.md
+ * Discord posting: handled by cron-runner.mjs (pipes stdout to Discord)
  */
 
 import '../../_shared/env-loader.mjs'
@@ -20,43 +20,50 @@ import '../../_shared/env-loader.mjs'
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'url'
+import { getGlobalTimezone } from '../../_shared/formatters/index.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT  = path.resolve(__dirname, '../../..')
 const ONBOARDING_FILE = path.join(REPO_ROOT, 'data/onboarding.json')
-const OUTPUTS_DIR = path.join(__dirname, '../outputs')
+const TEAM_FILE       = path.join(REPO_ROOT, 'data/team.json')
+const OUTPUTS_DIR     = path.join(__dirname, '../outputs')
 
 const args       = process.argv.slice(2)
 const filterName = args.includes('--client') ? args[args.indexOf('--client') + 1]?.toLowerCase() : null
 const dryRun     = args.includes('--dry-run')
-const today      = new Date().toISOString().split('T')[0]
+const TZ         = getGlobalTimezone(REPO_ROOT)
+const now        = new Date()
+const today      = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(now)
 
 // ── Step labels ───────────────────────────────────────────────────────────────
 
 const STEP_LABELS = {
-  payment_collected:           'Payment collected',
-  contract_signed:             'Contract signed',
-  welcome_email_sent:          'Welcome email sent',
-  added_to_daily_sweep:        'Added to daily sweep',
-  onboarding_form_submitted:   'Client completes onboarding form',
-  client_joined_discord:       'Client joins Discord',
-  discord_channel_created:     'Discord channel created for client',
-  facebook_access_granted:     'Facebook access granted & verified',
-  client_media_submitted:      'Client submits photos/videos',
-  ad_scripts_created:          'Ad scripts created (AI + review)',
-  ad_creatives_produced:       'Ad creatives produced',
-  creatives_approved:          'Creatives approved by client',
-  meta_campaigns_built:        'Meta campaigns built in Ads Manager',
-  ghl_subaccount_configured:   'GHL subaccount created & configured',
-  onboarding_call_completed:   'Onboarding call completed',
-  campaigns_launched:          'Campaigns launched',
-  launch_date_logged:          'Launch date logged',
-  post_launch_checkin_scheduled: 'Post-launch check-in scheduled (~2 weeks)'
+  payment_collected:             'Collect payment',
+  contract_signed:               'Sign contract',
+  welcome_email_sent:            'Send welcome email',
+  added_to_daily_sweep:          'Add to daily sweep',
+  onboarding_form_submitted:     'Complete onboarding form',
+  client_joined_discord:         'Join Discord server',
+  discord_channel_created:       'Create Discord channel',
+  ghl_subaccount_configured:     'Configure GHL sub-account',
+  facebook_access_granted:       'Grant Meta/Facebook access',
+  client_media_submitted:        'Submit photos & videos',
+  ad_scripts_written:            'Write ad scripts',
+  ad_scripts_sent_to_client:     'Send scripts to client',
+  ad_scripts_approved:           'Approve ad scripts',
+  video_editor_briefed:          'Brief the video editor',
+  ad_creatives_produced:         'Produce ad creatives',
+  meta_campaigns_built:          'Build Meta campaigns',
+  onboarding_call_booked:        'Book onboarding call',
+  onboarding_call_completed:     'Complete onboarding call',
+  campaigns_launched:            'Launch campaigns',
+  '48hr_health_check':           'Run 48-hour health check',
+  post_launch_checkin_scheduled: 'Schedule post-launch check-in'
 }
 
-// ── Dependency evaluator ──────────────────────────────────────────────────────
+// ── Dependency + time-gate evaluator ─────────────────────────────────────────
 
-function evaluateSteps(steps) {
+function evaluateSteps(steps, client) {
   const results = { unlocked: [], blocked: [], complete: [], waiting_auto: [] }
 
   for (const [key, step] of Object.entries(steps)) {
@@ -74,7 +81,17 @@ function evaluateSteps(steps) {
       continue
     }
 
-    // Dependencies met — is it auto or manual?
+    // Time-gated steps: check if enough time has passed
+    if (step.timeGatedHours && client.campaignsLaunchedAt) {
+      const launchedAt  = new Date(client.campaignsLaunchedAt)
+      const gatePassesAt = new Date(launchedAt.getTime() + step.timeGatedHours * 60 * 60 * 1000)
+      if (now < gatePassesAt) {
+        const hoursLeft = Math.ceil((gatePassesAt - now) / (60 * 60 * 1000))
+        results.blocked.push({ key, pendingDeps: [], timeGated: true, hoursLeft })
+        continue
+      }
+    }
+
     if (step.autoDetected) {
       results.waiting_auto.push(key)
     } else {
@@ -89,30 +106,47 @@ function evaluateSteps(steps) {
 
 function getPhase(steps) {
   const s = steps
-  if (s.campaigns_launched?.status === 'complete')        return 'LAUNCHED'
+  if (s['48hr_health_check']?.status === 'complete')    return 'LAUNCHED'
+  if (s.campaigns_launched?.status === 'complete')      return 'POST-LAUNCH CHECK'
   if (s.onboarding_call_completed?.status === 'complete') return 'LAUNCHING'
-  if (s.ghl_subaccount_configured?.status === 'complete') return 'ONBOARDING CALL READY'
-  if (s.meta_campaigns_built?.status === 'complete')      return 'GHL SETUP'
-  if (s.ad_creatives_produced?.status === 'complete')     return 'CAMPAIGNS BUILD'
-  if (s.ad_scripts_created?.status === 'complete')        return 'CREATIVE PRODUCTION'
+  if (s.onboarding_call_booked?.status === 'complete')  return 'ONBOARDING CALL SCHEDULED'
+  if (s.meta_campaigns_built?.status === 'complete')    return 'READY TO BOOK'
+  if (s.ad_scripts_approved?.status === 'complete')     return 'CAMPAIGNS BUILD'
+  if (s.ad_scripts_written?.status === 'complete')      return 'SCRIPTS REVIEW'
   if (s.onboarding_form_submitted?.status === 'complete') return 'PRODUCTION'
-  if (s.contract_signed?.status === 'complete')           return 'AWAITING CLIENT FUNNEL'
+  if (s.contract_signed?.status === 'complete')         return 'AWAITING CLIENT FUNNEL'
   return 'NEW'
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 const data = JSON.parse(fs.readFileSync(ONBOARDING_FILE, 'utf8'))
+const team = JSON.parse(fs.readFileSync(TEAM_FILE, 'utf8'))
 
-let clients = data.clients.filter(c => c.status === 'onboarding')
+const ROLE_LABELS = {
+  accountManager: 'Account Manager',
+  mediaBuyer:     'Media Buyer',
+  videoEditor:    'Video Editor'
+}
+function resolveRole(roleKey) {
+  const person = team.roles?.[roleKey]
+  const label  = ROLE_LABELS[roleKey] || roleKey
+  return person ? `${person} (${label})` : label
+}
+
+const pendingAlerts = (data.alerts || []).filter(a => a.status === 'pending')
+
+let clients = data.clients.filter(c =>
+  c.status === 'onboarding' ||
+  (c.status === 'launched' && c.steps?.post_launch_checkin_scheduled?.status !== 'complete')
+)
 if (filterName) clients = clients.filter(c => c.companyName.toLowerCase().includes(filterName))
 
-if (clients.length === 0) {
-  console.log('No active onboarding clients.')
+if (clients.length === 0 && pendingAlerts.length === 0) {
+  console.log('No active onboarding clients and no pending alerts.')
   process.exit(0)
 }
 
-// Build per-role action lists
 const roleActions = {
   accountManager: [],
   mediaBuyer:     [],
@@ -123,33 +157,37 @@ const roleActions = {
 const clientSummaries = []
 
 for (const client of clients) {
-  const eval_ = evaluateSteps(client.steps)
-  const phase  = getPhase(client.steps)
+  const eval_  = evaluateSteps(client.steps, client)
+  const phase   = getPhase(client.steps)
 
-  // Bucket unlocked steps by owner
+  // Flag ready-to-book clients that haven't been notified yet
+  const isReadyToBook = client.readyToBookCallAt &&
+    client.steps?.onboarding_call_booked?.status !== 'complete'
+
   for (const item of eval_.unlocked) {
     const bucket = roleActions[item.owner] || roleActions.accountManager
     bucket.push({ client: client.companyName, step: item.key, label: STEP_LABELS[item.key] || item.key, note: item.note })
   }
 
-  // Auto steps waiting
   for (const key of eval_.waiting_auto) {
     roleActions.auto.push({ client: client.companyName, step: key, label: STEP_LABELS[key] || key })
   }
 
-  // Blocked steps (for context)
   const blockedSummary = eval_.blocked.map(b => ({
-    step: STEP_LABELS[b.key] || b.key,
-    waitingOn: b.pendingDeps.map(d => STEP_LABELS[d] || d)
+    step:      STEP_LABELS[b.key] || b.key,
+    timeGated: b.timeGated || false,
+    hoursLeft: b.hoursLeft || null,
+    waitingOn: (b.pendingDeps || []).map(d => STEP_LABELS[d] || d)
   }))
 
   clientSummaries.push({
-    name: client.companyName,
+    name:        client.companyName,
     phase,
-    unlocked: eval_.unlocked.length,
-    blocked: blockedSummary,
-    complete: eval_.complete.length,
-    total: Object.keys(client.steps).length
+    isReadyToBook,
+    unlocked:    eval_.unlocked.length,
+    blocked:     blockedSummary,
+    complete:    eval_.complete.length,
+    total:       Object.keys(client.steps).length
   })
 }
 
@@ -160,23 +198,34 @@ const lines = []
 lines.push(`# Onboarding Briefing — ${today}`)
 lines.push(`${clients.length} client(s) in onboarding\n`)
 
-// Per-client status overview
+if (pendingAlerts.length > 0) {
+  lines.push(`## ⚠️ Needs Manual Review (${pendingAlerts.length})`)
+  for (const a of pendingAlerts) {
+    lines.push(`- [${a.id}] ${a.message}`)
+  }
+  lines.push(`\nResolve alerts with: node scripts/resolve-alert.mjs --id <alert_id>\n`)
+}
+
 lines.push(`## Client Status`)
 for (const c of clientSummaries) {
   lines.push(`\n### ${c.name}`)
   lines.push(`Phase: ${c.phase} | ${c.complete}/${c.total} steps complete`)
-  if (c.unlocked > 0) lines.push(`${c.unlocked} step(s) ready to action`)
+  if (c.isReadyToBook) lines.push(`🚀 READY TO BOOK — send booking link to client in Discord`)
+  if (c.unlocked > 0)  lines.push(`${c.unlocked} step(s) ready to action`)
   if (c.blocked.length > 0) {
     lines.push(`Blocked steps:`)
     for (const b of c.blocked) {
-      lines.push(`  - "${b.step}" → waiting on: ${b.waitingOn.join(', ')}`)
+      if (b.timeGated) {
+        lines.push(`  - "${b.step}" → time-gated, available in ~${b.hoursLeft}h`)
+      } else {
+        lines.push(`  - "${b.step}" → waiting on: ${b.waitingOn.join(', ')}`)
+      }
     }
   }
 }
 
-// Per-role action lists
 lines.push(`\n---\n`)
-lines.push(`## Action List — Account Manager / CSM`)
+lines.push(`## Action List — ${resolveRole('accountManager')}`)
 if (roleActions.accountManager.length === 0) {
   lines.push(`Nothing to action right now.`)
 } else {
@@ -185,7 +234,7 @@ if (roleActions.accountManager.length === 0) {
   }
 }
 
-lines.push(`\n## Action List — Media Buyer`)
+lines.push(`\n## Action List — ${resolveRole('mediaBuyer')}`)
 if (roleActions.mediaBuyer.length === 0) {
   lines.push(`Nothing to action right now.`)
 } else {
@@ -194,7 +243,7 @@ if (roleActions.mediaBuyer.length === 0) {
   }
 }
 
-lines.push(`\n## Action List — Video Editor`)
+lines.push(`\n## Action List — ${resolveRole('videoEditor')}`)
 if (roleActions.videoEditor.length === 0) {
   lines.push(`Nothing to action right now.`)
 } else {
@@ -224,4 +273,4 @@ if (!dryRun) {
   console.log(`\n✅ Written to agents/onboarding/outputs/${today}/briefing.md`)
 }
 
-// TODO: Post to Discord team channels once configured
+// Discord posting is handled by cron-runner.mjs which pipes this output

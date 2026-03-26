@@ -45,33 +45,34 @@ function matchClient(clients, query) {
 
 function matchStep(steps, query) {
   const q = query.toLowerCase().replace(/[\s-]/g, '_')
-  // Exact match first
   if (steps[q]) return q
-  // Partial match
   return Object.keys(steps).find(k => k.includes(q) || q.includes(k.replace(/_/g, '')))
 }
 
-// ── Step labels (for readable output) ────────────────────────────────────────
+// ── Step labels ───────────────────────────────────────────────────────────────
 
 const STEP_LABELS = {
-  payment_collected:             'Payment collected',
-  contract_signed:               'Contract signed',
-  welcome_email_sent:            'Welcome email sent',
-  added_to_daily_sweep:          'Added to daily sweep',
-  onboarding_form_submitted:     'Client completed onboarding form',
-  client_joined_discord:         'Client joined Discord',
-  discord_channel_created:       'Discord channel created',
-  facebook_access_granted:       'Facebook access granted & verified',
-  client_media_submitted:        'Client submitted photos/videos',
-  ad_scripts_created:            'Ad scripts created',
-  ad_creatives_produced:         'Ad creatives produced',
-  creatives_approved:            'Creatives approved by client',
-  meta_campaigns_built:          'Meta campaigns built',
-  ghl_subaccount_configured:     'GHL subaccount configured',
-  onboarding_call_completed:     'Onboarding call completed',
-  campaigns_launched:            'Campaigns launched',
-  launch_date_logged:            'Launch date logged',
-  post_launch_checkin_scheduled: 'Post-launch check-in scheduled'
+  payment_collected:             'Collect payment',
+  contract_signed:               'Sign contract',
+  welcome_email_sent:            'Send welcome email',
+  added_to_daily_sweep:          'Add to daily sweep',
+  onboarding_form_submitted:     'Complete onboarding form',
+  client_joined_discord:         'Join Discord server',
+  discord_channel_created:       'Create Discord channel',
+  ghl_subaccount_configured:     'Configure GHL sub-account',
+  facebook_access_granted:       'Grant Meta/Facebook access',
+  client_media_submitted:        'Submit photos & videos',
+  ad_scripts_written:            'Write ad scripts',
+  ad_scripts_sent_to_client:     'Send scripts to client',
+  ad_scripts_approved:           'Approve ad scripts',
+  video_editor_briefed:          'Brief the video editor',
+  ad_creatives_produced:         'Produce ad creatives',
+  meta_campaigns_built:          'Build Meta campaigns',
+  onboarding_call_booked:        'Book onboarding call',
+  onboarding_call_completed:     'Complete onboarding call',
+  campaigns_launched:            'Launch campaigns',
+  '48hr_health_check':           'Run 48-hour health check',
+  post_launch_checkin_scheduled: 'Schedule post-launch check-in'
 }
 
 // ── Dependency evaluator ──────────────────────────────────────────────────────
@@ -80,11 +81,10 @@ function getNewlyUnlocked(steps, justCompletedKey) {
   const unlocked = []
   for (const [key, step] of Object.entries(steps)) {
     if (step.status === 'complete') continue
-    if (step.autoDetected) continue
     const deps = step.dependsOn || []
     if (!deps.includes(justCompletedKey)) continue
     const allDepsNowDone = deps.every(d => steps[d]?.status === 'complete')
-    if (allDepsNowDone) unlocked.push({ key, owner: step.owner, label: STEP_LABELS[key] || key })
+    if (allDepsNowDone) unlocked.push({ key, owner: step.owner, label: STEP_LABELS[key] || key, readyToBookTrigger: step.readyToBookTrigger || false })
   }
   return unlocked
 }
@@ -110,7 +110,7 @@ if (!stepKey) {
 const step = client.steps[stepKey]
 
 if (step.status === 'complete') {
-  console.log(`⚠️  "${STEP_LABELS[stepKey]}" is already marked complete for ${client.companyName} (${step.completedAt})`)
+  console.log(`⚠️  "${STEP_LABELS[stepKey] || stepKey}" is already marked complete for ${client.companyName} (${step.completedAt})`)
   process.exit(0)
 }
 
@@ -128,21 +128,41 @@ client.log.push({
   by:        actor
 })
 
-// Check if this is a launch event — update client status
+// ── Special handlers ──────────────────────────────────────────────────────────
+
+// Record launch timestamp for 48hr health check gating
 if (stepKey === 'campaigns_launched') {
-  client.status = 'launched'
-  client.launchedDate = today
+  client.status             = 'launched'
+  client.launchedDate       = today
+  client.campaignsLaunchedAt = now
 }
 
 // Find newly unlocked steps
 const newlyUnlocked = getNewlyUnlocked(client.steps, stepKey)
+
+// Detect ready-to-book condition — fires when onboarding_call_booked is newly unlocked
+const readyToBook = newlyUnlocked.find(u => u.key === 'onboarding_call_booked' && u.readyToBookTrigger)
+if (readyToBook && !client.readyToBookCallAt) {
+  client.readyToBookCallAt = now
+  client.log.push({
+    timestamp: now,
+    event:     'ready_to_book_call',
+    note:      'All pre-call deps met. Send booking link to client in Discord. Dashboard task created.'
+  })
+}
 
 // Save
 fs.writeFileSync(ONBOARDING_FILE, JSON.stringify(data, null, 2))
 
 // ── Output ────────────────────────────────────────────────────────────────────
 
-console.log(`\n✅ [${client.companyName}] "${STEP_LABELS[stepKey]}" marked complete`)
+console.log(`\n✅ [${client.companyName}] "${STEP_LABELS[stepKey] || stepKey}" marked complete`)
+
+if (readyToBook) {
+  console.log(`\n🚀 READY TO BOOK ONBOARDING CALL`)
+  console.log(`   → Send booking link to ${client.companyName} in their Discord channel`)
+  console.log(`   → Dashboard task created for account manager`)
+}
 
 if (newlyUnlocked.length > 0) {
   console.log(`\n🔓 Now unlocked:`)
@@ -153,11 +173,12 @@ if (newlyUnlocked.length > 0) {
   console.log(`   No new steps unlocked yet — waiting on other dependencies.`)
 }
 
-// Output JSON for Evan to parse and relay to team
+// JSON output for Evan to parse and relay to team
 console.log('\n---JSON---')
 console.log(JSON.stringify({
-  client: client.companyName,
-  step: stepKey,
-  label: STEP_LABELS[stepKey],
-  newlyUnlocked
+  client:       client.companyName,
+  step:         stepKey,
+  label:        STEP_LABELS[stepKey] || stepKey,
+  newlyUnlocked,
+  readyToBook:  !!readyToBook
 }))

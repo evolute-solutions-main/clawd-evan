@@ -5,7 +5,7 @@ import path from 'path'
 
 const root     = path.resolve(fileURLToPath(import.meta.url), '../../')
 const data     = path.join(root, 'data')
-const htmlFile = path.join(root, 'sales_tracker.html')
+const htmlFile = path.join(root, 'dashboard.html')
 
 // Read lib/metrics.mjs, strip ES module export keywords for browser inlining,
 // then wrap in a Metrics global so the HTML can call Metrics.computeRevenue() etc.
@@ -31,6 +31,14 @@ const transactions = fs.readFileSync(path.join(data, 'transactions.json'), 'utf8
 const weeklyDials       = fs.readFileSync(path.join(data, 'weekly_dials.json'),    'utf8').trim()
 const unmatchedFathom   = fs.readFileSync(path.join(data, 'unmatched_fathom.json'), 'utf8').trim()
 
+// onboarding.json — injected into Ops > Onboarding tab
+let onboardingRaw
+try {
+  onboardingRaw = fs.readFileSync(path.join(data, 'onboarding.json'), 'utf8').trim()
+} catch {
+  onboardingRaw = '{"clients":[],"alerts":[]}'
+}
+
 let html = fs.readFileSync(htmlFile, 'utf8')
 // Inject metrics lib (replaces previous bundle between the script tags)
 html = html.replace(/<script id="metrics-lib">[\s\S]*?<\/script>/, metricsBundle)
@@ -42,6 +50,7 @@ html = html.replace(/const TRANSACTIONS = \[[\s\S]*?\];/, 'const TRANSACTIONS = 
 html = html.replace(/const BUS_EXP = \[[\s\S]*?\];/,          'const BUS_EXP = '          + expenses     + ';')
 html = html.replace(/const WEEKLY_DIALS = \[[\s\S]*?\];/,      'const WEEKLY_DIALS = '      + weeklyDials      + ';')
 html = html.replace(/const UNMATCHED_FATHOM = \[[\s\S]*?\];/, 'const UNMATCHED_FATHOM = ' + unmatchedFathom + ';')
+html = html.replace(/const ONBOARDING_DATA = \{[\s\S]*?\};/, 'const ONBOARDING_DATA = ' + onboardingRaw + ';')
 
 // Bake year/month select options from data (avoids relying on runtime JS to populate them)
 const MONTH_NAMES = ['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
@@ -60,5 +69,7 @@ html = html.replace(
   `<select id="selMonth"><option value="">Month</option>${monthOpts}</select>`
 )
 fs.writeFileSync(htmlFile, html)
-if (!process.argv.includes('--no-open')) execSync(`open "${htmlFile}"`)
+if (!process.argv.includes('--no-open')) {
+  try { execSync(`open "${htmlFile}"`) } catch {}
+}
 console.log('Done.')

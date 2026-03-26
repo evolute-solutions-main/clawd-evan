@@ -9,6 +9,7 @@ https://github.com/evolute-solutions-main/clawd-evan.git
 ```
 
 ## Environment
+- **Only working directory: `/root/clawd-evan`** — do not create or edit `/root/clawd` or any other path
 - **Primary dev environment: VM** — `/root/clawd-evan` on DigitalOcean (134.209.34.97)
 - Local copy at `/Users/max/clawd-evan` exists but VM is authoritative
 - Secrets: `/root/clawd-evan/.secrets.env` on VM (NOT `.env`)
@@ -42,8 +43,6 @@ https://github.com/evolute-solutions-main/clawd-evan.git
 - Webhook auto-detection: Stripe payment → marks `payment_collected`; GHL form → marks `onboarding_form_submitted`; Discord join → marks `client_joined_discord`
 
 **Still to build:**
-- `run.mjs` → post output to Discord (currently just prints to stdout)
-- Daily cron for onboarding briefing
 - Dashboard onboarding tab
 
 ## AGENTS.md Routing Rules

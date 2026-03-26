@@ -19,10 +19,37 @@ import { execFileSync } from 'node:child_process'
 import path from 'node:path'
 import { fileURLToPath } from 'url'
 import fs from 'node:fs'
+import { postMessage } from '../../_shared/discord/index.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT  = path.resolve(__dirname, '../../..')
 const ONBOARDING_FILE = path.join(REPO_ROOT, 'data/onboarding.json')
+
+const OPS_CHANNEL_ID = process.env.DISCORD_OPS_CHANNEL_ID || '1475336170916544524'
+
+function saveAlert(type, message, payload) {
+  const data = JSON.parse(fs.readFileSync(ONBOARDING_FILE, 'utf8'))
+  if (!data.alerts) data.alerts = []
+  data.alerts.push({
+    id:         `alert_${Date.now()}`,
+    type,
+    status:     'pending',
+    message,
+    receivedAt: new Date().toISOString(),
+    resolvedAt: null,
+    payload
+  })
+  fs.writeFileSync(ONBOARDING_FILE, JSON.stringify(data, null, 2))
+  console.warn(`[stripe-webhook] Alert saved — type: ${type}`)
+}
+
+async function alertOps(message) {
+  try {
+    await postMessage(OPS_CHANNEL_ID, `⚠️ **Stripe Payment — needs manual review**\n${message}`)
+  } catch (err) {
+    console.error('[stripe-webhook] Failed to post Discord alert:', err.message)
+  }
+}
 
 // Lazy init — Stripe key may not be set yet
 let _stripe = null
@@ -34,7 +61,7 @@ function getStripe() {
   return _stripe
 }
 
-export function handleStripeWebhook(req, res) {
+export async function handleStripeWebhook(req, res) {
   const sig     = req.headers['stripe-signature']
   const secret  = process.env.STRIPE_WEBHOOK_SECRET
 
@@ -57,7 +84,7 @@ export function handleStripeWebhook(req, res) {
   try {
     switch (event.type) {
       case 'payment_intent.succeeded':
-        handlePaymentSucceeded(event.data.object)
+        await handlePaymentSucceeded(event.data.object)
         break
       case 'customer.created':
         handleCustomerCreated(event.data.object)
@@ -72,7 +99,7 @@ export function handleStripeWebhook(req, res) {
   }
 }
 
-function handlePaymentSucceeded(paymentIntent) {
+async function handlePaymentSucceeded(paymentIntent) {
   const email    = paymentIntent.receipt_email?.toLowerCase()?.trim()
   const amount   = paymentIntent.amount / 100  // Stripe amounts are in cents
   const stripeId = paymentIntent.customer
@@ -80,7 +107,9 @@ function handlePaymentSucceeded(paymentIntent) {
   console.log(`[stripe-webhook] Payment succeeded: $${amount} from ${email || 'unknown'}`)
 
   if (!email) {
-    console.warn('[stripe-webhook] No email on payment intent — cannot match client')
+    const msg = `Payment of $${amount} received but no email on the payment intent. Stripe customer: ${stripeId || 'unknown'}`
+    saveAlert('payment_no_email', msg, { amount, stripeId })
+    await alertOps(`${msg}\n\nResolve: link manually via \`mark-done.mjs\` once you identify the client.`)
     return
   }
 
@@ -91,8 +120,9 @@ function handlePaymentSucceeded(paymentIntent) {
   )
 
   if (!client) {
-    console.log(`[stripe-webhook] No onboarding client for ${email} — payment logged but no step updated`)
-    // Still worth logging — could be a renewal or a new client Max hasn't entered yet
+    const msg = `Payment of $${amount} received from \`${email}\` but no onboarding client matched. Could be a renewal, a new client not yet added, or an email mismatch.`
+    saveAlert('payment_no_client_match', msg, { amount, email, stripeId })
+    await alertOps(`${msg}\n\nIf this is a new client: \`node scripts/new-client.mjs --name "..." --email "${email}" --stripe "${stripeId || ''}"\`\nIf existing client with wrong email: update their record and run \`mark-done.mjs\` manually.`)
     return
   }
 

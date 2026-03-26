@@ -35,17 +35,14 @@ Last updated: 2026-03-25
 **Goal:** Zero manual tracking. Every onboarding client has a live checklist. Blockers surface automatically every day until resolved.
 
 **What to build:**
-- Onboarding checklist per client stored in `data/onboarding.json`:
-  - Steps: contract signed → payment collected → intake form received → GHL access granted → ad account access → ads built → ads launched → first results review
-  - Each step: `{ step, status, assignee, dueDate, completedAt, notes }`
-- Daily onboarding agent (runs each morning):
-  - Scans all active onboarding clients
-  - Identifies blockers (step overdue, access not received, etc.)
-  - Posts a concise follow-up list to Discord with names, stuck step, days overdue
-  - Optionally: draft follow-up messages for Max to send (or send automatically)
+- Onboarding checklist per client stored in `data/onboarding.json` ✅
+- Daily onboarding agent (runs each morning): ✅
+  - Scans all active onboarding clients, walks dependency graph
+  - Identifies what's unlocked and who owns it (reads role assignments from `data/team.json`)
+  - Posts per-role action list to Discord — goal is to push every step to completion as fast as possible, no due dates
 - Dashboard panel: Onboarding tracker tab showing all clients + step statuses
 
-**Data sources:** Manual input to start; eventually pull from GHL pipeline stages + Asana
+**Data sources:** Manual input + auto-detection via Stripe/GHL/Discord webhooks ✅
 
 ---
 

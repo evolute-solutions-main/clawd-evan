@@ -25,6 +25,7 @@ import { execFileSync } from 'node:child_process'
 import path from 'node:path'
 import { fileURLToPath } from 'url'
 import fs from 'node:fs'
+import { postMessage } from '../../_shared/discord/index.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT  = path.resolve(__dirname, '../../..')
@@ -33,16 +34,49 @@ const ONBOARDING_FILE = path.join(REPO_ROOT, 'data/onboarding.json')
 // The form ID of the onboarding form in GHL
 // Set GHL_ONBOARDING_FORM_ID in .secrets.env once you have it
 const ONBOARDING_FORM_ID = process.env.GHL_ONBOARDING_FORM_ID || null
+const OPS_CHANNEL_ID     = process.env.DISCORD_OPS_CHANNEL_ID || '1475336170916544524'
 
-export function handleGHLWebhook(req, res) {
+function saveAlert(type, message, payload) {
+  const data = JSON.parse(fs.readFileSync(ONBOARDING_FILE, 'utf8'))
+  if (!data.alerts) data.alerts = []
+  data.alerts.push({
+    id:         `alert_${Date.now()}`,
+    type,
+    status:     'pending',
+    message,
+    receivedAt: new Date().toISOString(),
+    resolvedAt: null,
+    payload
+  })
+  fs.writeFileSync(ONBOARDING_FILE, JSON.stringify(data, null, 2))
+  console.warn(`[ghl-webhook] Alert saved — type: ${type}`)
+}
+
+async function alertOps(message) {
+  try {
+    await postMessage(OPS_CHANNEL_ID, `⚠️ **GHL Onboarding Form — needs manual review**\n${message}`)
+  } catch (err) {
+    console.error('[ghl-webhook] Failed to post Discord alert:', err.message)
+  }
+}
+
+export async function handleGHLWebhook(req, res) {
   const payload = req.body
   const type    = payload?.type || payload?.event_type
 
-  console.log(`[ghl-webhook] Received: ${type}`, JSON.stringify(payload).slice(0, 200))
+  console.log(`[ghl-webhook] Received full payload:`, JSON.stringify(payload, null, 2))
 
   try {
-    if (type === 'FormSubmitted' || type === 'form_submitted') {
-      handleFormSubmitted(payload)
+    // GHL native webhooks send { type: "FormSubmitted", email, ... }
+    // GHL automation webhooks send flat contact+form fields with no type field
+    const isFormSubmission = (
+      type === 'FormSubmitted' ||
+      type === 'form_submitted' ||
+      (!type && (payload.email || payload.Email))  // automation format
+    )
+
+    if (isFormSubmission) {
+      await handleFormSubmitted(payload)
       return res.status(200).json({ ok: true })
     }
 
@@ -56,18 +90,22 @@ export function handleGHLWebhook(req, res) {
   }
 }
 
-function handleFormSubmitted(payload) {
-  const email  = payload.email?.toLowerCase()?.trim()
+async function handleFormSubmitted(payload) {
+  const email  = (payload.email || payload.Email || payload.contact_email || '').toLowerCase().trim()
+  const name   = payload.name || payload.full_name || payload.Name || '(no name)'
   const formId = payload.formId || payload.form_id
 
-  if (!email) {
-    console.warn('[ghl-webhook] FormSubmitted missing email — cannot match client')
+  // If a specific form ID is configured, only process that form
+  // (silent ignore — other GHL forms shouldn't trigger onboarding)
+  if (ONBOARDING_FORM_ID && formId && formId !== ONBOARDING_FORM_ID) {
+    console.log(`[ghl-webhook] Form ${formId} is not the onboarding form — ignoring`)
     return
   }
 
-  // If a specific form ID is configured, only process that form
-  if (ONBOARDING_FORM_ID && formId && formId !== ONBOARDING_FORM_ID) {
-    console.log(`[ghl-webhook] Form ${formId} is not the onboarding form — ignoring`)
+  if (!email) {
+    const msg = `Form submitted with no email. Name: ${name} | Form ID: ${formId || 'unknown'}`
+    saveAlert('form_no_email', msg, payload)
+    await alertOps(`${msg}\n\nResolve: add client with \`new-client.mjs\` then run \`mark-done.mjs\` manually.`)
     return
   }
 
@@ -79,7 +117,9 @@ function handleFormSubmitted(payload) {
   )
 
   if (!client) {
-    console.warn(`[ghl-webhook] No onboarding client found for email: ${email}`)
+    const msg = `Form submitted but no onboarding client matched email \`${email}\`. Name on form: ${name}`
+    saveAlert('form_no_client_match', msg, payload)
+    await alertOps(`${msg}\n\nPossible causes: email mismatch, client not yet added, or wrong email used.\nResolve with: \`node scripts/mark-done.mjs --client "Company Name" --step onboarding_form_submitted\``)
     return
   }
 
