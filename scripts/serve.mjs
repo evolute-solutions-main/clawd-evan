@@ -376,6 +376,45 @@ const server = http.createServer(async (req, res) => {
     }
   }
 
+  // API: unmark a step (revert to pending)
+  if (req.method === 'POST' && req.url === '/api/onboarding/unmark-done') {
+    try {
+      const body = JSON.parse(await readBody(req))
+      const { clientId, step } = body
+      if (!clientId || !step) return json(res, 400, { error: 'clientId and step required' })
+
+      const data = loadOnboarding()
+      const client = data.clients.find(c => c.id === clientId)
+      if (!client) return json(res, 404, { error: 'client not found' })
+
+      const stepObj = client.onboarding.steps[step]
+      if (!stepObj) return json(res, 404, { error: 'step not found' })
+
+      const now = new Date().toISOString()
+      stepObj.status = 'pending'
+      delete stepObj.completedAt
+      delete stepObj.deliverable
+
+      // If undoing campaigns_launched, revert client status
+      if (step === 'campaigns_launched' && client.onboarding.status === 'launched') {
+        client.onboarding.status = 'onboarding'
+        delete client.onboarding.launchedDate
+        delete client.onboarding.campaignsLaunchedAt
+      }
+
+      client.onboarding.log = client.onboarding.log || []
+      client.onboarding.log.push({ timestamp: now, event: 'step_unmarked', step, by: 'dashboard' })
+
+      saveOnboarding(data)
+      console.log(`[onboarding] ${client.companyName} — "${step}" unmarked`)
+      execSync('node scripts/inject-and-open.mjs --no-open', { cwd: root, stdio: 'ignore' })
+      broadcastOnboardingUpdate()
+      return json(res, 200, { ok: true })
+    } catch (e) {
+      return json(res, 500, { error: e.message })
+    }
+  }
+
   // API: mark all onboarding steps complete (mark client as launched)
   if (req.method === 'POST' && req.url === '/api/onboarding/mark-complete') {
     try {
