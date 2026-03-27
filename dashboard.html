@@ -465,8 +465,6 @@ body.ops-mode #hSub, body.ops-mode .sep { display:none; }
 .ob-item:hover { border-color: rgba(255,216,0,0.25); box-shadow: 0 4px 20px rgba(0,0,0,0.6); }
 .ob-item.blocked { opacity:.45; }
 .ob-item.ob-dragging { opacity:.35; }
-.ob-item.ob-drop-before { box-shadow:0 -3px 0 0 rgba(129,140,248,0.9),0 4px 20px rgba(0,0,0,0.6); }
-.ob-item.ob-drop-after  { box-shadow:0  3px 0 0 rgba(129,140,248,0.9),0 4px 20px rgba(0,0,0,0.6); }
 .ob-item-label { font-size:0.84rem; font-weight:600; color:var(--text); }
 .ob-item-client { font-size:0.73rem; color:var(--muted2); margin-top:2px; }
 .ob-item-note { font-size:0.73rem; color:var(--muted2); margin-top:5px; font-style:italic; }
@@ -539,8 +537,7 @@ textarea.ob-input { resize:vertical; min-height:72px; }
 }
 .ob-client-card:hover { border-color: rgba(255,216,0,0.28); box-shadow: 0 6px 36px rgba(0,0,0,0.75); }
 .ob-client-card.ob-dragging { opacity:0.35; }
-.ob-client-card.ob-drop-before { box-shadow:0 -3px 0 0 rgba(129,140,248,0.9),0 6px 36px rgba(0,0,0,0.75); }
-.ob-client-card.ob-drop-after  { box-shadow:0  3px 0 0 rgba(129,140,248,0.9),0 6px 36px rgba(0,0,0,0.75); }
+.ob-drop-line { height:3px; background:rgba(129,140,248,0.95); border-radius:3px; margin:2px 0; pointer-events:none; }
 .ob-drag-handle {
   position:absolute; top:50%; right:14px; transform:translateY(-50%);
   color:var(--muted); font-size:0.9rem; line-height:1; cursor:grab; user-select:none;
@@ -30753,7 +30750,7 @@ function renderOnboarding() {
 
   // DO NOW
   const sortedDoNow = obSortItems(doNowItems, 'ob-donow-order')
-  actHtml += `<div class="ob-section" id="ob-donow"><div class="ob-section-title">Do Now (${doNowItems.length})</div>`
+  actHtml += `<div class="ob-section" id="ob-donow" ondragover="event.preventDefault()" ondrop="obSectionDrop(event,'ob-donow-order')"><div class="ob-section-title">Do Now (${doNowItems.length})</div>`
   if (!sortedDoNow.length) actHtml += `<div class="ob-empty">Nothing to action right now.</div>`
   for (const { client, key, step } of sortedDoNow) {
     const label = OB_STEP_LABELS[key] || key
@@ -30785,7 +30782,7 @@ function renderOnboarding() {
   // FOLLOW UP REQUIRED — client action needed (AM only)
   if (obRole === 'accountManager') {
     const sortedFollowUp = obSortItems(waitingItems, 'ob-followup-order')
-    actHtml += `<div class="ob-section" id="ob-followup"><div class="ob-section-title">Follow Up Required — Client Action Needed (${waitingItems.length})</div>`
+    actHtml += `<div class="ob-section" id="ob-followup" ondragover="event.preventDefault()" ondrop="obSectionDrop(event,'ob-followup-order')"><div class="ob-section-title">Follow Up Required — Client Action Needed (${waitingItems.length})</div>`
     if (!sortedFollowUp.length) {
       actHtml += `<div class="ob-empty">No pending client actions.</div>`
     }
@@ -30871,6 +30868,8 @@ function renderOnboarding() {
     </div>`
   }
   const obClientsEl = document.getElementById('ob-clients')
+  obClientsEl.setAttribute('ondragover', 'event.preventDefault()')
+  obClientsEl.setAttribute('ondrop', "obSectionDrop(event,'ob-card-order')")
   obClientsEl.innerHTML = cardsHtml || '<div class="ob-empty">No active clients.</div>'
 }
 
@@ -31148,8 +31147,11 @@ function obSortItems(items, orderKey) {
     return ai - bi
   })
 }
-// Per-element drag handlers
+// Per-element drag handlers — uses a real DOM line element as drop indicator
 let _obDragEl = null, _obDragOrderKey = null, _obDragJustEnded = false
+function _obLine() { return document.querySelector('.ob-drop-line') }
+function _obClearLine() { _obLine()?.remove() }
+function _obMakeLine() { const l = document.createElement('div'); l.className = 'ob-drop-line'; return l }
 function obItemDragStart(e, el, orderKey) {
   _obDragEl = el; _obDragOrderKey = orderKey
   el.classList.add('ob-dragging')
@@ -31158,34 +31160,45 @@ function obItemDragStart(e, el, orderKey) {
 function obItemDragOver(e, el, orderKey) {
   if (!_obDragEl || _obDragEl === el || _obDragOrderKey !== orderKey) return
   e.preventDefault()
-  const isItem = el.classList.contains('ob-item')
-  const sel = isItem ? '.ob-item[data-item-id]' : '.ob-client-card[data-item-id]'
-  el.parentElement?.querySelectorAll(sel).forEach(c => c.classList.remove('ob-drop-before','ob-drop-after'))
   const rect = el.getBoundingClientRect()
-  el.classList.add(e.clientY < rect.top + rect.height / 2 ? 'ob-drop-before' : 'ob-drop-after')
+  const line = _obLine() || _obMakeLine()
+  if (e.clientY < rect.top + rect.height / 2) el.before(line); else el.after(line)
+}
+function _obCommitDrop(orderKey) {
+  const line = _obLine()
+  if (!line || !_obDragEl) return
+  line.before(_obDragEl)
+  line.remove()
+  const isItem = _obDragEl.classList.contains('ob-item')
+  const sel = isItem ? '.ob-item[data-item-id]' : '.ob-client-card[data-item-id]'
+  if (_obDragEl.parentElement) obSaveOrder(orderKey, [..._obDragEl.parentElement.querySelectorAll(sel)].map(c => c.dataset.itemId))
 }
 function obItemDrop(e, el, orderKey) {
   e.preventDefault()
-  if (!_obDragEl || _obDragEl === el || _obDragOrderKey !== orderKey) return
-  const insertBefore = el.classList.contains('ob-drop-before')
-  el.classList.remove('ob-drop-before','ob-drop-after')
-  if (insertBefore) el.before(_obDragEl); else el.after(_obDragEl)
-  const isItem = el.classList.contains('ob-item')
-  const sel = isItem ? '.ob-item[data-item-id]' : '.ob-client-card[data-item-id]'
-  obSaveOrder(orderKey, [...el.parentElement.querySelectorAll(sel)].map(c => c.dataset.itemId))
+  if (!_obDragEl || _obDragOrderKey !== orderKey) return
+  if (!_obLine() && _obDragEl !== el) {
+    // fallback: no line yet, use cursor position
+    const rect = el.getBoundingClientRect()
+    if (e.clientY < rect.top + rect.height / 2) el.before(_obDragEl); else el.after(_obDragEl)
+    const isItem = _obDragEl.classList.contains('ob-item')
+    const sel = isItem ? '.ob-item[data-item-id]' : '.ob-client-card[data-item-id]'
+    if (_obDragEl.parentElement) obSaveOrder(orderKey, [..._obDragEl.parentElement.querySelectorAll(sel)].map(c => c.dataset.itemId))
+  } else {
+    _obCommitDrop(orderKey)
+  }
+}
+function obSectionDrop(e, orderKey) {
+  e.preventDefault()
+  if (!_obDragEl || _obDragOrderKey !== orderKey) return
+  _obCommitDrop(orderKey)
 }
 function obItemDragEnd(el) {
+  _obClearLine()
   el.classList.remove('ob-dragging')
-  const isItem = el.classList.contains('ob-item')
-  const sel = isItem ? '.ob-item[data-item-id]' : '.ob-client-card[data-item-id]'
-  el.parentElement?.querySelectorAll(sel).forEach(c => c.classList.remove('ob-drop-before','ob-drop-after','ob-dragging'))
   _obDragEl = null; _obDragOrderKey = null
   _obDragJustEnded = true; setTimeout(() => { _obDragJustEnded = false }, 100)
 }
-function obItemDragLeave(e, el) {
-  if (el.contains(e.relatedTarget)) return
-  el.classList.remove('ob-drop-before','ob-drop-after')
-}
+function obItemDragLeave(e, el) { /* line stays until dragover repositions it */ }
 
 function obToggleNewClientForm() {
   const f = document.getElementById('ob-new-client-form')
