@@ -465,7 +465,8 @@ body.ops-mode #hSub, body.ops-mode .sep { display:none; }
 .ob-item:hover { border-color: rgba(255,216,0,0.25); box-shadow: 0 4px 20px rgba(0,0,0,0.6); }
 .ob-item.blocked { opacity:.45; }
 .ob-item.ob-dragging { opacity:.35; }
-.ob-item.ob-drag-over { border-color:rgba(129,140,248,0.7); box-shadow:0 0 0 2px rgba(129,140,248,0.25),0 4px 20px rgba(0,0,0,0.6); }
+.ob-item.ob-drop-before { box-shadow:0 -3px 0 0 rgba(129,140,248,0.9),0 4px 20px rgba(0,0,0,0.6); }
+.ob-item.ob-drop-after  { box-shadow:0  3px 0 0 rgba(129,140,248,0.9),0 4px 20px rgba(0,0,0,0.6); }
 .ob-item-label { font-size:0.84rem; font-weight:600; color:var(--text); }
 .ob-item-client { font-size:0.73rem; color:var(--muted2); margin-top:2px; }
 .ob-item-note { font-size:0.73rem; color:var(--muted2); margin-top:5px; font-style:italic; }
@@ -538,7 +539,8 @@ textarea.ob-input { resize:vertical; min-height:72px; }
 }
 .ob-client-card:hover { border-color: rgba(255,216,0,0.28); box-shadow: 0 6px 36px rgba(0,0,0,0.75); }
 .ob-client-card.ob-dragging { opacity:0.35; }
-.ob-client-card.ob-drag-over { border-color:rgba(129,140,248,0.7); box-shadow:0 0 0 2px rgba(129,140,248,0.25),0 6px 36px rgba(0,0,0,0.75); }
+.ob-client-card.ob-drop-before { box-shadow:0 -3px 0 0 rgba(129,140,248,0.9),0 6px 36px rgba(0,0,0,0.75); }
+.ob-client-card.ob-drop-after  { box-shadow:0  3px 0 0 rgba(129,140,248,0.9),0 6px 36px rgba(0,0,0,0.75); }
 .ob-drag-handle {
   position:absolute; top:50%; right:14px; transform:translateY(-50%);
   color:var(--muted); font-size:0.9rem; line-height:1; cursor:grab; user-select:none;
@@ -31158,15 +31160,16 @@ function obItemDragOver(e, el, orderKey) {
   e.preventDefault()
   const isItem = el.classList.contains('ob-item')
   const sel = isItem ? '.ob-item[data-item-id]' : '.ob-client-card[data-item-id]'
-  el.parentElement?.querySelectorAll(sel).forEach(c => c.classList.remove('ob-drag-over'))
-  el.classList.add('ob-drag-over')
+  el.parentElement?.querySelectorAll(sel).forEach(c => c.classList.remove('ob-drop-before','ob-drop-after'))
+  const rect = el.getBoundingClientRect()
+  el.classList.add(e.clientY < rect.top + rect.height / 2 ? 'ob-drop-before' : 'ob-drop-after')
 }
 function obItemDrop(e, el, orderKey) {
   e.preventDefault()
   if (!_obDragEl || _obDragEl === el || _obDragOrderKey !== orderKey) return
-  el.classList.remove('ob-drag-over')
-  const rect = el.getBoundingClientRect()
-  if (e.clientY < rect.top + rect.height / 2) el.before(_obDragEl); else el.after(_obDragEl)
+  const insertBefore = el.classList.contains('ob-drop-before')
+  el.classList.remove('ob-drop-before','ob-drop-after')
+  if (insertBefore) el.before(_obDragEl); else el.after(_obDragEl)
   const isItem = el.classList.contains('ob-item')
   const sel = isItem ? '.ob-item[data-item-id]' : '.ob-client-card[data-item-id]'
   obSaveOrder(orderKey, [...el.parentElement.querySelectorAll(sel)].map(c => c.dataset.itemId))
@@ -31175,13 +31178,13 @@ function obItemDragEnd(el) {
   el.classList.remove('ob-dragging')
   const isItem = el.classList.contains('ob-item')
   const sel = isItem ? '.ob-item[data-item-id]' : '.ob-client-card[data-item-id]'
-  el.parentElement?.querySelectorAll(sel).forEach(c => c.classList.remove('ob-drag-over', 'ob-dragging'))
+  el.parentElement?.querySelectorAll(sel).forEach(c => c.classList.remove('ob-drop-before','ob-drop-after','ob-dragging'))
   _obDragEl = null; _obDragOrderKey = null
   _obDragJustEnded = true; setTimeout(() => { _obDragJustEnded = false }, 100)
 }
 function obItemDragLeave(e, el) {
   if (el.contains(e.relatedTarget)) return
-  el.classList.remove('ob-drag-over')
+  el.classList.remove('ob-drop-before','ob-drop-after')
 }
 
 function obToggleNewClientForm() {
