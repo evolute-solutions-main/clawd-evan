@@ -30760,23 +30760,16 @@ function renderOnboarding() {
 
   let actHtml = ''
 
-  // DO NOW
-  const sortedDoNow = obSortItems(doNowItems, 'ob-donow-order')
-  actHtml += `<div class="ob-section" id="ob-donow" ondragover="event.preventDefault()" ondrop="obSectionDrop(event,'ob-donow-order')"><div class="ob-section-title">Do Now (${doNowItems.length})</div>`
-  if (!sortedDoNow.length) actHtml += `<div class="ob-empty">Nothing to action right now.</div>`
-  for (const { client, key, step } of sortedDoNow) {
+  // DO NOW — always rendered in priority order, no drag reordering
+  actHtml += `<div class="ob-section" id="ob-donow"><div class="ob-section-title">Do Now (${doNowItems.length})</div>`
+  if (!doNowItems.length) actHtml += `<div class="ob-empty">Nothing to action right now.</div>`
+  for (const { client, key, step } of doNowItems) {
     const label = OB_STEP_LABELS[key] || key
     const deliv = OB_DELIVERABLES[key]
     const iid = `ob-del-${client.id}-${key}`
     const btnLabel = OB_DONE_LABELS[key] || (deliv ? 'Submit' : 'Mark Done')
     const note = cleanNote(step.note)
-    actHtml += `<div class="ob-item" draggable="true" id="obitem-${client.id}-${key}" data-item-id="${client.id}-${key}"
-      ondragstart="obItemDragStart(event,this,'ob-donow-order')"
-      ondragover="obItemDragOver(event,this,'ob-donow-order')"
-      ondrop="obItemDrop(event,this,'ob-donow-order')"
-      ondragend="obItemDragEnd(this)"
-      ondragleave="obItemDragLeave(event,this)">
-      <span class="ob-drag-handle" title="Drag to reorder">⠿</span>
+    actHtml += `<div class="ob-item" id="obitem-${client.id}-${key}">
       <div class="ob-item-label">${label}</div>
       <div class="ob-item-client">${client.companyName}</div>
       ${note ? `<div class="ob-item-note">${note}</div>` : ''}
