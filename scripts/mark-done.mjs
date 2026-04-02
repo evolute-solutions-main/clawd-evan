@@ -10,13 +10,8 @@
  *   node scripts/mark-done.mjs --client "smith" --step "facebook"   (fuzzy match)
  */
 
-import fs from 'node:fs'
-import path from 'node:path'
-import { fileURLToPath } from 'url'
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const REPO_ROOT = path.resolve(__dirname, '..')
-const CLIENTS_FILE = path.join(REPO_ROOT, 'data/clients.json')
+import '../agents/_shared/env-loader.mjs'
+import { getClients, updateClient } from '../agents/_shared/db.mjs'
 
 // ── Args ──────────────────────────────────────────────────────────────────────
 
@@ -91,12 +86,12 @@ function getNewlyUnlocked(steps, justCompletedKey) {
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 
-const data = JSON.parse(fs.readFileSync(CLIENTS_FILE, 'utf8'))
+const clients = await getClients()
 
-const client = matchClient(data.clients, clientArg)
+const client = matchClient(clients, clientArg)
 if (!client) {
   console.error(`No onboarding client found matching "${clientArg}"`)
-  console.error(`Active clients: ${data.clients.filter(c => c.onboarding?.status === 'onboarding').map(c => c.companyName).join(', ')}`)
+  console.error(`Active clients: ${clients.filter(c => c.onboarding?.status === 'onboarding').map(c => c.companyName).join(', ')}`)
   process.exit(1)
 }
 
@@ -152,7 +147,7 @@ if (readyToBook && !client.onboarding.readyToBookCallAt) {
 }
 
 // Save
-fs.writeFileSync(CLIENTS_FILE, JSON.stringify(data, null, 2))
+await updateClient(client.id, { onboarding: client.onboarding })
 
 // ── Output ────────────────────────────────────────────────────────────────────
 

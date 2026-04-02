@@ -21,11 +21,10 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'url'
 import { getGlobalTimezone } from '../../_shared/formatters/index.mjs'
+import { getClients, getAlerts } from '../../_shared/db.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT  = path.resolve(__dirname, '../../..')
-const CLIENTS_FILE = path.join(REPO_ROOT, 'data/clients.json')
-const ALERTS_FILE  = path.join(REPO_ROOT, 'data/alerts.json')
 const TEAM_FILE    = path.join(REPO_ROOT, 'data/team.json')
 const OUTPUTS_DIR     = path.join(__dirname, '../outputs')
 
@@ -128,9 +127,11 @@ function getPhase(steps) {
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 
-const clientData = JSON.parse(fs.readFileSync(CLIENTS_FILE, 'utf8'))
-const alertData  = JSON.parse(fs.readFileSync(ALERTS_FILE,  'utf8'))
-const team       = JSON.parse(fs.readFileSync(TEAM_FILE,    'utf8'))
+const [clientsArr, alertsArr, team] = await Promise.all([
+  getClients(),
+  getAlerts(),
+  Promise.resolve(JSON.parse(fs.readFileSync(TEAM_FILE, 'utf8')))
+])
 
 const ROLE_LABELS = {
   accountManager: 'Account Manager',
@@ -143,9 +144,9 @@ function resolveRole(roleKey) {
   return person ? `${person} (${label})` : label
 }
 
-const pendingAlerts = (alertData.alerts || []).filter(a => a.status === 'pending')
+const pendingAlerts = alertsArr.filter(a => a.status === 'pending')
 
-let clients = clientData.clients.filter(c =>
+let clients = clientsArr.filter(c =>
   c.onboarding?.status === 'onboarding' ||
   (c.onboarding?.status === 'launched' && c.onboarding.steps?.post_launch_checkin_scheduled?.status !== 'complete')
 )

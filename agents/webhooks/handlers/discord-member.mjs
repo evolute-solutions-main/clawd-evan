@@ -20,21 +20,52 @@
  *   PUT  /channels/{channelId}/permissions/{userId}  — grant access
  */
 
-import { execFileSync } from 'node:child_process'
-import path from 'node:path'
-import { fileURLToPath } from 'url'
-import fs from 'node:fs'
+import { getClients, updateClient, upsertAlert } from '../../_shared/db.mjs'
 import { postMessage } from '../../_shared/discord/index.mjs'
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const REPO_ROOT  = path.resolve(__dirname, '../../..')
-const CLIENTS_FILE = path.join(REPO_ROOT, 'data/clients.json')
-const ALERTS_FILE  = path.join(REPO_ROOT, 'data/alerts.json')
 
 const GUILD_ID            = '1164939432722440282'  // Evolute HQ
 const CLIENTS_CATEGORY_ID = process.env.DISCORD_CLIENTS_CATEGORY_ID || null
 const OPS_CHANNEL_ID      = process.env.DISCORD_OPS_CHANNEL_ID || '1475336170916544524'
 // Set DISCORD_CLIENTS_CATEGORY_ID in .secrets.env — the category where client channels live
+
+// ── Step completion helper (inlined from mark-done logic) ─────────────────────
+
+function completeStep(client, stepKey, actor) {
+  const step = client.onboarding?.steps?.[stepKey]
+  if (!step || step.status === 'complete') return false
+
+  const now   = new Date().toISOString()
+  const today = now.split('T')[0]
+
+  step.status      = 'complete'
+  step.completedAt = today
+
+  client.onboarding.log = client.onboarding.log || []
+  client.onboarding.log.push({
+    timestamp: now,
+    event:     'step_completed',
+    step:      stepKey,
+    by:        actor
+  })
+
+  // Check if onboarding_call_booked is newly unlocked
+  const steps = client.onboarding.steps
+  const callStep = steps['onboarding_call_booked']
+  if (callStep && callStep.status !== 'complete' && callStep.readyToBookTrigger) {
+    const deps = callStep.dependsOn || []
+    const allDone = deps.every(d => steps[d]?.status === 'complete')
+    if (allDone && !client.onboarding.readyToBookCallAt) {
+      client.onboarding.readyToBookCallAt = now
+      client.onboarding.log.push({
+        timestamp: now,
+        event:     'ready_to_book_call',
+        note:      'All pre-call deps met. Send booking link to client in Discord. Dashboard task created.'
+      })
+    }
+  }
+
+  return true
+}
 
 export async function handleMemberJoin(member) {
   if (member.guild.id !== GUILD_ID) return  // Only handle Evolute HQ
@@ -46,13 +77,12 @@ export async function handleMemberJoin(member) {
   console.log(`[discord-member] New member joined: ${member.displayName} (${userId})`)
 
   // Try to match to an onboarding client
-  const data  = JSON.parse(fs.readFileSync(CLIENTS_FILE, 'utf8'))
-  const match = findMatchingClient(data.clients, displayName, username)
+  const clients = await getClients()
+  const match = findMatchingClient(clients, displayName, username)
 
   if (!match) {
     console.warn(`[discord-member] No onboarding client matched for ${member.displayName} (${userId})`)
-    const alertData = JSON.parse(fs.readFileSync(ALERTS_FILE, 'utf8'))
-    alertData.alerts.push({
+    await upsertAlert({
       id:         `alert_${Date.now()}`,
       type:       'discord_join_no_match',
       status:     'pending',
@@ -61,7 +91,6 @@ export async function handleMemberJoin(member) {
       resolvedAt: null,
       payload:    { userId, displayName: member.displayName, username: member.user.username }
     })
-    fs.writeFileSync(ALERTS_FILE, JSON.stringify(alertData, null, 2))
     try {
       await postMessage(OPS_CHANNEL_ID, `⚠️ **New Discord member — no onboarding match**\nDisplay name: ${member.displayName} | Username: ${member.user.username}\n\nIf this is a client, resolve with:\n\`node scripts/mark-done.mjs --client "Company Name" --step client_joined_discord\`\nThen manually create their channel if needed.`)
     } catch (err) {
@@ -75,8 +104,7 @@ export async function handleMemberJoin(member) {
   // Low-confidence match: one expecting client but no name match — save as pending and ask for manual confirmation
   if (lowConfidence) {
     console.warn(`[discord-member] Low-confidence match: ${member.displayName} → ${client.companyName}`)
-    const alertData = JSON.parse(fs.readFileSync(ALERTS_FILE, 'utf8'))
-    alertData.alerts.push({
+    await upsertAlert({
       id:         `alert_${Date.now()}`,
       type:       'discord_join_pending_match',
       status:     'pending',
@@ -85,7 +113,6 @@ export async function handleMemberJoin(member) {
       resolvedAt: null,
       payload:    { userId, displayName: member.displayName, username: member.user.username, suggestedClientId: client.id, suggestedClientName: client.companyName }
     })
-    fs.writeFileSync(ALERTS_FILE, JSON.stringify(alertData, null, 2))
     try {
       await postMessage(OPS_CHANNEL_ID, `❓ **New Discord member — confirm match**\nDisplay name: ${member.displayName} | Username: ${member.user.username}\n\nPossible match: **${client.companyName}** (submitted form but no name match)\n\nConfirm with:\n\`node scripts/mark-done.mjs --client "${client.companyName}" --step client_joined_discord\`\nThen create their channel if confirmed.`)
     } catch (err) {
@@ -96,14 +123,9 @@ export async function handleMemberJoin(member) {
 
   console.log(`[discord-member] Matched to client: ${client.companyName} (confident: ${confident})`)
 
-  // Mark client_joined_discord
-  execFileSync('node', [
-    path.join(REPO_ROOT, 'scripts/mark-done.mjs'),
-    '--client', client.companyName,
-    '--step',   'client_joined_discord',
-    '--by',     'discord_event'
-  ], { encoding: 'utf8' })
-
+  // Mark client_joined_discord inline
+  completeStep(client, 'client_joined_discord', 'discord_event')
+  await updateClient(client.id, { onboarding: client.onboarding })
   console.log(`[discord-member] ✅ Marked client_joined_discord for ${client.companyName}`)
 
   // Create their channel and add them
@@ -187,21 +209,9 @@ async function createClientChannel(member, client, userId) {
   const channel = await createRes.json()
   console.log(`[discord-member] ✅ Created channel #${channelName} (${channel.id}) for ${client.companyName}`)
 
-  // Save channel ID to client record
-  const clientsData = JSON.parse(fs.readFileSync(CLIENTS_FILE, 'utf8'))
-  const record = clientsData.clients.find(c => c.id === client.id)
-  if (record) {
-    record.discordChannelId = channel.id
-    fs.writeFileSync(CLIENTS_FILE, JSON.stringify(clientsData, null, 2))
-  }
-
-  // Mark discord_channel_created
-  execFileSync('node', [
-    path.join(REPO_ROOT, 'scripts/mark-done.mjs'),
-    '--client', client.companyName,
-    '--step',   'discord_channel_created',
-    '--by',     'auto'
-  ], { encoding: 'utf8' })
+  // Save channel ID to client record and mark discord_channel_created
+  completeStep(client, 'discord_channel_created', 'auto')
+  await updateClient(client.id, { discordChannelId: channel.id, onboarding: client.onboarding })
 
   // Send welcome message in the new channel
   await fetch(`https://discord.com/api/v10/channels/${channel.id}/messages`, {

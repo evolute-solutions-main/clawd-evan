@@ -12,16 +12,9 @@
  *     --contract-end "2026-09-25" --fathom "https://fathom.ai/..." --stripe "cus_xxx" --video-editor
  */
 
-import fs from 'node:fs'
-import path from 'node:path'
-import { fileURLToPath } from 'url'
-import { syncAllClients } from '../lib/client-sync.mjs'
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const REPO_ROOT    = path.resolve(__dirname, '..')
-const CLIENTS_FILE = path.join(REPO_ROOT, 'data/clients.json')
-const SALES_FILE   = path.join(REPO_ROOT, 'data/sales_data.json')
-const TEAM_FILE    = path.join(REPO_ROOT, 'data/team.json')
+import '../agents/_shared/env-loader.mjs'
+import { getClients, upsertClient, getAppointments, updateAppointment, updateClient } from '../agents/_shared/db.mjs'
+import { findAppointmentMatch } from '../lib/client-sync.mjs'
 
 // ── Args ──────────────────────────────────────────────────────────────────────
 
@@ -199,13 +192,11 @@ function makeSteps(needsVideoEditor) {
   return steps
 }
 
-// ── Write ─────────────────────────────────────────────────────────────────────
+// ── Main ──────────────────────────────────────────────────────────────────────
 
-const data = JSON.parse(fs.readFileSync(CLIENTS_FILE, 'utf8'))
+const clients = await getClients()
 
-data.clients = data.clients.filter(c => c.id !== 'client_example')
-
-const existingByEmail = data.clients.find(c => c.email === email)
+const existingByEmail = clients.find(c => c.email === email)
 if (existingByEmail) {
   if (existingByEmail.onboarding?.status === 'launched') {
     console.warn(`⚠️  A client with email ${email} already exists and has been launched. Aborting.`)
@@ -237,26 +228,25 @@ const client = {
   }
 }
 
-data.clients.push(client)
-fs.writeFileSync(CLIENTS_FILE, JSON.stringify(data, null, 2))
+await upsertClient(client)
 
-// ── Auto-sync to sales_data ───────────────────────────────────────────────────
+// ── Auto-link to appointment ──────────────────────────────────────────────────
 
-const synced = syncAllClients(CLIENTS_FILE, SALES_FILE)
-let thisLink = synced.find(s => s.client.id === id)
+let thisLink = null
 
-// If appointmentId was passed explicitly, syncAllClients skips this client
-// (because it already has an appointmentId). Stamp onboardingClientId on the
-// appointment directly so both sides stay in sync.
-if (!thisLink && appointmentId) {
-  const rawSales = JSON.parse(fs.readFileSync(SALES_FILE, 'utf8'))
-  const appointments = rawSales.appointments || rawSales
-  const appt = appointments.find(a => a.id === appointmentId)
-  if (appt && !appt.onboardingClientId) {
-    appt.onboardingClientId = id
-    const salesOut = Array.isArray(rawSales) ? appointments : { ...rawSales, appointments }
-    fs.writeFileSync(SALES_FILE, JSON.stringify(salesOut, null, 2))
-    thisLink = { appointment: appt, confidence: 'explicit' }
+if (appointmentId) {
+  // Explicit appointment ID passed — stamp onboardingClientId on that appointment
+  await updateAppointment(appointmentId, { onboardingClientId: id })
+  thisLink = { appointment: { id: appointmentId, contactName: name }, confidence: 'explicit' }
+} else {
+  // Try to find a matching closed appointment by email/name
+  const appointments = await getAppointments()
+  const result = findAppointmentMatch(client, appointments)
+  if (result) {
+    const { appointment, confidence } = result
+    await updateAppointment(appointment.id, { onboardingClientId: id })
+    await updateClient(id, { appointmentId: appointment.id })
+    thisLink = { appointment, confidence }
   }
 }
 

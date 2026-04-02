@@ -52,8 +52,22 @@ export async function updateClient(id, fields) {
 
 // ── Alerts ────────────────────────────────────────────────────────────────────
 
+export async function getAlerts() {
+  const { data, error } = await db().from('alerts').select('*').order('received_at', { ascending: false })
+  if (error) throw error
+  return data.map(dbToAlert)
+}
+
 export async function upsertAlert(alert) {
   const { error } = await db().from('alerts').upsert(alertToDb(alert), { onConflict: 'id' })
+  if (error) throw error
+}
+
+export async function updateAlert(id, fields) {
+  const row = {}
+  if (fields.status     !== undefined) row.status      = fields.status
+  if (fields.resolvedAt !== undefined) row.resolved_at = fields.resolvedAt || null
+  const { error } = await db().from('alerts').update(row).eq('id', id)
   if (error) throw error
 }
 
@@ -131,6 +145,18 @@ function dbToClient(r) {
     fathomSalesCallLink:  r.fathom_sales_call_link,
     discordChannelId:     r.discord_channel_id,
     onboarding:           r.onboarding || {},
+  }
+}
+
+function dbToAlert(r) {
+  return {
+    id:         r.id,
+    type:       r.type,
+    status:     r.status,
+    message:    r.message,
+    receivedAt: r.received_at,
+    resolvedAt: r.resolved_at,
+    payload:    r.payload || {}
   }
 }
 

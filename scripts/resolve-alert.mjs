@@ -9,21 +9,15 @@
  *   node scripts/resolve-alert.mjs --list                  (show all pending alerts)
  */
 
-import fs from 'node:fs'
-import path from 'node:path'
-import { fileURLToPath } from 'url'
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const REPO_ROOT = path.resolve(__dirname, '..')
-const ALERTS_FILE = path.join(REPO_ROOT, 'data/alerts.json')
+import '../agents/_shared/env-loader.mjs'
+import { getAlerts, updateAlert } from '../agents/_shared/db.mjs'
 
 const args     = process.argv.slice(2)
 const get      = (flag) => { const i = args.indexOf(flag); return i !== -1 ? args[i + 1] : null }
 const listMode = args.includes('--list')
 const alertId  = get('--id')
 
-const data   = JSON.parse(fs.readFileSync(ALERTS_FILE, 'utf8'))
-const alerts = data.alerts || []
+const alerts = await getAlerts()
 
 if (listMode) {
   const pending = alerts.filter(a => a.status === 'pending')
@@ -57,8 +51,5 @@ if (alert.status === 'resolved') {
   process.exit(0)
 }
 
-alert.status     = 'resolved'
-alert.resolvedAt = new Date().toISOString()
-
-fs.writeFileSync(ALERTS_FILE, JSON.stringify(data, null, 2))
+await updateAlert(alertId, { status: 'resolved', resolvedAt: new Date().toISOString() })
 console.log(`✅ Alert ${alertId} marked resolved.`)

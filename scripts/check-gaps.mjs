@@ -10,20 +10,15 @@
  *   node scripts/check-gaps.mjs --json              (machine-readable output)
  */
 
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-
-const root      = path.resolve(fileURLToPath(import.meta.url), '../../')
-const DATA_FILE = path.join(root, 'data', 'sales_data.json')
+import '../agents/_shared/env-loader.mjs'
+import { getAppointments } from '../agents/_shared/db.mjs'
 
 const args = process.argv.slice(2)
 const _fi  = args.indexOf('--from'); const fromArg = _fi !== -1 ? args[_fi + 1] || null : null
 const _ti  = args.indexOf('--to');   const toArg   = _ti !== -1 ? args[_ti + 1] || null : null
 const jsonOut = args.includes('--json')
 
-const raw  = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'))
-const appts = Array.isArray(raw) ? raw : raw.appointments
+const appts = await getAppointments()
 
 const today     = new Date().toISOString().slice(0, 10)
 const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10)
